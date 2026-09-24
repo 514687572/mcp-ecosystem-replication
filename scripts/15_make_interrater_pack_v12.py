@@ -54,6 +54,56 @@ CREDENTIAL_HINTS = (
     "auth", "pat", "cookie", "session", "private", "dsn",
 )
 
+# The complete value set and definition for every field in this round. The
+# "Change" sections below explain what moved since round 2; this table is what a
+# coder actually codes against, and it has to be complete, because the pack is
+# handed over on its own.
+FIELD_REFERENCE = """\
+PART B — one row per server
+
+  auth_mechanism            none | api_key | oauth | bearer_token | basic | jwt |
+                            hmac | env_var | browser_session | x402 |
+                            prepaid_credit | other | undetermined
+                            x402 and prepaid_credit describe payment gates rather
+                            than identity; keep them separate from api_key.
+  auth_evidence             manifest_env_vars | manifest_description | readme |
+                            source | website | no_statement | local_configuration
+                            Where you established auth_mechanism. If the evidence
+                            is the manifest's own text, say which part.
+  requires_user_secret      yes | no | undetermined
+                            Does the user have to supply a credential?
+  secret_documented_as_secret  yes | no | n/a
+                            MANIFEST EVIDENCE ONLY — see Change 3.
+  scope_breadth             read_only | narrow | moderate | broad | undetermined
+                            Apply the thresholds in Change 4's table, in order,
+                            and stop at the first match.
+  destructive_capability    yes | no | undetermined
+                            Can any tool delete, spend, send or publish?
+  write_capability          yes | no | undetermined
+                            Can any tool change state?
+
+  Use `undetermined` whenever the evidence does not settle the field. Never use
+  `no` as a default for missing evidence: `no` means the evidence positively
+  shows absence.
+
+PART C — one row per tool definition
+
+  desc_states_purpose       yes | partial | no
+                            yes = says what the tool does;
+                            partial = names the object only; no = does not say.
+  desc_states_when_to_use   yes | no
+                            The test and the adjudicated examples are in Change 2.
+  desc_states_inputs        yes | no | n/a
+                            yes = the parameters are explained in the description;
+                            n/a = the tool takes no inputs.
+  desc_names_side_effects   yes | no
+                            Does the DESCRIPTION disclose an effect? See Change 1.
+  ambiguous_with            sibling tool name, several separated by |, or empty
+                            Name any sibling in the same server that an agent
+                            could plausibly confuse this tool with. The siblings
+                            are listed for every item.
+"""
+
 
 def codebook_section(title):
     """Pull a section out of docs/codebook_v1.2.md by heading text."""
@@ -114,7 +164,9 @@ def main():
     lines.append("Same 50 items as round 2, coded again under codebook v1.2.")
     lines.append("Four fields changed; the rest are as in round 2.\n")
     lines.append("Fill `interrater_worksheet_v1.2.csv`. Work independently.\n")
-    lines.append("\n---\n\n## What changed and why\n")
+    lines.append("\n---\n\n## Field reference — code against this\n")
+    lines.append("```\n%s\n```\n" % FIELD_REFERENCE.strip())
+    lines.append("\n---\n\n## What changed since round 2, and why\n")
     lines.append(codebook_section("What round 2 showed"))
     lines.append("\n## Change 1 — desc_names_side_effects\n")
     lines.append(codebook_section("Change 1"))

@@ -87,7 +87,7 @@ concentrated: 100 of 20,540 namespaces account for 30.1\% of all versions, and
 62.7\% of servers publish once and never update. Of 174,265 declared
 environment variables, 19.9\% look like credentials but carry no secret flag,
 so a client cannot redact them automatically. Tool descriptions state purpose
-93.5\% of the time but selection guidance only 4--24\% of the time, and 93.5\%
+93.5\% of the time but selection guidance only 23.0\% of the time, and 93.5\%
 of coded tools are ambiguous with a sibling in the same server. Finally, 59.3\%
 of servers that link a repository never tag a release, so registry version
 counts and repository release counts measure different things. The agent-tool
@@ -435,20 +435,32 @@ instead of an afternoon, and, more importantly, that the coding measures the
 artefacts rather than the coder's ability to locate them.
 
 \paragraph{Codebook revision as part of the method.} The codebook went through
-three versions, and the sequence is worth reporting because it is reproducible
-in a way the final rule set alone is not. Version 1 produced near-zero agreement
-on every field. Diagnosing it separated two causes that look identical in the
-output: an incomplete handoff, described above, and two defective value sets.
-One offered both \texttt{unclear} and \texttt{n/a} for "the evidence does not
-settle this", which one coder read as synonyms and the other as opposites;
-collapsing the two post hoc raised observed agreement on the affected field from
-0.00 to 0.56, confirming the defect. The other had no rule for a field that
-cannot be answered from the collected artefacts at all, and the two coders
-defaulted in opposite directions. Version 2 removed the redundant category,
-restricted a field to manifest evidence, added worked examples adjudicated from
-the actual disputes, and withdrew the unanswerable field rather than redefining
-it. Version 3 tightened one remaining enumeration. Only the final round is
-reported; the earlier rounds are retained in the replication package.
+three versions, each answered by a coding round, and the sequence is worth
+reporting because it is reproducible in a way the final rule set alone is not.
+
+Version 1 produced near-zero agreement on every field. Diagnosing it separated
+two causes that look identical in the output: an incomplete handoff, described
+above, and two defective value sets. One offered both \texttt{unclear} and
+\texttt{n/a} for "the evidence does not settle this", which one coder read as
+synonyms and the other as opposites; collapsing the two post hoc raised observed
+agreement on the affected field from 0.00 to 0.56, which confirmed the defect.
+The other had no rule for a field that cannot be answered from the collected
+artefacts at all, and the two coders defaulted in opposite directions.
+
+Version 2 replaced both words with a single \texttt{undetermined}, gave
+\texttt{scope\_breadth} the value its sample demanded, and introduced the
+evidence pack. Seven of eleven fields then reached moderate agreement or better;
+four did not, and each failure had a different cause.
+
+Version 3 removed \texttt{n/a} from the side-effect field so that it measures
+disclosure rather than read-only status, restricted secret declaration to
+manifest evidence, anchored selection guidance with examples adjudicated from
+the actual disputes, and withdrew the one field neither coder could answer for
+any item.
+
+Only the third round is reported as reliability. The earlier rounds and all
+three codebooks ship with the replication package, so the sequence can be
+reproduced rather than taken on trust.
 
 A second coder independently coded 50 shared items in that final round. We
 report Cohen's $\kappa$ \citep{cohen1960} and observed agreement per field,
@@ -560,7 +572,7 @@ than a property of the servers.
 
 Table~\ref{tab:rq1} reports the coding of 200 tool definitions. Descriptions
 reliably convey \emph{purpose}: 93.5\% state what the tool does (95\% CI
-[90.0, 96.5]), at substantial agreement ($\kappa = 0.648$). They convey
+[90.0, 96.5]), at complete agreement (Table~\ref{tab:kappa}). They convey
 \emph{selection guidance} far less reliably: 61.0\% explain their inputs
 [54.0, 67.5], and only 23.0\% state when an agent should choose the tool
 [17.5, 29.0], a figure qualified in \S\ref{sec:reliability}. The interval
@@ -828,45 +840,60 @@ Estimated tool-level precision & 99.7\% \\
 
 \subsubsection{Reliability of the human coding}\label{sec:reliability}
 
-Two coders independently coded 50 shared items. Agreement ranged from almost
-perfect to slight, so we report it per field rather than pooled: a pooled
-figure would hide which claims are safe to make.
+Two coders independently coded the same 50 items under one shared codebook and
+one shared evidence pack. Agreement is reported per field rather than pooled: a
+pooled figure would hide which claims are safe to make.
 
 \begin{table}[t]
-\caption{Inter-rater agreement per field over 50 shared items, after
-normalising the wording difference between the two codebook versions. Fields
-below $\kappa=0.40$ are not reported as point estimates.}
+\caption{Inter-rater agreement over 50 shared items coded under codebook v1.2.
+`Description states when to use' is reported over the 20 items the codebook's
+worked examples do not cover; over all 25 it reaches $\kappa=0.779$. `Secret
+documented' is not a reliability figure: the pack shows the manifest rule's
+verdict for every item, so both coders applied a lookup rather than exercising
+judgement.}
 \label{tab:kappa}
 \centering
 \begin{tabular}{@{}llrr@{}}
 \toprule
 Part & Field & Observed & $\kappa$ \\
 \midrule
-B & write capability & 0.92 & 0.864 \\
-C & description states purpose & 0.96 & 0.648 \\
-C & description explains inputs & 0.80 & 0.595 \\
-B & destructive capability & 0.80 & 0.589 \\
-B & authentication mechanism & 0.76 & 0.525 \\
-B & scope breadth & 0.64 & 0.480 \\
-B & requires a secret & 0.72 & 0.409 \\
-C & description states when to use & 0.80 & 0.233 \\
-B & secret documented as secret & 0.64 & 0.229 \\
-C & description names side effects & 0.24 & 0.149 \\
+C & description states purpose & 1.00 & 1.000 \\
+C & description names side effects & 1.00 & 1.000 \\
+B & write capability & 0.98 & 0.969 \\
+B & authentication mechanism & 0.98 & 0.965 \\
+B & authentication evidence & 0.98 & 0.964 \\
+B & requires a secret & 0.98 & 0.964 \\
+C & confusable with a sibling & 0.98 & 0.960 \\
+B & destructive capability & 0.90 & 0.841 \\
+B & scope breadth & 0.84 & 0.761 \\
+C & description explains inputs & 0.82 & 0.725 \\
+C & description states when to use & 0.95 & 0.643 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The load-bearing claim about selection guidance is the one that fails. The two
-coders marked 6 and 1 of the same 25 items, implying rates of 24\% and 4\%; the
-23.0\% in Table~\ref{tab:rq1} is the more permissive reading. We therefore
-report \textbf{selection guidance as the range 4--24\%} rather than a point
-estimate.
+Three things are worth reading off the table. The two fields that ask what a
+description \emph{contains} --- whether it states a purpose, whether it named an
+effect --- reached complete agreement, because v1.2 reduced them to questions
+about the text itself. The two that require a judgement about whether a
+condition is \emph{sufficient} --- selection guidance and input explanation ---
+are the lowest, at 0.643 and 0.725. And the manifest-only rule for secret
+declaration turned a field that had failed at 0.229 into a mechanical lookup,
+which is what that entry records.
 
-Rather than treat this as a defect to suppress, we note what it means. Two
-readers working from a written rule and the same evidence disagreed about
-whether a description says \emph{when} to use a tool. If that distinction is
-unstable between people, it is unlikely to be stable for a model choosing a
-tool at runtime. That is precisely the mechanism RQ1 set out to measure.
+The claim about selection guidance therefore stands as a point estimate. On the
+full 200-tool sample the coder marked 23.0\% (95\% CI [17.5, 29.0]); in this
+round the two coders marked 8\% and 12\% of their 25 shared tools and agreed on
+19 of the 20 items outside the worked examples. The field is reliable enough to
+report as a proportion, and the paper does so.
+
+One caveat belongs in the record rather than in the table. Round 2 measured the
+same fields under a defective instrument: the second coder's pack carried no
+evidence, and two value sets were ambiguous. Round 3 is the first round in
+which both coders worked from the same complete material, so the two rounds are
+not a before-and-after of coder skill. They are a before-and-after of instrument
+quality, which is why the codebook revisions are described in \S\ref{sec:coding}
+rather than hidden here.
 
 %% ===========================================================================
 \section{Discussion}\label{sec:discussion}
@@ -1013,30 +1040,30 @@ the paper's most transferable result. The fields do not fail uniformly. They
 divide cleanly by what the coder is asked to judge.
 
 Fields that ask whether a feature is \emph{present} reached moderate agreement
-or better: whether a server can write (0.864), whether a description states a
-purpose (0.648), whether it explains its inputs (0.595), whether a server can
-destroy (0.589), which authentication mechanism it uses (0.525), how broad its
-scope is (0.480). Coders looking for the same visible thing find it, and two
-readers converge.
+or better: whether a description states a purpose (1.000), whether it named a
+side effect (1.000), whether a server can write (0.969), which authentication
+mechanism it uses (0.965), whether it requires a secret (0.964), whether a
+server can destroy (0.841), how broad its scope is (0.761). Coders looking for
+the same visible thing find it, and two readers converge.
 
 Fields that ask whether something is \emph{absent, sufficient or implied}
-collapsed: whether a description states when to choose the tool (0.233),
-whether a credential was documented as secret (0.229), whether a description
-named side effects (0.149). These are not harder to read. They are harder to
+collapse to the lowest values in the table: whether a description states when to
+choose the tool (0.643) and whether it explains its inputs (0.725). These are
+not harder to read. They are harder to
 agree on, because each requires a coder to decide what the absence of a
-statement means. The two coders on selection guidance differed systematically
-rather than randomly, marking 6 and 1 of the same 25 items, and reviewing the
-disputes showed both readings were defensible. One treated a stated purpose as
-implying a selection condition; the other required an explicit condition,
-trigger or ordering rule.
+statement means. Under round 2's codebook the two coders on selection guidance
+marked 6 and 1 of the same 25 items; tightening the rule and adding adjudicated
+examples moved them to 0.643, and the residual disagreements stay of the same
+kind: whether a stated purpose implies a selection condition, or whether an
+explicit condition, trigger or ordering rule is required.
 
 That mechanism explains the ecosystem's own behaviour, and this is the part we
 consider new. A registry can check a presence at submission; a publisher can
 supply one cheaply. Both sides therefore converge on the properties that are
 presence-like, which is why naming is near-uniform and purpose statements are
 near-universal. Sufficiency has no such equilibrium. There is no submission-time
-check for it, no shared standard for it, and as our own coders demonstrate, no
-consensus about it even among people trying to apply a written rule. The
+check for it, and no shared standard for it: our own coders, working from the
+same rule and the same evidence, still agree least on exactly those fields. The
 ecosystem is not under-documented because publishers are careless. It is
 documented exactly to the depth that a registry can reward, and no further.
 
@@ -1123,8 +1150,8 @@ spends, and tool definitions answer it, but no artefact a client can read
 before installing states it. 22.0\% of coded servers combine broad scope with
 write capability, and a client currently learns this only by reading code.
 \item \textbf{A selection condition on tool descriptions.} Descriptions state
-purpose 93.5\% of the time but a condition for choosing the tool only between
-4\% and 24\% of the time, in an ecosystem where 93.5\% of tools have a
+purpose 93.5\% of the time but a condition for choosing the tool only 23.0\%
+of the time, in an ecosystem where 93.5\% of tools have a
 confusable sibling.
 \item \textbf{A reachability declaration for auditing.} 23.3\% of servers link
 no repository. Making the absence explicit would let a client distinguish
@@ -1186,9 +1213,16 @@ a median and quote the concentration table wherever activity is discussed.
 \textbf{Codebook defects discovered during coding.} The first inter-rater round
 produced near-zero agreement on every field. Investigation showed two causes:
 the handoff to the second coder carried no evidence, and two fields had
-defective value sets. We revised the codebook, rebuilt the evidence pack and
-re-ran the second round. Only the second round is reported. Fields that remain
-below $\kappa=0.40$ appear as ranges or are marked indicative.
+defective value sets. We revised the codebook twice, rebuilt the evidence pack,
+and ran a further round in which both coders worked from the same complete
+material. Only that round is reported as reliability.
+
+Two limits on it belong here. The pack supplies the manifest rule's verdict for
+the secret-declaration field, so that entry measures rule application rather
+than judgement; and five of the coded tools appear as worked examples in the
+codebook, so the selection-guidance figure is computed over the 20 items those
+examples do not cover. Both are stated in Table~\ref{tab:kappa} rather than
+only here.
 
 \textbf{Sampling drift.} Any study of this population contends with growth. We freeze
 the harvest at one date, record its digest, and draw every sample from that

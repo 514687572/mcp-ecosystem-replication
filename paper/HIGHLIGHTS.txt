@@ -3,5 +3,5 @@ Highlights
 114,604 published versions across 35,388 MCP servers, frozen 24 September 2026
 100 of 20,540 namespaces account for 30.1% of all published versions
 19.9% of credential-like variables are not flagged secret, blocking redaction
-Only 4-24% of tool descriptions state when an agent should choose the tool
+Only 23.0% of tool descriptions state when an agent should choose the tool
 59.3% of servers never tag a release, so version counts mislead

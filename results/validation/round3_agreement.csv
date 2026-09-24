@@ -1,0 +1,13 @@
+field,items,observed,expected,kappa,band,note
+auth_mechanism,50,0.98,0.436,0.965,almost perfect,
+auth_evidence,50,0.98,0.438,0.964,almost perfect,
+requires_user_secret,50,0.98,0.437,0.964,almost perfect,
+secret_documented_as_secret,50,1.0,0.481,1.0,almost perfect,"the pack supplied this field's verdict for every item; measures rule application, not independent agreement"
+scope_breadth,50,0.84,0.331,0.761,substantial,
+destructive_capability,50,0.9,0.369,0.841,almost perfect,
+write_capability,50,0.98,0.356,0.969,almost perfect,
+desc_states_purpose,50,1.0,0.43,1.0,almost perfect,
+desc_states_when_to_use,50,0.98,0.455,0.963,almost perfect,"5 items are worked examples in the codebook; excluding them gives observed 0.950, kappa 0.643 over 20 items"
+desc_states_inputs,50,0.82,0.344,0.725,substantial,
+desc_names_side_effects,50,1.0,0.42,1.0,almost perfect,
+ambiguous_with,50,0.98,0.505,0.96,almost perfect,binary: has an ambiguous sibling

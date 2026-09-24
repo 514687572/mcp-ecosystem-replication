@@ -1,0 +1,53 @@
+Round 3 value validation
+
+shared items: 50
+
+every coded value is permitted by codebook v1.2
+
+disagreements: 28
+
+  B010   auth_mechanism               primary=none           coder2=undetermined
+  B010   auth_evidence                primary=manifest_description coder2=no_statement
+  B010   requires_user_secret         primary=no             coder2=undetermined
+  B006   scope_breadth                primary=moderate       coder2=narrow
+  B008   scope_breadth                primary=broad          coder2=moderate
+  B011   scope_breadth                primary=narrow         coder2=moderate
+  B012   scope_breadth                primary=moderate       coder2=undetermined
+  B016   scope_breadth                primary=moderate       coder2=narrow
+  B017   scope_breadth                primary=read_only      coder2=narrow
+  B020   scope_breadth                primary=read_only      coder2=narrow
+  B024   scope_breadth                primary=moderate       coder2=narrow
+  B003   destructive_capability       primary=undetermined   coder2=no
+  B006   destructive_capability       primary=undetermined   coder2=no
+  B012   destructive_capability       primary=yes            coder2=undetermined
+  B016   destructive_capability       primary=undetermined   coder2=no
+  B024   destructive_capability       primary=undetermined   coder2=no
+  B012   write_capability             primary=yes            coder2=undetermined
+  C002   desc_states_when_to_use      primary=no             coder2=yes
+  C002   desc_states_inputs           primary=no             coder2=n/a
+  C011   desc_states_inputs           primary=yes            coder2=no
+  C012   desc_states_inputs           primary=yes            coder2=no
+  C014   desc_states_inputs           primary=yes            coder2=no
+  C015   desc_states_inputs           primary=n/a            coder2=no
+  C018   desc_states_inputs           primary=n/a            coder2=no
+  C022   desc_states_inputs           primary=n/a            coder2=no
+  C023   desc_states_inputs           primary=yes            coder2=no
+  C024   desc_states_inputs           primary=yes            coder2=no
+  C007   ambiguous_with               primary=no             coder2=yes
+
+
+contamination audit
+
+The pack is self-contained by design. Two parts of it answer
+specific items, and those items are excluded from any claim of
+independent agreement:
+
+  desc_states_when_to_use: worked examples C001, C003, C010, C016, C020
+    all 50 items      -> observed 0.980, kappa 0.963
+    20 clean items    -> observed 0.950, kappa 0.643
+
+  secret_documented_as_secret: the pack shows the manifest
+    rule's verdict for all 25 Part B items, and both coders
+    matched it on all 25. No uncontaminated items remain, so the
+    field is reported as rule application rather than as
+    inter-rater reliability.

@@ -133,6 +133,40 @@ reported from this round; it needs either a v1.2 rule or a third pass.
 
 ## Round 3 (codebook v1.2)
 
+Round 3 was run: both coders coded the same 50 items under codebook v1.2 and
+the same evidence pack. Inputs and outputs are under `round3_coding_pack/` and
+beside this file respectively.
+
+| File | Content |
+| --- | --- |
+| `round3_coding_pack/interrater_pack_v1.2.md` | the pack both coders worked from |
+| `round3_coding_pack/interrater_worksheet_v1.2.csv` | the blank sheet as issued |
+| `round3_coding_pack/interrater_worksheet_v1.2_primary.csv` | primary coder's return |
+| `round3_coding_pack/interrater_worksheet_v1.2_coder2.csv` | second coder's return, an .xlsx under a .csv name |
+| `round3_codes_primary.csv`, `round3_codes_coder2.csv` | normalised, one row per item |
+| `round3_agreement.csv` | per-field observed agreement and kappa |
+| `round3_validation.txt` | value validation, every disagreement, and the contamination audit |
+
+**The primary return needed one repair, and the repair is in the data.** Every
+Part C row arrived with one empty field missing, which shifts each value from
+`write_capability` onward one column left. `scripts/20_ingest_round3.py`
+restores the missing empty field; the shift is detected by the row having one
+fewer field than the header, so the repair is deterministic rather than a
+judgement. The raw file is shipped unmodified so the repair can be checked.
+
+**Two fields cannot support an independent-agreement claim, and the package
+says which.** The pack is self-contained by design, which is what made round 2
+work, but two parts of it supply answers:
+
+* every Part B item shows the manifest rule's verdict for
+  `secret_documented_as_secret`, and both coders matched it on all 25 items, so
+  the field measures rule application rather than judgement;
+* `desc_states_when_to_use` is anchored by five worked examples whose item ids
+  are themselves in the coded set, so the field is reported over the 20 items
+  the examples do not cover, where it reaches kappa 0.643 rather than 0.779.
+
+`round3_validation.txt` records both explicitly.
+
 Round 2 left four fields unusable, each for a different reason. v1.2 responds to
 each and both coders re-code the same 50 items.
 
