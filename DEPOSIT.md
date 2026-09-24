@@ -1,5 +1,11 @@
 # Depositing this package and obtaining a DOI
 
+**Deposited at Science Data Bank: <https://doi.org/10.57760/sciencedb.013wx>**
+
+This is the identifier cited in the manuscript's Data availability statement.
+Science Data Bank reserves the DOI at submission and makes it resolvable on
+approval; the identifier does not change if the deposit is revised.
+
 The package is published at
 <https://github.com/514687572/mcp-ecosystem-replication>. A repository URL
 satisfies sharing but not citation: journals that require a data deposit want a
