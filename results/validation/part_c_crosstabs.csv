@@ -1,0 +1,11 @@
+field,value,tools,share_pct
+desc_states_purpose,no,13,6.5
+desc_states_purpose,yes,187,93.5
+desc_states_when_to_use,no,154,77.0
+desc_states_when_to_use,yes,46,23.0
+desc_states_inputs,no,78,39.0
+desc_states_inputs,yes,122,61.0
+desc_names_side_effects,no,123,61.5
+desc_names_side_effects,yes,77,38.5
+language,javascript/typescript,141,70.5
+language,python,59,29.5

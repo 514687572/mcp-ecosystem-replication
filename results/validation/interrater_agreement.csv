@@ -1,0 +1,13 @@
+part,field,items,observed_agreement,expected_agreement,cohens_kappa
+B,auth_mechanism,25,0.2,0.046,0.161
+B,requires_user_secret,25,0.16,0.046,0.119
+B,secret_documented_as_secret,25,0.08,0.018,0.064
+B,scope_breadth,25,0.6,0.301,0.428
+B,destructive_capability,25,0.72,0.482,0.46
+B,write_capability,25,0.84,0.398,0.734
+B,readme_warns_about_risk,25,0.0,0.0,0.0
+C,desc_states_purpose,25,0.96,0.886,0.648
+C,desc_states_when_to_use,25,0.8,0.739,0.233
+C,desc_states_inputs,25,0.8,0.506,0.595
+C,desc_names_side_effects,25,0.24,0.107,0.149
+C,ambiguous_with(binary),25,0.76,0.728,0.118

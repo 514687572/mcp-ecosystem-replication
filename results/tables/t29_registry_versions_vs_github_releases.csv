@@ -1,0 +1,13 @@
+metric,value
+servers whose repository was resolved,914.0
+... with at least one registry version,914.0
+... with zero GitHub releases,542.0
+share with zero GitHub releases (%),59.3
+median registry versions,2.0
+median GitHub releases,0.0
+mean registry versions,4.35
+mean GitHub releases,5.88
+servers where GitHub releases > registry versions,228.0
+servers where the two counts are equal,100.0
+servers where registry versions > GitHub releases,586.0
+Spearman correlation between the two counts,0.379

@@ -1,0 +1,5 @@
+pattern,servers,share_pct
+GitHub releases exceed registry versions,228,24.9
+counts agree exactly,100,10.9
+registry versions exceed GitHub releases,586,64.1
+registry understates by 2x or more,167,18.3

@@ -1,0 +1,7 @@
+statistic,value
+release-to-release gaps,79216.0
+mean gap (days),6.3
+median gap (days),0.6
+p90 gap (days),15.7
+gaps under 1 day,46255.0
+gaps over 180 days,116.0

@@ -1,0 +1,9 @@
+metric,value,share_of_servers_pct
+published_server_names,35388.0,100.0
+published_versions,114604.0,
+versions_per_server_mean,3.24,
+servers_with_packages,15166.0,42.9
+servers_with_remote_endpoint,21526.0,60.8
+servers_with_repository,27146.0,76.7
+servers_deprecated,374.0,1.1
+distinct_namespaces,20540.0,

@@ -1,0 +1,15 @@
+metric,value
+servers coded,150
+authentication mechanism identified,96
+authentication mechanism identified (%),64.0
+authentication mechanism unclear (%),36.0
+no authentication required,52
+credential-based authentication,37
+payment-based gate (x402 / prepaid credit),7
+requires the user to supply a secret,24
+... of those: secret NOT flagged as secret,3
+... of those: secret flag left unclear,0
+servers with write capability,51
+servers with destructive capability,10
+servers with broad scope,47
+broad scope AND write capability,33

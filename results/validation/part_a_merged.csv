@@ -1,0 +1,151 @@
+pkg_key,registry_type,has_server_entrypoint,n_tools_actual,n_tools_extracted,matched,under_extracted,over_extracted,miss_reason_taxonomy,miss_reason_raw,notes
+npm:@agentutility/mcp-matchpoint,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0; 无 source excerpt
+npm:@alex-apps/ng-token-saver,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0; 无 source excerpt
+npm:@alex-gon/tgc-mcp-server,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0; 无 source excerpt
+npm:@allchemylabs/aether-wcag-scanner,npm,True,6,6,6,0,0,none,,regex 6; 证据列出 aether_* 工具
+npm:@brilliant-hq/mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@catlabtech/mycal-mcp-server,npm,True,13,13,13,0,0,none,,regex 13
+npm:@cesteral/amazon-dsp-mcp,npm,True,21,21,21,0,0,none,,regex 21; 列表含参数名，实际工具数需复核
+npm:@chrischall/myatriumhealth-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@collhub/mcp,npm,True,5,5,5,0,0,none,,regex 5
+npm:@coolver/home-assistant-mcp,npm,True,96,96,96,0,0,none,,regex 96
+npm:@danielblomma/cortex-mcp,npm,True,23,23,23,0,0,none,,regex 23
+npm:@depixapp/mcp,npm,True,50,50,50,0,0,none,,regex 50
+npm:@hebline.ai/mcp-server,npm,True,3,3,3,0,0,none,,regex 3
+npm:@himorishige/hatago-mcp-hub,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@imagin.studio/api-docs-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@imba_wallet/agent-mcp-docs,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@imouiche/mitre-attack-mcp-server,npm,True,65,65,65,0,0,none,,AST=regex=65
+npm:@infoinlet/mcp-mongodb,npm,True,6,6,6,0,0,none,,regex 6
+npm:@itcons-app/mcp,npm,True,17,17,17,0,0,none,,regex 17
+npm:@itm-platform/mcp-server,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@lazyants/hetzner-mcp-server,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@marvenn/mcp-server,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@meltingpixels/zero-core-budget,npm,True,6,6,6,0,0,none,,regex 6
+npm:@mfukushim/map-traveler-mcp,npm,True,14,14,14,0,0,none,,regex 14
+npm:@michalpiszczek/ai-economics-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@miller-joe/youtube-mcp,npm,True,16,16,16,0,0,none,,regex 16
+npm:@mrfentmen/bitbucket-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@mrfentmen/huggingface-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@mrfentmen/pinata-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@mrfentmen/urban-dictionary-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@mrfentmen/valorant-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@mrfentmen/weather-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@mrfentmen/wise-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@n747ai/clearedindex-mcp-server,npm,True,19,19,19,0,0,none,,regex 19
+npm:@neverinfamous/postgres-mcp,npm,True,319,319,319,0,0,none,,regex 319; 含 prompts/参数，实际工具数可能偏大
+npm:@openenterprise/oe-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@piqrypt/mcp-server,npm,True,4,4,4,0,0,none,,AST 未捕获; regex 4 个 piqrypt_* 工具可信
+npm:@powforge/mcp-l402-gate,npm,True,4,4,4,0,0,none,,regex 4
+npm:@readystack/wcag22-css-lint,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@referencime/mcp-server,npm,False,0,0,0,0,0,not_a_server_or_no_tools,metadata_error,status metadata_error
+npm:@scrapeer/mcp-server,npm,True,15,15,15,0,0,none,,regex 15
+npm:@selenix/mcp-server,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@smartpolicy/mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@striderlabs/mcp-chipotle,npm,True,18,18,18,0,0,none,,regex 18
+npm:@supabase/mcp-server-supabase,npm,True,0,0,0,0,0,extractor_miss,extraction_missed_known_server,extracted 0; 已知 MCP server，需运行时确认工具数
+npm:@thenextgennexus/redfin-mcp-server,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@turbopentest/mcp-server,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@undisk-mcp/stdio-proxy,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:@vibgrate/cli,npm,True,61,61,61,0,0,none,,regex 61
+npm:@weiseer/api-changelog-mcp,npm,True,4,4,4,0,0,none,,regex 4
+npm:@xcreener/mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:aegis-mcp-server,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:africa-api-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:agentlookup-mcp,npm,True,6,6,6,0,0,none,,regex 6
+npm:aidc-mcp-server,npm,True,3,3,3,0,0,none,,regex 3
+npm:apple-ads-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:arxiv-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:astro-mcp,npm,True,8,8,8,0,0,none,,regex 8
+npm:beacon-mcp,npm,True,3,3,3,0,0,none,,regex 3
+npm:boardgamegeek-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:bostrom-mcp,npm,True,5,5,5,0,0,none,,regex 5
+npm:bugcatcher-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:bulbapedia-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:canicode,npm,True,6,6,6,0,0,none,,regex 6
+npm:cartridge-cafe-mcp,npm,True,13,13,13,0,0,none,,regex 13
+npm:compare-cli-mcp,npm,True,3,3,3,0,0,none,,regex 3
+npm:dead-drop-mcp,npm,True,1,1,1,0,0,none,,regex 1
+npm:ellmos-servercommander-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_detected,AST=regex=0
+npm:emailmd,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:exoplanets-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:frugal-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:gleif-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:hammerspoon-mcp,npm,True,75,75,75,0,0,none,,regex 75
+npm:hana-cli,npm,True,15,15,15,0,0,none,,regex 15
+npm:ibanforge-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:imgcli-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:iz-tolk-mcp,npm,True,4,4,4,0,0,none,,regex 4
+npm:makers-page-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,status_error,extraction status error
+npm:mcp-comfy-ui-builder,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:mcp-infra-lens,npm,False,0,0,0,0,0,not_a_server_or_no_tools,status_error,extraction status error
+npm:mcp-searxng,npm,True,4,4,4,0,0,none,,regex 4
+npm:mcp-server-clawcast,npm,True,6,6,6,0,0,none,,regex 6
+npm:mcp-yandex-wordstat,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:mcpvault-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:mindwtr-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:msds-chain-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:nasa-epic-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:omnarai-mcp,npm,True,7,7,7,0,0,none,,regex 7
+npm:openbrewery-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:openpanel-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:ozav-mcp-server,npm,True,2,2,2,0,0,none,,regex 2
+npm:pageshot-mcp,npm,True,4,4,4,0,0,none,,regex 4
+npm:pipepost-mcp,npm,True,29,29,29,0,0,none,,regex 29
+npm:pir-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:postall-mcp-server,npm,True,6,6,6,0,0,none,,regex 6
+npm:pretrip-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:reporelay-mcp,npm,True,1,1,1,0,0,none,,regex 1
+npm:safe-mind-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:safehold,npm,True,11,11,11,0,0,none,,regex 11
+npm:simplepractice-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:tariffmonitor-mcp,npm,True,2,2,2,0,0,none,,regex 2
+npm:tempguru-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:toolstem-sec-mcp-server,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:u-he-preset-randomizer,npm,True,14,14,14,0,0,none,,regex 14
+npm:virwave-breathe,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:vue-harvest-mcp,npm,True,18,18,18,0,0,none,,regex 18
+npm:wazap-mcp,npm,True,20,20,20,0,0,none,,regex 20
+npm:webcheck-mcp,npm,True,6,6,6,0,0,none,,regex 6
+npm:withings-mcp-unofficial,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:workable-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:xenmark-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+npm:yungle-mcp,npm,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_or_entrypoint_detected,extracted 0
+pypi:acumatica-mcp,pypi,True,28,28,28,0,0,none,,AST=regex=28
+pypi:agent-magnet,pypi,True,33,33,33,0,0,none,,AST=regex=33
+pypi:agentic-csv-cleaner,pypi,True,1,1,1,0,0,none,,AST=regex=1
+pypi:allure-testops-mcp,pypi,True,20,20,20,0,0,none,,AST=regex=20
+pypi:amnesic,pypi,True,12,12,12,0,0,none,,AST=regex=12
+pypi:bankstatementparser-mcp,pypi,True,5,5,5,0,0,none,,AST=regex=5
+pypi:couchbase-guru,pypi,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_detected,AST=regex=0
+pypi:cpersona,pypi,True,2,2,2,0,0,none,,AST=regex=2
+pypi:crosstabs-mcp,pypi,False,0,0,0,0,0,not_a_server_or_no_tools,metadata_error,status metadata_error
+pypi:epwforge-mcp,pypi,True,4,4,4,0,0,none,,AST=regex=4
+pypi:fabricator-panel-mcp,pypi,True,25,25,25,0,0,none,,AST=regex=25
+pypi:gb-eli-mcp,pypi,True,9,9,9,0,0,none,,AST=regex=9
+pypi:iaiops,pypi,True,196,199,196,0,3,false_positive,regex_only误报非工具,AST=196; regex=199; assert_all_tools_governed/register_profile/selection_tool_count 非工具
+pypi:ignition-mcp,pypi,True,43,44,43,0,1,false_positive,regex_only误报非工具,AST=43; regex=44; register 为内部注册函数
+pypi:inferenceindexer-mcp,pypi,True,8,8,8,0,0,none,,AST=regex=8
+pypi:kashrock-mcp,pypi,True,46,46,46,0,0,none,,AST=regex=46
+pypi:kio-orzeczenia-mcp,pypi,True,6,6,6,0,0,none,,AST=regex=6
+pypi:luma-mcp,pypi,True,4,0,0,4,0,extractor_miss,regex漏AST-only工具,AST-only: export_event_ics/get_event/search_events/set_preferences; extracted 0
+pypi:massive-context-mcp,pypi,True,17,17,17,0,0,none,,AST=regex=17
+pypi:mcp-capstone,pypi,True,14,14,14,0,0,none,,AST=regex=14
+pypi:mcp-gatehouse,pypi,True,3,4,3,0,1,false_positive,regex多抽decorator非工具,AST=3; regex=4 含 decorator
+pypi:mcp-gitlab,pypi,True,83,83,83,0,0,none,,AST=regex=83
+pypi:mcp-pyright,pypi,True,7,7,7,0,0,none,,AST=regex=7
+pypi:mcp-server-malcolm,pypi,True,58,58,58,0,0,none,,AST=regex=58
+pypi:mcp-units,pypi,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_detected,AST=regex=0
+pypi:mcpwright-census,pypi,True,8,8,8,0,0,none,,AST=regex=8
+pypi:memory-arbiter-mcp,pypi,True,4,4,4,0,0,none,,AST=regex=4
+pypi:mt-eli-mcp,pypi,True,3,3,3,0,0,none,,AST=regex=3
+pypi:nephyr-wallets,pypi,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_detected,AST=regex=0
+pypi:peil-mcp,pypi,True,22,22,22,0,0,dynamic_registration,AST未捕获动态注册,AST=0; regex=22; server.py 工具列表可信
+pypi:pinescript-mcp,pypi,True,8,8,8,0,0,none,,AST=regex=8
+pypi:pyrecrawl,pypi,True,13,13,13,0,0,none,,AST=regex=13
+pypi:securityscan-mcp,pypi,True,8,8,8,0,0,none,,AST=regex=8
+pypi:stamp-mcp,pypi,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_detected,AST=regex=0
+pypi:stratevo,pypi,False,0,0,0,0,0,not_a_server_or_no_tools,no_tools_detected,AST=regex=0
+pypi:supertone-mcp,pypi,True,14,14,14,0,0,none,,AST=regex=14
+pypi:uop-mcp-server,pypi,True,0,0,0,0,0,no_tools_detected,no_tools_detected,AST=regex=0; 包名 mcp-server 但未检测到工具
+pypi:yandex-wiki-search-mcp,pypi,True,33,32,32,1,0,extractor_miss,regex漏AST-only工具,AST=33; regex=32; page_clone 为 AST-only 工具

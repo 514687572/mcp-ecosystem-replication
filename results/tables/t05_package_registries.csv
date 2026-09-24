@@ -1,0 +1,7 @@
+registry_type,packages,servers,packages_pct
+npm,49371,9879,54.5
+pypi,21880,3931,24.2
+mcpb,9836,904,10.9
+oci,8272,981,9.1
+nuget,881,130,1.0
+cargo,288,59,0.3

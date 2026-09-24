@@ -1,0 +1,14 @@
+metric,value
+coded packages,150
+coder classified as an MCP server,81
+coder classified as not a server,69
+servers where the extractor found >= 1 tool,78
+package-level detection rate (%),96.3
+tools actually exposed (coder count),1794
+tools extracted by the pipeline,1794
+tools matched (estimated),1789
+tools missed by the extractor,5
+tools extracted that are not real tools,5
+estimated tool-level recall (%),99.7
+estimated tool-level precision (%),99.7
+servers with at least one miss,2

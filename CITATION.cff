@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "Replication package: the Model Context Protocol server ecosystem"
+message: "If you use this package, please cite the article it accompanies."
+type: dataset
+authors:
+  - family-names: Chen
+    given-names: Junan
+    orcid: "https://orcid.org/0009-0005-7969-0343"
+    affiliation: "University of Electronic Science and Technology of China"
+license: CC-BY-4.0
+version: "1.0.0"
+date-released: "2026-09-24"
+url: "https://github.com/514687572/mcp-ecosystem-replication"
+repository-code: "https://github.com/514687572/mcp-ecosystem-replication"
+abstract: >-
+  Pipelines, seeded samples, generated result tables and human validation
+  material for an empirical study of the Model Context Protocol server
+  ecosystem, frozen 24 September 2026.
+keywords:
+  - empirical software engineering
+  - software ecosystem
+  - Model Context Protocol
+  - agent tooling
+  - replication

@@ -1,0 +1,4 @@
+transport,versions,servers,versions_pct
+stdio,76782,15009,67.0
+streamable-http,48242,21208,42.1
+sse,2780,1160,2.4

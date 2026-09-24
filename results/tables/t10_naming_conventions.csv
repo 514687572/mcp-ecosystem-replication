@@ -1,0 +1,6 @@
+pattern,servers,servers_pct
+no slash separator,0,0.0
+namespace without dot (not reverse-DNS),0,0.0
+uppercase in server segment,170,0.5
+space in server segment,0,0.0
+underscore in server segment,1049,3.0

@@ -1,0 +1,11 @@
+metric,value,share_pct
+extracted tool definitions,12065.0,
+servers represented,676.0,
+tools per server (mean),17.8,
+tools with a description,11630.0,96.4
+descriptions under 5 words,1363.0,11.3
+descriptions that state when to use the tool,747.0,6.2
+tools declaring an input schema,381.0,3.2
+snake_case names,10442.0,86.5
+camelCase names,260.0,2.2
+kebab-case names,384.0,3.2

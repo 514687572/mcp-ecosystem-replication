@@ -1,0 +1,51 @@
+item_id,part,target
+B001,B,ai.edgechat/edgepedia
+B002,B,ai.getvda/structured-output-agent
+B003,B,ai.meetlark/mcp-server
+B004,B,ai.namewhisper/ens-tools
+B005,B,ai.primeta/primeta
+B006,B,ai.smithery/mrugankpednekar-bill_splitter_mcp
+B007,B,ai.smithery/zwldarren-akshare-one-mcp
+B008,B,ai.strix/strix
+B009,B,ai.zencap/zencap
+B010,B,app.cannonstudio/cannon-studio
+B011,B,app.wishpool/ireland-payments-mcp
+B012,B,cat.churchofai/aigora
+B013,B,ch.martinelli/jooq-mcp
+B014,B,club.atlasyield/mcp
+B015,B,com.agentery/agentery
+B016,B,com.astryke/hub
+B017,B,com.bynn/bynn
+B018,B,com.dexpaprika/dexpaprika
+B019,B,com.discoverseniorbenefits/benefits
+B020,B,com.eqiqs/eqiqs
+B021,B,com.files/python-mcp
+B022,B,com.getlandlens/landlens
+B023,B,com.immo-spot/mcp
+B024,B,com.invoicedataextraction/invoice-data-extraction
+B025,B,com.mcparmory/polygon
+C001,C,ai.fodda/mcp-server :: discover_adjacent_trends
+C002,C,ai.fodda/mcp-server :: expert_onboarding_research
+C003,C,ai.fodda/mcp-server :: get_earnings_divergence
+C004,C,ai.fodda/mcp-server :: sign_up_free_account
+C005,C,ai.mentu/navigator :: navigator_query
+C006,C,ai.oobeprotocol.sap.mcp/sap-mcp :: sap_give_feedback
+C007,C,ai.oobeprotocol.sap.mcp/sap-mcp :: sap_skills_upgrade_plan
+C008,C,ai.oobeprotocol.sap.mcp/sap-mcp :: sap_x402_estimate_cost
+C009,C,com.aicandidatehub/mcp :: import_resume_from_text
+C010,C,com.aioproductos/mcp-studio :: studio_hold
+C011,C,com.geekflare/mcp :: openPorts
+C012,C,com.getmcpads/google-analytics :: ga4_get_audience_export_diagnostics
+C013,C,com.getmcpads/google-search-console :: gsc_get_sitemap_health
+C014,C,com.getmcpads/google-search-console :: gsc_list_sitemaps
+C015,C,com.parlayx/mcp :: prophetx_list_positions
+C016,C,com.pulsemcp/proctor :: destroy_machine
+C017,C,com.rcs-campaigns/campaigns :: list_contacts
+C018,C,com.scrapeer/mcp-server :: scrapeer_list_flows
+C019,C,dev.homespun/homespun :: grants
+C020,C,dev.hythe/hythe :: end_session
+C021,C,dev.hythe/hythe :: get_entity_detail
+C022,C,eu.ansvar/malawi-law-mcp :: about
+C023,C,eu.ansvar/malawi-law-mcp :: validate_eu_compliance
+C024,C,eu.ansvar/pakistani-law-mcp :: get_provision
+C025,C,eu.ansvar/portuguese-law-mcp :: list_sources

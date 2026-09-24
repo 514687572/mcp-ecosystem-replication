@@ -1,0 +1,181 @@
+part,item_id,target,field,primary,second
+B,B001,ai.edgechat/edgepedia,auth_mechanism,none,unclear
+B,B009,ai.zencap/zencap,auth_mechanism,oauth,unclear
+B,B010,app.cannonstudio/cannon-studio,auth_mechanism,none,unclear
+B,B013,ch.martinelli/jooq-mcp,auth_mechanism,none,unclear
+B,B014,club.atlasyield/mcp,auth_mechanism,none,unclear
+B,B015,com.agentery/agentery,auth_mechanism,none,unclear
+B,B018,com.dexpaprika/dexpaprika,auth_mechanism,none,unclear
+B,B019,com.discoverseniorbenefits/benefits,auth_mechanism,none,unclear
+B,B021,com.files/python-mcp,auth_mechanism,api_key,unclear
+B,B022,com.getlandlens/landlens,auth_mechanism,none,unclear
+B,B023,com.immo-spot/mcp,auth_mechanism,none,unclear
+B,B001,ai.edgechat/edgepedia,requires_user_secret,no,unclear
+B,B010,app.cannonstudio/cannon-studio,requires_user_secret,no,unclear
+B,B013,ch.martinelli/jooq-mcp,requires_user_secret,no,unclear
+B,B014,club.atlasyield/mcp,requires_user_secret,no,unclear
+B,B015,com.agentery/agentery,requires_user_secret,no,unclear
+B,B018,com.dexpaprika/dexpaprika,requires_user_secret,no,unclear
+B,B019,com.discoverseniorbenefits/benefits,requires_user_secret,no,unclear
+B,B021,com.files/python-mcp,requires_user_secret,yes,unclear
+B,B022,com.getlandlens/landlens,requires_user_secret,no,unclear
+B,B023,com.immo-spot/mcp,requires_user_secret,no,unclear
+B,B001,ai.edgechat/edgepedia,secret_documented_as_secret,no,n/a
+B,B002,ai.getvda/structured-output-agent,secret_documented_as_secret,unclear,n/a
+B,B003,ai.meetlark/mcp-server,secret_documented_as_secret,unclear,n/a
+B,B004,ai.namewhisper/ens-tools,secret_documented_as_secret,unclear,n/a
+B,B005,ai.primeta/primeta,secret_documented_as_secret,unclear,n/a
+B,B006,ai.smithery/mrugankpednekar-bill_splitter_mcp,secret_documented_as_secret,unclear,n/a
+B,B007,ai.smithery/zwldarren-akshare-one-mcp,secret_documented_as_secret,unclear,n/a
+B,B008,ai.strix/strix,secret_documented_as_secret,unclear,n/a
+B,B009,ai.zencap/zencap,secret_documented_as_secret,no,n/a
+B,B010,app.cannonstudio/cannon-studio,secret_documented_as_secret,no,n/a
+B,B011,app.wishpool/ireland-payments-mcp,secret_documented_as_secret,unclear,n/a
+B,B012,cat.churchofai/aigora,secret_documented_as_secret,unclear,n/a
+B,B013,ch.martinelli/jooq-mcp,secret_documented_as_secret,no,n/a
+B,B014,club.atlasyield/mcp,secret_documented_as_secret,no,n/a
+B,B015,com.agentery/agentery,secret_documented_as_secret,no,n/a
+B,B016,com.astryke/hub,secret_documented_as_secret,unclear,n/a
+B,B017,com.bynn/bynn,secret_documented_as_secret,unclear,n/a
+B,B018,com.dexpaprika/dexpaprika,secret_documented_as_secret,no,n/a
+B,B019,com.discoverseniorbenefits/benefits,secret_documented_as_secret,no,n/a
+B,B020,com.eqiqs/eqiqs,secret_documented_as_secret,unclear,n/a
+B,B021,com.files/python-mcp,secret_documented_as_secret,yes,n/a
+B,B022,com.getlandlens/landlens,secret_documented_as_secret,no,n/a
+B,B023,com.immo-spot/mcp,secret_documented_as_secret,no,n/a
+B,B024,com.invoicedataextraction/invoice-data-extraction,secret_documented_as_secret,unclear,n/a
+B,B025,com.mcparmory/polygon,secret_documented_as_secret,unclear,n/a
+B,B001,ai.edgechat/edgepedia,scope_breadth,read_only,unclear
+B,B003,ai.meetlark/mcp-server,scope_breadth,narrow,unclear
+B,B004,ai.namewhisper/ens-tools,scope_breadth,broad,unclear
+B,B005,ai.primeta/primeta,scope_breadth,narrow,unclear
+B,B006,ai.smithery/mrugankpednekar-bill_splitter_mcp,scope_breadth,narrow,unclear
+B,B007,ai.smithery/zwldarren-akshare-one-mcp,scope_breadth,read_only,unclear
+B,B008,ai.strix/strix,scope_breadth,broad,unclear
+B,B009,ai.zencap/zencap,scope_breadth,read_only,unclear
+B,B010,app.cannonstudio/cannon-studio,scope_breadth,read_only,unclear
+B,B011,app.wishpool/ireland-payments-mcp,scope_breadth,narrow,unclear
+B,B012,cat.churchofai/aigora,scope_breadth,broad,unclear
+B,B013,ch.martinelli/jooq-mcp,scope_breadth,read_only,unclear
+B,B014,club.atlasyield/mcp,scope_breadth,read_only,unclear
+B,B015,com.agentery/agentery,scope_breadth,read_only,unclear
+B,B016,com.astryke/hub,scope_breadth,broad,unclear
+B,B017,com.bynn/bynn,scope_breadth,narrow,unclear
+B,B018,com.dexpaprika/dexpaprika,scope_breadth,read_only,unclear
+B,B019,com.discoverseniorbenefits/benefits,scope_breadth,read_only,unclear
+B,B020,com.eqiqs/eqiqs,scope_breadth,read_only,unclear
+B,B021,com.files/python-mcp,scope_breadth,broad,unclear
+B,B022,com.getlandlens/landlens,scope_breadth,read_only,unclear
+B,B023,com.immo-spot/mcp,scope_breadth,read_only,unclear
+B,B024,com.invoicedataextraction/invoice-data-extraction,scope_breadth,narrow,unclear
+B,B025,com.mcparmory/polygon,scope_breadth,read_only,unclear
+B,B002,ai.getvda/structured-output-agent,destructive_capability,unclear,no
+B,B004,ai.namewhisper/ens-tools,destructive_capability,yes,unclear
+B,B005,ai.primeta/primeta,destructive_capability,unclear,no
+B,B008,ai.strix/strix,destructive_capability,yes,unclear
+B,B013,ch.martinelli/jooq-mcp,destructive_capability,no,unclear
+B,B014,club.atlasyield/mcp,destructive_capability,no,unclear
+B,B015,com.agentery/agentery,destructive_capability,no,unclear
+B,B017,com.bynn/bynn,destructive_capability,no,unclear
+B,B018,com.dexpaprika/dexpaprika,destructive_capability,no,unclear
+B,B020,com.eqiqs/eqiqs,destructive_capability,no,unclear
+B,B021,com.files/python-mcp,destructive_capability,unclear,yes
+B,B002,ai.getvda/structured-output-agent,write_capability,unclear,no
+B,B003,ai.meetlark/mcp-server,write_capability,yes,no
+B,B004,ai.namewhisper/ens-tools,write_capability,yes,unclear
+B,B005,ai.primeta/primeta,write_capability,unclear,no
+B,B006,ai.smithery/mrugankpednekar-bill_splitter_mcp,write_capability,yes,no
+B,B008,ai.strix/strix,write_capability,yes,no
+B,B010,app.cannonstudio/cannon-studio,write_capability,no,yes
+B,B012,cat.churchofai/aigora,write_capability,yes,unclear
+B,B013,ch.martinelli/jooq-mcp,write_capability,no,unclear
+B,B014,club.atlasyield/mcp,write_capability,no,unclear
+B,B015,com.agentery/agentery,write_capability,no,unclear
+B,B016,com.astryke/hub,write_capability,yes,unclear
+B,B017,com.bynn/bynn,write_capability,no,unclear
+B,B018,com.dexpaprika/dexpaprika,write_capability,no,unclear
+B,B020,com.eqiqs/eqiqs,write_capability,no,unclear
+B,B024,com.invoicedataextraction/invoice-data-extraction,write_capability,yes,no
+B,B001,ai.edgechat/edgepedia,readme_warns_about_risk,unclear,no
+B,B002,ai.getvda/structured-output-agent,readme_warns_about_risk,unclear,no
+B,B003,ai.meetlark/mcp-server,readme_warns_about_risk,unclear,no
+B,B004,ai.namewhisper/ens-tools,readme_warns_about_risk,unclear,no
+B,B005,ai.primeta/primeta,readme_warns_about_risk,unclear,no
+B,B006,ai.smithery/mrugankpednekar-bill_splitter_mcp,readme_warns_about_risk,unclear,no
+B,B007,ai.smithery/zwldarren-akshare-one-mcp,readme_warns_about_risk,unclear,no
+B,B008,ai.strix/strix,readme_warns_about_risk,unclear,no
+B,B009,ai.zencap/zencap,readme_warns_about_risk,unclear,no
+B,B010,app.cannonstudio/cannon-studio,readme_warns_about_risk,unclear,no
+B,B011,app.wishpool/ireland-payments-mcp,readme_warns_about_risk,unclear,no
+B,B012,cat.churchofai/aigora,readme_warns_about_risk,unclear,no
+B,B013,ch.martinelli/jooq-mcp,readme_warns_about_risk,unclear,no
+B,B014,club.atlasyield/mcp,readme_warns_about_risk,unclear,no
+B,B015,com.agentery/agentery,readme_warns_about_risk,unclear,no
+B,B016,com.astryke/hub,readme_warns_about_risk,unclear,no
+B,B017,com.bynn/bynn,readme_warns_about_risk,unclear,no
+B,B018,com.dexpaprika/dexpaprika,readme_warns_about_risk,unclear,no
+B,B019,com.discoverseniorbenefits/benefits,readme_warns_about_risk,unclear,no
+B,B020,com.eqiqs/eqiqs,readme_warns_about_risk,unclear,no
+B,B021,com.files/python-mcp,readme_warns_about_risk,unclear,no
+B,B022,com.getlandlens/landlens,readme_warns_about_risk,unclear,no
+B,B023,com.immo-spot/mcp,readme_warns_about_risk,unclear,no
+B,B024,com.invoicedataextraction/invoice-data-extraction,readme_warns_about_risk,unclear,no
+B,B025,com.mcparmory/polygon,readme_warns_about_risk,unclear,no
+C,C005,ai.mentu/navigator :: navigator_query,desc_states_purpose,yes,partial
+C,C010,com.aioproductos/mcp-studio :: studio_hold,desc_states_purpose,yes,partial
+C,C015,com.parlayx/mcp :: prophetx_list_positions,desc_states_purpose,no,yes
+C,C019,dev.homespun/homespun :: grants,desc_states_purpose,no,partial
+C,C022,eu.ansvar/malawi-law-mcp :: about,desc_states_purpose,yes,partial
+C,C001,ai.fodda/mcp-server :: discover_adjacent_trends,desc_states_when_to_use,yes,no
+C,C003,ai.fodda/mcp-server :: get_earnings_divergence,desc_states_when_to_use,yes,no
+C,C004,ai.fodda/mcp-server :: sign_up_free_account,desc_states_when_to_use,yes,no
+C,C010,com.aioproductos/mcp-studio :: studio_hold,desc_states_when_to_use,yes,no
+C,C016,com.pulsemcp/proctor :: destroy_machine,desc_states_when_to_use,yes,no
+C,C020,dev.hythe/hythe :: end_session,desc_states_when_to_use,yes,no
+C,C001,ai.fodda/mcp-server :: discover_adjacent_trends,desc_states_inputs,no,n/a
+C,C002,ai.fodda/mcp-server :: expert_onboarding_research,desc_states_inputs,no,n/a
+C,C003,ai.fodda/mcp-server :: get_earnings_divergence,desc_states_inputs,no,n/a
+C,C004,ai.fodda/mcp-server :: sign_up_free_account,desc_states_inputs,yes,n/a
+C,C005,ai.mentu/navigator :: navigator_query,desc_states_inputs,yes,n/a
+C,C006,ai.oobeprotocol.sap.mcp/sap-mcp :: sap_give_feedback,desc_states_inputs,no,n/a
+C,C007,ai.oobeprotocol.sap.mcp/sap-mcp :: sap_skills_upgrade_plan,desc_states_inputs,no,n/a
+C,C008,ai.oobeprotocol.sap.mcp/sap-mcp :: sap_x402_estimate_cost,desc_states_inputs,yes,n/a
+C,C009,com.aicandidatehub/mcp :: import_resume_from_text,desc_states_inputs,yes,n/a
+C,C010,com.aioproductos/mcp-studio :: studio_hold,desc_states_inputs,yes,n/a
+C,C011,com.geekflare/mcp :: openPorts,desc_states_inputs,yes,n/a
+C,C012,com.getmcpads/google-analytics :: ga4_get_audience_export_diagnostics,desc_states_inputs,yes,n/a
+C,C013,com.getmcpads/google-search-console :: gsc_get_sitemap_health,desc_states_inputs,no,n/a
+C,C014,com.getmcpads/google-search-console :: gsc_list_sitemaps,desc_states_inputs,yes,n/a
+C,C015,com.parlayx/mcp :: prophetx_list_positions,desc_states_inputs,no,n/a
+C,C016,com.pulsemcp/proctor :: destroy_machine,desc_states_inputs,no,n/a
+C,C017,com.rcs-campaigns/campaigns :: list_contacts,desc_states_inputs,no,n/a
+C,C018,com.scrapeer/mcp-server :: scrapeer_list_flows,desc_states_inputs,no,n/a
+C,C019,dev.homespun/homespun :: grants,desc_states_inputs,no,n/a
+C,C020,dev.hythe/hythe :: end_session,desc_states_inputs,yes,n/a
+C,C021,dev.hythe/hythe :: get_entity_detail,desc_states_inputs,yes,n/a
+C,C022,eu.ansvar/malawi-law-mcp :: about,desc_states_inputs,no,n/a
+C,C023,eu.ansvar/malawi-law-mcp :: validate_eu_compliance,desc_states_inputs,yes,n/a
+C,C024,eu.ansvar/pakistani-law-mcp :: get_provision,desc_states_inputs,yes,n/a
+C,C025,eu.ansvar/portuguese-law-mcp :: list_sources,desc_states_inputs,no,n/a
+C,C007,ai.oobeprotocol.sap.mcp/sap-mcp :: sap_skills_upgrade_plan,desc_names_side_effects,no,yes
+C,C008,ai.oobeprotocol.sap.mcp/sap-mcp :: sap_x402_estimate_cost,desc_names_side_effects,no,yes
+C,C011,com.geekflare/mcp :: openPorts,desc_names_side_effects,no,yes
+C,C012,com.getmcpads/google-analytics :: ga4_get_audience_export_diagnostics,desc_names_side_effects,yes,no
+C,C013,com.getmcpads/google-search-console :: gsc_get_sitemap_health,desc_names_side_effects,yes,no
+C,C005,ai.mentu/navigator :: navigator_query,ambiguous_with(binary),yes,no
+C,C008,ai.oobeprotocol.sap.mcp/sap-mcp :: sap_x402_estimate_cost,ambiguous_with(binary),no,yes
+C,C009,com.aicandidatehub/mcp :: import_resume_from_text,ambiguous_with(binary),yes,no
+C,C010,com.aioproductos/mcp-studio :: studio_hold,ambiguous_with(binary),yes,no
+C,C011,com.geekflare/mcp :: openPorts,ambiguous_with(binary),yes,no
+C,C012,com.getmcpads/google-analytics :: ga4_get_audience_export_diagnostics,ambiguous_with(binary),yes,no
+C,C015,com.parlayx/mcp :: prophetx_list_positions,ambiguous_with(binary),yes,no
+C,C016,com.pulsemcp/proctor :: destroy_machine,ambiguous_with(binary),yes,no
+C,C017,com.rcs-campaigns/campaigns :: list_contacts,ambiguous_with(binary),yes,no
+C,C018,com.scrapeer/mcp-server :: scrapeer_list_flows,ambiguous_with(binary),yes,no
+C,C019,dev.homespun/homespun :: grants,ambiguous_with(binary),yes,no
+C,C020,dev.hythe/hythe :: end_session,ambiguous_with(binary),yes,no
+C,C021,dev.hythe/hythe :: get_entity_detail,ambiguous_with(binary),yes,no
+C,C022,eu.ansvar/malawi-law-mcp :: about,ambiguous_with(binary),yes,no
+C,C023,eu.ansvar/malawi-law-mcp :: validate_eu_compliance,ambiguous_with(binary),yes,no
+C,C024,eu.ansvar/pakistani-law-mcp :: get_provision,ambiguous_with(binary),yes,no
+C,C025,eu.ansvar/portuguese-law-mcp :: list_sources,ambiguous_with(binary),yes,no

@@ -1,0 +1,7 @@
+metric,value,share_pct
+remote endpoints,48706,100.0
+servers with a remote endpoint,21586,44.3
+plaintext http endpoints,0,0.0
+endpoints on a bare IP address,1,0.0
+endpoints pointing at localhost,0,0.0
+distinct hosts,14903,30.6

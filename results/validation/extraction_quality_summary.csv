@@ -1,0 +1,10 @@
+metric,value
+validation sample size,150
+python packages comparable via AST,40
+tools found by regex extractor,806
+tools found by AST extractor,780
+tools agreed by both,775
+regex-only (candidate false positives),31
+AST-only (extractor misses),5
+estimated recall on comparable packages (%),99.4
+candidate false positive rate (%),3.8

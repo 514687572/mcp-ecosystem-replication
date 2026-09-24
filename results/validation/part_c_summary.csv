@@ -1,0 +1,14 @@
+metric,value
+tools coded,200
+description states the purpose (yes),187
+description states the purpose (partial),0
+description does NOT state the purpose,13
+description states WHEN to use the tool,46
+... as a share of coded tools (%),23.0
+description explains the inputs,122
+... as a share (%),61.0
+description names side effects,77
+tools the coder found ambiguous with a sibling,187
+... as a share (%),93.5
+mean ambiguous siblings per tool,2.31
+tools that state purpose AND when to use,46

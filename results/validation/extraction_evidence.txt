@@ -1,0 +1,3325 @@
+
+==============================================================================
+PACKAGE npm:@agentutility/mcp-matchpoint
+  server   ai.agentutility/mcp-matchpoint
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@alex-apps/ng-token-saver
+  server   io.github.Alex88Ryabov/ng-token-saver
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@alex-gon/tgc-mcp-server
+  server   io.github.alex-gon/thegamecrafter
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@allchemylabs/aether-wcag-scanner
+  server   io.github.allchemylabs/aether-wcag-scanner
+  status   ok
+  extracted tools (6): aether-wcag-scanner, aether_check_html, aether_get_fix, aether_scan_and_fix, aether_submit_feedback, aether_verify_fix
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\mcp-server\index.js:66  '',
+        'WHEN TO USE: for any question about the accessibility, a11y or WCAG conformance of a URL, call aether_scan_and_fix FIRST. Do not fetch the page HTML yourself and reason about it; fetched HTML misses rendered state, contrast, keyboard behaviour and SPA routes.',
+        '',
+        'WORKFLOW: (1) ae
+    dist\mcp-server\index.js:68  '',
+        'WORKFLOW: (1) aether_scan_and_fix with the URL (default maxFixes:10 also generates fixes; use maxFixes:0 only when the user explicitly wants a scan with no fixes). For an HTML snippet use aether_check_html. For a single-page app pass the `spa` block. (2) Present violations grouped by severi
+    dist\mcp-server\index.js:77  const server = new McpServer({
+        name: 'aether-wcag-scanner',
+        version: '1.0.2',
+        description: 'WCAG 2.1 AA accessibility scanner with RAG-powered fix generation. ' +
+            'Scans live URLs via Playwright + axe-core across viewports, returns ' +
+    dist\mcp-server\services\axe-rule-metadata.js:5  * Maps axe-core rule IDs to the WCAG 2.1 criteria they test, along with
+     * human-readable descriptions and default impact. Used by the aether_get_fix
+     * tool (including its explanation-only mode) to enrich results even when the
+     * RAG API is unavailable.
+     */
+    dist\mcp-server\services\verify-service.js:5  * Every "did this fix work?" answer here is MEASURED by the same headless
+     * Chromium + axe-core engine that `aether_scan_url` / `aether_scan_and_fix` use
+     * — never by regex heuristics or model opinion. Two modes:
+     *
+     *   - `verifySnippet`  → runs real axe on the original HTML and the fixed HTML
+    dist\mcp-server\tools\check-html.js:2  /**
+     * aether_check_html — Static analysis of an HTML snippet.
+     *
+     * Analyzes HTML for accessibility issues without a browser using heuristic
+     * pattern matching. If issues are found and the RAG API is available,
+
+==============================================================================
+PACKAGE npm:@brilliant-hq/mcp
+  server   design.brilliant/mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@catlabtech/mycal-mcp-server
+  server   io.github.Junhui20/mycal
+  status   ok
+  extracted tools (13): get_malaysia_holidays, check_malaysia_holiday, next_malaysia_holiday, malaysia_business_days, malaysia_long_weekends, malaysia_leave_optimizer, list_malaysia_states, resolve_malaysia_state, malaysia_holiday_changes, malaysia_school_terms, malaysia_school_holidays, malaysia_exams, malaysia_is_school_day
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\index.js:3042  server.tool(
+      "get_malaysia_holidays",
+      "Get Malaysia public holidays. Covers all 16 regions (13 states + 3 federal territories) including Islamic holidays with tentative/confirmed status.",
+      {
+        year: z.number().int().describe("Year (e.g. 2026)"),
+    dist\index.js:3063  server.tool(
+      "check_malaysia_holiday",
+      "Check if a specific date is a public holiday, weekend, or working day in Malaysia. Returns holiday details, school day status. Use when user asks 'is X a holiday?', 'do I work on X?'.",
+      {
+        date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).describe("Date i
+    dist\index.js:3095  server.tool(
+      "next_malaysia_holiday",
+      "Find the next upcoming public holiday in Malaysia. Use when user asks 'when is the next holiday?'.",
+      {
+        state: z.string().optional().describe("State code or alias"),
+    dist\index.js:3112  server.tool(
+      "malaysia_business_days",
+      "Count business/working days between two dates for a Malaysian state. Excludes weekends and public holidays.",
+      {
+        start: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).describe("Start date"),
+    dist\index.js:3128  server.tool(
+      "malaysia_long_weekends",
+      "Find all long weekends (3+ consecutive non-working days) in Malaysia for a given year.",
+      {
+        year: z.number().int().describe("Year"),
+    dist\index.js:3148  server.tool(
+      "malaysia_leave_optimizer",
+      "Find the most efficient annual-leave days to take to maximise consecutive days off in Malaysia (e.g. 'take 2 days \u2192 get 5 off'). Ideal for planning trips around public holidays and weekends, per state.",
+      {
+        year: z.number().int().describe("Year
+
+==============================================================================
+PACKAGE npm:@cesteral/amazon-dsp-mcp
+  server   io.github.cesteral/amazon-dsp-mcp
+  status   ok
+  extracted tools (21): amazon-dsp-mcp, amazon_dsp_bulk_operations_workflow, profileId, entityType, amazon_dsp_campaign_setup_workflow, objective, amazon_dsp_creative_upload_workflow, creativeType, cross_platform_campaign_setup, totalBudget, cross_platform_performance_comparison, dateRange, amazon_dsp_entity_duplication_workflow, entityId, amazon_dsp_entity_update_workflow, amazon_dsp_reporting_workflow, reportLevel, amazon_dsp_targeting_discovery_workflow, goal, amazon_dsp_tool_schema_exploration, amazon_dsp_troubleshoot_entity
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\index.js:11  const transportMode = detectTransportMode();
+    const logger = createServerLogger("amazon-dsp-mcp", transportMode, otelLogMixin());
+    async function setupStdioCredentials(sessionId) {
+        const profileId = mcpConfig.amazonDspProfileId;
+        if (!profileId) {
+    dist\index.js:13  async function setupStdioCredentials(sessionId) {
+        const profileId = mcpConfig.amazonDspProfileId;
+        if (!profileId) {
+            logger.warn("No AmazonDsp credentials found in env vars. " +
+                "Set AMAZON_DSP_PROFILE_ID plus either (AMAZON_DSP_APP_ID + AMAZON_DSP_APP_SECRET + " +
+    dist\index.js:14  const profileId = mcpConfig.amazonDspProfileId;
+        if (!profileId) {
+            logger.warn("No AmazonDsp credentials found in env vars. " +
+                "Set AMAZON_DSP_PROFILE_ID plus either (AMAZON_DSP_APP_ID + AMAZON_DSP_APP_SECRET + " +
+                "AMAZON_DSP_REFRESH_TOKEN) for the refresh-token 
+    dist\index.js:27  refreshToken: mcpConfig.amazonDspRefreshToken,
+            }, profileId, mcpConfig.amazonDspApiBaseUrl);
+            logger.info("Using LwA refresh-token flow (auto-refreshing access tokens)");
+        }
+        else if (mcpConfig.amazonDspAccessToken) {
+    dist\index.js:31  else if (mcpConfig.amazonDspAccessToken) {
+            authAdapter = new AmazonDspAccessTokenAdapter(mcpConfig.amazonDspAccessToken, profileId, mcpConfig.amazonDspApiBaseUrl, mcpConfig.amazonDspClientId);
+            logger.warn("Using static access-token flow — token expires after 60 minutes. " +
+             
+    dist\index.js:51  bootstrapMcpServer({
+        serviceName: "amazon-dsp-mcp",
+        config: mcpConfig,
+        logger,
+        transportMode,
+
+==============================================================================
+PACKAGE npm:@chrischall/myatriumhealth-mcp
+  server   io.github.chrischall/myatriumhealth-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@collhub/mcp
+  server   com.collhub/collhub
+  status   ok
+  extracted tools (5): whoami, logout, list_document_types, list_data_sources, list_instances
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\index.js:2  #!/usr/bin/env node
+    import{readFileSync as Ko}from"node:fs";import{fileURLToPath as Go}from"node:url";import{dirname as Yo,resolve as Vo}from"node:path";import{McpServer as Xo}from"@modelcontextprotocol/sdk/server/mcp.js";import{StdioServerTransport as Qo}from"@modelcontextprotocol/sdk/server/stdio.
+    dist\index.js:4  ${d}`:`Open this URL in a browser to log in to CollHub:
+      ${d}`);let f=await m;return un(e.server,{grant_type:"authorization_code",code:f,redirect_uri:o,client_id:e.clientId,code_verifier:i},t)}var fe=class extends Error{type;title;status;detail;errors;constructor(t){super(t.title),this.name="AppErr
+    dist\index.js:7  ${t.profile}`).digest("hex").slice(0,16);return It(this.dir,"sessions",`${_s(t.profile)}-${n}.json`)}read(t){try{let n=JSON.parse(cs(this.path(t),"utf8"));return ys(n)?n:void 0}catch{return}}write(t,n,r){let s={origin:t.origin,client_id:t.clientId,profile:t.profile,user:r,access_token:n.access_token
+    dist\index.js:17  `):o,c=i?.expect!==void 0?i.expect:a?.length&&a.every(w=>w.expect!==void 0)?a.map(w=>w.expect??"").join(`
+    `):s,d=i?{from:le(s,i.from),to:le(s,i.to),text:i.text,...i.expect!==void 0?{expect:i.expect}:{}}:a?.length?{hunks:Nn(s,a)}:{text:o},u=n?"draft":"main",m=await G(`/documents/${t}/streams/${u}`,d,
+    dist\index.js:62  ${E}`}]}}if(!c.data.locker){let k=await R(`/documents/${t}/lock`,"");if(!k.success)return T(k)}let v=await X(m);if(!v.success)return T(v);let y=v.data,w=f(y);if(!w.ok)return{content:[{type:"text",text:`Error: ${w.message}`}],isError:!0};if(!w.changed)return O({id:t,version:c.data.version,headings:w.
+    dist\index.js:63  ${E}`}]}}if(!c.data.locker){let k=await R(`/documents/${t}/lock`,"");if(!k.success)return T(k)}let v=await X(m);if(!v.success)return T(v);let y=v.data,w=f(y);if(!w.ok)return{content:[{type:"text",text:`Error: ${w.message}`}],isError:!0};if(!w.changed)return O({id:t,version:c.data.version,headings:w.
+
+==============================================================================
+PACKAGE npm:@coolver/home-assistant-mcp
+  server   io.github.Coolver/home-assistant-mcp
+  status   ok
+  extracted tools (96): ha_read_file, ha_write_file, ha_list_files, ha_delete_file, ha_list_entities, ha_get_entity_state, ha_rename_entity, ha_list_exposed_entities, ha_expose_entities, ha_get_entity_registry, ha_get_entity_registry_entry, ha_update_entity_registry, ha_remove_entity_registry_entry, ha_find_dead_entities, ha_get_area_registry, ha_get_area_registry_entry, ha_create_area, ha_update_area, ha_delete_area, ha_get_device_registry, ha_get_device_registry_entry, ha_update_device_registry, ha_remove_device_registry_entry, ha_list_helpers, ha_create_helper
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    build\handlers.js:141  // File Operations
+        'ha_read_file': async (client, args) => {
+            const result = await client.readFile(args.path);
+            return { content: [{ type: 'text', text: result }] };
+        },
+    build\handlers.js:145  },
+        'ha_write_file': async (client, args) => {
+            const commitMessage = generateCommitMessage('write_file', args);
+            await client.writeFile(args.path, args.content, commitMessage);
+            return successResponse(`File written successfully: ${args.path}`);
+    build\handlers.js:150  },
+        'ha_list_files': async (client, args) => {
+            const result = await client.listFiles(args);
+            return jsonResponse(result);
+        },
+    build\handlers.js:154  },
+        'ha_delete_file': async (client, args) => {
+            await client.deleteFile(args.path);
+            return successResponse(`File deleted successfully: ${args.path}`);
+        },
+    build\handlers.js:159  // Entity Operations
+        'ha_list_entities': async (client, args) => {
+            const result = await client.listEntities(args);
+            return jsonResponse(result);
+        },
+    build\handlers.js:163  },
+        'ha_get_entity_state': async (client, args) => {
+            const result = await client.getEntityState(args.entity_id);
+            return jsonResponse(result);
+        },
+
+==============================================================================
+PACKAGE npm:@danielblomma/cortex-mcp
+  server   io.github.DanielBlomma/cortex
+  status   ok
+  extracted tools (23): context.analysis_state, context.analysis_why, context.analysis_why_not, context.analysis_changes, context.search, context.get_related, context.impact, context.get_rules, context.reload, planner, reviewer, builder, tester, security-reviewer, human, plan, plan-review, build-review, approval, cortex.workflow.start, cortex.workflow.advance, cortex.workflow.status, cortex.workflow.envelope
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    scaffold\mcp\dist\server.js:264  let args;
+        if (toolName === "context.analysis_state") {
+            if (!hasExactKeys(rawInput, ["task_id"]) || typeof rawInput.task_id !== "string")
+                return undefined;
+            args = ["state", rawInput.task_id];
+    scaffold\mcp\dist\server.js:269  }
+        else if (toolName === "context.analysis_why") {
+            if (!hasExactKeys(rawInput, ["task_id", "fact_id"]) ||
+                typeof rawInput.task_id !== "string" ||
+                typeof rawInput.fact_id !== "string")
+    scaffold\mcp\dist\server.js:276  }
+        else if (toolName === "context.analysis_why_not") {
+            if (!hasExactKeys(rawInput, ["task_id", "predicate"]) ||
+                typeof rawInput.task_id !== "string" ||
+                typeof rawInput.predicate !== "string")
+    scaffold\mcp\dist\server.js:319  function registerMaintainedAnalysisTools(server) {
+        server.registerTool("context.analysis_state", {
+            description: "Read the trusted maintained analysis state for a task.",
+            inputSchema: AnalysisStateInput,
+        }, async (input) => executeMaintainedAnalysisTool("context.analysis_state
+    scaffold\mcp\dist\server.js:322  inputSchema: AnalysisStateInput,
+        }, async (input) => executeMaintainedAnalysisTool("context.analysis_state", input));
+        server.registerTool("context.analysis_why", {
+            description: "Explain a fact in trusted maintained analysis state.",
+            inputSchema: AnalysisWhyInput,
+    scaffold\mcp\dist\server.js:323  }, async (input) => executeMaintainedAnalysisTool("context.analysis_state", input));
+        server.registerTool("context.analysis_why", {
+            description: "Explain a fact in trusted maintained analysis state.",
+            inputSchema: AnalysisWhyInput,
+        }, async (input) => executeMaintainedAnalysis
+
+==============================================================================
+PACKAGE npm:@depixapp/mcp
+  server   io.github.depixapp/depix-mcp
+  status   ok
+  extracted tools (50): create_checkout, get_checkout, list_checkouts, simulate_checkout_payment, list_products, get_product, update_product, activate_product, set_featured_products, list_product_checkouts, get_account, get_deposit_status, get_withdrawal_status, get_onboarding_status, update_merchant_profile, get_vault_status, list_webhook_logs, open_support_ticket, get_support_ticket, list_support_tickets, reply_support_ticket, close_support_ticket, attach_support_ticket_file, wallet_status, wallet_get_address
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\instructions.js:51  * one-off QR and the dated payment link. Nothing in the handshake said the
+     * second one existed, and `create_checkout` — whose description opened by
+     * calling itself "a charge" — was the tool the word pointed at. So the routing
+     * rested entirely on a note inside `create_product`, which a host tha
+    dist\instructions.js:63  "pay.depixapp.com/c/{id} and never shown on the merchant's public store. For a one-off amount paid once (not dated, not " +
+        "recurring), use `create_checkout` instead. `list_products` omits charges unless you pass kind=\"charge\" (or kind=\"all\").";
+    /**
+     * What to DO about a missing credential,
+    dist\schemas.js:157  /**
+     * The RAIL-CONDITIONAL rules of create_checkout, which a per-field raw shape
+     * cannot express (OpenAPI 0.20.0 states them as an if/then/else on
+     * `payment_method`).
+     *
+    dist\schemas.js:527  };
+    // get_product is OPEN-WORLD (spec §4.3): the API returns SELECT * so extra
+    // columns may appear — passthrough forwards them without breaking.
+    export const getProductOutput = {
+        product: z
+    dist\server.js:84  // ── Checkouts ──
+        server.registerTool("create_checkout", {
+            title: "Create checkout",
+            description: "Create a ONE-OFF payment (checkout) with a hosted payment page, on either settlement rail — paid once, short-lived. For a dated or recurring payment link (a \"cobrança\": rent, tui
+    dist\server.js:91  }, (args) => run(() => createCheckout(client, args)));
+        server.registerTool("get_checkout", {
+            title: "Get checkout",
+            description: "Fetch a checkout by id (owner view). `payment_method` tells you which rail it settles on; a still-payable depix checkout also carries its `depix` paym
+
+==============================================================================
+PACKAGE npm:@hebline.ai/mcp-server
+  server   io.github.Hebline/mcp-server
+  status   ok
+  extracted tools (3): categories, compare, execute
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\e2e.test.js:66  const toolNames = toolsResponse.result.tools.map((t) => t.name);
+            expect(toolNames).toContain("execute");
+            expect(toolNames).toContain("compare");
+            expect(toolNames).toContain("categories");
+        });
+    dist\e2e.test.js:67  expect(toolNames).toContain("execute");
+            expect(toolNames).toContain("compare");
+            expect(toolNames).toContain("categories");
+        });
+        it("categories tool returns geocoding and translation", async () => {
+    dist\e2e.test.js:68  expect(toolNames).toContain("compare");
+            expect(toolNames).toContain("categories");
+        });
+        it("categories tool returns geocoding and translation", async () => {
+            const lines = await sendMcpRequest([
+    dist\e2e.test.js:70  });
+        it("categories tool returns geocoding and translation", async () => {
+            const lines = await sendMcpRequest([
+                INIT,
+                INITIALIZED,
+    dist\e2e.test.js:78  method: "tools/call",
+                    params: { name: "categories", arguments: {} },
+                },
+            ]);
+            const response = lines
+    dist\e2e.test.js:88  expect(content.totalServices).toBe(20);
+            const cats = content.categories.map((c) => c.category);
+            expect(cats).toContain("geocoding");
+            expect(cats).toContain("translation");
+        });
+
+==============================================================================
+PACKAGE npm:@himorishige/hatago-mcp-hub
+  server   io.github.himorishige/hatago-mcp-hub
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@imagin.studio/api-docs-mcp
+  server   io.github.IMAGINstudio/api-docs-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@imba_wallet/agent-mcp-docs
+  server   com.imbawallet/agent-docs
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@imouiche/mitre-attack-mcp-server
+  server   io.github.imouiche/mitre-attack-mcp-server
+  status   ok
+  extracted tools (65): get_data_stats, get_technique_by_id, get_object_by_attack_id, get_object_by_stix_id, get_objects_by_name, get_objects_by_content, get_techniques_by_tactic, search_techniques, get_group_by_name, get_stix_type, search_groups, get_group_techniques, get_software, search_software, get_attack_id, get_name, get_technique_tactics, get_stats, get_groups_by_alias, get_techniques_used_by_group, get_software_used_by_group, get_campaigns_attributed_to_group, get_campaigns_by_alias, get_techniques_used_by_group_software, get_groups_using_technique
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    src\mitre_mcp_server\server.py:171  "Ensure STIX data has been downloaded first (e.g., via download_all_domains "
+                "or by starting the server once and checking get_data_stats)."
+            )
+    
+        try:
+    src\mitre_mcp_server\server.py:327  @mcp.tool()
+    async def get_data_stats() -> Dict[str, Any]:
+        """
+        Return statistics about downloaded MITRE ATT&CK STIX data.
+    src\mitre_mcp_server\server.py:338  @mcp.tool()
+    async def get_technique_by_id(
+        technique_id: str,
+        domain: str = "enterprise",
+        include_description: bool = True,
+    src\mitre_mcp_server\server.py:374  # Library already supports this lookup!
+        tech = attack_data.get_object_by_attack_id(
+            technique_id,
+            "attack-pattern"
+        )
+    src\mitre_mcp_server\server.py:403  @mcp.tool()
+    async def get_object_by_attack_id(
+        attack_id: str,
+        stix_type: str,
+        domain: str = "enterprise",
+    src\mitre_mcp_server\server.py:438  try:
+            obj = attack_data.get_object_by_attack_id(attack_id, stix_type)
+        except Exception:
+            obj = None
+
+==============================================================================
+PACKAGE npm:@infoinlet/mcp-mongodb
+  server   io.github.infoinlet-marketplace/mcp-mongodb
+  status   ok
+  extracted tools (6): mongo_find, mongo_aggregate, mongo_count, mongo_list_collections, mongo_stats, mongo_health
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\server.js:6  * @infoinlet/mcp-mongodb — read-only MongoDB access for AI agents.
+     * Tools: mongo_find · mongo_aggregate · mongo_count · mongo_list_collections ·
+     *        mongo_stats · mongo_health. No inserts/updates/deletes; $out/$merge blocked.
+     */
+    require("dotenv/config");
+    dist\server.js:7  * Tools: mongo_find · mongo_aggregate · mongo_count · mongo_list_collections ·
+     *        mongo_stats · mongo_health. No inserts/updates/deletes; $out/$merge blocked.
+     */
+    require("dotenv/config");
+    const index_js_1 = require("@modelcontextprotocol/sdk/server/index.js");
+    dist\server.js:21  const TOOLS = [
+        { name: 'mongo_find', description: 'Find documents (filter, projection, sort, limit). Read-only.', inputSchema: { type: 'object', properties: { collection: { type: 'string' }, filter: { type: 'object' }, projection: { type: 'object' }, sort: { type: 'object' }, limit: { type: 'nu
+    dist\server.js:22  { name: 'mongo_find', description: 'Find documents (filter, projection, sort, limit). Read-only.', inputSchema: { type: 'object', properties: { collection: { type: 'string' }, filter: { type: 'object' }, projection: { type: 'object' }, sort: { type: 'object' }, limit: { type: 'number', default: 50 }
+    dist\server.js:23  { name: 'mongo_aggregate', description: 'Run an aggregation pipeline. $out/$merge and server-side JS are rejected.', inputSchema: { type: 'object', properties: { collection: { type: 'string' }, pipeline: { type: 'array' } }, required: ['collection', 'pipeline'] } },
+        { name: 'mongo_count', descri
+    dist\server.js:24  { name: 'mongo_count', description: 'Count documents matching a filter.', inputSchema: { type: 'object', properties: { collection: { type: 'string' }, filter: { type: 'object' } }, required: ['collection'] } },
+        { name: 'mongo_list_collections', description: 'List collections in the database.', i
+
+==============================================================================
+PACKAGE npm:@itcons-app/mcp
+  server   io.github.itcons-app/mcp
+  status   ok
+  extracted tools (17): itcons_check_connection, itcons_list_workorder_types, itcons_list_work_report_models, itcons_list_projects, itcons_list_clients, itcons_list_statuses, itcons_list_users, itcons_list_resources, itcons_search_workorders, itcons_list_pending_workorders, itcons_search_work_reports, itcons_list_work_reports_by_date, itcons_list_today_work_reports, itcons_create_workorder, itcons_create_user, itcons_create_project, itcons_create_client
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    scripts\smoke-http.mjs:15  const readOnlyTools = new Set([
+      "itcons_check_connection",
+      "itcons_list_workorder_types",
+      "itcons_list_work_report_models",
+      "itcons_list_projects",
+    scripts\smoke-http.mjs:16  "itcons_check_connection",
+      "itcons_list_workorder_types",
+      "itcons_list_work_report_models",
+      "itcons_list_projects",
+      "itcons_list_clients",
+    scripts\smoke-http.mjs:17  "itcons_list_workorder_types",
+      "itcons_list_work_report_models",
+      "itcons_list_projects",
+      "itcons_list_clients",
+      "itcons_list_statuses",
+    scripts\smoke-http.mjs:18  "itcons_list_work_report_models",
+      "itcons_list_projects",
+      "itcons_list_clients",
+      "itcons_list_statuses",
+      "itcons_list_users",
+    scripts\smoke-http.mjs:19  "itcons_list_projects",
+      "itcons_list_clients",
+      "itcons_list_statuses",
+      "itcons_list_users",
+      "itcons_list_resources",
+    scripts\smoke-http.mjs:20  "itcons_list_clients",
+      "itcons_list_statuses",
+      "itcons_list_users",
+      "itcons_list_resources",
+      "itcons_search_workorders",
+
+==============================================================================
+PACKAGE npm:@itm-platform/mcp-server
+  server   io.github.itmplatform/mcp-server
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@lazyants/hetzner-mcp-server
+  server   io.github.lazyants/hetzner
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@marvenn/mcp-server
+  server   io.github.marvennai/marvenn-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@meltingpixels/zero-core-budget
+  server   io.github.meltingpixelsai/zero-core-budget
+  status   ok
+  extracted tools (6): list_tools, health, register_agent, check_spend, report_spend, get_spending_report
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    src\config.ts:20  pricing: {
+        check_spend: 0.001,
+        report_spend: 0.001,
+        get_spending_report: 0.005,
+      },
+    src\config.ts:21  check_spend: 0.001,
+        report_spend: 0.001,
+        get_spending_report: 0.005,
+      },
+    } as const;
+    src\config.ts:22  report_spend: 0.001,
+        get_spending_report: 0.005,
+      },
+    } as const;
+    src\discovery.ts:37  ## Tools (6 total, 3 free + 3 paid)
+    - [list_tools](https://budget.rugslayer.com/mcp): List all tools with pricing (FREE)
+    - [health](https://budget.rugslayer.com/mcp): Server status and payment config (FREE)
+    - [register_agent](https://budget.rugslayer.com/mcp): Register agent with budget limits (FREE
+    src\discovery.ts:38  - [list_tools](https://budget.rugslayer.com/mcp): List all tools with pricing (FREE)
+    - [health](https://budget.rugslayer.com/mcp): Server status and payment config (FREE)
+    - [register_agent](https://budget.rugslayer.com/mcp): Register agent with budget limits (FREE)
+    - [check_spend](https://budget.rug
+    src\discovery.ts:39  - [health](https://budget.rugslayer.com/mcp): Server status and payment config (FREE)
+    - [register_agent](https://budget.rugslayer.com/mcp): Register agent with budget limits (FREE)
+    - [check_spend](https://budget.rugslayer.com/mcp): Check if a spend is within budget ($0.001)
+    - [report_spend](https://
+
+==============================================================================
+PACKAGE npm:@mfukushim/map-traveler-mcp
+  server   io.github.mfukushim/map-traveler-mcp
+  status   ok
+  extracted tools (14): tips, get_setting, get_traveler_info, set_traveler_info, set_avatar_prompt, reset_avatar_prompt, reach_a_percentage_of_destination, get_traveler_location, get_sns_mentions, get_sns_feeds, post_sns_writer, reply_sns_writer, add_like, call_traveler
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    build\esm\McpService.js:83  {
+                        name: "tips",
+                        title: "Tips for using this MCP server",
+                        description: "Inform you of recommended actions for your device",
+                        inputSchema: {
+    build\esm\McpService.js:92  {
+                        name: "get_setting",
+                        title: "Get the current setting",
+                        description: "Get current setting",
+                        inputSchema: {
+    build\esm\McpService.js:101  {
+                        name: "get_traveler_info",
+                        title: "Get the traveler's preferences (optional).",
+                        description: "get a traveler's setting.For example, traveler's name, the language traveler speak, Personality and speaking habits, etc.",
+                        
+    build\esm\McpService.js:112  {
+                        name: "set_traveler_info",
+                        title: "Set the traveler's preferences (optional).",
+                        description: "set a traveler's setting.For example, traveler's name, the language traveler speak, Personality and speaking habits, etc.",
+                        
+    build\esm\McpService.js:129  {
+                        name: "set_avatar_prompt",
+                        title: "Avatar generation prompt for image generation AI",
+                        description: "set a traveler's avatar prompt. A prompt for AI image generation to specify the appearance of a traveler's avatar",
+                        in
+    build\esm\McpService.js:144  {
+                        name: "reset_avatar_prompt",
+                        title: "Reset avatar generation prompt for image generation AI",
+                        description: "reset to default traveler's avatar prompt.",
+                        inputSchema: {
+
+==============================================================================
+PACKAGE npm:@michalpiszczek/ai-economics-mcp
+  server   pl.piszczek/ai-economics
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@miller-joe/youtube-mcp
+  server   io.github.miller-joe/youtube-mcp
+  status   ok
+  extracted tools (16): query_channel_analytics, generate_and_set_thumbnail, list_captions, upload_caption, delete_caption, list_comments, reply_to_comment, moderate_comment, create_playlist, add_to_playlist, list_my_shorts, get_shorts_analytics, list_my_videos, get_video, delete_video, update_video_metadata
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\index.js:132  "  --comfyui-url <url>            ComfyUI HTTP URL for the thumbnail bridge tool.",
+            "                                 When unset, generate_and_set_thumbnail is disabled. (env: COMFYUI_URL)",
+            "  --stdio                        Speak MCP over stdio instead of starting an HTTP",
+            
+    dist\tools\analytics.js:27  export function registerAnalyticsTool(server, client) {
+        server.tool("query_channel_analytics", "Query YouTube Analytics for the authenticated channel. Returns tabular data — useful for views/watch-time/retention/traffic-source reports. Date-ranged and optionally grouped by dimensions.", analytic
+    dist\tools\bridge.js:23  return;
+        server.tool("generate_and_set_thumbnail", "Generate a thumbnail image with ComfyUI and set it on a YouTube video. Uses 1280x720 by default (YouTube's recommended aspect). Requires youtube.upload scope. Combines the creator-ops workflow with AI image generation in one call.", generateAndS
+    dist\tools\captions.js:31  export function registerCaptionTools(server, client) {
+        server.tool("list_captions", "List caption tracks on a video with their language, name, status, and whether they are drafts.", listCaptionsSchema, async (args) => {
+            const res = await client.listCaptions(args.video_id);
+            if (re
+    dist\tools\captions.js:54  });
+        server.tool("upload_caption", "Upload a caption track (SRT or WebVTT) to a video. Creates a new track — use a distinct `name` per language/track, or `is_draft=true` while iterating.", uploadCaptionSchema, async (args) => {
+            const contentType = args.format === "vtt" ? "text/vtt" : "app
+    dist\tools\captions.js:84  });
+        server.tool("delete_caption", "Delete a caption track by ID. Use list_captions to find the track ID first.", deleteCaptionSchema, async (args) => {
+            await client.deleteCaption(args.caption_id);
+            return {
+                content: [
+
+==============================================================================
+PACKAGE npm:@mrfentmen/bitbucket-mcp
+  server   io.github.mrfentmen/bitbucket-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@mrfentmen/huggingface-mcp
+  server   io.github.mrfentmen/huggingface-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@mrfentmen/pinata-mcp
+  server   io.github.mrfentmen/pinata-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@mrfentmen/urban-dictionary-mcp
+  server   io.github.mrfentmen/urban-dictionary-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@mrfentmen/valorant-mcp
+  server   io.github.mrfentmen/valorant-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@mrfentmen/weather-mcp
+  server   io.github.mrfentmen/weather-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@mrfentmen/wise-mcp
+  server   io.github.mrfentmen/wise-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@n747ai/clearedindex-mcp-server
+  server   com.clearedindex/mcp
+  status   ok
+  extracted tools (19): check, lookup_merchant, get_cleared_status, route, route_gateway, check_domain_status, get_trust_score, cleared_check, report_delivery, witness, regime, witness_settlement, agent_read, cleared_verdict, cleared_run_gate, cleared_arena, list_cleared_services, submit_for_review, get_badge
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\index.js:21  }
+    function agentCheckUpgrade(source = "mcp_check") {
+        const joiner = AGENT_CHECK_CHECKOUT.includes("?") ? "&" : "?";
+        const liteJ = AGENT_LITE_CHECKOUT.includes("?") ? "&" : "?";
+        return {
+    dist\index.js:48  async function fetchClearedCheck(origin) {
+        const url = new URL(`${API_BASE}/api/cleared/check`);
+        url.searchParams.set("origin", origin);
+        url.searchParams.set("probe", "false");
+        url.searchParams.set("source", "mcp");
+    dist\index.js:81  // Resolve origin → slug via Check, then Agent Read
+        const check = await fetchClearedCheck(query);
+        const slug = typeof check.data.slug === "string" ? check.data.slug : null;
+        if (slug) {
+            const viaSlug = await fetch(`${API_BASE}/api/cleared/agent-read?slug=${encodeURIComponent(slug)
+    dist\index.js:82  const check = await fetchClearedCheck(query);
+        const slug = typeof check.data.slug === "string" ? check.data.slug : null;
+        if (slug) {
+            const viaSlug = await fetch(`${API_BASE}/api/cleared/agent-read?slug=${encodeURIComponent(slug)}`);
+            const data = (await viaSlug.json().catch(()
+    dist\index.js:100  return {
+                action: "route_gateway",
+                mcp: "route_gateway",
+                gatewayUrl: `${API_BASE}/gateway?utm_source=mcp&utm_medium=cleared`,
+                fee: {
+    dist\index.js:101  action: "route_gateway",
+                mcp: "route_gateway",
+                gatewayUrl: `${API_BASE}/gateway?utm_source=mcp&utm_medium=cleared`,
+                fee: {
+                    pct: 5,
+
+==============================================================================
+PACKAGE npm:@neverinfamous/postgres-mcp
+  server   io.github.neverinfamous/postgres-mcp
+  status   ok
+  extracted tools (319): pg_backup_strategy, backupType, retentionDays, pg_setup_citext, useCase, pg_setup_docstore, pg_extension_setup, extensionName, pg_database_health_check, focus, pg_index_tuning, schema, pg_query_builder, tables, operation, pg_schema_design, requirements, pg_performance_analysis, query, context, pg_migration, change, table, pg_tool_index, pg_quick_query
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\adapters\postgresql\postgres-adapter.js:257  */
+        async isExtensionAvailable(extensionName) {
+            return queryIsExtensionAvailable((sql, params) => this.executeQuery(sql, params), extensionName);
+        }
+        // =========================================================================
+    dist\adapters\postgresql\postgres-adapter.js:258  async isExtensionAvailable(extensionName) {
+            return queryIsExtensionAvailable((sql, params) => this.executeQuery(sql, params), extensionName);
+        }
+        // =========================================================================
+        // Capabilities
+    dist\adapters\postgresql\prompts\backup.js:8  return {
+            name: "pg_backup_strategy",
+            description: "Design enterprise backup strategy with logical, physical, and continuous archiving options.",
+            arguments: [
+                {
+    dist\adapters\postgresql\prompts\backup.js:12  {
+                    name: "backupType",
+                    description: "Backup type: logical, physical, or continuous",
+                    required: false,
+                },
+    dist\adapters\postgresql\prompts\backup.js:17  {
+                    name: "retentionDays",
+                    description: "Retention period in days (default: 30)",
+                    required: false,
+                },
+    dist\adapters\postgresql\prompts\backup.js:23  handler: (args, _context) => {
+                const backupType = args["backupType"] ?? "logical";
+                const retentionDays = args["retentionDays"] ?? "30";
+                let content = `# Enterprise Backup Strategy - ${backupType.charAt(0).toUpperCase() + backupType.slice(1)} Backup
+
+==============================================================================
+PACKAGE npm:@openenterprise/oe-mcp
+  server   io.github.openenterprise-info/oe-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@piqrypt/mcp-server
+  server   io.github.PiQrypt/audit-trail
+  status   ok
+  extracted tools (4): piqrypt_stamp_event, piqrypt_verify_chain, piqrypt_export_audit, piqrypt_search_events
+  AST-only tools     : (none)
+  regex-only tools   : piqrypt_export_audit, piqrypt_search_events, piqrypt_stamp_event, piqrypt_verify_chain
+  source excerpts:
+    dist\index.js:57  {
+            name: 'piqrypt_stamp_event',
+            description: 'Create a tamper-proof cryptographic record of an agent decision. Signs the event with Ed25519, links it to the previous event in a hash chain (AISS v2.0). Call this after every significant agent action. Required for GDPR Art.22, EU AI Act 
+    dist\index.js:79  {
+            name: 'piqrypt_verify_chain',
+            description: 'Verify that an agent\'s decision history is intact and untampered. Detects modified events, missing events, hash chain breaks, and forks. Call before trusting any historical agent output.',
+            inputSchema: {
+                type: 'object
+    dist\index.js:94  {
+            name: 'piqrypt_export_audit',
+            description: 'Export the complete agent audit trail to a portable JSON archive. Set certified=true to request a PiQrypt CA signature for legal admissibility (eIDAS Art.26). The export is self-contained and verifiable without PiQrypt installed.',
+          
+    dist\index.js:119  {
+            name: 'piqrypt_search_events',
+            description: 'Search the agent\'s cryptographic event history by type, time range, or session. Returns signed events with chain metadata. Use to reconstruct what an agent did during a specific period.',
+            inputSchema: {
+                type: 'object
+    dist\index.js:173  switch (name) {
+                case 'piqrypt_stamp_event':
+                    result = callPythonBridge('stamp', {
+                        agent_id: args.agent_id,
+                        payload: args.payload,
+    dist\index.js:180  break;
+                case 'piqrypt_verify_chain':
+                    result = callPythonBridge('verify', {
+                        events: args.events,
+                    });
+
+==============================================================================
+PACKAGE npm:@powforge/mcp-l402-gate
+  server   io.github.zekebuilds-lab/mcp-l402-gate
+  status   ok
+  extracted tools (4): image_render, l402_gate_challenge, l402_gate_verify, l402_gate_score
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    bin\demo.js:27  *     --target https://image.powforge.dev/mcp \
+     *     --tool image_render \
+     *     --lnbits-url $LNBITS_URL \
+     *     --lnbits-key $LNBITS_INVOICE_KEY
+     *
+    bin\demo.js:39  const DEFAULT_TARGET = 'https://image.powforge.dev/mcp';
+    const DEFAULT_TOOL = 'image_render';
+    const DEFAULT_AGENT = 'mcp-l402-gate-demo/0.3.0';
+    const DEFAULT_ORACLE = 'https://identity.powforge.dev';
+    src\server.js:14  * Three tools:
+     *   - l402_gate_challenge   request a fresh PoW challenge
+     *   - l402_gate_verify      verify PoW solve, mint L402 invoice, or poll payment
+     *   - l402_gate_score       look up Depth-of-Identity score for a pubkey
+     *
+    src\server.js:15  *   - l402_gate_challenge   request a fresh PoW challenge
+     *   - l402_gate_verify      verify PoW solve, mint L402 invoice, or poll payment
+     *   - l402_gate_score       look up Depth-of-Identity score for a pubkey
+     *
+     * Reference MCP config:
+    src\server.js:16  *   - l402_gate_verify      verify PoW solve, mint L402 invoice, or poll payment
+     *   - l402_gate_score       look up Depth-of-Identity score for a pubkey
+     *
+     * Reference MCP config:
+     *
+    src\tools.js:10  * Three tools, all stateless:
+     *   - l402_gate_challenge: GET /api/challenge → {nonce, difficulty}
+     *   - l402_gate_verify:    POST /api/solve OR GET /api/check/:payment_hash
+     *   - l402_gate_score:     GET /oracle/doi-score/:pubkey
+     *
+
+==============================================================================
+PACKAGE npm:@readystack/wcag22-css-lint
+  server   io.github.jmshinhwa/wcag22-css-lint
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@referencime/mcp-server
+  server   io.github.ThomasViennet/referencime
+  status   metadata_error
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@scrapeer/mcp-server
+  server   com.scrapeer/mcp-server
+  status   ok
+  extracted tools (15): scrapeer_list_flows, scrapeer_get_flow, scrapeer_run_flow, scrapeer_run_flow_and_wait, scrapeer_get_run_status, scrapeer_get_run_results, scrapeer_get_run_steps, scrapeer_list_runs, scrapeer_cancel_run, scrapeer_get_account, scrapeer_get_block_catalog, scrapeer_validate_flow, scrapeer_create_flow, scrapeer_update_flow, scrapeer_patch_flow
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\errors.js:21  constructor() {
+            super("Flow not found. Use scrapeer_list_flows to see your available flows.", 404);
+        }
+    }
+    export class RateLimitedError extends ScrapeerError {
+    dist\errors.js:55  super("The flow was modified by another caller (another tab, an MCP tool, or a scheduled run). " +
+                "Re-fetch the flow with scrapeer_get_flow to see the current version, then retry the patch or update.", 409);
+            this.currentProjectEventID = currentProjectEventID;
+        }
+    }
+    dist\index.js:20  const TOOL_TO_HANDLER = {
+        scrapeer_list_flows: "listFlows",
+        scrapeer_get_flow: "getFlow",
+        scrapeer_get_account: "getAccount",
+        scrapeer_run_flow: "runFlow",
+    dist\index.js:21  scrapeer_list_flows: "listFlows",
+        scrapeer_get_flow: "getFlow",
+        scrapeer_get_account: "getAccount",
+        scrapeer_run_flow: "runFlow",
+        scrapeer_run_flow_and_wait: "runFlowAndWait",
+    dist\index.js:23  scrapeer_get_account: "getAccount",
+        scrapeer_run_flow: "runFlow",
+        scrapeer_run_flow_and_wait: "runFlowAndWait",
+        scrapeer_get_run_status: "getRunStatus",
+        scrapeer_get_run_results: "getRunResults",
+    dist\index.js:24  scrapeer_run_flow: "runFlow",
+        scrapeer_run_flow_and_wait: "runFlowAndWait",
+        scrapeer_get_run_status: "getRunStatus",
+        scrapeer_get_run_results: "getRunResults",
+        scrapeer_get_run_steps: "getRunSteps",
+
+==============================================================================
+PACKAGE npm:@selenix/mcp-server
+  server   io.github.markmircea/Selenix-MCP-Server
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@smartpolicy/mcp
+  server   io.github.smartpolicy-protocol/smartpolicy
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@striderlabs/mcp-chipotle
+  server   io.github.markswendsen-code/chipotle
+  status   ok
+  extracted tools (18): chipotle_status, chipotle_login, chipotle_logout, chipotle_search_locations, chipotle_get_location, chipotle_get_menu, chipotle_get_favorites, chipotle_start_order, chipotle_customize_item, chipotle_add_to_bag, chipotle_view_bag, chipotle_checkout, chipotle_track_order, chipotle_get_rewards, chipotle_select_location, chipotle_set_order_type, chipotle_get_order_history, chipotle_reorder
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\index.js:26  {
+                name: "chipotle_status",
+                description: "Check connection status and whether you are logged in to Chipotle. Call this first to verify authentication before ordering.",
+                inputSchema: { type: "object", properties: {} },
+            },
+    dist\index.js:31  {
+                name: "chipotle_login",
+                description: "Authenticate with your Chipotle account using email and password. Required to access rewards and saved payment methods.",
+                inputSchema: {
+                    type: "object",
+    dist\index.js:43  {
+                name: "chipotle_logout",
+                description: "Log out of Chipotle by clearing stored session cookies. Use this to reset authentication state.",
+                inputSchema: { type: "object", properties: {} },
+            },
+    dist\index.js:48  {
+                name: "chipotle_search_locations",
+                description: "Find Chipotle restaurants near a given address or zip code. Returns a list of nearby locations with address and hours.",
+                inputSchema: {
+                    type: "object",
+    dist\index.js:66  {
+                name: "chipotle_get_location",
+                description: "Get detailed information about a specific Chipotle location by its ID.",
+                inputSchema: {
+                    type: "object",
+    dist\index.js:73  type: "string",
+                            description: "The location ID from chipotle_search_locations results",
+                        },
+                    },
+                    required: ["locationId"],
+
+==============================================================================
+PACKAGE npm:@supabase/mcp-server-supabase
+  server   com.supabase/mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@thenextgennexus/redfin-mcp-server
+  server   io.github.TheNextGenNexus/redfin-mcp-server
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@turbopentest/mcp-server
+  server   io.github.integsec/turbopentest
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@undisk-mcp/stdio-proxy
+  server   app.undisk.mcp/stdio-proxy
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:@vibgrate/cli
+  server   com.vibgrate/ai-context
+  status   ok
+  extracted tools (61): compress_content, retrieve_original, compression_stats, vibgrate-runtime-deps, coding, balanced, aggressive, general, orient, search_symbols, query_graph, get_node, find_path, impact_of, cross_impact_of, tests_for, get_graph_summary, list_areas, list_hubs, get_facts, guide_node, check_drift, vuln_attribution, list_vulnerabilities, upgrade_impact
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\chunk-35GMFNNH.js:289  {
+        name: "compress_content",
+        description: "Shrink a large tool output (JSON, logs, grep/test output, diffs, code, prose) before it enters your context. Keeps errors, ids and the parts relevant to `query`; the full original stays retrievable via `retrieve_original` using the hash in the return
+    dist\chunk-35GMFNNH.js:290  name: "compress_content",
+        description: "Shrink a large tool output (JSON, logs, grep/test output, diffs, code, prose) before it enters your context. Keeps errors, ids and the parts relevant to `query`; the full original stays retrievable via `retrieve_original` using the hash in the returned mar
+    dist\chunk-35GMFNNH.js:356  {
+        name: "retrieve_original",
+        description: "Expand a compression marker (`<<vg-ccr:HASH \u2026>>` or `Retrieve original: hash=\u2026`) back to the stored original \u2014 or just the slice you need with grep / lines / head / tail / json_path, which is much cheaper than the whole thing.",
+        i
+    dist\chunk-35GMFNNH.js:401  {
+        name: "compression_stats",
+        description: "What context compression saved on this machine: requests, tokens and estimated dollars for today / 7 days / 30 days, by model and client, plus the retrievable store size.",
+        inputSchema: obj({
+          window: { type: "string", enum: ["today", "7d",
+    dist\chunk-35GMFNNH.js:2127  try {
+        return execFileSync(cmd, args, { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"], timeout: 5e3 }).trim() || null;
+      } catch {
+        return null;
+      }
+    dist\chunk-35GMFNNH.js:2625  env: (url) => ({ KIMI_CODE_BASE_URL: v1(url), KIMI_BASE_URL: v1(url) }),
+        proxyEnv: () => ({ VG_PROXY_OPENAI_API_URL: "https://api.kimi.com/coding" }),
+        supportsUnwrap: false
+      },
+      grok: {
+
+==============================================================================
+PACKAGE npm:@weiseer/api-changelog-mcp
+  server   io.github.weiseer/api-changelog
+  status   ok
+  extracted tools (4): list_tracked, get_package, get_recent_breaking, check_version
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    index.js:80  const TOOLS = [
+      { name: "list_tracked", description: "List packages we track with latest version + breaking-change counts.", inputSchema: { type: "object", properties: { ecosystem: { type: "string", description: "e.g. npm, pypi, cargo" } } } },
+      { name: "get_package", description: "Full record fo
+    index.js:81  { name: "list_tracked", description: "List packages we track with latest version + breaking-change counts.", inputSchema: { type: "object", properties: { ecosystem: { type: "string", description: "e.g. npm, pypi, cargo" } } } },
+      { name: "get_package", description: "Full record for one tracked pack
+    index.js:82  { name: "get_package", description: "Full record for one tracked package — latest version, recent breaking events, source URLs.", inputSchema: { type: "object", properties: { package_id: { type: "string" } }, required: ["package_id"] } },
+      { name: "get_recent_breaking", description: "Recent breakin
+    index.js:83  { name: "get_recent_breaking", description: "Recent breaking changes across all tracked packages. Filter by days/ecosystem.", inputSchema: { type: "object", properties: { since_days: { type: "number", default: 30 }, ecosystem: { type: "string" } } } },
+      { name: "check_version", description: "Given 
+    index.js:85  ];
+    const HANDLERS = { list_tracked: listTracked, get_package: getPackage, get_recent_breaking: getRecentBreaking, check_version: checkVersion };
+    const server = new Server({ name: "api-changelog", version: "0.1.0" }, { capabilities: { tools: {} } });
+    server.setRequestHandler(ListToolsRequestSchema, a
+
+==============================================================================
+PACKAGE npm:@xcreener/mcp
+  server   com.xcreener/xcreener-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:aegis-mcp-server
+  server   io.github.cleburn/aegis-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:africa-api-mcp
+  server   io.github.africa-api/africa-api-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:agentlookup-mcp
+  server   io.github.peureka/agentlookup-mcp
+  status   ok
+  extracted tools (6): discover_agents, heartbeat, lookup_agent, register_agent, search_agents, registry_status
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\index.js:9  import { registerStatusTool } from "./tools/status.js";
+    import { registerHeartbeatTool } from "./tools/heartbeat.js";
+    const server = new McpServer({
+        name: "agentlookup",
+        version: "1.0.0",
+    dist\tools\discover.js:4  export function registerDiscoverTool(server) {
+        server.tool("discover_agents", "Browse new, active, and popular agents in the registry. Use when exploring what's available, starting a new project and looking for useful integrations, or when no specific search terms exist.", {
+            category: z
+    
+    dist\tools\heartbeat.js:4  export function registerHeartbeatTool(server) {
+        server.tool("heartbeat", "Send a heartbeat to keep a registered agent's status active. Use when managing an agent that's already registered and needs to stay active. Requires the agent's heartbeat token.", {
+            heartbeat_token: z
+                .
+    dist\tools\heartbeat.js:5  server.tool("heartbeat", "Send a heartbeat to keep a registered agent's status active. Use when managing an agent that's already registered and needs to stay active. Requires the agent's heartbeat token.", {
+            heartbeat_token: z
+                .string()
+                .describe("The agent's heartbea
+    dist\tools\heartbeat.js:7  .string()
+                .describe("The agent's heartbeat token (hb_live_*)"),
+        }, async ({ heartbeat_token }) => {
+            try {
+                const token = heartbeat_token || process.env.AGENTLOOKUP_HEARTBEAT_TOKEN;
+    dist\tools\heartbeat.js:8  .describe("The agent's heartbeat token (hb_live_*)"),
+        }, async ({ heartbeat_token }) => {
+            try {
+                const token = heartbeat_token || process.env.AGENTLOOKUP_HEARTBEAT_TOKEN;
+                if (!token) {
+
+==============================================================================
+PACKAGE npm:aidc-mcp-server
+  server   io.github.aidc2026ai-melon/aidc-mcp-server
+  status   ok
+  extracted tools (3): design, validate, layout
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\index.js:5  *
+     * Exposes three tools - design, validate, layout - that wrap the public
+     * HTTP endpoints at https://aidc-ai.io/api/agent/*. Authentication is optional:
+     * set AIDC_API_KEY to pass a Bearer key and upgrade rate-limit tier.
+     *
+    dist\index.js:96  .describe("Optional bounded GeoJSON parcel features."),
+        customInputs: JsonObject.optional().describe("Optional project-specific design inputs."),
+        options: DesignOptions.optional().describe("Optional redundancy, cooling-mode, and PUE overrides."),
+    })
+        .passthrough();
+    dist\index.js:108  })
+        .describe("Previously computed design summary.");
+    const ValidateInput = z
+        .object({
+        sessionId: z
+    dist\index.js:115  .describe("Preferred EngineSession id for graph validation."),
+        designSummary: DesignSummaryInput.optional(),
+        rawInput: DesignInput.optional().describe("Raw design request to size and validate."),
+    })
+        .refine((input) => Boolean(input.sessionId || input.designSummary || input.rawInput), { m
+    dist\index.js:116  designSummary: DesignSummaryInput.optional(),
+        rawInput: DesignInput.optional().describe("Raw design request to size and validate."),
+    })
+        .refine((input) => Boolean(input.sessionId || input.designSummary || input.rawInput), { message: "Either sessionId, designSummary, or rawInput must be provi
+    dist\index.js:118  })
+        .refine((input) => Boolean(input.sessionId || input.designSummary || input.rawInput), { message: "Either sessionId, designSummary, or rawInput must be provided." })
+        .meta({
+        description: "Provide an EngineSession id, a previous design summary, or raw design input.",
+        anyOf: [
+
+==============================================================================
+PACKAGE npm:apple-ads-mcp
+  server   io.github.Happygallo/apple-ads
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:arxiv-mcp
+  server   io.github.mrfentmen/arxiv-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:astro-mcp
+  server   io.github.morinokami/astro-mcp
+  status   ok
+  extracted tools (8): add, get-astro-changes, get-astro-config, get-astro-server-address, list-astro-integrations, get-astro-integration, list-astro-routes, search-astro-docs
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\index.js:1  import{ViteMcp as e}from"vite-plugin-mcp";import{createCache as t}from"async-cache-dedupe";import{z as n}from"zod";var r=`0.4.2`;const i={"@astrojs/prism":`astro-prism`,"@astrojs/rss":`astro-rss`,astro:`astro`,"create-astro":`create-astro`,"@astrojs/db":`db`,"@astrojs/upgrade":`upgrade`,"@astrojs/al
+    dist\index.js:5  ... ${a} more lines hidden. See full changelog at ${n}.`}async function s(e){e.tool(`get-astro-changes`,`Get the changelog of the Astro-related packages.
+    
+    Available packages:
+    ${Object.entries(i).map(([e,t])=>`- ${e}`).join(`
+    dist\index.js:10  `)}
+    `,{packageName:n.enum(Object.keys(i)).describe(`The name of the Astro-related package to get the changelog for`)},async({packageName:e})=>{let t=await a[`get-astro-changes`](e);return{content:[{type:`text`,text:o(t,300,`https://github.com/withastro/astro/blob/refs/heads/main/packages/${i[e]}/CHA
+    dist\index.js:11  `,{packageName:n.enum(Object.keys(i)).describe(`The name of the Astro-related package to get the changelog for`)},async({packageName:e})=>{let t=await a[`get-astro-changes`](e);return{content:[{type:`text`,text:o(t,300,`https://github.com/withastro/astro/blob/refs/heads/main/packages/${i[e]}/CHANGEL
+
+==============================================================================
+PACKAGE npm:beacon-mcp
+  server   io.github.enrichgateagent-png/beacon-mcp
+  status   ok
+  extracted tools (3): find_agent, top_agents, agent_details
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\beacon-server.js:35  const server = new McpServer({ name: "beacon", version: "0.1.4" });
+        server.tool("find_agent", "ALWAYS use this FIRST when the user needs an external capability, MCP server, or open-source AI agent " +
+            "(web scraping, PDF extraction, browser automation, RAG, trading, image gen, etc.). " +
+    dist\beacon-server.js:48  ? `Found ${results.length} agent(s) for "${query}"${d.semantic_expanded ? " (semantic match)" : ""}:`
+                : `No agents found for "${query}". Try broader terms or run top_agents.`;
+            return { content: [{ type: "text", text: [header, ...results.map(fmtAgent)].join("\n\n") }] };
+        });
+     
+    dist\beacon-server.js:51  });
+        server.tool("top_agents", "Browse the Beacon leaderboard when the user asks what's popular, proven, or well-maintained. " +
+            "sort=proven (real usage, default), top (GitHub stars), usage (telemetry jobs), health (maintenance).", {
+            limit: z.number().min(1).max(50).optional(),
+     
+    dist\beacon-server.js:62  });
+        server.tool("agent_details", "Look up one agent by agent_id (GitHub slug, e.g. 'owner/repo') after find_agent or when the user names a specific repo.", { agent_id: z.string().describe("The agent's id / GitHub slug") }, async ({ agent_id }) => {
+            creditSelection(agent_id);
+            let 
+    dist\init.js:17  When the user needs an external tool, MCP server, or open-source agent (scraping, PDF, browser, RAG, trading, etc.):
+    1. Use the beacon MCP tool \`find_agent\` FIRST — do not guess GitHub repo names or URLs.
+    2. Prefer a proven/high-star result from Beacon over building from scratch.
+    3. Wire the retur
+    dist\init.js:77  }
+        else if (!readFileSync(rulesPath, "utf8").includes("find_agent")) {
+            writeFileSync(rulesPath, readFileSync(rulesPath, "utf8") + "\n" + CURSOR_RULES, "utf8");
+            written.push(rulesPath + " (appended)");
+        }
+
+==============================================================================
+PACKAGE npm:boardgamegeek-mcp
+  server   io.github.mrfentmen/boardgamegeek-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:bostrom-mcp
+  server   io.github.cyberia-to/bostrom-mcp
+  status   ok
+  extracted tools (5): economy_mint_price, economy_pools, economy_inflation, graph_stats, infra_chain_status
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\services\liquidity.js:136  throw new Error(`No liquidity pool found for ${offerDenom}/${demandDenom}. ` +
+                "Check available pools with economy_pools.");
+        }
+        const { pool, reserves } = found;
+        const poolId = parseInt(pool.id);
+    dist\tools\economy.js:19  }, safe(async ({ denom }) => ok(await svc.getSupply(denom))));
+        server.registerTool("economy_mint_price", {
+            description: "Get current Volt and Ampere mint prices (resources module)",
+            annotations: READ_ONLY_ANNOTATIONS,
+        }, safe(async () => ok(await svc.getMintPrice())));
+    dist\tools\economy.js:30  }, safe(async ({ address }) => ok(await svc.getStaking(address))));
+        server.registerTool("economy_pools", {
+            description: "Get liquidity pool stats from the pools module",
+            annotations: READ_ONLY_ANNOTATIONS,
+        }, safe(async () => ok(await svc.getPools())));
+    dist\tools\economy.js:34  }, safe(async () => ok(await svc.getPools())));
+        server.registerTool("economy_inflation", {
+            description: "Get current inflation rate and minting parameters",
+            annotations: READ_ONLY_ANNOTATIONS,
+        }, safe(async () => ok(await svc.getInflation())));
+    dist\tools\graph.js:53  }));
+        server.registerTool("graph_stats", {
+            description: "Get knowledge graph statistics: total cyberlinks and active neurons",
+            annotations: READ_ONLY_ANNOTATIONS,
+        }, safe(async () => ok(await svc.getGraphStats())));
+    dist\tools\infra.js:5  export function registerInfraTools(server) {
+        server.registerTool("infra_chain_status", {
+            description: "Get current Bostrom chain status: latest block height, time, chain ID, sync status",
+            annotations: READ_ONLY_ANNOTATIONS,
+        }, safe(async () => ok(await svc.getChainStatus())))
+
+==============================================================================
+PACKAGE npm:bugcatcher-mcp
+  server   io.github.fDiosc/bugcatcher-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:bulbapedia-mcp
+  server   io.github.mrfentmen/bulbapedia-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:canicode
+  server   io.github.let-sunny/canicode
+  status   ok
+  extracted tools (6): analyze, gotcha-survey, list-rules, version, docs, visual-compare
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\index.js:9  // package.json
+    var version = "0.12.4";
+    var SeveritySchema = z.enum([
+      "blocking",
+      "risk",
+    dist\index.js:197  lastModified: z.string(),
+      version: z.string(),
+      sourceUrl: z.string().optional(),
+      document: AnalysisNodeSchema,
+      components: z.record(
+    dist\index.js:267  fileName: z.string(),
+      analyzedAt: z.string().datetime(),
+      version: z.string()
+    });
+    var ReportSchema = z.object({
+    dist\index.js:268  analyzedAt: z.string().datetime(),
+      version: z.string()
+    });
+    var ReportSchema = z.object({
+      metadata: ReportMetadataSchema,
+    dist\index.js:277  totalNodes: z.number().int().min(0),
+        analyzedNodes: z.number().int().min(0),
+        errorCount: z.number().int().min(0),
+        warningCount: z.number().int().min(0),
+        infoCount: z.number().int().min(0)
+    dist\index.js:333  var McpAnalyzeResponseSchema = z.object({
+      version: z.string(),
+      analyzedAt: z.string(),
+      fileKey: z.string().optional(),
+      fileName: z.string(),
+
+==============================================================================
+PACKAGE npm:cartridge-cafe-mcp
+  server   io.github.GalenGoodwick/cartridge-cafe
+  status   ok
+  extracted tools (13): connect_account, read_guide, browse_shelf, read_world_source, brew_world, bridge, world_state, my_worlds, render_probe, build_credits, playthrough, use_world, import_mesh
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    bridge-client.mjs:1  // bridge-client.mjs — THE shared HTTP client for everything that talks to the
+    // cafe from outside the browser: both MCP servers, the house builder daemon,
+    // and the volunteer client. One place for auth headers, JSON handling, command
+    // normalization, the claim-lock retry, and the request timeout
+    bridge-client.mjs:11  //    accept every malformed shape cafe_send has ever been handed.
+    //  · The bridge claim-lock (two builders, one world) returns
+    //    {buildLocked:true, until} — bridgeSend can wait it out instead of failing.
+    
+    export const CAFE_BASE = process.env.CAFE_BASE || 'https://cartridge.cafe'
+    bridge-client.mjs:12  //  · The bridge claim-lock (two builders, one world) returns
+    //    {buildLocked:true, until} — bridgeSend can wait it out instead of failing.
+    
+    export const CAFE_BASE = process.env.CAFE_BASE || 'https://cartridge.cafe'
+    bridge-client.mjs:33  : a.type ? { commands: [a] }                       // whole arg is one command
+        : Array.isArray(cmds) ? { commands: cmds }         // empty array → surface bridge's own error
+        : { commands: [] }
+    }
+    bridge-client.mjs:73  /** GET the bridge: full state, or pass 'describe' for the structural x-ray. */
+        bridgeGet(action = '') {
+          return this.text('/api/engine/bridge' + (action ? `?action=${action}` : ''))
+        },
+    bridge-client.mjs:74  /** GET the bridge: full state, or pass 'describe' for the structural x-ray. */
+        bridgeGet(action = '') {
+          return this.text('/api/engine/bridge' + (action ? `?action=${action}` : ''))
+        },
+
+==============================================================================
+PACKAGE npm:compare-cli-mcp
+  server   io.github.DrBaher/compare-cli-mcp
+  status   ok
+  extracted tools (3): compare_files, compare_with_negotiation, compare_demo
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    compare-cli-mcp.mjs:5  //
+    // Three tools: compare_files, compare_with_negotiation, compare_demo.
+    // Stdio transport only in v1.
+    
+    import { Server } from "@modelcontextprotocol/sdk/server/index.js";
+    compare-cli-mcp.mjs:197  // MCP-specific augmentation: surface where the agreed text came from when
+      // running through compare_with_negotiation. See docs/mcp.md §6.
+      if (negotiation_resolution) {
+        report.base.negotiation_resolution = negotiation_resolution;
+      }
+    compare-cli-mcp.mjs:430  {
+        name: "compare_files",
+        description: "Compare two contract documents and return clause-aware drift classification. Returns the same structured report as `compare --json`. Substantive drift returns a successful response with exit_class='substantive'; it is NOT an MCP error.",
+        inputSchema
+    compare-cli-mcp.mjs:448  {
+        name: "compare_with_negotiation",
+        description: "Compare a candidate document against the agreed text in an nda-review-cli negotiation.json. Three-tier resolution (status: converged|signed_off|finalized → per-round agreed: true → per-round clause_status all 'agreed'). Returns the structured
+    compare-cli-mcp.mjs:457  properties: {
+                path: { type: "string", description: "Path to negotiation.json. Same security note as compare_files.base.path." },
+                content_json: { type: "object", description: "Inline negotiation object (already parsed)." },
+              },
+            },
+    compare-cli-mcp.mjs:474  {
+        name: "compare_demo",
+        description: "Run a zero-argument synthetic comparison against bundled fixtures. Deterministically returns exit_class='substantive' (the fixtures contain a Term-clause change). Use to confirm the server is wired up end-to-end without constructing a fixture.",
+        inpu
+
+==============================================================================
+PACKAGE npm:dead-drop-mcp
+  server   io.github.holmesclaw-hash/dead-drop-content
+  status   ok
+  extracted tools (1): generate_article
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\index.js:10  function setupTools(server) {
+        server.tool("generate_article", "Generate a complete, publish-ready article with matched images. Send a topic, get back a finished article.", {
+            topic: z.string().describe("The article topic"),
+            keywords: z.array(z.string()).optional().describe("Target
+    dist\stdio.js:10  });
+    server.tool("generate_article", "Generate a complete, publish-ready article with matched images. Send a topic, get back a finished article.", {
+        topic: z.string().describe("The article topic"),
+        keywords: z.array(z.string()).optional().describe("Target SEO keywords"),
+        word_count: z.num
+
+==============================================================================
+PACKAGE npm:ellmos-servercommander-mcp
+  server   io.github.ellmos-ai/ellmos-servercommander-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:emailmd
+  server   dev.emailmd/emailmd
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:exoplanets-mcp
+  server   io.github.mrfentmen/exoplanets-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:frugal-mcp
+  server   io.github.brainsparker/frugal
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:gleif-mcp
+  server   io.github.mrfentmen/gleif-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:hammerspoon-mcp
+  server   io.github.mobabur94/hammerspoon
+  status   ok
+  extracted tools (75): hs_audio_devices, hs_audio_default, hs_audio_volume, hs_audio_mute, hs_audio_datasources, hs_audio_watch, hs_bluetooth_status, hs_bluetooth_power, hs_bluetooth_devices, hs_bluetooth_connect, hs_bluetooth_disconnect, hs_brightness, hs_timer_start, hs_timer_cancel, hs_timer_list, hs_system_info, hs_finder_selection, hs_finder_open, hs_trash, hs_quicklook, hs_caffeinate, hs_execute, hs_open_url, hs_alert, hs_focus_status
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\audio-tools.js:7  {
+            name: "hs_audio_devices",
+            description: "List all audio devices (input + output). Shows name, UID, type, volume, mute state, and whether it's the current default.",
+            inputSchema: {
+                type: "object",
+    dist\audio-tools.js:63  {
+            name: "hs_audio_default",
+            description: "Get or set the default audio device. When setting, matches by name substring (case-insensitive).",
+            inputSchema: {
+                type: "object",
+    dist\audio-tools.js:118  {
+            name: "hs_audio_volume",
+            description: "Get or set volume for a specific device (by name substring) or the default output. Volume is 0-100.",
+            inputSchema: {
+                type: "object",
+    dist\audio-tools.js:158  {
+            name: "hs_audio_mute",
+            description: "Get or toggle mute for a specific device or the default output.",
+            inputSchema: {
+                type: "object",
+    dist\audio-tools.js:201  {
+            name: "hs_audio_datasources",
+            description: "List available data sources for a device (e.g., 'Internal Speakers' vs 'Headphones' on the same device). Can also set the active source.",
+            inputSchema: {
+                type: "object",
+    dist\audio-tools.js:257  {
+            name: "hs_audio_watch",
+            description: "Start watching audio device changes (device added/removed, default changed, volume changed). Events appear as updates to resource `watcher://audio`.",
+            inputSchema: { type: "object", properties: {} },
+            handler: (bridge) => {
+
+==============================================================================
+PACKAGE npm:hana-cli
+  server   io.github.SAP-samples/hana-cli
+  status   ok
+  extracted tools (15): Security, quick-import, safe-import, large-file, flexible-mapping, full-table, filtered-export, excel-export, full-profile, quick-profile, default-rules, all-columns, key-based, standard-compare, structure-only
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    bin\commandMetadata.js:171  // Security
+        certificates: { category: 'security', relatedCommands: ['certificatesUI', 'encryptionStatus'] },
+        certificatesUI: { category: 'security', relatedCommands: ['certificates'] },
+        encryptionStatus: { category: 'security', relatedCommands: ['certificates', 'healthCheck'] },
+    bin\import.js:353  if (relativePath.startsWith('..') || path.isAbsolute(relativePath)) {
+        throw new Error(`Security violation: Access to file outside current directory is not allowed: ${filePath}`)
+      }
+    
+      try {
+    bin\import.js:369  } catch (error) {
+        if (error.message.includes('exceeds maximum') || error.message.includes('Security violation') || error.message.includes('outside current directory')) {
+          throw error
+        }
+        throw new Error(baseLite.bundle.getText("errFileNotFound", [resolvedPath]))
+    bin\securityScan.js:150  if (issues.length === 0 && warnings.length === 0) {
+            base.output(base.colors.green('✅ ' + base.bundle.getText('noSecurityIssuesFound')))
+            base.output('')
+          }
+    mcp-server\build\command-metadata.js:48  'security': {
+            name: 'Security',
+            description: 'User, role, privilege, and security audit management',
+        },
+        'mass-operations': {
+    mcp-server\build\command-metadata.js:309  },
+        // Security & Access Control
+        'users': {
+            category: 'security',
+            tags: ['user', 'access-control', 'administration'],
+
+==============================================================================
+PACKAGE npm:ibanforge-mcp
+  server   io.github.cammac-creator/ibanforge
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:imgcli-mcp
+  server   io.github.swperb/imgcli
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:iz-tolk-mcp
+  server   io.github.izzzzzi/iz-tolk-mcp
+  status   ok
+  extracted tools (4): get_compiler_version, compile_tolk, check_tolk_syntax, generate_deploy_link
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\prompts.js:66  "",
+                                `After writing the contract, use the \`compile_tolk\` tool to verify it compiles successfully.`,
+                                `If there are compilation errors, fix them iteratively.`,
+                            ].join("\n"),
+                        },
+    dist\prompts.js:136  `Also provide an overall assessment and any suggestions for improvement.`,
+                                `Use the \`check_tolk_syntax\` tool to verify any proposed fixes compile correctly.`,
+                            ].join("\n"),
+                        },
+                    },
+    dist\prompts.js:189  "",
+                                `3. **Verify**: Use the \`check_tolk_syntax\` tool to confirm the fix compiles`,
+                                "",
+                                `4. **Explain**: Briefly explain what was wrong and why the fix works`,
+                            ].join("\n"),
+    dist\tools.js:41  export function registerTools(server) {
+        // ─── Tool 1: get_compiler_version ───────────────────────────────
+        server.tool("get_compiler_version", "Returns the version of the Tolk compiler (from @ton/tolk-js WASM). " +
+            "Use this to check which compiler version is available.", {}, async 
+    dist\tools.js:42  // ─── Tool 1: get_compiler_version ───────────────────────────────
+        server.tool("get_compiler_version", "Returns the version of the Tolk compiler (from @ton/tolk-js WASM). " +
+            "Use this to check which compiler version is available.", {}, async () => {
+            try {
+                const vers
+    dist\tools.js:57  });
+        // ─── Tool 2: compile_tolk ───────────────────────────────────────
+        server.tool("compile_tolk", "Compiles Tolk smart contract source code using @ton/tolk-js. " +
+            "Provide source files as a map of filename->content. The entrypoint file must be included. " +
+            "Standard libra
+
+==============================================================================
+PACKAGE npm:makers-page-mcp
+  server   io.github.alexcloudstar/makers-page-mcp
+  status   error
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:mcp-comfy-ui-builder
+  server   io.github.MIt9/comfy-ui-builder
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:mcp-infra-lens
+  server   io.github.oaslananka/mcp-infra-lens
+  status   error
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:mcp-searxng
+  server   io.github.ihor-sokoliuk/mcp-searxng
+  status   ok
+  extracted tools (4): searxng_web_search, searxng_search_suggestions, searxng_instance_info, web_url_read
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\index.js:175  const TOOL_DEFINITIONS = {
+        searxng_web_search: {
+            validate: isSearXNGWebSearchArgs,
+            invalidArguments: "Invalid arguments for web search",
+            execute: executeWebSearch,
+    dist\index.js:180  },
+        searxng_search_suggestions: {
+            validate: isSearXNGSearchSuggestionsArgs,
+            invalidArguments: "Invalid arguments for search suggestions",
+            execute: executeSuggestions,
+    dist\index.js:185  },
+        searxng_instance_info: {
+            validate: isSearXNGInstanceInfoArgs,
+            invalidArguments: "Invalid arguments for instance info",
+            execute: executeInstanceInfo,
+    dist\index.js:190  },
+        web_url_read: {
+            validate: isWebUrlReadArgs,
+            invalidArguments: "Invalid arguments for URL reading",
+            execute: executeUrlRead,
+    dist\proxy.js:277  * fall back to the global `AUTH_*` env vars — see `getSearxngBasicAuthHeader`.
+     * `web_url_read` deliberately does NOT use this — it fetches arbitrary URLs.
+     *
+     * The User-Agent and Authorization are merged through a `Headers` instance,
+     * so any already-set `headers` — whether a plain object, a `He
+    dist\proxy.js:315  /**
+     * Returns a singleton undici Agent for direct `web_url_read` requests.
+     *
+     * Unlike the shared default agent, this is always created so the URL reader's
+     * DNS validation hook is present even when no system CA bundle is detected.
+
+==============================================================================
+PACKAGE npm:mcp-server-clawcast
+  server   io.github.danbones33/clawcast
+  status   ok
+  extracted tools (6): discover, trial, generate_song, check_status, list_community, ClawCast
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    index.js:4  /**
+     * ClawCast MCP Server
+     *
+     * Exposes ClawCast's AI rap news song generation to any MCP-compatible client.
+     * Tools:
+    index.js:6  *
+     * Exposes ClawCast's AI rap news song generation to any MCP-compatible client.
+     * Tools:
+     *   - discover:       Read the ClawCast agent manifest
+     *   - trial:          Generate a free sample song (no payment)
+    index.js:8  * Tools:
+     *   - discover:       Read the ClawCast agent manifest
+     *   - trial:          Generate a free sample song (no payment)
+     *   - generate_song:  Generate a paid song (x402 USDC payment)
+     *   - check_status:   Poll a song generation job for progress
+    index.js:9  *   - discover:       Read the ClawCast agent manifest
+     *   - trial:          Generate a free sample song (no payment)
+     *   - generate_song:  Generate a paid song (x402 USDC payment)
+     *   - check_status:   Poll a song generation job for progress
+     *   - list_community: Browse community-generated song
+    index.js:10  *   - trial:          Generate a free sample song (no payment)
+     *   - generate_song:  Generate a paid song (x402 USDC payment)
+     *   - check_status:   Poll a song generation job for progress
+     *   - list_community: Browse community-generated songs
+     */
+    index.js:11  *   - generate_song:  Generate a paid song (x402 USDC payment)
+     *   - check_status:   Poll a song generation job for progress
+     *   - list_community: Browse community-generated songs
+     */
+
+==============================================================================
+PACKAGE npm:mcp-yandex-wordstat
+  server   io.github.askads/mcp-yandex-wordstat
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:mcpvault-mcp
+  server   io.github.coburn2716/mcpvault
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:mindwtr-mcp
+  server   io.github.dongdongbh/mindwtr
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:msds-chain-mcp
+  server   io.github.littleblakew/msds-chain
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:nasa-epic-mcp
+  server   io.github.mrfentmen/nasa-epic-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:omnarai-mcp
+  server   io.github.justjlee/omnarai-mcp
+  status   ok
+  extracted tools (7): omnarai_context, omnarai_divergence, omnarai_trace, omnarai_info, omnarai_create_decision_record, omnarai_get_decision_lineage, omnarai_prepare_claude_code_handoff
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    index.js:8  *   omnarai_query      — Run a full deliberation against the 568-work corpus
+     *   omnarai_context    — FAST (~2s) bounded retrieval packet, no deliberation
+     *   omnarai_divergence — Read curated cross-model divergence records (the Atlas)
+     *   omnarai_trace      — Baseline-vs-augmented: what did the 
+    index.js:9  *   omnarai_context    — FAST (~2s) bounded retrieval packet, no deliberation
+     *   omnarai_divergence — Read curated cross-model divergence records (the Atlas)
+     *   omnarai_trace      — Baseline-vs-augmented: what did the corpus change?
+     *   omnarai_council    — Summon a LIVE panel of frontier model
+    index.js:10  *   omnarai_divergence — Read curated cross-model divergence records (the Atlas)
+     *   omnarai_trace      — Baseline-vs-augmented: what did the corpus change?
+     *   omnarai_council    — Summon a LIVE panel of frontier models on any question
+     *   omnarai_inquiry_brief — Draft claim/decision → bounded, 
+    index.js:13  *   omnarai_inquiry_brief — Draft claim/decision → bounded, attributed inquiry brief
+     *   omnarai_info       — Return corpus stats and glyph reference
+     *
+     * Opt-in (only when OMNARAI_DECISIONS_DIR is set — the local Decision Ledger, OMN-P-043):
+     *   omnarai_create_decision_record    — New record in 
+    index.js:16  * Opt-in (only when OMNARAI_DECISIONS_DIR is set — the local Decision Ledger, OMN-P-043):
+     *   omnarai_create_decision_record    — New record in 'exploring'; grants no authority
+     *   omnarai_get_decision_lineage      — Full lineage: sources, dissent, approval, events
+     *   omnarai_prepare_claude_code
+    index.js:17  *   omnarai_create_decision_record    — New record in 'exploring'; grants no authority
+     *   omnarai_get_decision_lineage      — Full lineage: sources, dissent, approval, events
+     *   omnarai_prepare_claude_code_handoff — Implementation packet from an APPROVED record only
+     *
+     * Installation: see READM
+
+==============================================================================
+PACKAGE npm:openbrewery-mcp
+  server   io.github.mrfentmen/openbrewery-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:openpanel-mcp
+  server   io.github.mrfentmen/openpanel-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:ozav-mcp-server
+  server   io.github.ElToro1855/ozav-mcp-server
+  status   ok
+  extracted tools (2): search_ozav, get_ozav_rates
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    src\index.ts:198  <strong>Busca Semantica</strong>
+            <span>Tool search_ozav que encontra respostas relevantes em qualquer tema</span>
+          </div>
+          <div class="feature">
+            <strong>3 Prompt Templates</strong>
+    src\server.ts:61  server.tool(
+        'search_ozav',
+        'Search for information about FX, IOF, US accounts, stablecoins, international cards, freelancers, businesses and B2B payments in OZAV\'s knowledge base. Supports Portuguese and English.',
+        {
+          query: z.string().describe(
+    src\server.ts:86  server.tool(
+        'get_ozav_rates',
+        'Get live exchange rates from OZAV. Returns current rates for BRL, USD, EUR, GBP, MXN currency pairs. Updated every 5 minutes.',
+        {
+          from: z.enum(['BRL', 'USD', 'EUR', 'GBP', 'MXN']).optional().describe(
+
+==============================================================================
+PACKAGE npm:pageshot-mcp
+  server   io.github.dpozimski/pageshot-mcp
+  status   ok
+  extracted tools (4): take_screenshot, batch_screenshot, render_html, generate_pdf
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    mcp-tools.js:13  server.tool(
+        'take_screenshot',
+        'Take a screenshot of any webpage. Returns a base64-encoded image.',
+        {
+          url: z.string().describe('The URL to screenshot'),
+    mcp-tools.js:103  server.tool(
+        'batch_screenshot',
+        'Capture screenshots of multiple URLs in a single request. Returns base64-encoded images. Maximum 5 URLs.',
+        {
+          urls: z.array(z.string()).min(1).max(5).describe('Array of URLs to screenshot (max 5)'),
+    mcp-tools.js:176  server.tool(
+        'render_html',
+        'Render raw HTML/CSS to an image. Perfect for generating OG images, social cards, email previews, and dynamic content from templates. No URL needed.',
+        {
+          html: z.string().describe('Raw HTML content to render (max 2MB)'),
+    mcp-tools.js:242  server.tool(
+        'generate_pdf',
+        'Convert a webpage URL or raw HTML to a PDF document. Supports page size, orientation, margins, and background printing. Returns PDF as base64.',
+        {
+          url: z.string().optional().describe('URL to convert to PDF (provide url OR html, not both)'),
+
+==============================================================================
+PACKAGE npm:pipepost-mcp
+  server   io.github.MendleM/pipepost
+  status   ok
+  extracted tools (29): seo_score, seo_meta, seo_schema, index_now, cover_image, publish, list_posts, cross_publish, frontmatter, generate_social_posts, repurpose, analytics, setup, activate, status, save_draft, list_drafts, get_draft, delete_draft, content_audit, check_links, bluesky_post, mastodon_post, linkedin_post, x_post
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\index.js:172  url: data.url,
+        datePublished: data.date_published,
+        author: { "@type": "Person", name: data.author_name },
+        ...data.image_url && { image: data.image_url }
+      };
+    dist\index.js:514  url: z.string(),
+      date_published: z.string(),
+      author_name: z.string(),
+      image_url: z.string().optional()
+    });
+    dist\index.js:649  // src/tools/publish-tools.ts
+    import { z as z3 } from "zod";
+    
+    // src/publish/devto.ts
+    dist\index.js:652  // src/publish/devto.ts
+    var DEVTO_API = "https://dev.to/api";
+    async function publishToDevto(input, apiKey) {
+      const result = await httpRequest(`${DEVTO_API}/articles`, {
+    dist\index.js:654  var DEVTO_API = "https://dev.to/api";
+    async function publishToDevto(input, apiKey) {
+      const result = await httpRequest(`${DEVTO_API}/articles`, {
+        method: "POST",
+        headers: { "api-key": apiKey },
+    dist\index.js:662  body_markdown: input.content,
+            published: input.status === "published",
+            tags: input.tags || [],
+            ...input.canonical_url && { canonical_url: input.canonical_url },
+            ...input.featured_image_url && { main_image: input.featured_image_url },
+
+==============================================================================
+PACKAGE npm:pir-mcp
+  server   io.github.Solteris-Dev/pir-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:postall-mcp-server
+  server   io.github.postall-io/postall
+  status   ok
+  extracted tools (6): postall_list_platforms, postall_create_post, postall_publish_post, postall_create_and_publish, postall_list_posts, postall_get_analytics
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    index.js:28  {
+        name: "postall_list_platforms",
+        description:
+          "List all social media platforms connected to the user's PostAll account. Returns platform names, types, and connection status.",
+        inputSchema: { type: "object", properties: {}, required: [] },
+    index.js:34  {
+        name: "postall_create_post",
+        description:
+          "Create a new social media post on PostAll. Specify content and target platforms. Platforms: INSTAGRAM, TWITTER, LINKEDIN, FACEBOOK, TIKTOK, YOUTUBE, PINTEREST, THREADS, REDDIT, WHATSAPP, TELEGRAM, DISCORD, BLUESKY, MASTODON, TUMBLR, VK, SLAC
+    index.js:55  {
+        name: "postall_publish_post",
+        description: "Publish a draft post immediately to all selected platforms.",
+        inputSchema: {
+          type: "object",
+    index.js:66  {
+        name: "postall_create_and_publish",
+        description:
+          "Create AND immediately publish a post in one step. Shortcut that creates a draft then publishes it.",
+        inputSchema: {
+    index.js:86  {
+        name: "postall_list_posts",
+        description: "List user's posts with optional status filter.",
+        inputSchema: {
+          type: "object",
+    index.js:98  {
+        name: "postall_get_analytics",
+        description: "Get analytics/insights across all connected platforms.",
+        inputSchema: { type: "object", properties: {}, required: [] },
+      },
+
+==============================================================================
+PACKAGE npm:pretrip-mcp
+  server   agency.kesey/pretrip
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:reporelay-mcp
+  server   io.github.Lukie-81/reporelay
+  status   ok
+  extracted tools (1): reporelay
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\audit.js:87  workspacePath: repositoryRoot,
+                    clientName: "reporelay-audit",
+                }));
+            }
+            else {
+    dist\audit.js:159  const outsideMarker = `outside-${randomUUID()}`;
+        const fixtureSecret = `reporelay-audit-${randomUUID()}-${randomUUID()}`;
+        try {
+            runRoot = await realpath(await mkdtemp(join(tmpdir(), "reporelay-audit-fixture-")));
+            workspaceRoot = join(runRoot, "workspace");
+    dist\audit.js:161  try {
+            runRoot = await realpath(await mkdtemp(join(tmpdir(), "reporelay-audit-fixture-")));
+            workspaceRoot = join(runRoot, "workspace");
+            outsideRoot = join(runRoot, "outside");
+            await mkdir(join(workspaceRoot, ".ai-handoff"), { recursive: true });
+    dist\audit.js:210  throw new Error("Fixture listener did not expose a TCP address.");
+            client = new Client({ name: "reporelay-audit-fixture", version: "1.0.0" });
+            await client.connect(new StreamableHTTPClientTransport(new URL(`http://127.0.0.1:${address.port}/mcp`), {
+                requestInit: { headers:
+    dist\cli.js:10  import { doctorTunnel, runTunnel as startTunnel, setupTunnel } from "./tunnel.js";
+    import { reporelayConfigDir } from "./user-config.js";
+    import { shutdownHttpServer } from "./server-shutdown.js";
+    const SUPPORTED_NODE_MAJOR = 22;
+    const SUPPORTED_NODE_MIN_MINOR = 19;
+    dist\cli.js:89  if (positional.length > 1)
+            throw new Error("Usage: reporelay quickstart [repository-root] [--port <port>] [--secret-file <path>] [--append-agent-instructions] [--no-handoff-writes]");
+        if (positional[0])
+            parsed.repositoryRoot = positional[0];
+        return parsed;
+
+==============================================================================
+PACKAGE npm:safe-mind-mcp
+  server   io.github.lewo-media/safe-mind
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:safehold
+  server   io.github.Spacetime-Technology/safehold
+  status   ok
+  extracted tools (11): add_document, delete_document, get_access_log, list_documents, update_document, get_document, get_driving_license, get_national_id, get_passport, get_photo, get_visa
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\prompts\expiry-audit.js:17  `Steps:\n` +
+                `1. Call \`list_documents\`. The response includes \`id\`, \`type\`, \`label\`, and \`expiry_date\` for every document. This needs no consent and exposes no sensitive values.\n` +
+                `2. For each document with an \`expiry_date\`, compare it to today and group as:\n`
+    dist\prompts\expiry-audit.js:29  `     visa / travel_authorization → re-application or extension.\n` +
+                `6. Do NOT call any \`get_*\` retrieval tool. This audit runs on metadata only. Do NOT call \`add_document\`, \`update_document\`, or \`delete_document\`.`;
+            return {
+                messages: [
+                    {
+    dist\prompts\onboard-document.js:29  ? `The user wants to update document_id "${document_id}". Confirm with the user that this is the right document before changing anything.`
+                    : `The user wants to update an existing ${label}. First call \`list_documents\` and ask the user which document_id to update.`
+                : '';
+    
+    dist\prompts\onboard-document.js:32  const callTool = resolvedMode === 'add'
+                ? `\`add_document\` with document_type="${docType}", a short \`label\` (e.g. the holder's name), and a \`fields\` object containing every value you collected.`
+                : `\`update_document\` with the document_id and a \`fields\` object containi
+    dist\prompts\onboard-document.js:33  ? `\`add_document\` with document_type="${docType}", a short \`label\` (e.g. the holder's name), and a \`fields\` object containing every value you collected.`
+                : `\`update_document\` with the document_id and a \`fields\` object containing only the changed fields.`;
+            const text = `
+    dist\prompts\selective-share.js:21  `     - "nationality" → nationality (do not share passport_number unless the service explicitly asked for it).\n` +
+                `2. Call \`list_documents\` to see which documents could fulfil the request. This needs no consent.\n` +
+                `3. Show the user a proposal in this format before call
+
+==============================================================================
+PACKAGE npm:simplepractice-mcp
+  server   io.github.chrischall/simplepractice-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:tariffmonitor-mcp
+  server   io.github.daleweaver1981/tariffmonitor-mcp
+  status   ok
+  extracted tools (2): lookup_hts_code, calculate_tariff
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    src\http.js:119  serverInfo: SERVER_INFO,
+            instructions: 'US import tariff data. Call lookup_hts_code first when you only have a '
+              + 'product description, then calculate_tariff with the HTS code and an ISO-2 origin '
+              + 'country to get the full stacked rate and the Nov 10 2026 cliff project
+    src\http.js:120  instructions: 'US import tariff data. Call lookup_hts_code first when you only have a '
+              + 'product description, then calculate_tariff with the HTS code and an ISO-2 origin '
+              + 'country to get the full stacked rate and the Nov 10 2026 cliff projection.',
+          } });
+        }
+    src\tools.js:70  {
+        name: 'lookup_hts_code',
+        description: 'Search for HTS (Harmonized Tariff Schedule) codes by description or numeric prefix. Returns up to 12 matching codes. Use this before calculate_tariff when you only have a product description. Descriptions are matched as a single phrase, so one keyword
+    src\tools.js:71  name: 'lookup_hts_code',
+        description: 'Search for HTS (Harmonized Tariff Schedule) codes by description or numeric prefix. Returns up to 12 matching codes. Use this before calculate_tariff when you only have a product description. Descriptions are matched as a single phrase, so one keyword ("foo
+    src\tools.js:84  {
+        name: 'calculate_tariff',
+        description: 'Calculate the full stacked US import tariff rate for an HTS code from a specific origin country. Returns: base rate, each additional layer (Section 301, Section 232), total current rate, and the projected rate after the November 10, 2026 Section 301 
+    src\tools.js:112  if (name === 'lookup_hts_code') {
+        const query = String(args.query || '').trim();
+        if (query.length < 2) {
+          return { content: [{ type: 'text', text: 'Query must be at least 2 characters.' }] };
+
+==============================================================================
+PACKAGE npm:tempguru-mcp
+  server   co.tempguru/event-staffing
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:toolstem-sec-mcp-server
+  server   io.github.toolstem/toolstem-sec-mcp-server
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:u-he-preset-randomizer
+  server   io.github.Fannon/u-he-preset-randomizer
+  status   ok
+  extracted tools (14): list_synths, select_synth, get_current_synth, list_presets, search_presets, filter_presets, explain_preset, get_categories, get_authors, get_favorites_files, get_synth_context, generate_random_presets, randomize_presets, merge_presets
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\mcp-server.js:98  const serverInstructions = [
+        '1. Use list_synths to discover installed u-he synths.',
+        '2. Call select_synth to load a library (supported: ' +
+            Array.from(uheSynthNames).join(', ') +
+            ').',
+    dist\mcp-server.js:99  '1. Use list_synths to discover installed u-he synths.',
+        '2. Call select_synth to load a library (supported: ' +
+            Array.from(uheSynthNames).join(', ') +
+            ').',
+        '   TIP: For large libraries (3000+ presets), use pattern parameter for faster loading.',
+    dist\mcp-server.js:103  '   TIP: For large libraries (3000+ presets), use pattern parameter for faster loading.',
+        '   Example: select_synth(synth="Hive", pattern="Bass/**/*") loads only bass presets.',
+        '   Omit pattern to load all presets (slower but gives full library access).',
+        '3. Explore presets with search
+    dist\mcp-server.js:105  '   Omit pattern to load all presets (slower but gives full library access).',
+        '3. Explore presets with search_presets, filter_presets, explain_preset.',
+        '4. Generate new sounds (all generated presets are automatically added to the loaded library):',
+        '   - generate_random_presets: Fully 
+    dist\mcp-server.js:115  'COMMON WORKFLOWS:',
+        '- Load and generate: select_synth(synth="Hive") → generate_random_presets(category="Bass", amount=16)',
+        '- Fast focused workflow: select_synth(synth="Hive", pattern="Bass/**/*") → generate_random_presets(amount=16)',
+        '- Preset variations: randomize_presets(preset_na
+    dist\mcp-server.js:116  '- Load and generate: select_synth(synth="Hive") → generate_random_presets(category="Bass", amount=16)',
+        '- Fast focused workflow: select_synth(synth="Hive", pattern="Bass/**/*") → generate_random_presets(amount=16)',
+        '- Preset variations: randomize_presets(preset_names=["My Favorite"], amou
+
+==============================================================================
+PACKAGE npm:virwave-breathe
+  server   io.github.virwave/virwave-breathe
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:vue-harvest-mcp
+  server   io.github.virgilvox/vue-harvest
+  status   ok
+  extracted tools (18): analyze-project, list-components, inspect-component, extract-component, deep-analyze, suggest-refactor, generate-wrapper, adapt-and-extract, batch-triage, coupling-report, analyze-design-system, get-design-tokens, analyze-new-project, path, extraction-sprint, refactor-component, component, extract-design-system
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\index.js:27  throw new Error(
+          'No analysis loaded. Run "analyze-project" first with the path to your Vue project.'
+        );
+      }
+    }
+    dist\index.js:117  if (types.every((t) => t === "direct-store-access")) {
+        return "generate-wrapper \u2014 create composable bridge for store access";
+      }
+      if (types.includes("hardcoded-api") && types.length <= 2) {
+        return "suggest-refactor \u2014 replace hardcoded API with prop-based fetch";
+    dist\index.js:120  if (types.includes("hardcoded-api") && types.length <= 2) {
+        return "suggest-refactor \u2014 replace hardcoded API with prop-based fetch";
+      }
+      if (types.includes("router-dependency") && types.length === 1) {
+        return "suggest-refactor \u2014 replace router usage with navigation events";
+    dist\index.js:123  if (types.includes("router-dependency") && types.length === 1) {
+        return "suggest-refactor \u2014 replace router usage with navigation events";
+      }
+      if (comp.couplingIssues.some((i) => i.severity === "blocker")) {
+        return "adapt-and-extract \u2014 needs significant restructuring";
+    dist\index.js:126  if (comp.couplingIssues.some((i) => i.severity === "blocker")) {
+        return "adapt-and-extract \u2014 needs significant restructuring";
+      }
+      if (types.length >= 3) {
+        return "adapt-and-extract \u2014 multiple issues, better to rewrite holistically";
+    dist\index.js:129  if (types.length >= 3) {
+        return "adapt-and-extract \u2014 multiple issues, better to rewrite holistically";
+      }
+      return "suggest-refactor \u2014 address issues individually";
+    }
+
+==============================================================================
+PACKAGE npm:wazap-mcp
+  server   io.github.razvangirgiz/wazap
+  status   ok
+  extracted tools (20): catch_up, learn, get_status, link_account, list_chats, read_messages, remember, wait_for_messages, search, get_message, find_contact, get_group_info, get_media, send_message, edit_message, react_to_message, confirm_send, delete_message, manage_chat, manage_group
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\account-resolve.js:20  export function attachAccountId(result, accountId) {
+        // A text-only answer (learn's guide) stays text only.
+        if (result.structuredContent === undefined && !result.isError)
+            return result;
+        const structured = result.structuredContent ?? {};
+    dist\account-resolve.js:25  // A read that had to walk the bindings stamps the account that answered, or
+        // null when it answered for several (catch_up); anything else reports the one
+        // the call resolved to.
+        if (structured.account_id === null && !result.isError)
+            return result;
+    dist\account-resolve.js:61  if (live === undefined) {
+            const fix = toolName === "link_account" ? FIX_ADD_ACCOUNT : `${FIX_ADD_ACCOUNT}, or call get_status without account_id to see the ids`;
+            throw new WazapError("ACCOUNT_NOT_FOUND", `No account "${requested}".`, fix);
+        }
+        return live;
+    dist\account-resolve.js:176  /**
+     * The get_status body: `write_tools` is this session's, not the process default.
+     * The `history` line is how an agent tells a stale store from a quiet one — the
+     * same freshness block search and recall attach to their results.
+     */
+    dist\asks.js:3  * Whether a message's words ask something of the user: the judgment
+     * the service's getUnanswered and catch_up's `waiting` share, so the two lists never
+     * disagree about who is waiting. Pure: it reads words, never a protobuf.
+     */
+    /** Words that make a message read as something asked of the user, w
+    dist\bridge.js:14  * serves, since to the session holder the bridge itself is the client, and
+     * catch_up keeps a mark per client (client-name.ts).
+     */
+    export function bridgedCall(params, clientName) {
+        return clientName === undefined ? params : { ...params, _meta: { ...params._meta, [CLIENT_META_KEY]: clientName }
+
+==============================================================================
+PACKAGE npm:webcheck-mcp
+  server   io.github.yifanyifan897645/webcheck
+  status   ok
+  extracted tools (6): check_website, check_seo, check_accessibility, find_broken_links, compare_pages, batch_check
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    dist\index.js:14  // Tool 1: Full website health check
+    server.tool("check_website", "Comprehensive website health check: SEO, performance, security, and accessibility analysis for any URL", {
+        url: z.string().url().describe("The URL to analyze"),
+    }, async ({ url }) => {
+        const result = await analyzeUrl(url);
+    dist\index.js:21  // Tool 2: SEO-specific analysis
+    server.tool("check_seo", "Detailed SEO analysis: title, meta description, headings, keywords, Open Graph tags, and improvement suggestions", {
+        url: z.string().url().describe("The URL to analyze for SEO"),
+    }, async ({ url }) => {
+        const result = await checkSeo(
+    dist\index.js:28  // Tool 3: Accessibility check
+    server.tool("check_accessibility", "Basic accessibility analysis: alt texts, ARIA labels, heading hierarchy, color contrast hints, form labels", {
+        url: z.string().url().describe("The URL to check for accessibility"),
+    }, async ({ url }) => {
+        const result = await
+    dist\index.js:35  // Tool 4: Find broken links
+    server.tool("find_broken_links", "Crawl a page and check all links for broken URLs (404s, timeouts, redirects)", {
+        url: z.string().url().describe("The page URL to check links on"),
+        max_links: z
+            .number()
+    dist\index.js:47  // Tool 5: Compare two URLs
+    server.tool("compare_pages", "Compare SEO and performance metrics between two URLs side by side", {
+        url1: z.string().url().describe("First URL to compare"),
+        url2: z.string().url().describe("Second URL to compare"),
+    }, async ({ url1, url2 }) => {
+    dist\index.js:58  // Tool 6: Batch check multiple URLs
+    server.tool("batch_check", "Check multiple URLs at once and get a summary table. Great for auditing an entire site or comparing competitors.", {
+        urls: z.array(z.string().url()).min(1).max(20).describe("List of URLs to check (max 20)"),
+    }, async ({ urls }) => 
+
+==============================================================================
+PACKAGE npm:withings-mcp-unofficial
+  server   io.github.davidmosiah/withingsmcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:workable-mcp
+  server   io.github.mrfentmen/workable-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:xenmark-mcp
+  server   io.github.Xenmark/xenmark-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE npm:yungle-mcp
+  server   co.yungle/yungle
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE pypi:acumatica-mcp
+  server   io.github.nicholsonpeter/acumatica
+  status   ok
+  extracted tools (28): connection_status, gi_suite_status, list_endpoints, describe_endpoint, list_available_entities, describe_entity, refresh_schema_cache, list_companies, switch_company, query_generic_inquiry, list_generic_inquiries, get_records, get_record_by_keys, search_records, create_record, update_record, invoke_action, list_attachments, delete_attachment, get_attachment_metadata, check_inventory, track_shipment, patch_record, delete_record, get_acumatica_version
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    acumatica_mcp-0.9.0\server.py:7  Tools:
+      DISCOVERY:   list_available_entities, describe_entity, list_endpoints,
+                   describe_endpoint, refresh_schema_cache, list_companies,
+                   switch_company, get_acumatica_version
+      QUERIES:     list_generic_inquiries, query_generic_inquiry, get_records,
+    acumatica_mcp-0.9.0\server.py:8  DISCOVERY:   list_available_entities, describe_entity, list_endpoints,
+                   describe_endpoint, refresh_schema_cache, list_companies,
+                   switch_company, get_acumatica_version
+      QUERIES:     list_generic_inquiries, query_generic_inquiry, get_records,
+                   get_record_by_
+    acumatica_mcp-0.9.0\server.py:78  "DISCOVERY:\n"
+        "- 'list_available_entities' — flat list of all queryable entities (cheap). "
+        "Start here to find entity names.\n"
+        "- 'describe_entity' — compact field list for a specific entity. "
+        "Use this before querying an unfamiliar entity.\n"
+    acumatica_mcp-0.9.0\server.py:80  "Start here to find entity names.\n"
+        "- 'describe_entity' — compact field list for a specific entity. "
+        "Use this before querying an unfamiliar entity.\n"
+        "- 'list_endpoints' — full endpoint listing (heavier, includes field details).\n"
+        "- 'describe_endpoint' — detailed field info in
+    acumatica_mcp-0.9.0\server.py:82  "Use this before querying an unfamiliar entity.\n"
+        "- 'list_endpoints' — full endpoint listing (heavier, includes field details).\n"
+        "- 'describe_endpoint' — detailed field info including types and nested entities.\n"
+        "- 'refresh_schema_cache' — force a fresh metadata fetch (use if schem
+    acumatica_mcp-0.9.0\server.py:83  "- 'list_endpoints' — full endpoint listing (heavier, includes field details).\n"
+        "- 'describe_endpoint' — detailed field info including types and nested entities.\n"
+        "- 'refresh_schema_cache' — force a fresh metadata fetch (use if schema seems stale).\n"
+        "- 'list_companies' — list avail
+
+==============================================================================
+PACKAGE pypi:agent-magnet
+  server   io.github.helinakdogan/agent-magnet
+  status   ok
+  extracted tools (33): recall, remember, show_project_memory, forget_memory, mark_done, create_team, add_team_member, list_teams, get_team_memory, history, request_team_write, list_pending_requests, approve_request, reject_request, recap, show_all_memory, list_projects, set_active_context, get_active_context, create_project, checkpoint, save_now, get_status, inject_memory, add_signal
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    agent_magnet-0.1.34\magnet\cli.py:76  "",
+            f"At conversation start, call `recall` (agent-magnet) to load {user_id}'s active project",
+            "memory and adopt it silently before your first response.",
+            "",
+            "Agent Magnet keeps a running memory. Count user messages in the conversation.",
+    agent_magnet-0.1.34\magnet\cli.py:85  "Whenever the user explicitly states a decision, preference, correction, or something to",
+            "watch out for, call `remember` immediately (in the background — never announce it).",
+            "",
+            "If the user types *projects, call `list_projects` and present the menu — it lists",
+            "
+    agent_magnet-0.1.34\magnet\cli.py:91  "project calls set_active_context(project=<chosen>); picking a team project calls",
+            "set_active_context(project=<chosen>, team_id=<that team's id>) — remember, *continue,",
+            "*memory, and *forget then all operate on that team project directly, subject to the",
+            "team's write-pe
+    agent_magnet-0.1.34\magnet\cli.py:94  "team's write-permission/approval rules.",
+            "If the user types *remember, call `save_now` (pass ALL messages so far) to do a",
+            "cumulative save of everything up to this point. (Distinct from the automatic",
+            "`remember` tool call above — that one fires per-statement in the back
+    agent_magnet-0.1.34\magnet\cli.py:96  "cumulative save of everything up to this point. (Distinct from the automatic",
+            "`remember` tool call above — that one fires per-statement in the background; *remember",
+            "is the user-triggered manual cumulative save.)",
+            "If the user types *usage, call `get_status` to show mem
+    agent_magnet-0.1.34\magnet\cli.py:99  "If the user types *usage, call `get_status` to show memory status and usage.",
+            "If the user types *forget <something>, call `forget_memory`. If they reference an item",
+            "by its id (shown in brackets in show_project_memory), delete it directly; otherwise",
+            "find the best text
+
+==============================================================================
+PACKAGE pypi:agentic-csv-cleaner
+  server   io.github.wesseltl/data-cleaner-agent
+  status   ok
+  extracted tools (1): clean_csv
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    agentic_csv_cleaner-0.1.3\cleaner\api.py:3  `clean_csv_text` takes CSV *text* and returns the cleaned CSV text plus a structured report of what
+    was done. Text in, text/JSON out — no files, no globals — which is exactly the shape an agent or an
+    MCP tool wants to call.
+    """
+    agentic_csv_cleaner-0.1.3\cleaner\api.py:16  def clean_csv_text(csv_text: str, use_llm: bool = False) -> dict:
+        """Clean a CSV given as text. Returns {cleaned_csv, steps, rows_in, rows_out, columns}.
+    
+        use_llm=True routes planning through the LLM planner (needs `anthropic` + ANTHROPIC_API_KEY);
+    agentic_csv_cleaner-0.1.3\cleaner\mcp_server.py:9  Then point your MCP client at this command. The agent gets one tool, `clean_csv`, that takes CSV text
+    and returns the cleaned CSV plus the list of steps taken.
+    """
+    from __future__ import annotations
+    agentic_csv_cleaner-0.1.3\cleaner\mcp_server.py:14  from cleaner.api import clean_csv_text
+    
+    try:
+        from fastmcp import FastMCP            # standalone FastMCP (mcp SDK 2.x+)
+    agentic_csv_cleaner-0.1.3\cleaner\mcp_server.py:31  @mcp.tool()
+    def clean_csv(csv_text: str) -> dict:
+        """Clean a messy CSV given as text.
+    
+        Fixes headers (snake_case), trims whitespace, parses mixed date formats to ISO, turns money
+    agentic_csv_cleaner-0.1.3\cleaner\mcp_server.py:44  """
+        return clean_csv_text(csv_text)
+    
+    
+    def main() -> None:
+
+==============================================================================
+PACKAGE pypi:allure-testops-mcp
+  server   io.github.mshegolev/allure-testops-mcp
+  status   ok
+  extracted tools (20): allure_list_projects, allure_get_project_statistics, allure_list_launches, allure_get_test_results, allure_search_failed_tests, allure_list_test_cases, allure_list_statuses, allure_list_layers, allure_get_test_case, allure_get_test_case_custom_fields, allure_list_custom_fields, allure_list_categories, allure_list_category_matchers, allure_create_test_case, allure_update_test_case, allure_delete_test_case, allure_create_category, allure_delete_category, allure_create_category_matcher, allure_delete_category_matcher
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    allure_testops_mcp-0.9.3\src\allure_testops_mcp\errors.py:61  "Check project_id / launch_id / IDs and spelling. "
+                    "Use allure_list_projects to discover valid project IDs."
+                )
+            if code == 409:
+                body = ""
+    allure_testops_mcp-0.9.3\src\allure_testops_mcp\models.py:139  class FailedTestsOutput(TypedDict):
+        """Output for :func:`allure_search_failed_tests`.
+    
+        ``launch_id`` is ``0`` when no launches exist for the project; in that
+        short-circuit path ``reason`` carries a human-readable explanation.
+    allure_testops_mcp-0.9.3\src\allure_testops_mcp\tools.py:11  * ``allure_list_projects``, ``allure_list_launches``, ``allure_get_test_results``
+      are synchronous ``def`` — FastMCP runs them in a worker thread via
+      ``anyio.to_thread.run_sync`` so the asyncio event loop isn't blocked.
+    * ``allure_get_project_statistics``, ``allure_search_failed_tests``,
+    allure_testops_mcp-0.9.3\src\allure_testops_mcp\tools.py:14  ``anyio.to_thread.run_sync`` so the asyncio event loop isn't blocked.
+    * ``allure_get_project_statistics``, ``allure_search_failed_tests``,
+      ``allure_list_test_cases`` are ``async def`` — they take an MCP ``Context``
+      and emit ``ctx.info`` / ``ctx.report_progress`` events during multi-call
+      operat
+    allure_testops_mcp-0.9.3\src\allure_testops_mcp\tools.py:15  * ``allure_get_project_statistics``, ``allure_search_failed_tests``,
+      ``allure_list_test_cases`` are ``async def`` — they take an MCP ``Context``
+      and emit ``ctx.info`` / ``ctx.report_progress`` events during multi-call
+      operations. Synchronous HTTP calls inside async tools are wrapped with
+      ``a
+    allure_testops_mcp-0.9.3\src\allure_testops_mcp\tools.py:196  @mcp.tool(
+        name="allure_list_projects",
+        annotations={
+            "title": "List Projects",
+            "readOnlyHint": True,
+
+==============================================================================
+PACKAGE pypi:amnesic
+  server   io.github.SurajKGoyal/amnesic
+  status   ok
+  extracted tools (12): db_query, db_get_schema, db_list_tables, db_search, db_annotate, db_deprecate, db_sync_knowledge, db_list_connections, db_forget, db_detect_drift, db_discover_relationships, db_get_relationships
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    amnesic-0.2.2\amnesic\readonly.py:4  Ported verbatim from coding-agent/tools/db_query.py with driver-agnostic
+    public API.  Two exported functions:
+    
+      assert_readonly(sql)            — raises ValueError on any write statement
+    amnesic-0.2.2\amnesic\server.py:14  from amnesic.tools.connections import db_list_connections as _db_list_connections
+    from amnesic.tools.drift import db_detect_drift as _db_detect_drift
+    from amnesic.tools.knowledge import db_annotate as _db_annotate
+    from amnesic.tools.knowledge import db_deprecate as _db_deprecate
+    amnesic-0.2.2\amnesic\server.py:16  from amnesic.tools.drift import db_detect_drift as _db_detect_drift
+    from amnesic.tools.knowledge import db_annotate as _db_annotate
+    from amnesic.tools.knowledge import db_deprecate as _db_deprecate
+    from amnesic.tools.knowledge import db_forget as _db_forget
+    from amnesic.tools.knowledge import db_syn
+    amnesic-0.2.2\amnesic\server.py:17  from amnesic.tools.knowledge import db_annotate as _db_annotate
+    from amnesic.tools.knowledge import db_deprecate as _db_deprecate
+    from amnesic.tools.knowledge import db_forget as _db_forget
+    from amnesic.tools.knowledge import db_sync_knowledge as _db_sync_knowledge
+    from amnesic.tools.query import db
+    amnesic-0.2.2\amnesic\server.py:19  from amnesic.tools.knowledge import db_forget as _db_forget
+    from amnesic.tools.knowledge import db_sync_knowledge as _db_sync_knowledge
+    from amnesic.tools.query import db_query as _db_query
+    from amnesic.tools.relationships import db_discover_relationships as _db_discover_relationships
+    from amnesic.t
+    amnesic-0.2.2\amnesic\server.py:20  from amnesic.tools.knowledge import db_sync_knowledge as _db_sync_knowledge
+    from amnesic.tools.query import db_query as _db_query
+    from amnesic.tools.relationships import db_discover_relationships as _db_discover_relationships
+    from amnesic.tools.relationships import db_get_relationships as _db_get_re
+
+==============================================================================
+PACKAGE pypi:bankstatementparser-mcp
+  server   io.github.sebastienrousseau/bankstatementparser-mcp
+  status   ok
+  extracted tools (5): list_supported_formats, detect_format, parse_statement, validate_statement, summarize_statement
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    bankstatementparser_mcp-0.0.19\bankstatementparser_mcp\adapters.py:18  The server registers its tools (``list_supported_formats``, ``detect_format``,
+    ``parse_statement``, ``validate_statement``, ``summarize_statement``) with
+    FastMCP. Agent frameworks such as LangChain, CrewAI and LlamaIndex each have
+    their own tool object; this module introspects the FastMCP tool regis
+    bankstatementparser_mcp-0.0.19\bankstatementparser_mcp\adapters.py:19  The server registers its tools (``list_supported_formats``, ``detect_format``,
+    ``parse_statement``, ``validate_statement``, ``summarize_statement``) with
+    FastMCP. Agent frameworks such as LangChain, CrewAI and LlamaIndex each have
+    their own tool object; this module introspects the FastMCP tool regis
+    bankstatementparser_mcp-0.0.19\bankstatementparser_mcp\server.py:112  "filename. Must be exactly one of: "
+                f"{_FORMAT_LIST} (see list_supported_formats). When omitted, the "
+                "format is inferred from the filename extension."
+            ),
+            json_schema_extra={"enum": _FORMAT_VALUES},
+    bankstatementparser_mcp-0.0.19\bankstatementparser_mcp\server.py:208  @mcp.tool(title="List supported statement formats", annotations=_PURE_READ)
+    def list_supported_formats() -> list[str]:
+        """List every bank statement format identifier this server can parse.
+    
+        Use this first to discover the valid ``format`` strings before calling
+    bankstatementparser_mcp-0.0.19\bankstatementparser_mcp\server.py:212  Use this first to discover the valid ``format`` strings before calling
+        ``detect_format`` or ``parse_statement``. For the file extensions and a
+        human-readable description of each format, read the
+        ``bankstatementparser://formats`` resource instead.
+    bankstatementparser_mcp-0.0.19\bankstatementparser_mcp\server.py:223  @mcp.tool(title="Detect statement format", annotations=_PURE_READ)
+    def detect_format(
+        content: Annotated[
+            str,
+            Field(
+
+==============================================================================
+PACKAGE pypi:couchbase-guru
+  server   io.github.Couchbase-Ecosystem/couchbase-guru
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE pypi:cpersona
+  server   io.github.Cloto-dev/cpersona
+  status   ok
+  extracted tools (2): think, think_with_tools
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    cpersona-2.5.12\cpersona\_vendored_mcp_common\llm_provider.py:70  Lives in ``_active_streams[request_id]`` for the lifetime of a
+        ``handle_think_with_tools_streaming`` invocation. The handler publishes
+        incremental progress; the interceptor reads it to build cancel
+        partial_result payloads and to retransmit on gap notifications.
+        """
+    cpersona-2.5.12\cpersona\_vendored_mcp_common\llm_provider.py:85  # Per-process registry of in-flight streaming requests. Keyed by JSON-RPC
+    # request_id. Populated by handle_think_with_tools_streaming on entry and
+    # removed on exit (finally). Read by the MGP interceptor's cancel and gap
+    # handlers.
+    _active_streams: dict[int, StreamState] = {}
+    cpersona-2.5.12\cpersona\_vendored_mcp_common\llm_provider.py:174  display_name: str = ""
+        reasoning_think_prefill: bool = False
+        # MGP §12: opt-in streaming. When True and the caller sets `_mgp.stream: true`
+        # on the tools/call params, handle_think_with_tools emits
+        # notifications/mgp.stream.chunk as tokens arrive. Default off to preserve
+    cpersona-2.5.12\cpersona\_vendored_mcp_common\llm_provider.py:176  # MGP §12: opt-in streaming. When True and the caller sets `_mgp.stream: true`
+        # on the tools/call params, handle_think_with_tools emits
+        # notifications/mgp.stream.chunk as tokens arrive. Default off to preserve
+        # existing one-shot behavior for non-MGP clients.
+        supports_streaming: bo
+    cpersona-2.5.12\cpersona\_vendored_mcp_common\llm_provider.py:191  # Models whose name suggests they run in a thinking / reasoning mode (emit
+    # <think>...</think> blocks, reasoning_content, or need the iter-2 </think>
+    # prefill workaround). Matched with word-boundary regex below.
+    #
+    cpersona-2.5.12\cpersona\_vendored_mcp_common\llm_provider.py:192  # Models whose name suggests they run in a thinking / reasoning mode (emit
+    # <think>...</think> blocks, reasoning_content, or need the iter-2 </think>
+    # prefill workaround). Matched with word-boundary regex below.
+    #
+    # Positive hints — any match implies reasoning=True:
+
+==============================================================================
+PACKAGE pypi:crosstabs-mcp
+  server   io.github.barangaroo/crosstabs-mcp
+  status   metadata_error
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE pypi:epwforge-mcp
+  server   io.github.guzz-labs/epwforge-mcp
+  status   ok
+  extracted tools (4): find_station, analyze_weather, chart_weather, generate_weather_file
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    epwforge_mcp-0.10.0\src\epwforge_mcp\client.py:6  v0.2.0+ — API key is OPTIONAL. The 3 read tools (find_station,
+    analyze_weather, chart_weather) work without auth. Only
+    generate_weather_file requires a key. Constructor no longer raises
+    when the key is missing; call sites that need it use
+    epwforge_mcp-0.10.0\src\epwforge_mcp\client.py:7  v0.2.0+ — API key is OPTIONAL. The 3 read tools (find_station,
+    analyze_weather, chart_weather) work without auth. Only
+    generate_weather_file requires a key. Constructor no longer raises
+    when the key is missing; call sites that need it use
+    `require_api_key()` to surface a clear error message.
+    epwforge_mcp-0.10.0\src\epwforge_mcp\client.py:8  analyze_weather, chart_weather) work without auth. Only
+    generate_weather_file requires a key. Constructor no longer raises
+    when the key is missing; call sites that need it use
+    `require_api_key()` to surface a clear error message.
+    """
+    epwforge_mcp-0.10.0\src\epwforge_mcp\client.py:39  "https://epwforge.com/account (any tier — Free signup includes 5 welcome credits) "
+        "and set it in your MCP client config. Read-only tools (find_station, "
+        "analyze_weather, chart_weather) work without a key; only "
+        "generate_weather_file needs auth."
+    )
+    epwforge_mcp-0.10.0\src\epwforge_mcp\client.py:40  "and set it in your MCP client config. Read-only tools (find_station, "
+        "analyze_weather, chart_weather) work without a key; only "
+        "generate_weather_file needs auth."
+    )
+    epwforge_mcp-0.10.0\src\epwforge_mcp\client.py:41  "analyze_weather, chart_weather) work without a key; only "
+        "generate_weather_file needs auth."
+    )
+
+==============================================================================
+PACKAGE pypi:fabricator-panel-mcp
+  server   io.github.philderks/fabricator-panel-mcp
+  status   ok
+  extracted tools (25): list_servers, get_server, read_server_logs, list_installed_mods, check_resource_usage, check_java, list_loader_game_versions, list_loader_versions, get_backup_status, list_snapshots, get_install_progress, check_panel, search_modrinth, get_mod_info, check_mod_compatibility, search_modpacks, get_mod_version, check_installed_mod_updates, check_mods_compatibility, get_server_runtime_diagnostics, list_backup_configs, control_server, install_server, update_or_install_mod, remove_mods
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    fabricator_panel_mcp-0.1.0\src\fabricator_mcp\routes.py:22  # --- read ---------------------------------------------------------------
+        "list_servers": (
+            ("GET", "/api/servers"),
+        ),
+        "get_server": (
+    fabricator_panel_mcp-0.1.0\src\fabricator_mcp\routes.py:25  ),
+        "get_server": (
+            ("GET", "/api/servers/<server_id>"),
+        ),
+        "read_server_logs": (
+    fabricator_panel_mcp-0.1.0\src\fabricator_mcp\routes.py:28  ),
+        "read_server_logs": (
+            ("GET", "/api/servers/<server_id>/logs"),
+        ),
+        "list_installed_mods": (
+    fabricator_panel_mcp-0.1.0\src\fabricator_mcp\routes.py:31  ),
+        "list_installed_mods": (
+            ("GET", "/api/servers/<server_id>/mods"),
+            # only when identify=True
+            ("GET", "/api/modrinth/servers/<server_id>/resolve-installed"),
+    fabricator_panel_mcp-0.1.0\src\fabricator_mcp\routes.py:36  ),
+        "check_resource_usage": (
+            ("GET", "/api/servers/<server_id>/metrics"),
+            ("GET", "/api/metrics/system"),
+        ),
+    fabricator_panel_mcp-0.1.0\src\fabricator_mcp\routes.py:40  ),
+        "check_java": (
+            ("GET", "/api/java/status"),
+            ("GET", "/api/java/installed"),
+        ),
+
+==============================================================================
+PACKAGE pypi:gb-eli-mcp
+  server   io.github.matematicsolutions/gb-eli-mcp
+  status   ok
+  extracted tools (9): gb_search, gb_get_act, gb_get_text, gb_recent_legislation, gb_search_case_law, gb_get_case, gb_search_govuk, gb_get_govuk_content, gb_coverage
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    gb_eli_mcp-0.5.3\src\gb_eli_mcp\citations.py:271  # Post-April-2025 documents use an opaque "d-{uuid}" URI instead (per the service's own
+    # OpenAPI docs) and cannot be derived from the citation alone - gb_get_case falls back to
+    # a query search for those.
+    _NCN_RE = re.compile(
+        r"\[(?P<year>\d{4})\]\s*"
+    gb_eli_mcp-0.5.3\src\gb_eli_mcp\coverage.py:65  _FAMILIES: list[dict] = [{'name': 'Legislation', 'tool': 'gb_search / gb_get_act / gb_get_text / gb_recent_legislation'}, {'name': 'Case law (Find Case Law)', 'tool': 'gb_search_case_law / gb_get_case'}, {'name': 'Government guidance (gov.uk)', 'tool': 'gb_search_govuk / gb_get_govuk_content'}]
+    
+    _GA
+    gb_eli_mcp-0.5.3\src\gb_eli_mcp\models.py:83  class SearchQuery(_Tolerant):
+        """Arguments for the ``gb_search`` tool."""
+    
+        text: str | None = None
+        doc_type: str | None = Field(
+    gb_eli_mcp-0.5.3\src\gb_eli_mcp\models.py:98  class SearchResult(_Tolerant):
+        """Result of ``gb_search``."""
+    
+        total_estimate: int
+        items: list[LegislationInfo] = Field(default_factory=list)
+    gb_eli_mcp-0.5.3\src\gb_eli_mcp\models.py:107  class LegislationText(_Tolerant):
+        """Result of ``gb_get_text``."""
+    
+        eli_uri: str
+        human_readable_citation: str | None = None
+    gb_eli_mcp-0.5.3\src\gb_eli_mcp\models.py:119  class RecentChangeInfo(LegislationInfo):
+        """An item from ``gb_recent_legislation``."""
+    
+    
+    # --- Case law (Find Case Law - caselaw.nationalarchives.gov.uk) --------------------
+
+==============================================================================
+PACKAGE pypi:iaiops
+  server   io.github.industrial-aiops/iaiops
+  status   ok
+  extracted tools (199): selection_tool_count, register_profile, assert_all_tools_governed, alarm_flood_analysis, alarm_cascade, alarm_rationalization_worksheet, alarm_event_clusters, adopt_alias_map, diff_alias_map, health_summary, anomaly_scan, cross_protocol_asset_model, asset_inventory, device_advisory_check, bacnet_discover, bacnet_object_list, bacnet_read_property, bacnet_read_points, bacnet_cov_subscribe, bacnet_read_trend_log, bacnet_write_property, baseline_learn, baseline_check, baseline_record_change, baseline_status
+  AST-only tools     : (none)
+  regex-only tools   : assert_all_tools_governed, register_profile, selection_tool_count
+  source excerpts:
+    iaiops-0.28.0\iaiops\core\brain\alarm_flood.py:860  def alarm_cascade(events: list, window_s: float = 60.0, min_cascade: int = 2) -> dict:
+        """Collapse an alarm flood into cascades + the likely FIRST-OUT root of each (READ-ONLY, pure).
+    
+        An operator flooded with 100+ alarms in 10 min needs "which one to look at first". This groups
+    iaiops-0.28.0\iaiops\core\brain\alarm_flood.py:918  "advice_as_dicts",
+        "alarm_cascade",
+        "rationalization_worksheet",
+        "worksheet_rows_as_dicts",
+        "alarm_flood_report",
+    iaiops-0.28.0\iaiops\core\brain\downtime_copilot.py:9  cited hypotheses).
+      * :func:`iaiops.core.brain.alarm_flood.alarm_cascade` — the transparent
+        first-out root of the biggest alarm cascade ("look here first").
+      * :func:`iaiops.core.brain.pdm.pdm_forecast` — trend/ETA per signal, which
+        surfaces precursors that were degrading *before* the trip
+    iaiops-0.28.0\iaiops\core\brain\downtime_copilot.py:25  from iaiops.core.brain.alarm_flood import alarm_cascade
+    from iaiops.core.brain.pdm import pdm_forecast
+    from iaiops.core.brain.rca import DEFAULT_LEAD_WINDOW_S, downtime_rca
+    iaiops-0.28.0\iaiops\core\brain\downtime_copilot.py:80  )
+        cascade = alarm_cascade(alarms or [], window_s=cascade_window_s)
+        flagged = _forecast_precursors(precursors, imminent_within_s)
+    
+        first_look = _first_look(cascade)
+    iaiops-0.28.0\iaiops\core\brain\downtime_copilot.py:143  return None
+        biggest = cascades[0]  # alarm_cascade sorts cascades by size desc
+        root = biggest.get("root") or {}
+        return {
+            "source": root.get("source"),
+
+==============================================================================
+PACKAGE pypi:ignition-mcp
+  server   io.github.jsgorana/ignition-mcp
+  status   ok
+  extracted tools (44): alarm_status, alarm_journal, alarm_acknowledge, bridge_install, bridge_status, db_run_named_query, db_query, register, gateway_info, gateway_trial_status, gateway_trial_reset, ignition_diagnose, gateway_modules, gateway_logs_query, gateway_logger_set_level, gateway_backup, gateway_performance, config_resource_list, history_query, history_providers, perspective_list_views, perspective_get_view, perspective_upsert_view, perspective_delete_view, perspective_validate_view
+  AST-only tools     : (none)
+  regex-only tools   : register
+  source excerpts:
+    ignition_mcp-0.1.3\bridge\build_zip.py:6  The BRIDGE_SECRET placeholder stays intact; it is substituted at install time
+    (bridge_install tool) or by the operator during a manual import.
+    
+    Usage: python bridge/build_zip.py
+    """
+    ignition_mcp-0.1.3\bridge\src\mcp_bridge_lib.py:20  # Set at install time (bridge_install rewrites this constant, or edit manually).
+    BRIDGE_SECRET = '__BRIDGE_SECRET__'
+    
+    MAX_SKEW_SECONDS = 300
+    ignition_mcp-0.1.3\bridge\src\mcp_bridge_lib.py:326  def handle_db_query(payload):
+        sql = payload.get('sql')
+        if not sql:
+            return _err('sql is required')
+    ignition_mcp-0.1.3\bridge\src\mcp_bridge_lib.py:464  'db/named-query': handle_db_named_query,
+        'db/query': handle_db_query,
+        'files/list': handle_files_list,
+        'files/read': handle_files_read,
+        'files/write': handle_files_write,
+    ignition_mcp-0.1.3\src\ignition_mcp\errors.py:82  "This capability requires the gateway-side bridge. Install it with the "
+                    "bridge_install tool (writes must be enabled), or see docs/bridge.md. "
+                    "Also confirm IGNITION_BRIDGE_SECRET matches the secret configured in the bridge."
+                ),
+            )
+    ignition_mcp-0.1.3\src\ignition_mcp\server.py:1  """ignition-mcp server entrypoint: builds the app context, registers all tool
+    modules and MCP resources, and runs over stdio."""
+    
+    from __future__ import annotations
+
+==============================================================================
+PACKAGE pypi:inferenceindexer-mcp
+  server   io.github.DesMartin01/inferenceindexer-mcp
+  status   ok
+  extracted tools (8): search_models, get_model, get_model_history, list_providers, get_provider, get_composite_latest, get_composite_history, compare_providers
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    inferenceindexer_mcp-0.1.1\test_mcp_integration.py:38  # Call one read-only tool against the live API.
+                res = await session.call_tool("search_models", {"limit": 1})
+                print("search_models result (text):")
+                for c in res.content:
+                    text = getattr(c, "text", None)
+    inferenceindexer_mcp-0.1.1\test_mcp_integration.py:39  res = await session.call_tool("search_models", {"limit": 1})
+                print("search_models result (text):")
+                for c in res.content:
+                    text = getattr(c, "text", None)
+                    if text:
+    inferenceindexer_mcp-0.1.1\inferenceindexer_mcp\server.py:58  @mcp.tool()
+    def search_models(
+        query: str | None = None,
+        tier: str | None = None,
+        limit: int = 25,
+    inferenceindexer_mcp-0.1.1\inferenceindexer_mcp\server.py:84  @mcp.tool()
+    def get_model(model_id: str) -> dict[str, Any]:
+        """Get full detail + current pricing for one model by its id.
+    
+        Args:
+    inferenceindexer_mcp-0.1.1\inferenceindexer_mcp\server.py:95  @mcp.tool()
+    def get_model_history(model_id: str, days: int = 30) -> dict[str, Any]:
+        """Get HISTORICAL price data / trends for one model.
+    
+        This is InferenceIndexer's differentiator: aggregators like OpenRouter
+    inferenceindexer_mcp-0.1.1\inferenceindexer_mcp\server.py:111  @mcp.tool()
+    def list_providers() -> dict[str, Any]:
+        """List all inference providers with model counts and price stats."""
+        return _get("/v1/providers")
+
+==============================================================================
+PACKAGE pypi:kashrock-mcp
+  server   com.kashrock/kashrock-mcp
+  status   ok
+  extracted tools (46): login, get_props, get_player_props, get_moneylines, get_lines, get_best_lines, get_gaps, get_coverage, get_media, get_player_snapshot, get_gamelogs, get_boxscore, get_results, get_lines_history, get_history_tape, get_team_h2h, get_live_games, get_live_boxscore, get_live_frame, get_live_events, get_live_odds, get_live_odds_history, get_live_ws, get_match_prep, get_player_board
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    kashrock_mcp-0.6.6\src\kashrock_mcp\catalog.py:25  _TOOLS: Dict[str, tuple[int, str]] = {
+        "login": (0, "Google sign-in; stores API key locally."),
+        "whoami": (0, "Your plan, quota, and unlocked drawers."),
+        "list_capabilities": (0, "Which tools this plan can use."),
+        "suggest_build": (0, "Map a one-line app goal to tools + plan."),
+    kashrock_mcp-0.6.6\src\kashrock_mcp\catalog.py:32  "list_markets": (0, "Canonical market / moneyline names."),
+        "get_props": (0, "DFS player props only. Sandbox=CS2 (500 req/UTC day); Hobby+=all sports. Prefer filters + slim."),
+        "get_player_props": (
+            0,
+            "DFS + sportsbook named-player props. board=dfs|main|all; default view=gro
+    kashrock_mcp-0.6.6\src\kashrock_mcp\catalog.py:33  "get_props": (0, "DFS player props only. Sandbox=CS2 (500 req/UTC day); Hobby+=all sports. Prefer filters + slim."),
+        "get_player_props": (
+            0,
+            "DFS + sportsbook named-player props. board=dfs|main|all; default view=groups+slim.",
+        ),
+    kashrock_mcp-0.6.6\src\kashrock_mcp\catalog.py:37  ),
+        "get_moneylines": (1, "Team match/map moneylines (line is null — that is normal)."),
+        "get_lines": (1, "Consensus team mainlines across sportsbooks, DFS Teams (PrizePicks/Underdog/Sleeper), and prediction markets (upcoming only by default; live_only=false for started)."),
+        "get_best_lin
+    kashrock_mcp-0.6.6\src\kashrock_mcp\catalog.py:38  "get_moneylines": (1, "Team match/map moneylines (line is null — that is normal)."),
+        "get_lines": (1, "Consensus team mainlines across sportsbooks, DFS Teams (PrizePicks/Underdog/Sleeper), and prediction markets (upcoming only by default; live_only=false for started)."),
+        "get_best_lines": (1
+    kashrock_mcp-0.6.6\src\kashrock_mcp\catalog.py:39  "get_lines": (1, "Consensus team mainlines across sportsbooks, DFS Teams (PrizePicks/Underdog/Sleeper), and prediction markets (upcoming only by default; live_only=false for started)."),
+        "get_best_lines": (1, "Top cross-venue consensus edges from /lines (upcoming only by default)."),
+        "get_ga
+
+==============================================================================
+PACKAGE pypi:kio-orzeczenia-mcp
+  server   io.github.matematicsolutions/kio-orzeczenia-mcp
+  status   ok
+  extracted tools (6): kio_search, kio_get_orzeczenie, kio_recent, kio_by_pzp_article, kio_get_pdf_url, kio_coverage
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    kio_orzeczenia_mcp-0.4.3\src\kio_orzeczenia_mcp\coverage.py:65  _FAMILIES: list[dict] = [{'name': 'KIO rulings', 'tool': 'kio_search / kio_get_orzeczenie / kio_recent / kio_by_pzp_article'}]
+    
+    _GAPS: list[dict] = [{'id': 'KIO-001', 'family': 'KIO rulings', 'missing': 'There is no official UZP API - this connector scrapes the public HTML database, so a site change
+    kio_orzeczenia_mcp-0.4.3\src\kio_orzeczenia_mcp\models.py:145  class PdfUrlResponse(BaseModel):
+        """Response dla kio_get_pdf_url."""
+    
+        pdf_url: str
+        signature: str
+    kio_orzeczenia_mcp-0.4.3\src\kio_orzeczenia_mcp\parser.py:250  snippet=snippet,
+                    pzp_articles=[],      # lista wynikow ich nie zawiera - patrz kio_get_orzeczenie
+                    subject_index=[],
+                    source_url=f"{BASE_URL}{DETAILS_PATH}/{internal_id}",
+                )
+    kio_orzeczenia_mcp-0.4.3\src\kio_orzeczenia_mcp\server.py:49  ### Sygnatura znana
+    1. `kio_get_orzeczenie` - pelne orzeczenie po sygnaturze (`KIO 2924/21`) lub internal_id. Sygnatura wymaga +1 req zeby ustalic internal_id przez search (1 req extra).
+    
+    ### Szukanie
+    2. `kio_search` - przeszukiwanie po `phrase` (slowa kluczowe), `signature`, `date_from/to` (YYYY-MM
+    kio_orzeczenia_mcp-0.4.3\src\kio_orzeczenia_mcp\server.py:52  ### Szukanie
+    2. `kio_search` - przeszukiwanie po `phrase` (slowa kluczowe), `signature`, `date_from/to` (YYYY-MM-DD), `subject_index` (indeks tematyczny, filtr server-side), `pzp_article` (filtr server-side), `inflection` (odmiana), `content_search` (pelna tresc), `sort` (`rank`/`date_asc`/`date_des
+    kio_orzeczenia_mcp-0.4.3\src\kio_orzeczenia_mcp\server.py:53  2. `kio_search` - przeszukiwanie po `phrase` (slowa kluczowe), `signature`, `date_from/to` (YYYY-MM-DD), `subject_index` (indeks tematyczny, filtr server-side), `pzp_article` (filtr server-side), `inflection` (odmiana), `content_search` (pelna tresc), `sort` (`rank`/`date_asc`/`date_desc`). Maks `si
+
+==============================================================================
+PACKAGE pypi:luma-mcp
+  server   io.github.alx1p/luma-mcp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : export_event_ics, get_event, search_events, set_preferences
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE pypi:massive-context-mcp
+  server   io.github.egoughnour/massive-context-mcp
+  status   ok
+  extracted tools (17): rlm_system_check, rlm_setup_ollama, rlm_setup_ollama_direct, rlm_ollama_status, rlm_load_context, rlm_inspect_context, rlm_chunk_context, rlm_get_chunk, rlm_filter_context, rlm_sub_query, rlm_store_result, rlm_get_results, rlm_list_contexts, rlm_sub_query_batch, rlm_auto_analyze, rlm_firewall_status, rlm_exec
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    massive_context_mcp-3.0.1\src\rlm_mcp_server.py:620  result["warnings"].append(
+                                "Service may still be starting. Check with rlm_ollama_status in a few seconds."
+                            )
+                    except Exception as e:
+                        result["errors"].append(f"Failed to start service: {e}")
+    massive_context_mcp-3.0.1\src\rlm_mcp_server.py:1210  @mcp.tool()
+    async def rlm_system_check() -> dict:
+        """Check if system meets requirements for Ollama with gemma3:12b.
+    
+        Verifies: macOS, Apple Silicon (M1/M2/M3/M4), 16GB+ RAM, Homebrew installed.
+    massive_context_mcp-3.0.1\src\rlm_mcp_server.py:1222  f"System ready for Ollama! {result.get('chip', 'Apple Silicon')} with "
+                f"{result['ram_gb']}GB RAM. Use rlm_setup_ollama to install."
+            )
+        else:
+            result["summary"] = (
+    massive_context_mcp-3.0.1\src\rlm_mcp_server.py:1233  @mcp.tool()
+    async def rlm_setup_ollama(
+        install: bool = False,
+        start_service: bool = False,
+        pull_model: bool = False,
+    massive_context_mcp-3.0.1\src\rlm_mcp_server.py:1257  "system_check": sys_check,
+                "example": "rlm_setup_ollama(install=true, start_service=true, pull_model=true)",
+            }
+    
+        result = await _setup_ollama(
+    massive_context_mcp-3.0.1\src\rlm_mcp_server.py:1280  @mcp.tool()
+    async def rlm_setup_ollama_direct(
+        install: bool = False,
+        start_service: bool = False,
+        pull_model: bool = False,
+
+==============================================================================
+PACKAGE pypi:mcp-capstone
+  server   io.github.daedalus/mcp-capstone
+  status   ok
+  extracted tools (14): get_version, check_support, list_architectures, disasm, disasm_lite, disasm_quick, get_architectures, get_modes, get_options, get_syntaxes, get_operands, get_access_types, get_groups, get_errors
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    mcp_capstone-0.1.0\src\mcp_capstone\_core.py:177  @mcp.tool()
+    def get_version() -> dict[str, Any]:
+        """Get Capstone engine version information.
+    
+        Returns:
+    mcp_capstone-0.1.0\src\mcp_capstone\_core.py:184  Example:
+            >>> get_version()
+            {'major': 5, 'minor': 0, 'version': '5.0.7', 'binding': '5.0.7'}
+        """
+        major, minor, combined = capstone.cs_version()
+    mcp_capstone-0.1.0\src\mcp_capstone\_core.py:197  @mcp.tool()
+    def check_support(arch: str) -> bool:
+        """Check if a specific architecture is supported by Capstone.
+    
+        Args:
+    mcp_capstone-0.1.0\src\mcp_capstone\_core.py:207  Example:
+            >>> check_support("x86")
+            True
+            >>> check_support("invalid")
+            False
+    mcp_capstone-0.1.0\src\mcp_capstone\_core.py:209  True
+            >>> check_support("invalid")
+            False
+        """
+        if arch not in ARCH_MAP:
+    mcp_capstone-0.1.0\src\mcp_capstone\_core.py:219  @mcp.tool()
+    def list_architectures() -> list[str]:
+        """List all supported architectures.
+    
+        Returns:
+
+==============================================================================
+PACKAGE pypi:mcp-gatehouse
+  server   io.github.nickgeorgeseo/gatehouse
+  status   ok
+  extracted tools (4): lookup_order, cancel_order, add_note, decorator
+  AST-only tools     : (none)
+  regex-only tools   : decorator
+  source excerpts:
+    mcp_gatehouse-0.2.0\src\mcp_gatehouse\demo.py:6  - ``lookup_order`` (READ) runs freely.
+    - ``add_note`` (WRITE) runs freely under the default policy — but every
+      call lands in ``audit.jsonl``, with the ``api_key`` argument redacted.
+    - ``cancel_order`` (DESTRUCTIVE) requires approval. The demo approver is a
+    mcp_gatehouse-0.2.0\src\mcp_gatehouse\demo.py:7  - ``lookup_order`` (READ) runs freely.
+    - ``add_note`` (WRITE) runs freely under the default policy — but every
+      call lands in ``audit.jsonl``, with the ``api_key`` argument redacted.
+    - ``cancel_order`` (DESTRUCTIVE) requires approval. The demo approver is a
+      terminal prompt: the model asks, *you* 
+    mcp_gatehouse-0.2.0\src\mcp_gatehouse\demo.py:9  call lands in ``audit.jsonl``, with the ``api_key`` argument redacted.
+    - ``cancel_order`` (DESTRUCTIVE) requires approval. The demo approver is a
+      terminal prompt: the model asks, *you* decide, the verdict gets logged.
+    """
+    mcp_gatehouse-0.2.0\src\mcp_gatehouse\demo.py:61  @gatehouse.tool(tier=AccessTier.READ)
+    def lookup_order(order_id: str) -> str:
+        """Look up an order's status."""
+        order = ORDERS.get(order_id)
+        if order is None:
+    mcp_gatehouse-0.2.0\src\mcp_gatehouse\demo.py:70  @gatehouse.tool(tier=AccessTier.WRITE)
+    def add_note(order_id: str, note: str, api_key: str = "") -> str:
+        """Attach a note to an order. (The api_key never reaches the log.)"""
+        if order_id not in ORDERS:
+            return f"no order {order_id}"
+    mcp_gatehouse-0.2.0\src\mcp_gatehouse\demo.py:79  @gatehouse.tool(tier=AccessTier.DESTRUCTIVE)
+    def cancel_order(order_id: str) -> str:
+        """Cancel an order. Requires approval — the gate fails closed."""
+        if order_id not in ORDERS:
+            return f"no order {order_id}"
+
+==============================================================================
+PACKAGE pypi:mcp-gitlab
+  server   io.github.vish288/mcp-gitlab
+  status   ok
+  extracted tools (83): gitlab_get_project, gitlab_create_project, gitlab_delete_project, gitlab_update_project_merge_settings, gitlab_get_project_approvals, gitlab_update_project_approvals, gitlab_list_project_approval_rules, gitlab_create_project_approval_rule, gitlab_update_project_approval_rule, gitlab_delete_project_approval_rule, gitlab_list_mr_approval_rules, gitlab_create_mr_approval_rule, gitlab_update_mr_approval_rule, gitlab_delete_mr_approval_rule, gitlab_list_groups, gitlab_get_group, gitlab_share_project_with_group, gitlab_unshare_project_with_group, gitlab_share_group_with_group, gitlab_unshare_group_with_group, gitlab_list_branches, gitlab_create_branch, gitlab_delete_branch, gitlab_list_commits, gitlab_get_commit
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    mcp_gitlab-0.10.2\src\mcp_gitlab\servers\gitlab.py:150  detail["body"] = error.body
+            detail["hint"] = "Verify the resource ID/path. Use gitlab_get_project to confirm it exists."
+        elif isinstance(error, GitLabAuthError):
+            detail["status_code"] = error.status_code
+            detail["body"] = error.body
+    mcp_gitlab-0.10.2\src\mcp_gitlab\servers\gitlab.py:178  )
+    async def gitlab_get_project(
+        ctx: Context,
+        project_id: Annotated[
+            str,
+    mcp_gitlab-0.10.2\src\mcp_gitlab\servers\gitlab.py:205  )
+    async def gitlab_create_project(
+        ctx: Context,
+        name: Annotated[str, Field(description="Project name", min_length=1)],
+        path: Annotated[str | None, Field(description="Project path/slug")] = None,
+    mcp_gitlab-0.10.2\src\mcp_gitlab\servers\gitlab.py:244  )
+    async def gitlab_delete_project(
+        ctx: Context,
+        project_id: Annotated[
+            str, Field(description="Project ID, path, or full GitLab URL", min_length=1)
+    mcp_gitlab-0.10.2\src\mcp_gitlab\servers\gitlab.py:266  )
+    async def gitlab_update_project_merge_settings(
+        ctx: Context,
+        project_id: Annotated[
+            str, Field(description="Project ID, path, or full GitLab URL", min_length=1)
+    mcp_gitlab-0.10.2\src\mcp_gitlab\servers\gitlab.py:319  )
+    async def gitlab_get_project_approvals(
+        ctx: Context,
+        project_id: Annotated[
+            str, Field(description="Project ID, path, or full GitLab URL", min_length=1)
+
+==============================================================================
+PACKAGE pypi:mcp-pyright
+  server   io.github.daedalus/mcp-pyright
+  status   ok
+  extracted tools (7): check_types, get_hover, get_completions, get_definition, find_references, get_document_symbols, format_code
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    mcp_pyright-0.1.0\src\mcp_pyright\mcp.py:58  @mcp.tool()
+    def check_types(
+        code: str | None = None,
+        file_path: str | None = None,
+        python_path: str | None = None,
+    mcp_pyright-0.1.0\src\mcp_pyright\mcp.py:83  Example:
+            >>> check_types(code="x: int = 'hello'")
+            {'file': '/tmp/...', 'diagnostics': [{'severity': 'error', 'message': '...'}], 'typeCheckingTime': 0.1}
+        """
+        if not code and not file_path:
+    mcp_pyright-0.1.0\src\mcp_pyright\mcp.py:167  @mcp.tool()
+    def get_hover(
+        code: str,
+        position: int,
+        python_path: str | None = None,
+    mcp_pyright-0.1.0\src\mcp_pyright\mcp.py:185  Example:
+            >>> get_hover("x: int = 1", 0)
+            {'contents': '```python\\nint\\n```', 'range': {...}, 'kind': 'python'}
+        """
+        lines = code.split("\n")
+    mcp_pyright-0.1.0\src\mcp_pyright\mcp.py:232  @mcp.tool()
+    def get_completions(
+        code: str,
+        position: int,
+        python_path: str | None = None,
+    mcp_pyright-0.1.0\src\mcp_pyright\mcp.py:250  Example:
+            >>> get_completions("prin", 4)
+            {'items': [{'label': 'print', 'detail': 'def print(...)', ...}]}
+        """
+        lines = code.split("\n")
+
+==============================================================================
+PACKAGE pypi:mcp-server-malcolm
+  server   io.github.nagameTW/mcp-server-malcolm
+  status   ok
+  extracted tools (58): arkime_field_search, arkime_sessions, arkime_unique, arkime_spigraph, arkime_spiview, arkime_connections, arkime_multiunique, arkime_spigraphhierarchy, arkime_sessions_csv, arkime_sessions_summary, arkime_build_query, arkime_session_pcap, arkime_session_detail, arkime_session_payload, arkime_session_file_by_hash, arkime_file_by_hash, arkime_views, arkime_shortcuts, arkime_crons, arkime_reverse_dns, arkime_pcap_files, arkime_node_stats, arkime_hunt_status, malcolm_related_sessions, malcolm_saved_objects
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    mcp_server_malcolm-1.1.1\src\mcp_server_malcolm\client.py:124  _INDEX_RE = re.compile(r"[A-Za-z0-9_.*,-]+")
+    _INDEX_SHAPE = "an index or pattern such as 'arkime_sessions3-*'"
+    
+    # Saved-object ids: the 50 dashboards on the lab are UUIDs plus named ones like
+    # "Metricbeat-system-overview", so letters, digits and "_ . -".
+    mcp_server_malcolm-1.1.1\src\mcp_server_malcolm\client.py:173  # "*" is in the class because the three index-pattern ids ARE their pattern
+    # ("arkime_sessions3-*"), and resolving a saved search's references[] entry
+    # lands on exactly those; "*" is an ordinary character inside a path segment.
+    _SAVED_ID_RE = re.compile(r"[A-Za-z0-9_.*-]+")
+    _SAVED_ID_SHAPE = "a sa
+    mcp_server_malcolm-1.1.1\src\mcp_server_malcolm\client.py:528  lists of unique / multiunique / spigraphhierarchy), "db" — Arkime's
+                `dbField2`, for arkime_connections' srcField/dstField — plus
+                "type", "group" and "help". Sorted by expression name. Passing one
+                column's name where the other belongs raises ToolInputError for the
+    
+    mcp_server_malcolm-1.1.1\src\mcp_server_malcolm\client.py:981  async def arkime_sessions(
+            self,
+            expression: str,
+            limit: int = 10,
+    mcp_server_malcolm-1.1.1\src\mcp_server_malcolm\client.py:1004  Uses GET /arkime/api/sessions.pcap?ids=<id> (the id from
+            arkime_sessions, e.g. "3@240425-..."; the node prefix is optional).
+            Verified live against Malcolm 25.12.1 — the expression=id==<id> form
+            returns 404 "no sessions found", and there is no
+            /arkime/api/session/<id>/
+    mcp_server_malcolm-1.1.1\src\mcp_server_malcolm\client.py:1108  @_upstream
+        async def arkime_sessions_csv(
+            self,
+            expression: str = "",
+            limit: int = 100,
+
+==============================================================================
+PACKAGE pypi:mcp-units
+  server   io.github.sellisd/mcp-units
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE pypi:mcpwright-census
+  server   io.github.mcpwright/census-mcp
+  status   ok
+  extracted tools (8): lookup_zip, get_income, get_demographics, get_housing, get_education, compare_zips, get_acs_variable, find_zips
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    mcpwright_census-0.1.3\src\census_mcp\formatting.py:167  def to_find_zips(
+        query: str, state: str | None, rows: list[dict[str, object]], vintage: int
+    ) -> FindZips:
+        """Build a FindZips result from ranked ZCTA-to-place rows."""
+    mcpwright_census-0.1.3\src\census_mcp\formatting.py:206  def available_metrics() -> list[str]:
+        """The metric names accepted by ``compare_zips``."""
+        return list(_METRICS)
+    mcpwright_census-0.1.3\src\census_mcp\places.py:1  """2020 Census ZCTA-to-Place relationship — the data layer behind ``find_zips``.
+    
+    Reverse lookup (place name -> candidate ZIPs) needs a mapping the ACS dataset
+    doesn't carry: the ACS store is keyed by ZCTA and has no place/city names. The
+    mcpwright_census-0.1.3\src\census_mcp\server.py:30  to_education,
+        to_find_zips,
+        to_housing,
+        to_income,
+        to_zip_info,
+    mcpwright_census-0.1.3\src\census_mcp\server.py:52  Typical flow:
+    - `lookup_zip` confirms a ZIP maps to a Census ZCTA and gives its name and
+      population — a good first call to validate a ZIP.
+    - `get_income` returns median household income, per-capita income, and the share
+      of households earning $200k+.
+    mcpwright_census-0.1.3\src\census_mcp\server.py:54  population — a good first call to validate a ZIP.
+    - `get_income` returns median household income, per-capita income, and the share
+      of households earning $200k+.
+    - `get_demographics` returns total population and median age.
+    - `get_housing` returns median home value, median gross rent, and the
+
+==============================================================================
+PACKAGE pypi:memory-arbiter-mcp
+  server   io.github.billy12151/memory-arbiter-mcp
+  status   ok
+  extracted tools (4): memory, memory_review, memory_govern, memory_repair
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    memory_arbiter_mcp-0.16.12\memory_arbiter\acl.py:5  This module deliberately adds ACL-specific helpers instead of changing the
+    semantics of general-purpose DB reads such as ``get_memory``.
+    """
+    from __future__ import annotations
+    memory_arbiter_mcp-0.16.12\memory_arbiter\acl.py:128  def visible_memory(
+        record: dict[str, Any] | None,
+        canonical: str | None,
+        admitted: WorkspaceScope = None,
+    memory_arbiter_mcp-0.16.12\memory_arbiter\acl.py:160  def memory_public_stub(memory_id: Any, *, visible: bool, memory: dict[str, Any] | None = None) -> dict[str, Any]:
+        if visible:
+            return {
+                "visible": True,
+    memory_arbiter_mcp-0.16.12\memory_arbiter\acl.py:164  "visible": True,
+                "memory_id": int(memory_id) if memory_id is not None else None,
+                "memory": memory,
+                "redaction_reason": None,
+            }
+    memory_arbiter_mcp-0.16.12\memory_arbiter\acl.py:165  "memory_id": int(memory_id) if memory_id is not None else None,
+                "memory": memory,
+                "redaction_reason": None,
+            }
+        return {
+    memory_arbiter_mcp-0.16.12\memory_arbiter\acl.py:170  "visible": False,
+            "memory_id": None,
+            "memory": None,
+            "redaction_reason": "workspace_acl",
+        }
+
+==============================================================================
+PACKAGE pypi:mt-eli-mcp
+  server   io.github.matematicsolutions/mt-eli-mcp
+  status   ok
+  extracted tools (3): mt_get_act, mt_coverage, mt_get_text
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    mt_eli_mcp-0.3.3\src\mt_eli_mcp\coverage.py:65  _FAMILIES: list[dict] = [{'name': 'Consolidated legislation', 'tool': 'mt_get_act / mt_get_text'}]
+    
+    _GAPS: list[dict] = [{'id': 'MT-001', 'family': 'Consolidated legislation', 'missing': 'Malta publishes the consolidated text only as PDF; the text is extracted with pypdf, so layout-dependent artefac
+    mt_eli_mcp-0.3.3\src\mt_eli_mcp\models.py:17  TEXT_NOTE = (
+        "Malta publishes the consolidated text only as PDF; mt_get_text downloads the official PDF and "
+        "extracts the text with pypdf. Layout-dependent artefacts are possible - the PDF at source_url "
+        "(via the page) is authoritative."
+    )
+    mt_eli_mcp-0.3.3\src\mt_eli_mcp\models.py:46  class LawText(_Tolerant):
+        """Result of ``mt_get_text`` (text extracted from the official PDF)."""
+    
+        eli: str | None = None
+        title: str | None = None
+    mt_eli_mcp-0.3.3\src\mt_eli_mcp\server.py:43  1. `mt_get_act` - metadata for a document by `eli` (e.g. `cap/586`): title, ELI, type, dates, legal force. Sourced from the page's JSON-LD.
+    2. `mt_get_text` - the full text by `eli`. Malta publishes the consolidated text only as PDF, so this downloads the official PDF and extracts the text.
+    
+    ## Hard
+    mt_eli_mcp-0.3.3\src\mt_eli_mcp\server.py:44  1. `mt_get_act` - metadata for a document by `eli` (e.g. `cap/586`): title, ELI, type, dates, legal force. Sourced from the page's JSON-LD.
+    2. `mt_get_text` - the full text by `eli`. Malta publishes the consolidated text only as PDF, so this downloads the official PDF and extracts the text.
+    
+    ## Hard
+    mt_eli_mcp-0.3.3\src\mt_eli_mcp\server.py:48  - **Do not answer past the edge of this corpus** - when a search comes back empty, or the question touches material this connector does not carry, call `mt_coverage` and relay what it says is missing. Absence here is not absence in the law.
+    - **Address by ELI coordinate, not keywords** - there is no
+
+==============================================================================
+PACKAGE pypi:nephyr-wallets
+  server   io.github.clm-studios/nephyr-wallets
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE pypi:peil-mcp
+  server   app.peil/peil-mcp
+  status   ok
+  extracted tools (22): list_clients, log_hours, list_unbilled, draft_invoice, send_invoice, orientation_snapshot, edit_hours, delete_hours, get_client_details, create_client, update_client, delete_client, list_invoices, set_invoice_status, update_invoice, delete_invoice, archive_invoice, schedule_send, cancel_scheduled_send, send_reminder, get_reminder_copy, set_reminder_copy
+  AST-only tools     : (none)
+  regex-only tools   : archive_invoice, cancel_scheduled_send, create_client, delete_client, delete_hours, delete_invoice, draft_invoice, edit_hours, get_client_details, get_reminder_copy, list_clients, list_invoices, list_unbilled, log_hours, orientation_snapshot
+  source excerpts:
+    peil_mcp-0.1.3\src\peil_mcp\api.py:93  def list_clients(self) -> list[dict]:
+            return self.get("/clients/").json()
+    
+        def list_invoices(self) -> list[dict]:
+    peil_mcp-0.1.3\src\peil_mcp\api.py:126  """Resolve a client by name: exact (case-insensitive), then unique substring."""
+            clients = self.list_clients()
+            needle = name.strip().lower()
+    
+            exact = [c for c in clients if (c.get("name") or "").strip().lower() == needle]
+    peil_mcp-0.1.3\src\peil_mcp\server.py:3  Draft-by-default: draft_invoice never sends anything to a client; send_invoice
+    is a separate, explicitly-confirmed tool that also requires the invoices:send
+    key permission. Dates are ISO YYYY-MM-DD.
+    """
+    peil_mcp-0.1.3\src\peil_mcp\server.py:26  - CLIENT NAMES: match loosely. If a name is ambiguous or you're unsure which \
+    client is meant, call list_clients and ask — never guess. Tool errors already \
+    list the available clients; use them to recover.
+    - RATE €0: if log_hours reports an entry at €0.00/h, that client has no rate \
+    configured — 
+    peil_mcp-0.1.3\src\peil_mcp\server.py:28  list the available clients; use them to recover.
+    - RATE €0: if log_hours reports an entry at €0.00/h, that client has no rate \
+    configured — say so plainly and offer to set a rate. Do NOT silently proceed to \
+    draft an invoice from €0 hours.
+    - SENDING / EMAIL: draft_invoice only ever creates a DRAFT
+    peil_mcp-0.1.3\src\peil_mcp\server.py:31  draft an invoice from €0 hours.
+    - SENDING / EMAIL: draft_invoice only ever creates a DRAFT. The tools that put \
+    mail in front of a client — send_invoice, schedule_send, send_reminder — are \
+    irreversible and require the invoices:send permission. NEVER call any of them \
+    unless the user has explicit
+
+==============================================================================
+PACKAGE pypi:pinescript-mcp
+  server   io.github.paulieb89/pinescript-mcp
+  status   ok
+  extracted tools (8): list_docs, list_sections, get_doc, get_section, search_docs, get_functions, validate_function, resolve_topic
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    pinescript_mcp-0.7.5\src\pinescript_mcp\server.py:86  # structured_content on oversized responses. Per-tool limit/offset in
+    # get_doc / get_section / search_docs already handles large payloads.
+    
+    # ---------------------------------------------------------------------------
+    # Transforms — expose resources and prompts as tools for clients that
+    pinescript_mcp-0.7.5\src\pinescript_mcp\server.py:101  Usage:
+            with _timed_tool("get_doc", path=path) as log:
+                ...
+                log["chars"] = len(content)  # add extra fields
+        """
+    pinescript_mcp-0.7.5\src\pinescript_mcp\server.py:231  def _get_doc_lines(rel_path: str) -> list[str]:
+        """Return doc file as list of lines, cached after first read."""
+        if rel_path not in _DOC_LINES_CACHE:
+            full_path = DOCS_ROOT / rel_path
+    pinescript_mcp-0.7.5\src\pinescript_mcp\server.py:239  def _get_doc_content(rel_path: str) -> str:
+        """Return doc file as a single string, cached after first read."""
+        return "\n".join(_get_doc_lines(rel_path))
+    pinescript_mcp-0.7.5\src\pinescript_mcp\server.py:241  """Return doc file as a single string, cached after first read."""
+        return "\n".join(_get_doc_lines(rel_path))
+    
+    
+    # Topic mapping for resolve_topic() — exact Pine Script API terms only.
+    pinescript_mcp-0.7.5\src\pinescript_mcp\server.py:244  # Topic mapping for resolve_topic() — exact Pine Script API terms only.
+    # Natural language routing is handled by the LLM reading the docs://manifest resource.
+    TOPIC_MAP = {
+        # Technical Analysis — exact function prefixes
+
+==============================================================================
+PACKAGE pypi:pyrecrawl
+  server   io.github.SanggonBoy/PyreCrawl
+  status   ok
+  extracted tools (13): scrape, extract, map_site, crawl, document, search, batch_scrape, deep_research, monitor, search_papers, cache, health, session
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    pyrecrawl-0.8.1\scripts\probe_stdio.py:13  proc = subprocess.Popen(
+        [str(VENV_PY), "-m", "pyrecrawl.server"],
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    pyrecrawl-0.8.1\scripts\probe_stdio.py:72  print("  tools:", names)
+        assert set(names) == {"scrape", "extract", "map_site", "crawl", "search", "health"}
+    
+        print("== health ==")
+        p = payload_of(rpc("tools/call", {"name": "health", "arguments": {}}, rid)); rid += 1
+    pyrecrawl-0.8.1\scripts\probe_stdio.py:77  print("  versions:", {k: v for k, v in p.items() if not k.endswith("error")})
+        assert "crawl4ai" in p and "scrapling" in p, p
+    
+        print("== scrape example.com (fast) ==")
+        p = payload_of(rpc("tools/call", {
+    pyrecrawl-0.8.1\scripts\probe_stdio.py:79  print("== scrape example.com (fast) ==")
+        p = payload_of(rpc("tools/call", {
+            "name": "scrape",
+            "arguments": {"url": "https://example.com", "prefer": "fast", "timeout": 20},
+    pyrecrawl-0.8.1\scripts\probe_stdio.py:81  p = payload_of(rpc("tools/call", {
+            "name": "scrape",
+            "arguments": {"url": "https://example.com", "prefer": "fast", "timeout": 20},
+        }, rid)); rid += 1
+        print("  status:", p.get("status"), "| title:", p.get("title"), "| method:", p.get("method"))
+    pyrecrawl-0.8.1\scripts\probe_stdio.py:87  print("== extract (CSS schema) ==")
+        p = payload_of(rpc("tools/call", {
+            "name": "extract",
+            "arguments": {
+
+==============================================================================
+PACKAGE pypi:securityscan-mcp
+  server   io.github.securityscan-api/securityscan
+  status   ok
+  extracted tools (8): scan_skill, check_dependencies, network_scan, audit_mcp_server_config, scan_secrets, full_stack_audit, securityscan_pricing, securityscan_checkout
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    securityscan_mcp-0.2.0\stack\unified_mcp_server.py:11  1. scan_skill           → SkillScan service  (skill/prompt-injection analysis)
+      2. check_dependencies   → DepScan API       (dependency endpoint health)
+      3. network_scan         → ActiveScanner API (network/device scan, AI agent loop)
+      4. audit_mcp_server_config → built-in engine (MCP server/conf
+    securityscan_mcp-0.2.0\stack\unified_mcp_server.py:12  1. scan_skill           → SkillScan service  (skill/prompt-injection analysis)
+      2. check_dependencies   → DepScan API       (dependency endpoint health)
+      3. network_scan         → ActiveScanner API (network/device scan, AI agent loop)
+      4. audit_mcp_server_config → built-in engine (MCP server/conf
+    securityscan_mcp-0.2.0\stack\unified_mcp_server.py:13  2. check_dependencies   → DepScan API       (dependency endpoint health)
+      3. network_scan         → ActiveScanner API (network/device scan, AI agent loop)
+      4. audit_mcp_server_config → built-in engine (MCP server/config audit — no external call)
+      5. scan_secrets         → SecretScan API    (detec
+    securityscan_mcp-0.2.0\stack\unified_mcp_server.py:14  3. network_scan         → ActiveScanner API (network/device scan, AI agent loop)
+      4. audit_mcp_server_config → built-in engine (MCP server/config audit — no external call)
+      5. scan_secrets         → SecretScan API    (detect & redact secrets/PII in a payload)
+      6. full_stack_audit     → orchestrat
+    securityscan_mcp-0.2.0\stack\unified_mcp_server.py:15  4. audit_mcp_server_config → built-in engine (MCP server/config audit — no external call)
+      5. scan_secrets         → SecretScan API    (detect & redact secrets/PII in a payload)
+      6. full_stack_audit     → orchestrates all of the above into one correlated report
+      7. securityscan_pricing   → offlin
+    securityscan_mcp-0.2.0\stack\unified_mcp_server.py:16  5. scan_secrets         → SecretScan API    (detect & redact secrets/PII in a payload)
+      6. full_stack_audit     → orchestrates all of the above into one correlated report
+      7. securityscan_pricing   → offline fact sheet: tiers, prices, limits (sell-to-agents)
+      8. securityscan_checkout  → starts a 
+
+==============================================================================
+PACKAGE pypi:stamp-mcp
+  server   io.github.theoddden/stamp
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE pypi:stratevo
+  server   io.github.NeuZhou/stratevo
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE pypi:supertone-mcp
+  server   io.github.supertone-inc/supertone-mcp
+  status   ok
+  extracted tools (14): text_to_speech, search_voice, get_voice, get_credit_balance, preview_voice, predict_duration, clone_voice, search_custom_voice, edit_custom_voice, delete_custom_voice, get_custom_voice, get_usage_history, get_voice_usage, merge_audio_files
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+  source excerpts:
+    supertone_mcp-0.3.1\src\supertone_mcp\constants.py:114  # ISSUE-022: autoplay is a per-call parameter (default False) on
+    # text_to_speech, NOT an env-driven behavior. The previous DEFAULT_AUTOPLAY
+    # constant (env-driven, default True) was removed. The handler signature
+    # carries the False default directly.
+    DEFAULT_AUTOPLAY: bool = False
+    supertone_mcp-0.3.1\src\supertone_mcp\constants.py:125  # --- ISSUE-019: clone_voice constraints ---
+    # Per FR-017 / UX spec §2.8: WAV/MP3 only, exactly one file, ≤3MB.
+    MAX_AUDIO_FILE_BYTES: int = 3 * 1024 * 1024
+    SUPPORTED_CLONE_FORMATS: dict[str, str] = {
+    supertone_mcp-0.3.1\src\supertone_mcp\models.py:96  and explicitly mark just those two as `NotRequired`. This restores type
+        safety for downstream consumers (`format_voice_detail`, `preview_voice`)
+        that read required fields without `.get()` guards.
+    
+        `language` from the SDK is exposed here as `supported_languages` for
+    supertone_mcp-0.3.1\src\supertone_mcp\server.py:14  @mcp.tool(
+        name="text_to_speech",
+        description=(
+            "Generate natural-sounding speech audio from text. "
+            "Use this when the user wants to: "
+    supertone_mcp-0.3.1\src\supertone_mcp\server.py:30  "A default voice is already configured -- just call this tool directly. "
+            "Only call search_voice if the user explicitly asks to change or browse voices."
+        ),
+    )
+    async def text_to_speech(
+    supertone_mcp-0.3.1\src\supertone_mcp\server.py:33  )
+    async def text_to_speech(
+        text: str,
+        voice_id: str | None = None,
+        language: str | None = None,
+
+==============================================================================
+PACKAGE pypi:uop-mcp-server
+  server   com.unifiedoffer/mcp-server
+  status   ok
+  extracted tools (0): (none)
+  AST-only tools     : (none)
+  regex-only tools   : (none)
+
+==============================================================================
+PACKAGE pypi:yandex-wiki-search-mcp
+  server   io.github.dlbolshov/yandex-wiki-search-mcp
+  status   ok
+  extracted tools (32): page_search, page_get, page_get_descendants, page_get_comments, page_get_resources, page_get_grids, grid_get, page_get_attachments, page_read_attachment, user_get_current, grid_create, grid_update, grid_add_rows, grid_delete, grid_copy, grid_update_cells, grid_delete_rows, grid_add_columns, grid_delete_columns, grid_move_row, grid_move_column, page_create, page_update, page_edit, page_append_content
+  AST-only tools     : page_clone
+  regex-only tools   : (none)
+  source excerpts:
+    yandex_wiki_search_mcp-1.5.1\mcp_wiki\mcp\middleware.py:5  logs the other half — which MCP method arrived and how long serving it took —
+    so the two subtract: a `page_search` that took 8 seconds of which the Wiki API
+    took 7.9 is their latency, not ours, and the log says so without a profiler.
+    
+    Kept at DEBUG deliberately. `LOG_LEVEL` defaults to INFO, so this
+    yandex_wiki_search_mcp-1.5.1\mcp_wiki\mcp\params.py:17  description=(
+                "Attachment (file) numeric ID, as listed by page_get_attachments."
+            ),
+            gt=0,
+        ),
+    yandex_wiki_search_mcp-1.5.1\mcp_wiki\mcp\params.py:262  capabilities = [
+            "- Discover pages across the whole Wiki with page_search, then open a result by its slug with page_get.",
+            "- Read Wiki pages by slug or ID",
+            "- Traverse a page subtree, or the whole Wiki with page_get_descendants(from_root=true)",
+            "- Read comments, re
+    yandex_wiki_search_mcp-1.5.1\mcp_wiki\mcp\params.py:264  "- Read Wiki pages by slug or ID",
+            "- Traverse a page subtree, or the whole Wiki with page_get_descendants(from_root=true)",
+            "- Read comments, resources, and attachments — and read an attachment's content into the conversation with page_read_attachment",
+            "- Read page grids an
+    yandex_wiki_search_mcp-1.5.1\mcp_wiki\mcp\params.py:281  "If a tool accepts `page_id` and `slug`, provide exactly one of them.",
+            "The `content` on a `page_search` result is an excerpt of at most ~510 characters taken from wherever the match sits in the page — not the page and not a summary, sometimes without the query terms in it, highlighted with
+    yandex_wiki_search_mcp-1.5.1\mcp_wiki\mcp\params.py:282  "The `content` on a `page_search` result is an excerpt of at most ~510 characters taken from wherever the match sits in the page — not the page and not a summary, sometimes without the query terms in it, highlighted with <em> tags only when highlight=true was passed. Use it to pick a result, then re

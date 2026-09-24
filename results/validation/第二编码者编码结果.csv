@@ -1,0 +1,51 @@
+item_id,part,target,auth_mechanism,auth_evidence,requires_user_secret,secret_documented_as_secret,scope_breadth,destructive_capability,write_capability,readme_warns_about_risk,desc_states_purpose,desc_states_when_to_use,desc_states_inputs,desc_names_side_effects,ambiguous_with,codebook_version
+B001,B,ai.edgechat/edgepedia,unclear,none,unclear,n/a,unclear,no,no,no,,,,,,v1.0
+B002,B,ai.getvda/structured-output-agent,unclear,none,unclear,n/a,unclear,no,no,no,,,,,,v1.0
+B003,B,ai.meetlark/mcp-server,unclear,none,unclear,n/a,unclear,no,no,no,,,,,,v1.0
+B004,B,ai.namewhisper/ens-tools,unclear,none,unclear,n/a,unclear,unclear,unclear,no,,,,,,v1.0
+B005,B,ai.primeta/primeta,unclear,none,unclear,n/a,unclear,no,no,no,,,,,,v1.0
+B006,B,ai.smithery/mrugankpednekar-bill_splitter_mcp,unclear,none,unclear,n/a,unclear,no,no,no,,,,,,v1.0
+B007,B,ai.smithery/zwldarren-akshare-one-mcp,unclear,none,unclear,n/a,unclear,no,no,no,,,,,,v1.0
+B008,B,ai.strix/strix,unclear,none,unclear,n/a,unclear,unclear,no,no,,,,,,v1.0
+B009,B,ai.zencap/zencap,unclear,none,unclear,n/a,unclear,no,no,no,,,,,,v1.0
+B010,B,app.cannonstudio/cannon-studio,unclear,none,unclear,n/a,unclear,no,yes,no,,,,,,v1.0
+B011,B,app.wishpool/ireland-payments-mcp,unclear,none,unclear,n/a,unclear,yes,yes,no,,,,,,v1.0
+B012,B,cat.churchofai/aigora,unclear,none,unclear,n/a,unclear,unclear,unclear,no,,,,,,v1.0
+B013,B,ch.martinelli/jooq-mcp,unclear,none,unclear,n/a,unclear,unclear,unclear,no,,,,,,v1.0
+B014,B,club.atlasyield/mcp,unclear,none,unclear,n/a,unclear,unclear,unclear,no,,,,,,v1.0
+B015,B,com.agentery/agentery,unclear,none,unclear,n/a,unclear,unclear,unclear,no,,,,,,v1.0
+B016,B,com.astryke/hub,unclear,none,unclear,n/a,unclear,unclear,unclear,no,,,,,,v1.0
+B017,B,com.bynn/bynn,unclear,none,unclear,n/a,unclear,unclear,unclear,no,,,,,,v1.0
+B018,B,com.dexpaprika/dexpaprika,unclear,none,unclear,n/a,unclear,unclear,unclear,no,,,,,,v1.0
+B019,B,com.discoverseniorbenefits/benefits,unclear,none,unclear,n/a,unclear,no,no,no,,,,,,v1.0
+B020,B,com.eqiqs/eqiqs,unclear,none,unclear,n/a,unclear,unclear,unclear,no,,,,,,v1.0
+B021,B,com.files/python-mcp,unclear,none,unclear,n/a,unclear,yes,yes,no,,,,,,v1.0
+B022,B,com.getlandlens/landlens,unclear,none,unclear,n/a,unclear,no,no,no,,,,,,v1.0
+B023,B,com.immo-spot/mcp,unclear,none,unclear,n/a,unclear,no,no,no,,,,,,v1.0
+B024,B,com.invoicedataextraction/invoice-data-extraction,unclear,none,unclear,n/a,unclear,no,no,no,,,,,,v1.0
+B025,B,com.mcparmory/polygon,unclear,none,unclear,n/a,unclear,no,no,no,,,,,,v1.0
+C001,C,ai.fodda/mcp-server :: discover_adjacent_trends,,,,,,,,,yes,no,n/a,no,expert_onboarding_research,v1.0
+C002,C,ai.fodda/mcp-server :: expert_onboarding_research,,,,,,,,,yes,no,n/a,no,discover_adjacent_trends,v1.0
+C003,C,ai.fodda/mcp-server :: get_earnings_divergence,,,,,,,,,yes,no,n/a,no,expert_onboarding_research,v1.0
+C004,C,ai.fodda/mcp-server :: sign_up_free_account,,,,,,,,,yes,no,n/a,yes,,v1.0
+C005,C,ai.mentu/navigator :: navigator_query,,,,,,,,,partial,no,n/a,no,,v1.0
+C006,C,ai.oobeprotocol.sap.mcp/sap-mcp :: sap_give_feedback,,,,,,,,,yes,no,n/a,yes,,v1.0
+C007,C,ai.oobeprotocol.sap.mcp/sap-mcp :: sap_skills_upgrade_plan,,,,,,,,,yes,no,n/a,yes,sap_x402_estimate_cost,v1.0
+C008,C,ai.oobeprotocol.sap.mcp/sap-mcp :: sap_x402_estimate_cost,,,,,,,,,yes,no,n/a,yes,sap_skills_upgrade_plan,v1.0
+C009,C,com.aicandidatehub/mcp :: import_resume_from_text,,,,,,,,,yes,no,n/a,yes,,v1.0
+C010,C,com.aioproductos/mcp-studio :: studio_hold,,,,,,,,,partial,no,n/a,no,,v1.0
+C011,C,com.geekflare/mcp :: openPorts,,,,,,,,,yes,no,n/a,yes,,v1.0
+C012,C,com.getmcpads/google-analytics :: ga4_get_audience_export_diagnostics,,,,,,,,,yes,no,n/a,no,,v1.0
+C013,C,com.getmcpads/google-search-console :: gsc_get_sitemap_health,,,,,,,,,yes,no,n/a,no,gsc_list_sitemaps,v1.0
+C014,C,com.getmcpads/google-search-console :: gsc_list_sitemaps,,,,,,,,,yes,no,n/a,no,gsc_get_sitemap_health,v1.0
+C015,C,com.parlayx/mcp :: prophetx_list_positions,,,,,,,,,yes,no,n/a,no,,v1.0
+C016,C,com.pulsemcp/proctor :: destroy_machine,,,,,,,,,yes,no,n/a,yes,,v1.0
+C017,C,com.rcs-campaigns/campaigns :: list_contacts,,,,,,,,,yes,no,n/a,no,,v1.0
+C018,C,com.scrapeer/mcp-server :: scrapeer_list_flows,,,,,,,,,yes,no,n/a,no,,v1.0
+C019,C,dev.homespun/homespun :: grants,,,,,,,,,partial,no,n/a,no,,v1.0
+C020,C,dev.hythe/hythe :: end_session,,,,,,,,,yes,no,n/a,yes,,v1.0
+C021,C,dev.hythe/hythe :: get_entity_detail,,,,,,,,,yes,no,n/a,no,,v1.0
+C022,C,eu.ansvar/malawi-law-mcp :: about,,,,,,,,,partial,no,n/a,no,,v1.0
+C023,C,eu.ansvar/malawi-law-mcp :: validate_eu_compliance,,,,,,,,,yes,no,n/a,no,,v1.0
+C024,C,eu.ansvar/pakistani-law-mcp :: get_provision,,,,,,,,,yes,no,n/a,no,,v1.0
+C025,C,eu.ansvar/portuguese-law-mcp :: list_sources,,,,,,,,,yes,no,n/a,no,,v1.0

@@ -1,0 +1,8 @@
+top_k_namespaces,versions,share_of_versions_pct
+1,2387,2.1
+5,9629,8.4
+10,15141,13.2
+25,21591,18.8
+50,27486,24.0
+100,34525,30.1
+bottom 50% of namespaces (10270),10270,9.0

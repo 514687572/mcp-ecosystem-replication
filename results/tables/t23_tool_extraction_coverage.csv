@@ -1,0 +1,4 @@
+metric,value,share_of_attempted_pct
+packages attempted,1200,100.0
+packages parsed successfully,1169,97.4
+packages yielding >= 1 tool,676,56.3

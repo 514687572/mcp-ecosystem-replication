@@ -1,0 +1,7 @@
+bucket,servers,servers_pct
+"single version, never updated again",22182,62.7
+"multiple versions, last publish <= 30 days",5705,16.1
+"multiple versions, 31-90 days",4211,11.9
+"multiple versions, 91-180 days",2280,6.4
+"multiple versions, 181-365 days",947,2.7
+"multiple versions, > 365 days",63,0.2

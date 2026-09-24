@@ -1,0 +1,17 @@
+* text=auto eol=lf
+*.csv text
+*.jsonl text
+*.json text
+*.md text
+*.py text
+*.ps1 text
+*.cff text
+*.yaml text
+*.tex text
+*.bib text
+*.pdf binary
+*.png binary
+# keep generated tables out of language statistics
+results/tables/*.csv linguist-generated=true
+results/validation/*.csv linguist-generated=true
+MANIFEST.csv linguist-generated=true

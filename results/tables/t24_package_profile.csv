@@ -1,0 +1,13 @@
+metric,value,share_pct
+packages enriched,13316.0,100.0
+npm packages,9557.0,71.8
+PyPI packages,3759.0,28.2
+npm: with a licence declared,9309.0,69.9
+npm: deprecated,282.0,2.1
+npm: single maintainer,8970.0,67.4
+npm: no maintainer recorded,81.0,0.6
+npm: median versions published,5.0,0.0
+npm: median monthly downloads,254.0,1.9
+npm: zero downloads in last month,2062.0,15.5
+PyPI: with a licence declared,1995.0,15.0
+PyPI: yanked releases,143.0,1.1

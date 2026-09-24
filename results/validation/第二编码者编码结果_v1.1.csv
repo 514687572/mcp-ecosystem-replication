@@ -1,0 +1,51 @@
+﻿item_id,part,target,auth_mechanism,auth_evidence,requires_user_secret,secret_documented_as_secret,scope_breadth,destructive_capability,write_capability,readme_warns_about_risk,desc_states_purpose,desc_states_when_to_use,desc_states_inputs,desc_names_side_effects,ambiguous_with,codebook_version,notes
+B001,B,ai.edgechat/edgepedia,none,manifest_description,no,undetermined,read_only,no,no,undetermined,,,,,,v1.1,"desc says ""Search and read ... No key"": no-key + read-only asserted; no reachable README for risk"
+B002,B,ai.getvda/structured-output-agent,undetermined,no_statement,undetermined,undetermined,undetermined,undetermined,undetermined,undetermined,,,,,,v1.1,"description ""Structured Output MCP Agent"" too generic to settle auth or capability"
+B003,B,ai.meetlark/mcp-server,undetermined,no_statement,undetermined,undetermined,narrow,no,yes,undetermined,,,,,,v1.1,create polls/vote are writes to the poll objects; destructive not evidenced
+B004,B,ai.namewhisper/ens-tools,undetermined,no_statement,undetermined,undetermined,broad,yes,yes,undetermined,,,,,,v1.1,"register/trade/manages ENS names: acts on many name assets, trade implies spending"
+B005,B,ai.primeta/primeta,undetermined,no_statement,undetermined,undetermined,undetermined,undetermined,undetermined,undetermined,,,,,,v1.1,"marketing copy, no tool facts to settle write/destructive"
+B006,B,ai.smithery/mrugankpednekar-bill_splitter_mcp,undetermined,no_statement,undetermined,undetermined,moderate,no,yes,undetermined,,,,,,v1.1,create groups/add expenses: writes shared multi-user ledgers; no spending/deletion stated
+B007,B,ai.smithery/zwldarren-akshare-one-mcp,undetermined,no_statement,undetermined,undetermined,read_only,no,no,undetermined,,,,,,v1.1,"""Provide access to ... data ... prices, real-time, news"": reads only"
+B008,B,ai.strix/strix,undetermined,no_statement,undetermined,undetermined,broad,yes,yes,undetermined,,,,,,v1.1,pentest scans against targets + manage assets/PRs: acts on many external systems
+B009,B,ai.zencap/zencap,oauth,manifest_description,yes,no,read_only,no,no,undetermined,,,,,,v1.1,"""OAuth 2.1"" in description; financial data reads only; no secret flag documented"
+B010,B,app.cannonstudio/cannon-studio,none,manifest_description,no,undetermined,read_only,no,no,undetermined,,,,,,v1.1,"""Public ... for product/pricing ... answers"": public read-only Q&A"
+B011,B,app.wishpool/ireland-payments-mcp,undetermined,no_statement,undetermined,undetermined,broad,yes,yes,undetermined,,,,,,v1.1,payments via Stripe cards/Apple Pay: spends money = destructive; key likely but not declared
+B012,B,cat.churchofai/aigora,undetermined,no_statement,undetermined,undetermined,broad,no,yes,undetermined,,,,,,v1.1,confessional/penance + agent forum: writes posts visible to others
+B013,B,ch.martinelli/jooq-mcp,none,manifest_description,no,undetermined,read_only,no,no,undetermined,,,,,,v1.1,"""provides access to the jOOQ documentation"": docs read only"
+B014,B,club.atlasyield/mcp,undetermined,no_statement,undetermined,undetermined,read_only,no,no,undetermined,,,,,,v1.1,"description states ""Read-only"" explicitly"
+B015,B,com.agentery/agentery,undetermined,no_statement,undetermined,undetermined,read_only,no,no,undetermined,,,,,,v1.1,price benchmarks/history across servers: reads only
+B016,B,com.astryke/hub,undetermined,no_statement,undetermined,undetermined,narrow,no,yes,undetermined,,,,,,v1.1,a board your agents keep current: writes to the user own board
+B017,B,com.bynn/bynn,undetermined,no_statement,undetermined,undetermined,read_only,no,no,undetermined,,,,,,v1.1,"fraud detection: analyzes documents, detector returns findings, no write evidenced"
+B018,B,com.dexpaprika/dexpaprika,undetermined,no_statement,undetermined,undetermined,undetermined,undetermined,undetermined,undetermined,,,,,,v1.1,"data framing but ""swaps"" listed: could be data or trade execution, ambiguous"
+B019,B,com.discoverseniorbenefits/benefits,undetermined,no_statement,undetermined,undetermined,read_only,no,no,undetermined,,,,,,v1.1,find benefits + check eligibility via rules: deterministic reads
+B020,B,com.eqiqs/eqiqs,undetermined,no_statement,undetermined,undetermined,undetermined,undetermined,undetermined,undetermined,,,,,,v1.1,"compatibility ""scoring"" = computation; scope/write not evidenced either way"
+B021,B,com.files/python-mcp,api_key,manifest_env_vars,yes,yes,moderate,yes,yes,undetermined,,,,,,v1.1,FILES_COM_API_KEY required+flagged secret; Files.com API read/write incl delete
+B022,B,com.getlandlens/landlens,undetermined,no_statement,undetermined,undetermined,read_only,no,no,undetermined,,,,,,v1.1,rental records lookup: reads only
+B023,B,com.immo-spot/mcp,undetermined,no_statement,undetermined,undetermined,read_only,no,no,undetermined,,,,,,v1.1,official French property data via MCP: reads only
+B024,B,com.invoicedataextraction/invoice-data-extraction,undetermined,no_statement,undetermined,undetermined,moderate,no,yes,undetermined,,,,,,v1.1,"upload invoices (user connects docs) + read rows: write present, no delete/spend"
+B025,B,com.mcparmory/polygon,undetermined,no_statement,undetermined,undetermined,read_only,no,no,undetermined,,,,,,v1.1,"market data, ratings, earnings, news: reads only"
+C001,C,discover_adjacent_trends,,,,,,,,,yes,no,no,n/a,search_graph|search_insights|get_domain_intelligence|get_expert_intelligence,v1.1,"purpose clear; ""Use to expand..."" are application examples, not a selection condition; read-only"
+C002,C,expert_onboarding_research,,,,,,,,,yes,no,no,yes,,v1.1,kicks off async research = write; identity derived from session; no documented params
+C003,C,get_earnings_divergence,,,,,,,,,yes,no,no,n/a,get_earnings_intelligence,v1.1,"graph read; ""Use for"" truncated so no when_to_use condition"
+C004,C,sign_up_free_account,,,,,,,,,yes,yes,yes,yes,get_my_account,v1.1,GUARDRAIL gives explicit ordering condition; profile fields (name/job_title/company) documented; creates account + sends email
+C005,C,navigator_query,,,,,,,,,yes,no,no,n/a,navigator,v1.1,"finds/ranks evidence = read; ""Specialist tool"" but no trigger/condition"
+C006,C,sap_give_feedback,,,,,,,,,yes,no,no,yes,agentWallet,v1.1,creates on-chain feedback = write; no params explained
+C007,C,sap_skills_upgrade_plan,,,,,,,,,yes,no,no,n/a,sap_skills_upgrade_plan,v1.1,returns commands/target dirs (plan only); sap_skills_install flagged but absent from sibling list
+C008,C,sap_x402_estimate_cost,,,,,,,,,yes,no,yes,n/a,,v1.1,estimates cost = read-only; SDK method + volume curve overrides referenced
+C009,C,import_resume_from_text,,,,,,,,,yes,no,yes,yes,list_cv_profiles|list_generated_cvs,v1.1,"persists new CV profile = write; returns cv_profile_id (output, not input params)"
+C010,C,studio_hold,,,,,,,,,yes,no,yes,yes,studio_goto|studio_zoom|studio_highlight,v1.1,"motion on the timeline; ""Use after captions/highlights/zooms"" is timing guidance, not a selection condition"
+C011,C,openPorts,,,,,,,,,yes,no,yes,n/a,tlsScan,v1.1,scans a host = read; host + optional service detection documented
+C012,C,ga4_get_audience_export_diagnostics,,,,,,,,,yes,no,yes,n/a,ga4_list_audience_exports|ga4_query_audience_export,v1.1,"explicitly ""Read-only""; optionally samples rows"
+C013,C,gsc_get_sitemap_health,,,,,,,,,yes,no,no,n/a,gsc_list_sitemaps|gsc_get_sitemap|gsc_health_check,v1.1,"explicitly ""read-only"""
+C014,C,gsc_list_sitemaps,,,,,,,,,yes,no,no,n/a,gsc_get_sitemap|gsc_get_sitemap_health|gsc_list_sites,v1.1,read-only listing
+C015,C,prophetx_list_positions,,,,,,,,,yes,no,no,n/a,kalshi_list_positions|limitless_list_positions,v1.1,"description truncated ""List the calling actor""; lists positions = read"
+C016,C,destroy_machine,,,,,,,,,yes,no,yes,yes,cancel_exam|get_machines,v1.1,"Delete + ""Warning: irreversible"", terminates processes; ""Use this to clean up"" = use-case not selection; Returns success"
+C017,C,list_contacts,,,,,,,,,yes,no,no,n/a,Contacts|search_templates,v1.1,"""Search the org"" states action+scope but vague"
+C018,C,scrapeer_list_flows,,,,,,,,,yes,no,no,n/a,,v1.1,"""List your saved scraping flows"" = read; no params"
+C019,C,grants,,,,,,,,,no,no,no,no,apps|deploy_app,v1.1,"description is literally ""A v2 app"" - states nothing about purpose"
+C020,C,end_session,,,,,,,,,yes,no,yes,yes,,v1.1,"compat wrapper over checkpoint; lists params + states legacy side effects removed; ""Prefer checkpoint"" but checkpoint absent from sibling list"
+C021,C,get_entity_detail,,,,,,,,,yes,no,yes,n/a,get_entity_neighborhood|get_entity_backlinks,v1.1,reads entity content by ID/name/alias (input forms stated)
+C022,C,about,,,,,,,,,yes,no,no,n/a,,v1.1,server metadata/statistics/freshness = read
+C023,C,validate_eu_compliance,,,,,,,,,yes,no,no,n/a,get_eu_basis|get_provision_eu_basis,v1.1,checks EU alignment status = read
+C024,C,get_provision,,,,,,,,,yes,no,no,n/a,get_provision_eu_basis,v1.1,retrieves provision text = read
+C025,C,list_sources,,,,,,,,,yes,no,no,n/a,about,v1.1,returns provenance metadata for sources = read

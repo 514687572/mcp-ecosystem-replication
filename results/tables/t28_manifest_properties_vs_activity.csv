@@ -1,0 +1,7 @@
+group,servers,median_versions,mean_versions,share_deprecated_pct
+declares a repository,27146,1.0,3.59,1.1
+does not declare a repository,8242,1.0,2.09,0.8
+ships a package,15166,2.0,5.19,1.8
+hosted only (no package),20222,1.0,1.77,0.5
+has a title,21767,1.0,3.1,0.7
+has no title,13621,1.0,3.45,1.7

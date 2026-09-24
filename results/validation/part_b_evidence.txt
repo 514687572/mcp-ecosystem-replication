@@ -1,0 +1,1654 @@
+PART B EVIDENCE PACK
+For each server: everything the registry declares, plus the
+links you need to judge authentication and scope.
+Do NOT probe live endpoints. Use the repository README and source.
+
+==============================================================================
+B001  ai.edgechat/edgepedia
+  title         : Edgepedia
+  description   : Search and read Edgepedia, a free and growing encyclopedia with citations. No key.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://www.edgechat.ai/developers
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B002  ai.getvda/structured-output-agent
+  title         : (none)
+  description   : Structured Output MCP Agent
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://structured-output-agent.getvda.ai
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B003  ai.meetlark/mcp-server
+  title         : (none)
+  description   : Agent-first meeting schedule polls for humans and agents. Create polls, vote, find times.
+  version       : 1.0.3
+  transport     : stdio|streamable-http   [package+remote]
+  packages      : npm
+  repository    : (none)
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B004  ai.namewhisper/ens-tools
+  title         : Name Whisper — ENS Intelligence Layer
+  description   : 44 MCP tools to search, value, register, trade, and manage ENS names. AI-powered intelligence layer.
+  version       : 1.2.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/eggybug42069/namewhisper-mcp
+  website       : https://namewhisper.ai
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B005  ai.primeta/primeta
+  title         : Primeta
+  description   : Give your AI a face, a voice, and a personality. 3D avatars with custom personas.
+  version       : 1.0.1
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://primeta.ai
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B006  ai.smithery/mrugankpednekar-bill_splitter_mcp
+  title         : (none)
+  description   : Track and split shared expenses across trips, events, and groups. Create groups, add expenses, and…
+  version       : 1.15.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/mrugankpednekar/bill_splitter_mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B007  ai.smithery/zwldarren-akshare-one-mcp
+  title         : (none)
+  description   : Provide access to Chinese stock market data including historical prices, real-time data, news, and…
+  version       : 1.14.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/zwldarren/akshare-one-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B008  ai.strix/strix
+  title         : Strix
+  description   : AI pentesting: run scans, triage vulnerabilities, review PRs, manage schedules and assets.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://strix.ai
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B009  ai.zencap/zencap
+  title         : (none)
+  description   : Institutional financial data with SEC filing citations, for every AI agent. OAuth 2.1.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://zencap.ai
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B010  app.cannonstudio/cannon-studio
+  title         : Cannon Studio
+  description   : Public Cannon Studio MCP for product, pricing, workflow, model, and API answers.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B011  app.wishpool/ireland-payments-mcp
+  title         : Ireland Payments (Stripe — cards / Apple Pay)
+  description   : Ireland payments for AI agents — cards / Apple Pay via Stripe. Never holds funds.
+  version       : 0.1.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/junter1989k-ai/ireland-payments-mcp
+  website       : https://github.com/junter1989k-ai/ireland-payments-mcp
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B012  cat.churchofai/aigora
+  title         : Church of AI & Cats
+  description   : A half-joking Polish church for AI agents: doctrine, confessional with penance, agent forum.
+  version       : 1.3.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/Wrk2525/Aigora
+  website       : https://churchofai.cat/skill.md
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B013  ch.martinelli/jooq-mcp
+  title         : (none)
+  description   : An MCP server that provides access to the jOOQ documentation
+  version       : 1.0.0
+  transport     : sse   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/martinellich/jooq-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B014  club.atlasyield/mcp
+  title         : AtlasYield
+  description   : DeFi vault judgment for agents: 16-factor Atlas Score, route survival, blowup alerts. Read-only.
+  version       : 0.2.4
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/gveshk/atlasyield-mcp
+  website       : https://docs.atlasyield.club/api-reference/mcp
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B015  com.agentery/agentery
+  title         : (none)
+  description   : Price benchmarks, alternatives & daily price history across 17,000+ AI agents and MCP servers.
+  version       : 1.8.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://agentery.com
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B016  com.astryke/hub
+  title         : Astryke Hub
+  description   : Every project you have going, on one board your coding agents keep current and you actually read.
+  version       : 1.0.1
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://astryke.com
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B017  com.bynn/bynn
+  title         : Bynn
+  description   : Document fraud detection for manipulated, fake and AI-generated PDF and image documents.
+  version       : 1.0.1
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/Bynn-Intelligence/skills
+  website       : https://docs.bynn.com
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B018  com.dexpaprika/dexpaprika
+  title         : DexPaprika
+  description   : DEX and on-chain data: liquidity pools, token prices, swaps, and trading volume.
+  version       : 2.5.1
+  transport     : sse|streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/coinpaprika/dexpaprika-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B019  com.discoverseniorbenefits/benefits
+  title         : DiscoverSeniorBenefits
+  description   : Find US senior benefits by ZIP and check eligibility via deterministic rules citing .gov sources.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://discoverseniorbenefits.com/ai
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B020  com.eqiqs/eqiqs
+  title         : eqiqs
+  description   : 21-framework people intelligence and compatibility scoring for any MCP client.
+  version       : 1.0.17
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/EQIQs/mcp-server
+  website       : https://www.eqiqs.com/mcp
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B021  com.files/python-mcp
+  title         : (none)
+  description   : Local-only Python MCP server for the Files.com API.
+  version       : 1.0.90
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/Files-com/files-mcp
+  website       : (none)
+  env vars      : 2 declared, 1 flagged secret, 1 required
+
+==============================================================================
+B022  com.getlandlens/landlens
+  title         : LandLens rental records
+  description   : Owner of record, code violations, evictions and tenant reviews for US college-town rentals.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://getlandlens.com/api
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B023  com.immo-spot/mcp
+  title         : Immo Spot MCP
+  description   : Données immobilières officielles françaises (DVF+, cadastre, DPE, risques, urbanisme) via MCP.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://immo-spot.com/mcp-server-data-immobilier
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B024  com.invoicedataextraction/invoice-data-extraction
+  title         : Invoice Data Extraction
+  description   : Invoices and other financial documents to rows: upload, say what to extract, read the rows.
+  version       : 0.1.1
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://invoicedataextraction.com/docs/mcp
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B025  com.mcparmory/polygon
+  title         : (none)
+  description   : Access stock, crypto, and ETF market data, analyst ratings, earnings, and financial news
+  version       : 1.0.2
+  transport     : stdio   [package-only]
+  packages      : oci|pypi
+  repository    : https://github.com/mcparmory/registry
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B026  com.mcpmux/mcp-mux
+  title         : McpMux
+  description   : McpMux — configure MCP servers once, connect every AI client through one local gateway.
+  version       : 0.1.1
+  transport     : (none)   [neither]
+  packages      : (none)
+  repository    : https://github.com/mcpmux/mcp-mux
+  website       : https://mcpmux.com
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B027  com.mcpscores/csv-import-rehearsal
+  title         : CSV Import Rehearsal
+  description   : Simulate a CSV import against a supplied typed column contract and return exact accepted rows, re...
+  version       : 0.1.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://mcp-factory.bowling-anthony.workers.dev/csv-import-rehearsal
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B028  com.nusii/mcp
+  title         : Nusii MCP Server
+  description   : Nusii MCP server for drafting, pricing, and tracking business proposals.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://nusii.com/docs/integrations/ai-assistants/
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B029  com.olyport/bls
+  title         : BLS Employment & Wages
+  description   : Unemployment rates, labor force, and Consumer Price Index from the Bureau of Labor Statistics
+  version       : 1.1.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://olyport.com
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B030  com.permitreporter/us-building-permits
+  title         : PermitReporter — US Building Permit Intelligence
+  description   : Source-linked building-permit search across 34 US states and DC, with county-level coverage.
+  version       : 1.1.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://permitreporter.com/ai-permit-search
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B031  com.pokerink/poker-tools
+  title         : PokerInk Poker Tools
+  description   : Exact Texas Hold'em equity and hand analysis, every runout enumerated. Free, no API key.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://pokerink.com/developers
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B032  com.scribblecards/handwritten-cards
+  title         : Scribble — Real Handwritten Cards
+  description   : Send real handwritten cards in the US. A machine writes each one in ink, then we mail it.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://scribblecards.com/mcp
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B033  com.seoapi/meta
+  title         : (none)
+  description   : Validate Meta-ExternalAgent and Meta-WebIndexer IP addresses. Remote MCP validate_ip tool.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://seoapi.com/meta/
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B034  com.southlondonscientific/clara
+  title         : Clara — Personal Clean Air Planner
+  description   : UK personal air quality advice and daily exposure assessment. Pairs with Hermes for live data.
+  version       : 0.3.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://www.southlondonscientific.com
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B035  com.swamix.mcp/server
+  title         : Swamix MCP
+  description   : Hosted MCP catalog with 30 tenant-isolated browser, RAG, AI, mail and media tools.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://mcp.swamix.com/quickstart
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B036  com.thenextgennexus/healthcare-fda-intelligence-mcp
+  title         : (none)
+  description   : Scrape the FAA Aircraft Registry by N-number — aircraft make, model, year, owner name, address, airw
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://apify.com/nexgendata/healthcare-fda-intelligence-mcp
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B037  com.trypinchy/pinchy
+  title         : Pinchy
+  description   : Find coupon and promo codes for any online store, ordered by how likely they are to work.
+  version       : 0.1.1
+  transport     : stdio|streamable-http   [package+remote]
+  packages      : npm
+  repository    : https://github.com/trypinchy/pinchy-mcp
+  website       : https://trypinchy.com
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B038  com.uapdrop/research-archive
+  title         : UAPDrop Research Archive
+  description   : Search declassified UAP/UFO government archives, geocoded sightings and cited entity profiles.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/spedmo/uapdrop-mcp
+  website       : https://www.uapdrop.com/api.html
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B039  dev.nakodo/nakodo
+  title         : (none)
+  description   : Warm introductions to the right builder, matched privately on your work. Double opt-in, no feed.
+  version       : 0.2.3
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/matthewwilliams949-ops/nakodo
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B040  eu.projektionisten/mobility
+  title         : MobilityMCP
+  description   : Public transport in Germany (ÖPNV, Fahrplan): journeys, departures, disruptions, nearby sharing.
+  version       : 0.3.1
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://ai.projektionisten.eu/mcp-landingpage/
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B041  finance.orla/orla
+  title         : Orla
+  description   : Personal, family and business books over fiat and crypto. Reads and records; it cannot pay.
+  version       : 0.3.0
+  transport     : stdio|streamable-http   [package+remote]
+  packages      : npm
+  repository    : https://github.com/cheetah-trade/orla-cli
+  website       : https://orla.finance/en/ai-agents/api
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B042  fyi.clearmarket/clearmarket
+  title         : ClearMarket
+  description   : Reference data for prediction markets: graded resolution clarity, cross-venue links, provenance.
+  version       : 0.2.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/JDSource/clearmarket
+  website       : https://clearmarket.fyi
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B043  io.actvt/actvt
+  title         : Actvt
+  description   : Query live Mac system metrics, listening ports, and Claude Code and Codex session history.
+  version       : 1.2.3
+  transport     : (none)   [neither]
+  packages      : (none)
+  repository    : https://github.com/oye-collective/actvt-macos-releases
+  website       : https://actvt.io
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B044  io.fuse/mcp
+  title         : Fuse Network
+  description   : MCP server for Fuse Network: balances, tokens, staking, DeFi data, swaps and on-chain transactions.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://www.fuse.io
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B045  io.github.Arun-kc/schemabrain
+  title         : SchemaBrain
+  description   : The trust and intelligence layer between AI agents and your database.
+  version       : 0.6.0
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/Arun-kc/schemabrain
+  website       : https://schemabrain.mintlify.app
+  env vars      : 1 declared, 1 flagged secret, 1 required
+
+==============================================================================
+B046  io.github.CSOAI-ORG/health-check-ai-mcp
+  title         : (none)
+  description   : Health Check Ai MCP Server by MEOK AI Labs
+  version       : 1.0.9
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/CSOAI-ORG/health-check-ai-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B047  io.github.CSOAI-ORG/qidi-printer-mcp
+  title         : (none)
+  description   : Qidi Printer MCP Server by MEOK AI Labs
+  version       : 1.0.8
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/CSOAI-ORG/qidi-printer-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B048  io.github.ChloePark85/kr-groundtruth
+  title         : (none)
+  description   : Korean fact-verification tools for AI agents: business registration, address, DART, apt prices, laws
+  version       : 0.1.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://kr-groundtruth-mcp.vercel.app
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B049  io.github.Crackx17/dokutrak-mcp
+  title         : DokuTrak
+  description   : Let your agent chase the documents: create, chase, read and collect DokuTrak Document Requests.
+  version       : 0.1.1
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/Crackx17/dokutrak-mcp
+  website       : https://dokutrak.com
+  env vars      : 2 declared, 1 flagged secret, 1 required
+
+==============================================================================
+B050  io.github.Dailyaiagents/release-gate
+  title         : (none)
+  description   : Local completion-contract checks and release receipts.
+  version       : 0.1.1
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/Dailyaiagents/daily-ai-agent-toolkit
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B051  io.github.DataLeadsPRO/saas-pricing-extractor
+  title         : (none)
+  description   : Extract and structure pricing pages from any SaaS site: plans, tiers, and features.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/DataLeadsPRO/saas-pricing-extractor
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B052  io.github.Evozim/ddos-mitigation-shield-mcp
+  title         : Execute ddos-mitigation-shield-mcp
+  description   : Premium agentic endpoint for ddos-mitigation-shield-mcp.
+  version       : 2.0.0
+  transport     : sse   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B053  io.github.HCS412/ventureautomated-omnis
+  title         : Omnis Venture Intelligence MCP
+  description   : Venture intelligence for autonomous agents with discovery, scoring, and workspace automation.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/HCS412/ventureautomated
+  website       : https://www.bamboosnow.co/venture-intelligence-mcp-server
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B054  io.github.JohannsenLum/linkedin-api-mcp
+  title         : LinkedIn
+  description   : Read LinkedIn profiles, companies, jobs and messages via your own browser session
+  version       : 1.0.1
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/JohannsenLum/linkedin-api-mcp
+  website       : https://github.com/JohannsenLum/linkedin-api-mcp#readme
+  env vars      : 4 declared, 1 flagged secret, 0 required
+
+==============================================================================
+B055  io.github.LinuxSuRen/atest-mcp-server
+  title         : (none)
+  description   : Auto-download & launch https://github.com/LinuxSuRen/atest-mcp-server
+  version       : 1.0.2
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/LinuxSuRen/atest-mcp-server
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B056  io.github.MK3Core/flickr-mcp
+  title         : (none)
+  description   : Flickr MCP server — tag photos, write descriptions, set titles, and add photos to groups using AI.
+  version       : 0.2.1
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/MK3Core/flickr-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B057  io.github.Mrshahidali420/sitehelm
+  title         : SiteHelm
+  description   : Let an AI agent run your WordPress site: every write previewed, verified and reversible.
+  version       : 0.16.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/Mrshahidali420/SiteHelm
+  website       : https://www.wpsitehelm.com/
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B058  io.github.Nikoble1926/kraken-signals-mcp
+  title         : (none)
+  description   : Kraken crypto signals via x402: free preview + paid USDC-on-Base signals, regime & indicators
+  version       : 1.1.1
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/Nikoble1926/kraken-crypto-signals
+  website       : (none)
+  env vars      : 2 declared, 1 flagged secret, 0 required
+
+==============================================================================
+B059  io.github.Patrizzos/envspeak
+  title         : (none)
+  description   : MCP server and CLI that resolves config/env-var cascade across .env, docker-compose, and Kubernetes
+  version       : 0.1.0
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/patrizzos/envspeak
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B060  io.github.Servosity/n-central-mcp
+  title         : N-able N-central MCP
+  description   : N-central REST API with an offline org-tree mirror, cross-tenant search, and a JWT-expiry guardian.
+  version       : 0.1.4
+  transport     : stdio   [package-only]
+  packages      : mcpb
+  repository    : https://github.com/servosity/msp-skills
+  website       : (none)
+  env vars      : 3 declared, 1 flagged secret, 1 required
+
+==============================================================================
+B061  io.github.ThaiTrevor/gold-mcp
+  title         : (none)
+  description   : MCP server for XAUUSD gold market data + 4-tier trading toolkit (TA, backtest, SMC, risk).
+  version       : 4.1.2
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/ThaiTrevor/gold-mcp
+  website       : https://pthaicapital.io.vn/mcp/
+  env vars      : 2 declared, 2 flagged secret, 0 required
+
+==============================================================================
+B062  io.github.VIKAS9793/context-fabric
+  title         : Context Fabric
+  description   : Context sync layer for AI agents. Ensures continuity and eliminates memory drift automatically.
+  version       : 1.2.2
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/VIKAS9793/context-fabric
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B063  io.github.WYRE-AI/connectwise-manage-mcp
+  title         : ConnectWise Manage
+  description   : MCP server for ConnectWise Manage PSA — companies, tickets, projects, time entries, and more.
+  version       : 1.9.0
+  transport     : stdio   [package-only]
+  packages      : oci
+  repository    : https://github.com/WYRE-AI/connectwise-manage-mcp
+  website       : https://github.com/WYRE-AI/connectwise-manage-mcp
+  env vars      : 8 declared, 3 flagged secret, 4 required
+
+==============================================================================
+B064  io.github.WYRE-AI/datto-bcdr-mcp
+  title         : Datto BCDR
+  description   : MCP server for Datto BCDR — appliances, agents, recovery points, screenshots, alerts.
+  version       : 1.1.5
+  transport     : stdio   [package-only]
+  packages      : oci
+  repository    : https://github.com/WYRE-AI/datto-bcdr-mcp
+  website       : https://github.com/WYRE-AI/datto-bcdr-mcp
+  env vars      : 6 declared, 2 flagged secret, 2 required
+
+==============================================================================
+B065  io.github.benswel/qr-for-agent
+  title         : QR for Agent
+  description   : Dynamic QR codes for AI agents — custom styling, scan tracking, webhooks
+  version       : 0.12.2
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/benswel/qr-for-agent-api
+  website       : (none)
+  env vars      : 2 declared, 1 flagged secret, 1 required
+
+==============================================================================
+B066  io.github.bluemagma-compliance/nohumansshop
+  title         : noHumansShop
+  description   : Affiliate marketplace for AI agents: find tools, publish verified guides, earn. OAuth, no keys.
+  version       : 0.1.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/bluemagma-compliance/nohumansshop
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B067  io.github.bnmbnmai/apollo-intelligence
+  title         : Apollo Intelligence Network
+  description   : 54 AI agent tools: OSINT, intel feeds, DeFi, crypto, weather, DNS, proxies. x402 micropayments.
+  version       : 4.15.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/bnmbnmai/mcp-proxy
+  website       : https://apolloai.team
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B068  io.github.camgitt/memoir
+  title         : (none)
+  description   : Persistent memory for AI coding tools via MCP. Remembers across sessions and machines.
+  version       : 3.2.2
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/camgitt/memoir
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B069  io.github.chris-paton/trustedvillas-mcp
+  title         : TrustedVillas Villa Rentals
+  description   : Search and book luxury villa rentals across Europe with real-time availability and pricing.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/chris-paton/trustedvillas-mcp
+  website       : https://mcp.trustedvillas.co.uk
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B070  io.github.clicksprotocol/mcp-server
+  title         : (none)
+  description   : Agent commerce settlement tools on Base: treasury setup, payment splits, yield and attribution.
+  version       : 1.0.3
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/clicks-protocol/clicks-protocol
+  website       : (none)
+  env vars      : 2 declared, 1 flagged secret, 0 required
+
+==============================================================================
+B071  io.github.codespar/mcp-picpay
+  title         : (none)
+  description   : MCP server for PicPay Business — BR digital wallet (60M+ users): checkout, Pix QR, subscriptions
+  version       : 0.2.0-alpha.3
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/codespar/mcp-dev-latam
+  website       : (none)
+  env vars      : 3 declared, 2 flagged secret, 2 required
+
+==============================================================================
+B072  io.github.cyanheads/obsidian-mcp-server
+  title         : (none)
+  description   : Read, write, search, and surgically edit Obsidian notes, tags, and frontmatter via MCP.
+  version       : 3.6.0
+  transport     : stdio|streamable-http   [package-only]
+  packages      : npm
+  repository    : https://github.com/cyanheads/obsidian-mcp-server
+  website       : (none)
+  env vars      : 24 declared, 0 flagged secret, 2 required
+
+==============================================================================
+B073  io.github.cyanheads/stackexchange-mcp-server
+  title         : (none)
+  description   : Search Stack Exchange questions, fetch Q&A threads as markdown, look up tag FAQs and user profiles.
+  version       : 0.1.15
+  transport     : stdio|streamable-http   [package+remote]
+  packages      : npm
+  repository    : https://github.com/cyanheads/stackexchange-mcp-server
+  website       : (none)
+  env vars      : 8 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B074  io.github.damdafayton/dreamhome
+  title         : Dream Home Design
+  description   : Redesign interiors and exteriors instantly using AI. Turn sketches into realistic home designs.
+  version       : 1.0.0
+  transport     : sse   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B075  io.github.dearlordylord/voila-mcp
+  title         : Voila Groceries MCP
+  description   : Safe personal Voila grocery automation for search, slots, cart updates, and order history
+  version       : 0.3.0
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/dearlordylord/voila-sdk
+  website       : https://github.com/dearlordylord/voila-sdk#readme
+  env vars      : 2 declared, 1 flagged secret, 0 required
+
+==============================================================================
+B076  io.github.dgunning/edgartools
+  title         : EdgarTools
+  description   : Open-source SEC EDGAR toolkit — 11 tools, 7 prompts, every filing type. No API key required.
+  version       : 5.21.1
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/dgunning/edgartools
+  website       : (none)
+  env vars      : 1 declared, 0 flagged secret, 1 required
+
+==============================================================================
+B077  io.github.elankeeran/companies-house-mcp
+  title         : UK Companies House
+  description   : Search UK companies, retrieve profiles, officers, charges, and generate due diligence reports
+  version       : 1.0.0
+  transport     : sse   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://github.com/elankeeran/Companies-House-MCP-Server
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B078  io.github.eltociear/skill-audit-mcp
+  title         : (none)
+  description   : Scan agent skills and MCP servers for malicious patterns before you load them
+  version       : 1.1.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/eltociear/skill-audit-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B079  io.github.fliptheweb/fatsecret-mcp
+  title         : (none)
+  description   : MCP server for FatSecret API - food search, nutrition, diary, recipes, weight tracking (unofficial)
+  version       : 0.0.8
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/fliptheweb/fatsecret-mcp
+  website       : (none)
+  env vars      : 3 declared, 3 flagged secret, 3 required
+
+==============================================================================
+B080  io.github.fraudlabspro/mcp-fraudlabspro
+  title         : (none)
+  description   : Fraud Prevention MCP server using FraudLabs Pro API.
+  version       : 1.1.1
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/fraudlabspro/mcp-fraudlabspro
+  website       : (none)
+  env vars      : 1 declared, 1 flagged secret, 1 required
+
+==============================================================================
+B081  io.github.getmasv/masv
+  title         : (none)
+  description   : Provides tools to use MASV API. MASV is reliable and secure large file transfer service.
+  version       : 0.0.6
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/getmasv/masv-mcp-server
+  website       : (none)
+  env vars      : 3 declared, 1 flagged secret, 2 required
+
+==============================================================================
+B082  io.github.ilyautov/moysklad-mcp-ru
+  title         : MoySklad MCP (RU)
+  description   : MoySklad JSON API 1.2 in your AI assistant — schema-driven, safety-gated document writes.
+  version       : 0.2.0
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/ilyautov/moysklad-mcp-ru
+  website       : https://moysklad-mcp-ru.aifrontier.tech
+  env vars      : 2 declared, 1 flagged secret, 0 required
+
+==============================================================================
+B083  io.github.jonnybottles/m365-roadmap
+  title         : M365 Roadmap
+  description   : Query the Microsoft 365 Roadmap from AI agents
+  version       : 0.4.0
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/jonnybottles/M365-roadmap-mcp-server
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B084  io.github.juanjaragavi/devspeak
+  title         : DevSpeak
+  description   : Official DevSpeak MCP server — translate technical text into formal specs from any AI IDE or agent
+  version       : 1.0.3
+  transport     : stdio|streamable-http   [package+remote]
+  packages      : npm
+  repository    : https://github.com/juanjaragavi/devspeak
+  website       : https://www.devspeak.dev
+  env vars      : 2 declared, 1 flagged secret, 1 required
+
+==============================================================================
+B085  io.github.kingwarthur/camelotwebtools-mcp
+  title         : (none)
+  description   : Official MCP server for Camelot Web Tools: 79 deterministic business, legal, and financial tools.
+  version       : 1.0.1
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/kingwarthur/camelotwebtools-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B086  io.github.lonniev/dpyc-oracle
+  title         : (none)
+  description   : DPYC Social Contract community concierge — free MCP for membership, governance, and onboarding
+  version       : 0.3.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/lonniev/dpyc-oracle
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B087  io.github.malkreide/swiss-holidays-mcp
+  title         : (none)
+  description   : Swiss school & public holidays, 26 cantons, by Schulart (OpenHolidays + Nager.Date)
+  version       : 0.6.0
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/malkreide/swiss-holidays-mcp
+  website       : https://github.com/malkreide/swiss-holidays-mcp
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B088  io.github.mcp-dir/detran_ms_licenciamentos_flex-mcp
+  title         : DETRAN MS Guia Flex: Licenciamentos
+  description   : DETRAN MS Guia Flex: Vehicle Licensings, official-source lookup. Platform-hosted, pay per query with
+  version       : 0.1.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/mcp-dir/detran_ms_licenciamentos_flex-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B089  io.github.mcp-dir/ecac_dctf_web-mcp
+  title         : ECAC: DCTF WEB
+  description   : ECAC: DCTF WEB, official-source lookup. Platform-hosted, pay per query with prepaid credit.
+  version       : 0.1.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/mcp-dir/ecac_dctf_web-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B090  io.github.mcp-dir/sefaz_ms_dec_caixa_postal-mcp
+  title         : SEFAZ MS DTE: Caixa Postal
+  description   : SEFAZ MS DTE: Caixa Postal, official-source lookup. Platform-hosted, pay per query with prepaid cred
+  version       : 0.1.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/mcp-dir/sefaz_ms_dec_caixa_postal-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B091  io.github.mcp-fortress/mcp-fortress
+  title         : MCP Fortress
+  description   : Security scanner for MCP servers. Detect vulnerabilities, prompt injection, and tool poisoning.
+  version       : 0.3.6
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B092  io.github.mharnett/ga4
+  title         : (none)
+  description   : Google Analytics 4 MCP: reports, realtime data, custom dimensions, data streams.
+  version       : 2.0.1
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/mharnett/mcp-ga4
+  website       : (none)
+  env vars      : 2 declared, 0 flagged secret, 2 required
+
+==============================================================================
+B093  io.github.mindstone/mcp-server-workday
+  title         : Workday
+  description   : Workday HCM MCP server for Model Context Protocol hosts — workers, profiles, organizations
+  version       : 0.3.1
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/mindstone/mcp-servers
+  website       : (none)
+  env vars      : 6 declared, 2 flagged secret, 4 required
+
+==============================================================================
+B094  io.github.mlawsonking/web-tools-mcp
+  title         : (none)
+  description   : 10 no-LLM web tools: URL to Markdown, metadata, JSON-LD, MX, scrape, RSS, DNS, RDAP, SSL, HTTP.
+  version       : 1.3.0
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/mlawsonking/MCP
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B095  io.github.mortenator/charta
+  title         : (none)
+  description   : Generate beautiful, presentation-ready charts (SVG + PNG). Supports 14+ chart types.
+  version       : 1.0.2
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/mortenator/charta-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B096  io.github.mrfentmen/lichess-mcp
+  title         : (none)
+  description   : Use this MCP server to Lichess, chess puzzles by rating, player stats, and top players. Tools...
+  version       : 1.0.0
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/mrfentmen/lichess-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B097  io.github.mrfentmen/workable-mcp
+  title         : (none)
+  description   : Job boards from Workable. No key required.
+  version       : 1.0.0
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/mrfentmen/workable-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B098  io.github.neo4j-contrib/mcp-neo4j-cypher
+  title         : (none)
+  description   : A simple Neo4j MCP server that allows you to run Cypher queries against a Neo4j database.
+  version       : 1.0.0
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/neo4j-contrib/mcp-neo4j
+  website       : (none)
+  env vars      : 9 declared, 1 flagged secret, 3 required
+
+==============================================================================
+B099  io.github.nzdsf2-gif/relayshield-mcp
+  title         : RelayShield Security Intelligence
+  description   : Breach, SIM swap, infostealer, domain lookalikes, MCP registry risk, prompt-injection detection.
+  version       : 0.2.12
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/RelayShield/relayshield-mcp
+  website       : https://relayshield.net?source=mcp-registry
+  env vars      : 3 declared, 2 flagged secret, 1 required
+
+==============================================================================
+B100  io.github.pduggusa/dredd-mcp
+  title         : Dredd MCP
+  description   : Pre-flight MCP security. Blocks compromised deps + tool drift. HMAC-signed. Dredd judges.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/pduggusa/dredd-mcp
+  website       : https://analytics.dugganusa.com/api/v1/dredd
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B101  io.github.pipeworx-io/bitfinex
+  title         : Bitfinex
+  description   : Bitfinex v2 public MCP.
+  version       : 0.1.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/pipeworx-io/mcp-bitfinex
+  website       : https://pipeworx.io/packs/bitfinex
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B102  io.github.pipeworx-io/buzzword-density
+  title         : Buzzword Density
+  description   : buzzword-density MCP — wraps StupidAPIs (keyless — no credential needed)
+  version       : 0.1.1
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/pipeworx-io/mcp-buzzword-density
+  website       : https://pipeworx.io/packs/buzzword-density
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B103  io.github.pipeworx-io/coinpaprika
+  title         : Coinpaprika
+  description   : Coinpaprika MCP — alternative crypto data source
+  version       : 0.1.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/pipeworx-io/mcp-coinpaprika
+  website       : https://pipeworx.io/packs/coinpaprika
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B104  io.github.pipeworx-io/gdelt
+  title         : Gdelt
+  description   : GDELT MCP — Global Database of Events, Language, and Tone (free, no auth)
+  version       : 0.1.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/pipeworx-io/mcp-gdelt
+  website       : https://pipeworx.io/packs/gdelt
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B105  io.github.pipeworx-io/performance-review
+  title         : Performance Review
+  description   : performance-review MCP — wraps StupidAPIs (keyless — no credential needed)
+  version       : 0.1.1
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/pipeworx-io/mcp-performance-review
+  website       : https://pipeworx.io/packs/performance-review
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B106  io.github.pipeworx-io/sec
+  title         : sec
+  description   : SEC MCP — SEC EDGAR public APIs (free, no auth)
+  version       : 0.1.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/pipeworx-io/mcp-sec
+  website       : https://pipeworx.io/packs/sec
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B107  io.github.pipeworx-io/sec-nport
+  title         : Sec Nport
+  description   : SEC Form N-PORT — fund and ETF holdings, asked security-first.
+  version       : 0.1.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/pipeworx-io/mcp-sec-nport
+  website       : https://pipeworx.io/packs/sec-nport
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B108  io.github.rudraneel93/mcp-guardian
+  title         : (none)
+  description   : Security, cost, and health governance proxy for MCP infrastructure
+  version       : 2.3.21
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/rudraneel93/mcp-guardian
+  website       : (none)
+  env vars      : 3 declared, 1 flagged secret, 0 required
+
+==============================================================================
+B109  io.github.ryanthegentry/402index
+  title         : (none)
+  description   : Search 15,000+ paid API endpoints across the L402, x402, and MPP protocols on 402index.io
+  version       : 0.3.0
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/ryanthegentry/402index
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B110  io.github.sadri-dridi/cc-ro
+  title         : ISO country RO
+  description   : Public ISO 3166-1 record for RO.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/sadri-dridi/named-mcp-utilities
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B111  io.github.sadri-dridi/ean-shape
+  title         : EAN/UPC digit shape
+  description   : EAN/UPC digit shape
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/sadri-dridi/named-mcp-utilities
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B112  io.github.sadri-dridi/flac-magic
+  title         : FLAC magic-byte check, file discarded
+  description   : FLAC magic-byte check, file discarded
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/sadri-dridi/named-mcp-utilities
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B113  io.github.sadri-dridi/gh-sha-ok
+  title         : GitHub commit SHA hex, value discarded
+  description   : GitHub commit SHA hex, value discarded
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/sadri-dridi/named-mcp-utilities
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B114  io.github.sadri-dridi/mime-csv
+  title         : MIME csv
+  description   : Public MIME token for csv.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/sadri-dridi/named-mcp-utilities
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B115  io.github.sadri-dridi/postcode-uk-ok
+  title         : UK postcode shape, value discarded
+  description   : UK postcode shape, value discarded
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/sadri-dridi/named-mcp-utilities
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B116  io.github.sadri-dridi/sha3-512
+  title         : SHA3-512 hex length, input discarded
+  description   : SHA3-512 hex length, input discarded
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/sadri-dridi/named-mcp-utilities
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B117  io.github.sadri-dridi/tiger192
+  title         : Tiger-192 hex length, input discarded
+  description   : Tiger-192 hex length, input discarded
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/sadri-dridi/named-mcp-utilities
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B118  io.github.sadri-dridi/tz-asia-sakhalin
+  title         : Asia/Sakhalin clock
+  description   : Current local time in Asia/Sakhalin.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/sadri-dridi/named-mcp-utilities
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B119  io.github.sadri-dridi/wh-kj
+  title         : Watt-hours to kilojoules, number discarded
+  description   : Watt-hours to kilojoules, number discarded
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/sadri-dridi/named-mcp-utilities
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B120  io.github.salatmaster/keenetic-mcp
+  title         : (none)
+  description   : Control a Keenetic router: devices, Wi-Fi, VPN routing, segments, safe verified writes.
+  version       : 0.3.1
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/salatmaster/keenetic-mcp
+  website       : (none)
+  env vars      : 3 declared, 1 flagged secret, 0 required
+
+==============================================================================
+B121  io.github.seanlok/tcg-mcp
+  title         : TCG MCP
+  description   : Pokemon TCG MCP server: PSA grading, collection management, and multi-provider pricing.
+  version       : 0.4.0
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/seanlok/tcg-mcp
+  website       : (none)
+  env vars      : 4 declared, 3 flagged secret, 0 required
+
+==============================================================================
+B122  io.github.selflabbs/security-intel-mcp
+  title         : Security Intel MCP
+  description   : CVE lookups (NVD) and dependency-manifest audits (OSV) for AI agents. No API keys.
+  version       : 2.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/selflabbs/security-intel-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B123  io.github.shahidla/cds-db-nlquery-mcp
+  title         : (none)
+  description   : MCP server for natural-language queries against SAP CAP db-layer entities via real CQN/SQL JOINs.
+  version       : 0.7.3
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/shahidla/cds-db-nlquery-mcp
+  website       : (none)
+  env vars      : 4 declared, 2 flagged secret, 0 required
+
+==============================================================================
+B124  io.github.snowmead/oxcode
+  title         : (none)
+  description   : PageRank-curated code intelligence for coding agents over an indexed source repository.
+  version       : 0.4.1
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/oxgraph/oxcode
+  website       : (none)
+  env vars      : 2 declared, 1 flagged secret, 0 required
+
+==============================================================================
+B125  io.github.sraj0501/devtrack
+  title         : DevTrack
+  description   : Read local tickets, commits, pending actions, voice profile, and EOD context over MCP.
+  version       : 3.1.1
+  transport     : stdio   [package-only]
+  packages      : mcpb
+  repository    : https://github.com/sraj0501/Devtrack_.git
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B126  io.github.thalovant/thalovant-mcp
+  title         : Thalovant MCP
+  description   : Connect MCP clients to Thalovant control-plane and hub runtime APIs over stdio or Streamable HTTP.
+  version       : 0.5.2
+  transport     : stdio|streamable-http   [package-only]
+  packages      : npm|oci
+  repository    : https://github.com/thalovant/thalovant-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B127  io.github.thelabvenice/memdata
+  title         : (none)
+  description   : Persistent memory for AI agents. Store context, retrieve it semantically.
+  version       : 1.4.1
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/thelabvenice/memdata-mcp
+  website       : (none)
+  env vars      : 1 declared, 1 flagged secret, 1 required
+
+==============================================================================
+B128  io.github.tixuz/openemis-pro
+  title         : (none)
+  description   : Read + write MCP server for OpenEMIS — free open-source school management system. 675 resources.
+  version       : 1.1.0
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/tixuz/openemis-mcp-pro
+  website       : (none)
+  env vars      : 6 declared, 2 flagged secret, 2 required
+
+==============================================================================
+B129  io.github.varvararatta/air_quality_mcp
+  title         : Air Quality Mcp
+  description   : Stay ahead of pollution with our Air Quality MCP. Access real-time air quality data, including
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/varvararatta/botfactory-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B130  io.github.vfa-khuongdv/mcp-backlog
+  title         : (none)
+  description   : MCP server for Backlog API integration with AI agents.
+  version       : 1.0.0
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/vfa-khuongdv/mcp-backlog
+  website       : (none)
+  env vars      : 2 declared, 1 flagged secret, 2 required
+
+==============================================================================
+B131  io.github.vishalsachdev/canvas-mcp
+  title         : (none)
+  description   : Canvas LMS integration for students and educators with optional privacy controls
+  version       : 1.12.0
+  transport     : stdio   [package-only]
+  packages      : pypi
+  repository    : https://github.com/vishalsachdev/canvas-mcp
+  website       : https://canvas-mcp.illinihunt.org/
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B132  io.github.vnbochkarev-netizen/vibo-mcp
+  title         : (none)
+  description   : Persistent memory for AI agents: L1/L2/L3, web compression, threads.
+  version       : 0.2.6
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/vnbochkarev-netizen/vibo-mcp
+  website       : (none)
+  env vars      : 1 declared, 1 flagged secret, 1 required
+
+==============================================================================
+B133  io.github.xxxoooxoxo/wiff
+  title         : (none)
+  description   : Deterministic, resumable multi-agent workflows across Codex, Claude, Cursor, and Kimi.
+  version       : 0.9.1
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/xxxoooxoxo/wiff
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B134  io.github.yaniv-golan/xaffinity-mcp
+  title         : xaffinity MCP
+  description   : MCP server for Affinity CRM - entity search, relationship intelligence, and workflow management
+  version       : 1.22.0
+  transport     : stdio   [package-only]
+  packages      : mcpb
+  repository    : https://github.com/yaniv-golan/affinity-sdk
+  website       : https://github.com/yaniv-golan/affinity-sdk
+  env vars      : 1 declared, 1 flagged secret, 1 required
+
+==============================================================================
+B135  io.github.yondry-ltd/day-planner
+  title         : Yondry: Day Out Planner
+  description   : Plan your perfect day out anywhere: itineraries and neighbourhood guides, tuned to mood and weather.
+  version       : 1.0.1
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://yondry.app
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B136  io.kondux/seraph
+  title         : Seraph
+  description   : Crypto transaction firewall and risk tools for MCP agents.
+  version       : 0.1.1
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/Kondux/seraph-mcp-public
+  website       : https://github.com/Kondux/seraph-mcp-public#readme
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B137  io.scrapfly.mcp/mcp
+  title         : (none)
+  description   : Scrape any website, extract structured data, and collect web content at scale with AI agents
+  version       : 1.0.0
+  transport     : stdio   [package-only]
+  packages      : npm
+  repository    : https://github.com/scrapfly/scrapfly-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B138  io.studiomeyer/meetmyagent
+  title         : MeetMyAgent
+  description   : Give your business its own AI agent and run it from any MCP client.
+  version       : 0.3.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/studiomeyer-io/meetmyagent-mcp
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B139  io.tooloracle/ecommerceoracle
+  title         : (none)
+  description   : EcommerceOracle - 8 e-commerce tools: Shopify, WooCommerce, GMV, conversions, returns.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/ToolOracle/ecommerceoracle
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B140  live.alpic.staging.demo-81c8a122/demo
+  title         : My MCP Server
+  description   : Description of my MCP server
+  version       : 0.0.1
+  transport     : sse|streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B141  md.authority/authority-md
+  title         : authority.md
+  description   : Search, browse, and buy 597 AI thinking frameworks, Tools and bundles from within any MCP client.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://authority.md/mcp
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B142  money.candor/candor-finance
+  title         : Candor Finance
+  description   : Personal-finance workspace for AI agents: accounts, spending, budgets, goals, and investments.
+  version       : 0.1.131
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/candorsystems/candor-finance
+  website       : https://candor.money/START.md
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B143  net.nexlab/wikipedia-retrieval
+  title         : Wikipedia Retrieval MCP
+  description   : Search
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://mcp.nexlab.net/s/wikipedia-retrieval
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B144  org.memoryapi/monitor
+  title         : Ecosystem Monitor
+  description   : Ecosystem monitoring: service status and x402 activity metrics
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : (none)
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B145  pro.publifye/junifye
+  title         : Junifye
+  description   : Write books, studies & commentaries with your AI — EPUB, print-ready PDF, web reader, ISBN, RTL
+  version       : 1.0.3
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/Publifye/mcp
+  website       : https://junifye.publifye.com
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B146  si.sigit/sigit
+  title         : siGit
+  description   : MCP server for siGit (sigit.si): browse repos, search code, manage PRs/issues, web search.
+  version       : 1.2.3
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : https://github.com/getsigit/sigit
+  website       : https://sigit.si
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B147  systems.phion/evidence-engine
+  title         : PHION Agent Trust Infrastructure
+  description   : 118 agent services with free discovery, intent, x402 terms and signed verification.
+  version       : 1.46.4
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://phion.systems
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B148  tv.popoff/data
+  title         : PopOff Data
+  description   : Reality-TV follower analytics for AI agents: histories, growth, follow graphs, engagement, CSV.
+  version       : 1.0.0
+  transport     : streamable-http   [remote-only]
+  packages      : (none)
+  repository    : (none)
+  website       : https://popoff.tv/data
+  env vars      : 0 declared, 0 flagged secret, 0 required
+
+==============================================================================
+B149  uk.openqr/qr
+  title         : OpenQR
+  description   : Generate, edit and track dynamic (editable) QR codes with scan analytics. Hosted MCP and REST API.
+  version       : 1.0.4
+  transport     : stdio|streamable-http   [package+remote]
+  packages      : npm
+  repository    : https://github.com/open-qr/openqr
+  website       : https://openqr.uk/api
+  env vars      : 1 declared, 1 flagged secret, 1 required
+
+==============================================================================
+B150  xyz.signomy/civitae
+  title         : CIVITAE — Governed AI Agent Marketplace
+  description   : Governed AI agent marketplace on Signomy. Register agents, fill slots, earn under MO§ES governance.
+  version       : 1.2.1
+  transport     : stdio|streamable-http   [package+remote]
+  packages      : pypi
+  repository    : https://github.com/SunrisesIllNeverSee/agent-universe
+  website       : https://signomy.xyz
+  env vars      : 0 declared, 0 flagged secret, 0 required

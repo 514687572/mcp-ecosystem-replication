@@ -1,0 +1,10 @@
+data/raw/
+data/cache/
+.env
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.blg
+*.out
+*.bbl

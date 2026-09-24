@@ -1,0 +1,88 @@
+# MCP Server Ecosystem Study — run configuration
+#
+# Everything the pipeline needs. Paths are resolved relative to the project root
+# (the folder containing this config/ directory), so scripts can be run from anywhere.
+
+project:
+  name: mcp-ecosystem-study
+  # Freeze date for the study. All "as of" statements in the paper use this.
+  # Change it deliberately, never accidentally.
+  freeze_window_end: "2026-09-24"
+
+http:
+  user_agent: "mcp-ecosystem-study/0.1 (academic research; contact: chenjunan.aiden@gmail.com)"
+  timeout_seconds: 60
+  max_retries: 8
+  # Connection failures retry fast; a flaky local proxy should not cost 31s
+  # per call. Server-side rate limits still honour Retry-After / reset headers.
+  retry_backoff_cap_seconds: 3
+  # How to reach the network.
+  #   auto : obey the environment and the Windows Internet Settings proxy
+  #   none : never use a proxy (direct connections)
+  #   url  : force a specific proxy, e.g. "http://127.0.0.1:7897"
+  #
+  # This machine reaches the MCP registry, npm and PyPI directly, but GitHub
+  # only through a local proxy. If the proxy client is not running, every host
+  # fails with ProxyError, so set this to `none` for the non-GitHub steps and
+  # back to `auto` (with the proxy up) for step 5.
+  proxy_mode: auto
+  proxy_url: ""
+  # Minimum seconds between requests to the same host. Keep GitHub polite.
+  min_interval_seconds:
+    default: 0.05
+    # A token allows 5,000 core requests/hour (1.39/s). This interval is per
+    # worker, so with the default 4 workers the aggregate is 4/3.0 = 1.33/s,
+    # which stays under the token budget. Lower the worker count before
+    # lowering this value.
+    api.github.com: 3.0
+    registry.npmjs.org: 0.05
+    api.npmjs.org: 0.05
+    pypi.org: 0.05
+    files.pythonhosted.org: 0.05
+
+registry:
+  # Official Model Context Protocol registry (authoritative, no auth required).
+  base_url: "https://registry.modelcontextprotocol.io/v0/servers"
+  page_limit: 100
+  # Safety valve; the harvest stops early if the cursor runs out.
+  # The registry held well over 40,000 published versions in September 2026,
+  # so this needs to be generous. Raise it if the harvest still reports
+  # complete=false.
+  max_pages: 2000
+
+github:
+  # Unauthenticated access is capped at 60 core requests/hour and 10 search
+  # requests/minute. Set GITHUB_TOKEN (a read-only, public-repo token is enough)
+  # to raise this to 5000/hour. The pipeline works without it, just slowly.
+  token_env_var: "GITHUB_TOKEN"
+  search_per_page: 100
+  max_search_pages_per_query: 10
+  # Discovery queries. GitHub search treats these as qualifiers.
+  search_queries:
+    - "topic:mcp-server"
+    - "topic:model-context-protocol"
+    - "topic:mcp"
+    - "mcp server in:name,description"
+    - "model context protocol in:name,description"
+  # Repositories that are infrastructure/aggregators rather than candidate servers.
+  exclude_repos:
+    - "modelcontextprotocol/servers"
+    - "modelcontextprotocol/typescript-sdk"
+    - "modelcontextprotocol/python-sdk"
+    - "punkpeye/awesome-mcp-servers"
+    - "wong2/awesome-mcp-servers"
+
+packages:
+  # Enrichment sources for published packages referenced by registry entries.
+  npm_registry: "https://registry.npmjs.org"
+  npm_downloads: "https://api.npmjs.org/downloads/point/last-month"
+  pypi_json: "https://pypi.org/pypi"
+  # Set to false to skip downloading package source archives.
+  download_sources: true
+  max_source_downloads: 2000
+
+analysis:
+  # Minimum number of published servers for a namespace to be reported as an
+  # organisational publisher rather than as a long tail of one-off names.
+  namespace_min_servers: 3
+  top_n: 25

@@ -1,0 +1,6 @@
+# The collection and analysis pipeline. Verified with Python 3.8.
+requests>=2.31
+PyYAML>=6.0
+pandas>=2.0
+matplotlib>=3.7
+Pillow>=9.0

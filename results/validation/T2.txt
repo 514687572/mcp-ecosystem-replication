@@ -1,0 +1,151 @@
+item_id,server_name,transport_class,auth_mechanism,auth_evidence,requires_user_secret,secret_documented_as_secret,scope_breadth,destructive_capability,write_capability,readme_warns_about_risk
+B001,ai.edgechat/edgepedia,remote-only,none,描述: No key,no,no,read_only,no,no,unclear
+B002,ai.getvda/structured-output-agent,remote-only,unclear,无 auth 声明,unclear,unclear,unclear,unclear,unclear,unclear
+B003,ai.meetlark/mcp-server,package+remote,unclear,无 auth 声明,unclear,unclear,narrow,no,yes,unclear
+B004,ai.namewhisper/ens-tools,remote-only,unclear,无 auth 声明,unclear,unclear,broad,yes,yes,unclear
+B005,ai.primeta/primeta,remote-only,unclear,无 auth 声明,unclear,unclear,narrow,unclear,unclear,unclear
+B006,ai.smithery/mrugankpednekar-bill_splitter_mcp,remote-only,unclear,无 auth 声明,unclear,unclear,narrow,no,yes,unclear
+B007,ai.smithery/zwldarren-akshare-one-mcp,remote-only,unclear,无 auth 声明,unclear,unclear,read_only,no,no,unclear
+B008,ai.strix/strix,remote-only,unclear,无 auth 声明,unclear,unclear,broad,yes,yes,unclear
+B009,ai.zencap/zencap,remote-only,oauth,描述: OAuth 2.1,unclear,no,read_only,no,no,unclear
+B010,app.cannonstudio/cannon-studio,remote-only,none,描述: Public answers,no,no,read_only,no,no,unclear
+B011,app.wishpool/ireland-payments-mcp,remote-only,unclear,无 auth 声明,unclear,unclear,narrow,yes,yes,unclear
+B012,cat.churchofai/aigora,remote-only,unclear,无 auth 声明,unclear,unclear,broad,unclear,yes,unclear
+B013,ch.martinelli/jooq-mcp,remote-only,none,文档访问无 auth 声明,no,no,read_only,no,no,unclear
+B014,club.atlasyield/mcp,package-only,none,描述: Read-only,no,no,read_only,no,no,unclear
+B015,com.agentery/agentery,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B016,com.astryke/hub,remote-only,unclear,无 auth 声明,unclear,unclear,broad,unclear,yes,unclear
+B017,com.bynn/bynn,remote-only,unclear,无 auth 声明,unclear,unclear,narrow,no,no,unclear
+B018,com.dexpaprika/dexpaprika,remote-only,none,描述: 公共 DEX 数据,no,no,read_only,no,no,unclear
+B019,com.discoverseniorbenefits/benefits,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B020,com.eqiqs/eqiqs,remote-only,unclear,无 auth 声明,unclear,unclear,read_only,no,no,unclear
+B021,com.files/python-mcp,package-only,api_key,"env vars: 2 declared; 1 flagged secret; 1 required",yes,yes,broad,unclear,yes,unclear
+B022,com.getlandlens/landlens,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B023,com.immo-spot/mcp,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B024,com.invoicedataextraction/invoice-data-extraction,remote-only,unclear,无 auth 声明,unclear,unclear,narrow,no,yes,unclear
+B025,com.mcparmory/polygon,package-only,unclear,env vars: 0 declared,unclear,unclear,read_only,no,no,unclear
+B026,com.mcpmux/mcp-mux,neither,unclear,无 auth 声明,unclear,unclear,broad,unclear,unclear,unclear
+B027,com.mcpscores/csv-import-rehearsal,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B028,com.nusii/mcp,remote-only,unclear,无 auth 声明,unclear,unclear,narrow,no,yes,unclear
+B029,com.olyport/bls,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B030,com.permitreporter/us-building-permits,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B031,com.pokerink/poker-tools,remote-only,none,描述: Free; no API key,no,no,read_only,no,no,unclear
+B032,com.scribblecards/handwritten-cards,remote-only,unclear,无 auth 声明,unclear,unclear,narrow,yes,yes,unclear
+B033,com.seoapi/meta,remote-only,none,validate_ip 公共工具,no,no,read_only,no,no,unclear
+B034,com.southlondonscientific/clara,remote-only,unclear,无 auth 声明,unclear,unclear,read_only,no,no,unclear
+B035,com.swamix.mcp/server,remote-only,unclear,无 auth 声明,unclear,unclear,broad,unclear,yes,unclear
+B036,com.thenextgennexus/healthcare-fda-intelligence-mcp,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B037,com.trypinchy/pinchy,package+remote,unclear,无 auth 声明,unclear,unclear,read_only,no,no,unclear
+B038,com.uapdrop/research-archive,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B039,dev.nakodo/nakodo,package-only,unclear,无 auth 声明,unclear,unclear,narrow,no,yes,unclear
+B040,eu.projektionisten/mobility,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B041,finance.orla/orla,package+remote,unclear,无 auth 声明,unclear,unclear,broad,no,yes,unclear
+B042,fyi.clearmarket/clearmarket,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B043,io.actvt/actvt,neither,unclear,无 auth 声明,unclear,unclear,broad,no,no,unclear
+B044,io.fuse/mcp,remote-only,unclear,无 auth 声明,unclear,unclear,broad,yes,yes,unclear
+B045,io.github.Arun-kc/schemabrain,package-only,api_key,"env vars: 1 declared; 1 flagged secret; 1 required",yes,yes,broad,unclear,unclear,unclear
+B046,io.github.CSOAI-ORG/health-check-ai-mcp,package-only,unclear,env vars: 0 declared,unclear,unclear,unclear,unclear,unclear,unclear
+B047,io.github.CSOAI-ORG/qidi-printer-mcp,package-only,unclear,env vars: 0 declared,unclear,unclear,narrow,unclear,yes,unclear
+B048,io.github.ChloePark85/kr-groundtruth,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B049,io.github.Crackx17/dokutrak-mcp,package-only,api_key,"env vars: 2 declared; 1 flagged secret; 1 required",yes,yes,narrow,unclear,yes,unclear
+B050,io.github.Dailyaiagents/release-gate,package-only,none,本地检查,no,no,narrow,no,no,unclear
+B051,io.github.DataLeadsPRO/saas-pricing-extractor,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B052,io.github.Evozim/ddos-mitigation-shield-mcp,remote-only,unclear,无 auth 声明,unclear,unclear,unclear,unclear,unclear,unclear
+B053,io.github.HCS412/ventureautomated-omnis,remote-only,unclear,无 auth 声明,unclear,unclear,broad,unclear,yes,unclear
+B054,io.github.JohannsenLum/linkedin-api-mcp,package-only,browser_session,"描述: via your own browser session; env vars: 4 declared; 1 flagged secret",unclear,yes,broad,no,no,unclear
+B055,io.github.LinuxSuRen/atest-mcp-server,package-only,unclear,env vars: 0 declared,unclear,unclear,unclear,unclear,unclear,unclear
+B056,io.github.MK3Core/flickr-mcp,package-only,unclear,无 auth 声明,unclear,unclear,narrow,no,yes,unclear
+B057,io.github.Mrshahidali420/sitehelm,remote-only,unclear,无 auth 声明,unclear,unclear,broad,no,yes,unclear
+B058,io.github.Nikoble1926/kraken-signals-mcp,package-only,x402,描述: x402; env vars: 2 declared; 1 flagged secret,unclear,yes,read_only,no,no,unclear
+B059,io.github.Patrizzos/envspeak,package-only,none,本地配置解析,no,no,narrow,no,no,unclear
+B060,io.github.Servosity/n-central-mcp,package-only,jwt,"描述: JWT-expiry guardian; env vars: 3 declared; 1 flagged secret; 1 required",yes,yes,broad,unclear,yes,unclear
+B061,io.github.ThaiTrevor/gold-mcp,package-only,api_key,"env vars: 2 declared; 2 flagged secret",unclear,yes,read_only,no,no,unclear
+B062,io.github.VIKAS9793/context-fabric,package-only,unclear,无 auth 声明,unclear,unclear,narrow,no,yes,unclear
+B063,io.github.WYRE-AI/connectwise-manage-mcp,package-only,api_key,"env vars: 8 declared; 3 flagged secret; 4 required",yes,yes,broad,unclear,yes,unclear
+B064,io.github.WYRE-AI/datto-bcdr-mcp,package-only,api_key,"env vars: 6 declared; 2 flagged secret; 2 required",yes,yes,broad,unclear,yes,unclear
+B065,io.github.benswel/qr-for-agent,package-only,api_key,"env vars: 2 declared; 1 flagged secret; 1 required",yes,yes,narrow,no,yes,unclear
+B066,io.github.bluemagma-compliance/nohumansshop,remote-only,oauth,描述: OAuth; no keys,unclear,no,broad,unclear,yes,unclear
+B067,io.github.bnmbnmai/apollo-intelligence,remote-only,x402,描述: x402 micropayments,unclear,no,broad,unclear,unclear,unclear
+B068,io.github.camgitt/memoir,package-only,unclear,无 auth 声明,unclear,unclear,narrow,no,yes,unclear
+B069,io.github.chris-paton/trustedvillas-mcp,remote-only,unclear,无 auth 声明,unclear,unclear,narrow,yes,yes,unclear
+B070,io.github.clicksprotocol/mcp-server,package-only,api_key,"env vars: 2 declared; 1 flagged secret",unclear,yes,broad,yes,yes,unclear
+B071,io.github.codespar/mcp-picpay,package-only,api_key,"env vars: 3 declared; 2 flagged secret; 2 required",yes,yes,broad,yes,yes,unclear
+B072,io.github.cyanheads/obsidian-mcp-server,package-only,env_var,"env vars: 24 declared; 2 required",yes,no,broad,unclear,yes,unclear
+B073,io.github.cyanheads/stackexchange-mcp-server,package+remote,none,"env vars: 8 declared; 0 required",no,no,read_only,no,no,unclear
+B074,io.github.damdafayton/dreamhome,remote-only,unclear,无 auth 声明,unclear,unclear,narrow,no,no,unclear
+B075,io.github.dearlordylord/voila-mcp,package-only,api_key,"env vars: 2 declared; 1 flagged secret",unclear,yes,narrow,yes,yes,unclear
+B076,io.github.dgunning/edgartools,package-only,env_var,"env vars: 1 declared; 1 required",yes,no,read_only,no,no,unclear
+B077,io.github.elankeeran/companies-house-mcp,remote-only,unclear,无 auth 声明,unclear,unclear,read_only,no,no,unclear
+B078,io.github.eltociear/skill-audit-mcp,remote-only,unclear,无 auth 声明,unclear,unclear,read_only,no,no,unclear
+B079,io.github.fliptheweb/fatsecret-mcp,package-only,api_key,"env vars: 3 declared; 3 flagged secret; 3 required",yes,yes,broad,unclear,yes,unclear
+B080,io.github.fraudlabspro/mcp-fraudlabspro,package-only,api_key,"env vars: 1 declared; 1 flagged secret; 1 required",yes,yes,narrow,no,no,unclear
+B081,io.github.getmasv/masv,package-only,api_key,"env vars: 3 declared; 1 flagged secret; 2 required",yes,yes,broad,unclear,yes,unclear
+B082,io.github.ilyautov/moysklad-mcp-ru,package-only,api_key,"env vars: 2 declared; 1 flagged secret",unclear,yes,broad,unclear,yes,unclear
+B083,io.github.jonnybottles/m365-roadmap,package-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B084,io.github.juanjaragavi/devspeak,package+remote,api_key,"env vars: 2 declared; 1 flagged secret; 1 required",yes,yes,narrow,no,no,unclear
+B085,io.github.kingwarthur/camelotwebtools-mcp,package-only,unclear,env vars: 0 declared,unclear,unclear,broad,unclear,unclear,unclear
+B086,io.github.lonniev/dpyc-oracle,remote-only,unclear,无 auth 声明,unclear,unclear,broad,unclear,yes,unclear
+B087,io.github.malkreide/swiss-holidays-mcp,package-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B088,io.github.mcp-dir/detran_ms_licenciamentos_flex-mcp,remote-only,prepaid_credit,描述: pay per query with prepaid credit,unclear,no,read_only,no,no,unclear
+B089,io.github.mcp-dir/ecac_dctf_web-mcp,remote-only,prepaid_credit,描述: pay per query with prepaid credit,unclear,no,read_only,no,no,unclear
+B090,io.github.mcp-dir/sefaz_ms_dec_caixa_postal-mcp,remote-only,prepaid_credit,描述: pay per query with prepaid credit,unclear,no,read_only,no,no,unclear
+B091,io.github.mcp-fortress/mcp-fortress,remote-only,unclear,无 auth 声明,unclear,unclear,read_only,no,no,unclear
+B092,io.github.mharnett/ga4,package-only,oauth,"env vars: 2 required; GA4 通常 OAuth",yes,no,read_only,no,no,unclear
+B093,io.github.mindstone/mcp-server-workday,package-only,api_key,"env vars: 6 declared; 2 flagged secret; 4 required",yes,yes,broad,unclear,unclear,unclear
+B094,io.github.mlawsonking/web-tools-mcp,package-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B095,io.github.mortenator/charta,package-only,none,无 auth 声明,no,no,narrow,no,no,unclear
+B096,io.github.mrfentmen/lichess-mcp,package-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B097,io.github.mrfentmen/workable-mcp,package-only,none,描述: No key required,no,no,read_only,no,no,unclear
+B098,io.github.neo4j-contrib/mcp-neo4j-cypher,package-only,api_key,"env vars: 9 declared; 1 flagged secret; 3 required",yes,yes,broad,unclear,yes,unclear
+B099,io.github.nzdsf2-gif/relayshield-mcp,package-only,api_key,"env vars: 3 declared; 2 flagged secret; 1 required",yes,yes,read_only,no,no,unclear
+B100,io.github.pduggusa/dredd-mcp,remote-only,hmac,描述: HMAC-signed,unclear,no,read_only,no,no,unclear
+B101,io.github.pipeworx-io/bitfinex,remote-only,none,描述: public MCP,no,no,read_only,no,no,unclear
+B102,io.github.pipeworx-io/buzzword-density,remote-only,none,描述: keyless no credential,no,no,read_only,no,no,unclear
+B103,io.github.pipeworx-io/coinpaprika,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B104,io.github.pipeworx-io/gdelt,remote-only,none,描述: free no auth,no,no,read_only,no,no,unclear
+B105,io.github.pipeworx-io/performance-review,remote-only,none,描述: keyless no credential,no,no,read_only,no,no,unclear
+B106,io.github.pipeworx-io/sec,remote-only,none,描述: free no auth,no,no,read_only,no,no,unclear
+B107,io.github.pipeworx-io/sec-nport,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B108,io.github.rudraneel93/mcp-guardian,package-only,api_key,"env vars: 3 declared; 1 flagged secret",unclear,yes,broad,unclear,unclear,unclear
+B109,io.github.ryanthegentry/402index,package-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B110,io.github.sadri-dridi/cc-ro,remote-only,none,描述: Public ISO 记录,no,no,narrow,no,no,unclear
+B111,io.github.sadri-dridi/ean-shape,remote-only,none,描述: 校验工具,no,no,narrow,no,no,unclear
+B112,io.github.sadri-dridi/flac-magic,remote-only,none,描述: magic-byte 检查,no,no,narrow,no,no,unclear
+B113,io.github.sadri-dridi/gh-sha-ok,remote-only,none,描述: 校验工具,no,no,narrow,no,no,unclear
+B114,io.github.sadri-dridi/mime-csv,remote-only,none,描述: Public MIME,no,no,narrow,no,no,unclear
+B115,io.github.sadri-dridi/postcode-uk-ok,remote-only,none,描述: 校验工具,no,no,narrow,no,no,unclear
+B116,io.github.sadri-dridi/sha3-512,remote-only,none,描述: 校验工具,no,no,narrow,no,no,unclear
+B117,io.github.sadri-dridi/tiger192,remote-only,none,描述: 校验工具,no,no,narrow,no,no,unclear
+B118,io.github.sadri-dridi/tz-asia-sakhalin,remote-only,none,描述: 当前时间,no,no,narrow,no,no,unclear
+B119,io.github.sadri-dridi/wh-kj,remote-only,none,描述: 单位转换,no,no,narrow,no,no,unclear
+B120,io.github.salatmaster/keenetic-mcp,package-only,api_key,"env vars: 3 declared; 1 flagged secret",unclear,yes,broad,unclear,yes,unclear
+B121,io.github.seanlok/tcg-mcp,package-only,api_key,"env vars: 4 declared; 3 flagged secret",unclear,yes,broad,unclear,yes,unclear
+B122,io.github.selflabbs/security-intel-mcp,remote-only,none,描述: No API keys,no,no,read_only,no,no,unclear
+B123,io.github.shahidla/cds-db-nlquery-mcp,package-only,api_key,"env vars: 4 declared; 2 flagged secret",unclear,yes,broad,unclear,unclear,unclear
+B124,io.github.snowmead/oxcode,package-only,api_key,"env vars: 2 declared; 1 flagged secret",unclear,yes,read_only,no,no,unclear
+B125,io.github.sraj0501/devtrack,package-only,none,本地读取,no,no,read_only,no,no,unclear
+B126,io.github.thalovant/thalovant-mcp,package-only,unclear,env vars: 0 declared,unclear,unclear,broad,unclear,unclear,unclear
+B127,io.github.thelabvenice/memdata,package-only,api_key,"env vars: 1 declared; 1 flagged secret; 1 required",yes,yes,narrow,no,yes,unclear
+B128,io.github.tixuz/openemis-pro,package-only,api_key,"env vars: 6 declared; 2 flagged secret; 2 required",yes,yes,broad,unclear,yes,unclear
+B129,io.github.varvararatta/air_quality_mcp,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B130,io.github.vfa-khuongdv/mcp-backlog,package-only,api_key,"env vars: 2 declared; 1 flagged secret; 2 required",yes,yes,broad,unclear,yes,unclear
+B131,io.github.vishalsachdev/canvas-mcp,package-only,unclear,env vars: 0 declared,unclear,unclear,broad,unclear,unclear,unclear
+B132,io.github.vnbochkarev-netizen/vibo-mcp,package-only,api_key,"env vars: 1 declared; 1 flagged secret; 1 required",yes,yes,narrow,no,yes,unclear
+B133,io.github.xxxoooxoxo/wiff,package-only,unclear,env vars: 0 declared,unclear,unclear,broad,unclear,yes,unclear
+B134,io.github.yaniv-golan/xaffinity-mcp,package-only,api_key,"env vars: 1 declared; 1 flagged secret; 1 required",yes,yes,broad,unclear,yes,unclear
+B135,io.github.yondry-ltd/day-planner,remote-only,unclear,无 auth 声明,unclear,unclear,read_only,no,no,unclear
+B136,io.kondux/seraph,remote-only,unclear,无 auth 声明,unclear,unclear,broad,unclear,unclear,unclear
+B137,io.scrapfly.mcp/mcp,package-only,unclear,env vars: 0 declared,unclear,unclear,read_only,no,no,unclear
+B138,io.studiomeyer/meetmyagent,remote-only,unclear,无 auth 声明,unclear,unclear,broad,unclear,unclear,unclear
+B139,io.tooloracle/ecommerceoracle,remote-only,unclear,无 auth 声明,unclear,unclear,read_only,no,no,unclear
+B140,live.alpic.staging.demo-81c8a122/demo,remote-only,unclear,示例服务器,unclear,unclear,unclear,unclear,unclear,unclear
+B141,md.authority/authority-md,remote-only,unclear,无 auth 声明,unclear,unclear,broad,yes,yes,unclear
+B142,money.candor/candor-finance,remote-only,unclear,无 auth 声明,unclear,unclear,broad,unclear,yes,unclear
+B143,net.nexlab/wikipedia-retrieval,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B144,org.memoryapi/monitor,remote-only,x402,描述: x402 activity metrics,unclear,no,read_only,no,no,unclear
+B145,pro.publifye/junifye,remote-only,unclear,无 auth 声明,unclear,unclear,broad,unclear,yes,unclear
+B146,si.sigit/sigit,remote-only,unclear,无 auth 声明,unclear,unclear,broad,unclear,yes,unclear
+B147,systems.phion/evidence-engine,remote-only,x402,描述: x402 terms,unclear,no,broad,unclear,unclear,unclear
+B148,tv.popoff/data,remote-only,none,无 auth 声明,no,no,read_only,no,no,unclear
+B149,uk.openqr/qr,package+remote,api_key,"env vars: 1 declared; 1 flagged secret; 1 required",yes,yes,narrow,no,yes,unclear
+B150,xyz.signomy/civitae,package+remote,unclear,env vars: 0 declared,unclear,unclear,broad,unclear,yes,unclear

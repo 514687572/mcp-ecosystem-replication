@@ -1,0 +1,12 @@
+part,field,items,observed_agreement,expected_agreement,cohens_kappa,band,claim_use
+B,auth_mechanism,25,0.76,0.494,0.525,moderate,supported with the moderate band stated
+B,requires_user_secret,25,0.72,0.526,0.409,moderate,borderline; report the band
+B,secret_documented_as_secret,25,0.64,0.533,0.229,fair,not reliable; report as indicative
+B,scope_breadth,25,0.64,0.307,0.48,moderate,supported with the moderate band stated
+B,destructive_capability,25,0.8,0.514,0.589,moderate,supported
+B,write_capability,25,0.92,0.411,0.864,almost perfect,supported
+B,readme_warns_about_risk,25,1.0,1.0,,not estimable,not informative; both coders could not determine it
+C,desc_states_purpose,25,0.96,0.886,0.648,substantial,supported
+C,desc_states_when_to_use,25,0.8,0.739,0.233,fair,not reliable; state the range across both coders
+C,desc_states_inputs,25,0.8,0.506,0.595,moderate,supported with the moderate band stated
+C,desc_names_side_effects,25,0.24,0.107,0.149,slight,"not reliable; codebook gap, see v1.2 note"

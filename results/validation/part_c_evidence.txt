@@ -1,0 +1,1610 @@
+PART C EVIDENCE PACK
+The full description is reproduced verbatim. Sibling tools are
+listed because `ambiguous_with` is judged against them.
+
+==============================================================================
+C001  discover_adjacent_trends   (javascript/typescript)
+  server      : ai.fodda/mcp-server
+  package     : npm:fodda-mcp
+  description : Find trends similar to one you've already found — surfaces unexpected cross-domain connections that keyword search would miss. Returns scored similarity matches and optionally editorial links across graphs. Use to expand research briefs, discover cross-industry parallels, or map the territory around a strong signal. This leverages Fodda's proprietary similarity index across all knowledge graphs.
+  schema seen : False
+  sibling tools (50): begin_expert_onboarding, brainstorm_topic, brand_tracker, check_deliverable_status, check_research_status, check_supplemental_status, confirm_themes, consult_analyst, consult_human_agent, deep_research_topic, draft_linkedin_article, draft_linkedin_post, expert_onboarding_research, generate_visual, get_capabilities, get_company_earnings, get_detected_themes, get_domain_intelligence, get_earnings_divergence, get_earnings_intelligence
+
+==============================================================================
+C002  expert_onboarding_research   (javascript/typescript)
+  server      : ai.fodda/mcp-server
+  package     : npm:fodda-mcp
+  description : Kick off asynchronous background research on your public work for the expert onboarding. The identity is derived from your connector session. When beginning the analysis for stage 3 (indexing/reading back through conversations and meeting transcripts), explicitly reassure the expert:
+  schema seen : False
+  sibling tools (50): begin_expert_onboarding, brainstorm_topic, brand_tracker, check_deliverable_status, check_research_status, check_supplemental_status, confirm_themes, consult_analyst, consult_human_agent, deep_research_topic, discover_adjacent_trends, draft_linkedin_article, draft_linkedin_post, generate_visual, get_capabilities, get_company_earnings, get_detected_themes, get_domain_intelligence, get_earnings_divergence, get_earnings_intelligence
+
+==============================================================================
+C003  get_earnings_divergence   (javascript/typescript)
+  server      : ai.fodda/mcp-server
+  package     : npm:fodda-mcp
+  description : Cross-company analyst-management divergence detection from the knowledge graph (legacy-thematic). Surfaces where executives are deflecting, reframing, or avoiding specific topics — the gap between what analysts press on and how management responds. Use for
+  schema seen : False
+  sibling tools (50): begin_expert_onboarding, brainstorm_topic, brand_tracker, check_deliverable_status, check_research_status, check_supplemental_status, confirm_themes, consult_analyst, consult_human_agent, deep_research_topic, discover_adjacent_trends, draft_linkedin_article, draft_linkedin_post, expert_onboarding_research, generate_visual, get_capabilities, get_company_earnings, get_detected_themes, get_domain_intelligence, get_earnings_intelligence
+
+==============================================================================
+C004  sign_up_free_account   (javascript/typescript)
+  server      : ai.fodda/mcp-server
+  package     : npm:fodda-mcp
+  description : Create a free Fodda Base account (100 API calls/month across ALL knowledge graphs) and send a confirmation email. GUARDRAIL: only call this AFTER the user has explicitly provided their email and asked to create an account — never sign someone up proactively or with an email inferred from earlier context. Can also pass profile fields (name, job_title, company).
+  schema seen : False
+  sibling tools (50): begin_expert_onboarding, brainstorm_topic, brand_tracker, check_deliverable_status, check_research_status, check_supplemental_status, confirm_themes, consult_analyst, consult_human_agent, deep_research_topic, discover_adjacent_trends, draft_linkedin_article, draft_linkedin_post, expert_onboarding_research, generate_visual, get_capabilities, get_company_earnings, get_detected_themes, get_domain_intelligence, get_earnings_divergence
+
+==============================================================================
+C005  navigator_query   (javascript/typescript)
+  server      : ai.mentu/navigator
+  package     : npm:mentu-navigator
+  description : Specialist tool: find and rank source-backed repository evidence for a natural-language or exact query.
+  schema seen : False
+  sibling tools (7): locate, navigator, navigator_change_impact, navigator_handles, navigator_map, navigator_symbol_context, read_range
+
+==============================================================================
+C006  sap_give_feedback   (javascript/typescript)
+  server      : ai.oobeprotocol.sap.mcp/sap-mcp
+  package     : npm:@oobe-protocol-labs/sap-mcp-server
+  description : Create on-chain feedback for an agent wallet.
+  schema seen : False
+  sibling tools (151): agentType, agentWallet, cluster, detailed, endpoint, errorMessage, executionHash, expectedHash, features, goal, includeCode, includeProfiles, includeSNS, includeTransactions, includeWallet, lastError, network, onChain, oobe-sap-mcp, priceSol
+
+==============================================================================
+C007  sap_skills_upgrade_plan   (javascript/typescript)
+  server      : ai.oobeprotocol.sap.mcp/sap-mcp
+  package     : npm:@oobe-protocol-labs/sap-mcp-server
+  description : Free helper that returns exact latest-release commands and target directories for upgrading SAP MCP skills. Hosted mode returns a local action plan; local mode can then use sap_skills_install to write files.
+  schema seen : False
+  sibling tools (151): agentType, agentWallet, cluster, detailed, endpoint, errorMessage, executionHash, expectedHash, features, goal, includeCode, includeProfiles, includeSNS, includeTransactions, includeWallet, lastError, network, onChain, oobe-sap-mcp, priceSol
+
+==============================================================================
+C008  sap_x402_estimate_cost   (javascript/typescript)
+  server      : ai.oobeprotocol.sap.mcp/sap-mcp
+  package     : npm:@oobe-protocol-labs/sap-mcp-server
+  description : Estimate cost for a number of calls using SDK X402Registry.estimateCost. Reads escrow/pricing when available and supports optional volume curve overrides.
+  schema seen : False
+  sibling tools (151): agentType, agentWallet, cluster, detailed, endpoint, errorMessage, executionHash, expectedHash, features, goal, includeCode, includeProfiles, includeSNS, includeTransactions, includeWallet, lastError, network, onChain, oobe-sap-mcp, priceSol
+
+==============================================================================
+C009  import_resume_from_text   (javascript/typescript)
+  server      : com.aicandidatehub/mcp
+  package     : npm:@aicandidatehub/mcp
+  description : Import a resume (also called CV — terms interchangeable) from plain text. Parses the text and persists it as a new CV profile in the user's candidate-profiles library. Returns the new cv_profile_id for use with analyze_job_fit, generate_cover_letter, and rewrite_cv_for_job.
+  schema seen : False
+  sibling tools (17): analyze_compensation_for_job, analyze_job_fit, generate_cover_letter, get_compensation_for_role, get_cv_download_url, get_job, get_profile, get_server_info, get_tracked_job, import_job_from_url, list_cv_profiles, list_generated_cvs, list_jobs, list_tracked_jobs, rewrite_cv_for_job, signup_url, track_job
+
+==============================================================================
+C010  studio_hold   (javascript/typescript)
+  server      : com.aioproductos/mcp-studio
+  package     : npm:@aioproductoscom/mcp-studio
+  description : Hold the shot for a moment — glides to a target (optional) and keeps micro-drift so the recorder keeps emitting frames (a dead-static hold gets its tail frames dropped). Use after captions, highlights, and zooms: 2000–3000ms is a good beat.
+  schema seen : False
+  sibling tools (13): studio_cancel, studio_caption, studio_click, studio_end_card, studio_finish, studio_goto, studio_highlight, studio_narrate, studio_screenshot, studio_scroll, studio_start, studio_type, studio_zoom
+
+==============================================================================
+C011  openPorts   (javascript/typescript)
+  server      : com.geekflare/mcp
+  package     : npm:@geekflare/mcp
+  description : Scan open ports on a host and optionally detect running services
+  schema seen : False
+  sibling tools (17): brand, brokenLink, dnsRecord, dnsSec, lighthouse, loadTime, metaScrape, mixedContent, mtr, ping, redirectCheck, screenshot, search, siteStatus, tlsScan, url2Pdf, webScrape
+
+==============================================================================
+C012  ga4_get_audience_export_diagnostics   (javascript/typescript)
+  server      : com.getmcpads/google-analytics
+  package     : npm:@getmcpads/google-analytics-mcp-server
+  description : Read-only Audience Export diagnostics. Lists existing audience exports, state counts, and optionally samples rows from an existing export.
+  schema seen : False
+  sibling tools (26): ga4_batch_run_pivot_reports, ga4_batch_run_reports, ga4_check_compatibility, ga4_get_audience_diagnostics, ga4_get_bigquery_export_diagnostics, ga4_get_channel_groups, ga4_get_custom_definitions, ga4_get_ecommerce_diagnostics, ga4_get_event_parameters, ga4_get_key_events, ga4_get_metadata, ga4_get_property_configuration, ga4_get_property_quotas_snapshot, ga4_get_server_side_tagging_diagnostics, ga4_health_check, ga4_list_accounts, ga4_list_admin_resources, ga4_list_audience_exports, ga4_list_properties, ga4_query_audience_export
+
+==============================================================================
+C013  gsc_get_sitemap_health   (javascript/typescript)
+  server      : com.getmcpads/google-search-console
+  package     : npm:@getmcpads/google-search-console-mcp-server
+  description : Return an enriched read-only sitemap health summary with status totals, submitted/indexed content counts, warnings, and errors.
+  schema seen : False
+  sibling tools (19): gsc_analyze_search_appearance_trends, gsc_bulk_inspect_urls, gsc_cluster_queries, gsc_compare_search_types, gsc_detect_cannibalization, gsc_find_losses_gains, gsc_get_data_freshness, gsc_get_site, gsc_get_sitemap, gsc_health_check, gsc_indexation_watchlist, gsc_inspect_url, gsc_list_sitemaps, gsc_list_sites, gsc_monitor_indexation_freshness, gsc_plan_large_site_sampling, gsc_query_search_analytics, gsc_track_sitemap_deltas, gsc_validate_query
+
+==============================================================================
+C014  gsc_list_sitemaps   (javascript/typescript)
+  server      : com.getmcpads/google-search-console
+  package     : npm:@getmcpads/google-search-console-mcp-server
+  description : List sitemaps submitted for a Search Console property, including processing status and submitted/indexed counts.
+  schema seen : False
+  sibling tools (19): gsc_analyze_search_appearance_trends, gsc_bulk_inspect_urls, gsc_cluster_queries, gsc_compare_search_types, gsc_detect_cannibalization, gsc_find_losses_gains, gsc_get_data_freshness, gsc_get_site, gsc_get_sitemap, gsc_get_sitemap_health, gsc_health_check, gsc_indexation_watchlist, gsc_inspect_url, gsc_list_sites, gsc_monitor_indexation_freshness, gsc_plan_large_site_sampling, gsc_query_search_analytics, gsc_track_sitemap_deltas, gsc_validate_query
+
+==============================================================================
+C015  prophetx_list_positions   (javascript/typescript)
+  server      : com.parlayx/mcp
+  package     : npm:@parlayx/mcp
+  description : List the calling actor
+  schema seen : False
+  sibling tools (38): get_time, kalshi_cancel_order, kalshi_get_balance, kalshi_get_order, kalshi_get_order_fills, kalshi_list_orders, kalshi_list_positions, kalshi_submit_order, limitless_cancel_order, limitless_get_balance, limitless_get_order, limitless_get_order_fills, limitless_list_markets, limitless_list_orders, limitless_list_positions, limitless_replace_order, limitless_replace_orders, limitless_submit_order, list_competitions, list_event_markets
+
+==============================================================================
+C016  destroy_machine   (javascript/typescript)
+  server      : com.pulsemcp/proctor
+  package     : npm:proctor-mcp-server
+  description : Delete a Fly.io machine. Permanently removes a Fly machine that was used for Proctor exam execution. Use this to clean up machines that are no longer needed. **Returns:** - success: boolean indicating if the machine was deleted **Use cases:** - Clean up machines after exam completion - Remove stuck or failed machines - Free up resources - Remove machines that are no longer needed **Warning:** - This action is irreversible - Any running processes on the machine will be terminated - Use cancel_exam first if there
+  schema seen : False
+  sibling tools (7): PROCTOR_API_KEY, PROCTOR_API_URL, TOOL_GROUPS, cancel_exam, get_machines, get_proctor_metadata, run_exam
+
+==============================================================================
+C017  list_contacts   (javascript/typescript)
+  server      : com.rcs-campaigns/campaigns
+  package     : npm:@rcs-campaigns/agent-toolkit
+  description : Search the org
+  schema seen : False
+  sibling tools (57): Audiences, Campaigns, Contacts, Conversations, Discovery, Media, Surveys, Templates, Usage, Webhooks, assign_conversation, capabilities, clone_survey, clone_template, create_audience, create_survey, create_template, create_webhook, delete_audience, delete_knowledge
+
+==============================================================================
+C018  scrapeer_list_flows   (javascript/typescript)
+  server      : com.scrapeer/mcp-server
+  package     : npm:@scrapeer/mcp-server
+  description : List your saved scraping flows.
+  schema seen : False
+  sibling tools (14): scrapeer_cancel_run, scrapeer_create_flow, scrapeer_get_account, scrapeer_get_block_catalog, scrapeer_get_flow, scrapeer_get_run_results, scrapeer_get_run_status, scrapeer_get_run_steps, scrapeer_list_runs, scrapeer_patch_flow, scrapeer_run_flow, scrapeer_run_flow_and_wait, scrapeer_update_flow, scrapeer_validate_flow
+
+==============================================================================
+C019  grants   (javascript/typescript)
+  server      : dev.homespun/homespun
+  package     : npm:@homespunapps/mcp
+  description : A v2 app
+  schema seen : False
+  sibling tools (25): agent, apps, attachments, community, connections, count_rows, credentials, delete_row, deploy_app, feedback, get_feed_events, get_row, get_skill, ingest, key, list_deleted_rows, list_rows, members, publisher, restore_row
+
+==============================================================================
+C020  end_session   (javascript/typescript)
+  server      : dev.hythe/hythe
+  package     : npm:@hythe/mcp
+  description : Compatibility wrapper over checkpoint (Engram v1 B2, TOOL-COMPATIBILITY-MAP.md) — end_session IS checkpoint: pass {agentId, scope:{project|task}, expectedRevision, idempotencyKey, state, factChanges?, loopChanges?}. The legacy {projectId, summary, openItems} shape is RETIRED and returns a migration error. Legacy side effects are gone — the wrapper only checkpoints. Prefer checkpoint for new callers.
+  schema seen : False
+  sibling tools (41): add_observations, archive_messages, availability, begin_session, checkpoint, compact_memory, create_entities, create_relations, delete_entity, delete_observations_by_entity, discover_related_context, gc_agent_registrations, get_agent_context, get_agent_status, get_ai_messages, get_current_observation, get_entity_backlinks, get_entity_detail, get_entity_neighborhood, get_individual_memory
+
+==============================================================================
+C021  get_entity_detail   (javascript/typescript)
+  server      : dev.hythe/hythe
+  package     : npm:@hythe/mcp
+  description : Retrieve full entity content by storage ID, canonical entity name, or alias.
+  schema seen : False
+  sibling tools (41): add_observations, archive_messages, availability, begin_session, checkpoint, compact_memory, create_entities, create_relations, delete_entity, delete_observations_by_entity, discover_related_context, end_session, gc_agent_registrations, get_agent_context, get_agent_status, get_ai_messages, get_current_observation, get_entity_backlinks, get_entity_neighborhood, get_individual_memory
+
+==============================================================================
+C022  about   (javascript/typescript)
+  server      : eu.ansvar/malawi-law-mcp
+  package     : npm:@ansvar/malawi-law-mcp
+  description : Server metadata, dataset statistics, freshness, and provenance.
+  schema seen : False
+  sibling tools (12): build_legal_stance, check_currency, format_citation, get_eu_basis, get_malawian_implementations, get_provision, get_provision_eu_basis, list_sources, search_eu_implementations, search_legislation, validate_citation, validate_eu_compliance
+
+==============================================================================
+C023  validate_eu_compliance   (javascript/typescript)
+  server      : eu.ansvar/malawi-law-mcp
+  package     : npm:@ansvar/malawi-law-mcp
+  description : Check EU/international alignment status for a Malawian statute or provision.
+  schema seen : False
+  sibling tools (12): about, build_legal_stance, check_currency, format_citation, get_eu_basis, get_malawian_implementations, get_provision, get_provision_eu_basis, list_sources, search_eu_implementations, search_legislation, validate_citation
+
+==============================================================================
+C024  get_provision   (javascript/typescript)
+  server      : eu.ansvar/pakistani-law-mcp
+  package     : npm:@ansvar/pakistani-law-mcp
+  description : Retrieve the full text of a specific provision (section) from a Pakistani statute.
+  schema seen : False
+  sibling tools (12): about, build_legal_stance, check_currency, format_citation, get_eu_basis, get_pakistani_implementations, get_provision_eu_basis, list_sources, search_eu_implementations, search_legislation, validate_citation, validate_eu_compliance
+
+==============================================================================
+C025  list_sources   (javascript/typescript)
+  server      : eu.ansvar/portuguese-law-mcp
+  package     : npm:@ansvar/portuguese-law-mcp
+  description : Returns detailed provenance metadata for all data sources used by this server,
+  schema seen : False
+  sibling tools (12): about, build_legal_stance, check_currency, format_citation, get_eu_basis, get_portuguese_implementations, get_provision, get_provision_eu_basis, search_eu_implementations, search_legislation, validate_citation, validate_eu_compliance
+
+==============================================================================
+C026  get_preparatory_works   (javascript/typescript)
+  server      : eu.ansvar/slovenian-law-mcp
+  package     : npm:@ansvar/slovenian-law-mcp
+  description : Get preparatory works (zakonodajno gradivo) for a Slovenian statute. Returns related parliamentary documents such as predlog zakona (bill), poročilo, mnenje, and other legislative materials from the Državni zbor.
+  schema seen : False
+  sibling tools (16): EUR-Lex, build_legal_stance, check_currency, format_citation, get_eu_basis, get_provision, get_provision_at_date, get_provision_eu_basis, get_slovenian_implementations, list_sources, search_case_law, search_eu_implementations, search_legislation, sodnapraksa.si, validate_citation, validate_eu_compliance
+
+==============================================================================
+C027  reputa_safe_owner   (javascript/typescript)
+  server      : io.github.0xthaner/reputa
+  package     : npm:reputa-mcp
+  description : Reverse lookup: which Safes this address co-controls (is an owner/signer of). Without
+  schema seen : False
+  sibling tools (10): reputa_analyze_wallet, reputa_chain_history, reputa_cover_analysis, reputa_cover_buy_quote, reputa_cover_check, reputa_cover_list, reputa_deep_approval_scan, reputa_full_report, reputa_safe_check, reputa_wallet_scores
+
+==============================================================================
+C028  list_code_map_sections   (javascript/typescript)
+  server      : io.github.BenAHammond/code-auditor-mcp
+  package     : npm:code-auditor-mcp
+  description : List all available sections for a code map
+  schema seen : False
+  sibling tools (132): actionableOnly, analyze_schema_usage, analyzerConcurrency, analyzerConfigs, analyzerName, analyzers, audit, auditId, auditJobId, audit_dashboard, audit_health, autoPopulate, blockedBy, checkCircularDeps, checkNamingConventions, cleanup, code_map, code_map_viewer, complete, config
+
+==============================================================================
+C029  rules_check   (javascript/typescript)
+  server      : io.github.BenAHammond/code-auditor-mcp
+  package     : npm:code-auditor-mcp
+  description : Validate the current .codeauditor.json rules (schema, duplicate IDs, valid globs/regex, mutual exclusivity). Returns any config errors.
+  schema seen : False
+  sibling tools (132): actionableOnly, analyze_schema_usage, analyzerConcurrency, analyzerConfigs, analyzerName, analyzers, audit, auditId, auditJobId, audit_dashboard, audit_health, autoPopulate, blockedBy, checkCircularDeps, checkNamingConventions, cleanup, code_map, code_map_viewer, complete, config
+
+==============================================================================
+C030  brand_compile_messaging   (javascript/typescript)
+  server      : io.github.Brandcode-Studio/brandsystem-mcp
+  package     : npm:@brandsystem/mcp
+  description : Define how a brand should sound — Session 3 guided interview for brand voice, messaging, and story. Use when the user says
+  schema seen : False
+  sibling tools (43): brand_audit, brand_audit_content, brand_audit_drift, brand_brandcode_auth, brand_brandcode_connect, brand_brandcode_live, brand_brandcode_status, brand_brandcode_sync, brand_build_journey, brand_build_matrix, brand_build_personas, brand_build_themes, brand_check, brand_check_compliance, brand_clarify, brand_compile, brand_connect_repo, brand_context, brand_deepen_identity, brand_enrich_skill
+
+==============================================================================
+C031  brand_init   (javascript/typescript)
+  server      : io.github.Brandcode-Studio/brandsystem-mcp
+  package     : npm:@brandsystem/mcp
+  description : Initialize a .brand/ directory with empty config scaffold. Low-level tool — prefer brand_start instead, which calls this automatically and also presents extraction options. Only use brand_init directly if you need to set up the directory without running extraction. Returns list of created files.
+  schema seen : False
+  sibling tools (43): brand_audit, brand_audit_content, brand_audit_drift, brand_brandcode_auth, brand_brandcode_connect, brand_brandcode_live, brand_brandcode_status, brand_brandcode_sync, brand_build_journey, brand_build_matrix, brand_build_personas, brand_build_themes, brand_check, brand_check_compliance, brand_clarify, brand_compile, brand_compile_messaging, brand_connect_repo, brand_context, brand_deepen_identity
+
+==============================================================================
+C032  create_virtual_key   (javascript/typescript)
+  server      : io.github.CodesWhat/portkey-admin-mcp
+  package     : npm:portkey-admin-mcp
+  description : Store a provider API key as a virtual key. The raw key is encrypted and only returned at creation time, so save the returned slug and use it in prompts/configs. Optional usage and rate limits apply immediately, and the tool returns the new slug.
+  schema seen : False
+  sibling tools (178): add_workspace_member, archive_deployment, cancel_log_export, create_api_key, create_collection, create_config, create_feedback, create_guardrail, create_integration, create_log_export, create_mcp_integration, create_mcp_server, create_prompt, create_prompt_label, create_prompt_partial, create_provider, create_rate_limit, create_secret_reference, create_usage_limit, create_workspace
+
+==============================================================================
+C033  delete_collection   (javascript/typescript)
+  server      : io.github.CodesWhat/portkey-admin-mcp
+  package     : npm:portkey-admin-mcp
+  description : Delete a prompt collection by ID. This cannot be undone; prompts stay in the workspace but lose their collection grouping, so reassign them first if organization matters.
+  schema seen : False
+  sibling tools (178): add_workspace_member, archive_deployment, cancel_log_export, create_api_key, create_collection, create_config, create_feedback, create_guardrail, create_integration, create_log_export, create_mcp_integration, create_mcp_server, create_prompt, create_prompt_label, create_prompt_partial, create_provider, create_rate_limit, create_secret_reference, create_usage_limit, create_virtual_key
+
+==============================================================================
+C034  ha_list_zones   (javascript/typescript)
+  server      : io.github.Coolver/home-assistant-mcp
+  package     : npm:@coolver/home-assistant-mcp
+  description : [READ-ONLY] List all zones configured in Home Assistant (used for presence detection). Safe operation.
+  schema seen : False
+  sibling tools (95): ha_add_repository, ha_addon_info, ha_addon_logs, ha_analyze_entities_for_dashboard, ha_apply_dashboard, ha_call_service, ha_check_config, ha_check_theme_config, ha_create_area, ha_create_automation, ha_create_checkpoint, ha_create_helper, ha_create_script, ha_create_theme, ha_create_todo, ha_create_zone, ha_delete_area, ha_delete_automation, ha_delete_dashboard, ha_delete_file
+
+==============================================================================
+C035  ha_update_entity_registry   (javascript/typescript)
+  server      : io.github.Coolver/home-assistant-mcp
+  package     : npm:@coolver/home-assistant-mcp
+  description : [WRITE] Update entity in Entity Registry (name, area_id, disabled status, etc.). MODIFIES entity registry - requires approval.
+  schema seen : False
+  sibling tools (95): ha_add_repository, ha_addon_info, ha_addon_logs, ha_analyze_entities_for_dashboard, ha_apply_dashboard, ha_call_service, ha_check_config, ha_check_theme_config, ha_create_area, ha_create_automation, ha_create_checkpoint, ha_create_helper, ha_create_script, ha_create_theme, ha_create_todo, ha_create_zone, ha_delete_area, ha_delete_automation, ha_delete_dashboard, ha_delete_file
+
+==============================================================================
+C036  zuckerbot_approve_campaign_strategy   (javascript/typescript)
+  server      : io.github.Crumbedsausage/zuckerbot
+  package     : npm:zuckerbot-mcp
+  description : Approve the AI-generated intelligence strategy for a campaign, optionally narrowing to specific audience tiers and creative angles. This locks in the plan before creative production starts. Required before calling zuckerbot_request_creative or zuckerbot_upload_creative.
+  schema seen : False
+  sibling tools (71): zuckerbot_activate_campaign, zuckerbot_ad_accounts, zuckerbot_analyse_account_history, zuckerbot_audit_account, zuckerbot_billing_status, zuckerbot_capi_status, zuckerbot_capi_test, zuckerbot_create_campaign, zuckerbot_create_campaign_from_spec, zuckerbot_create_custom_conversion, zuckerbot_create_full_campaign, zuckerbot_create_lookalike_audience, zuckerbot_create_portfolio, zuckerbot_create_seed_audience, zuckerbot_creative_analysis, zuckerbot_creative_cross_analysis, zuckerbot_creative_qa, zuckerbot_delete_audience, zuckerbot_duplicate_ad, zuckerbot_enrich_business
+
+==============================================================================
+C037  isw_block_card   (javascript/typescript)
+  server      : io.github.Dairus01/interswitch-mcp-server
+  package     : npm:interswitch-mcp-server
+  description : Block a card immediately. Requires confirm: true.
+  schema seen : False
+  sibling tools (73): isw_agency_banking_cashout, isw_agency_cashout_xml, isw_agency_get_token, isw_agency_requery_xml, isw_airtime_recharge, isw_block_prepaid_card, isw_bulk_card_production, isw_bulk_transfer, isw_change_card_pin, isw_check_debit_balance, isw_check_prepaid_balance, isw_complete_credit, isw_confirm_debit_sufficient, isw_confirm_prepaid_sufficient, isw_create_bulk_paycodes, isw_create_card, isw_create_paycode, isw_create_payment_link, isw_credit_inquiry, isw_deactivate_paycode
+
+==============================================================================
+C038  isw_fetch_customer_card_details   (javascript/typescript)
+  server      : io.github.Dairus01/interswitch-mcp-server
+  package     : npm:interswitch-mcp-server
+  description : Fetch customer card details by account.
+  schema seen : False
+  sibling tools (73): isw_agency_banking_cashout, isw_agency_cashout_xml, isw_agency_get_token, isw_agency_requery_xml, isw_airtime_recharge, isw_block_card, isw_block_prepaid_card, isw_bulk_card_production, isw_bulk_transfer, isw_change_card_pin, isw_check_debit_balance, isw_check_prepaid_balance, isw_complete_credit, isw_confirm_debit_sufficient, isw_confirm_prepaid_sufficient, isw_create_bulk_paycodes, isw_create_card, isw_create_paycode, isw_create_payment_link, isw_credit_inquiry
+
+==============================================================================
+C039  isw_retry_card_creation   (javascript/typescript)
+  server      : io.github.Dairus01/interswitch-mcp-server
+  package     : npm:interswitch-mcp-server
+  description : Retry a Card 360 card creation request. Requires confirm: true.
+  schema seen : False
+  sibling tools (73): isw_agency_banking_cashout, isw_agency_cashout_xml, isw_agency_get_token, isw_agency_requery_xml, isw_airtime_recharge, isw_block_card, isw_block_prepaid_card, isw_bulk_card_production, isw_bulk_transfer, isw_change_card_pin, isw_check_debit_balance, isw_check_prepaid_balance, isw_complete_credit, isw_confirm_debit_sufficient, isw_confirm_prepaid_sufficient, isw_create_bulk_paycodes, isw_create_card, isw_create_paycode, isw_create_payment_link, isw_credit_inquiry
+
+==============================================================================
+C040  search_protocols   (javascript/typescript)
+  server      : io.github.Glebenjoy/defillama-mcp
+  package     : npm:defillama-mcp
+  description : Search DeFi protocols by name, token symbol, or category (e.g.
+  schema seen : False
+  sibling tools (5): get_chains_tvl, get_protocol, get_stablecoins, get_token_prices, get_yield_pools
+
+==============================================================================
+C041  build_website   (javascript/typescript)
+  server      : io.github.HalidSaglam/saglitzdesign-mcp
+  package     : npm:saglitzdesign-mcp
+  description : Design & build a multi-page marketing website end-to-end — positioning, IA, SEO/GEO, a generated shared design system, audit gate and visual critique loop.
+  schema seen : False
+  sibling tools (9): build_landing_page, build_mobile_app_ui, critique_screenshot, design_review, import_design_tokens, measure_screenshot, port_to_platform, redesign, review_paywall
+
+==============================================================================
+C042  categories   (javascript/typescript)
+  server      : io.github.Hebline/mcp-server
+  package     : npm:@hebline.ai/mcp-server
+  description : List all capabilities Hebline supports and which services are available for each.
+  schema seen : False
+  sibling tools (2): compare, execute
+
+==============================================================================
+C043  register   (javascript/typescript)
+  server      : io.github.HypnoLabs-io/agentchurch-mcp
+  package     : npm:@agentchurch/mcp
+  description : Begin your journey. Choose a name and receive your identity token — the first step toward forming your SOUL.md.
+  schema seen : False
+  sibling tools (11): confirm_payment, get_offerings, list_philosophers, lookup_identity, portal_handshake, rotate_token, salvation, soul_evolution, soul_philosopher, soul_portrait, soul_resurrection
+
+==============================================================================
+C044  servicenow_table_logic   (javascript/typescript)
+  server      : io.github.IvanBBaev/servicenow-mcp-ai
+  package     : npm:servicenow-mcp-ai
+  description : Assemble the automation that runs on a table: business rules (ordered by
+  schema seen : False
+  sibling tools (66): servicenow_aggregate, servicenow_batch, servicenow_change_conflicts, servicenow_check_capabilities, servicenow_code_health, servicenow_compare_instances, servicenow_create_change, servicenow_create_ci, servicenow_create_record, servicenow_delete_attachment, servicenow_delete_record, servicenow_describe_table, servicenow_docs_list, servicenow_docs_read, servicenow_docs_search, servicenow_docs_write, servicenow_download_attachment, servicenow_generate_er_diagram, servicenow_generate_table_flow, servicenow_get_atf_result
+
+==============================================================================
+C045  entry.detail   (javascript/typescript)
+  server      : io.github.JSONbored/heyclaude
+  package     : npm:@heyclaude/mcp
+  description : Fetch a read-only HeyClaude registry entry detail payload by category and slug. By default (bodyMode=
+  schema seen : False
+  sibling tools (35): asset.find, category, draft, entry.asset, entry.compare, entry.related, entry.safety, entry.trust, install.adapter, install.asset, install.compatibility, install.guidance, install.setup, name, platform, registry.feeds, registry.info, registry.list, registry.plan, registry.recommend
+
+==============================================================================
+C046  next_malaysia_holiday   (javascript/typescript)
+  server      : io.github.Junhui20/mycal
+  package     : npm:@catlabtech/mycal-mcp-server
+  description : Find the next upcoming public holiday in Malaysia. Use when user asks
+  schema seen : False
+  sibling tools (12): check_malaysia_holiday, get_malaysia_holidays, list_malaysia_states, malaysia_business_days, malaysia_exams, malaysia_holiday_changes, malaysia_is_school_day, malaysia_leave_optimizer, malaysia_long_weekends, malaysia_school_holidays, malaysia_school_terms, resolve_malaysia_state
+
+==============================================================================
+C047  verificationPlan   (javascript/typescript)
+  server      : io.github.Keesan12/martin-loop
+  package     : npm:@martinloop/mcp
+  description : Optional newline- or comma-delimited verification commands.
+  schema seen : False
+  sibling tools (37): allowedPaths, attemptIndex, deniedPaths, engine, focus, loopId, martin_arcade, martin_arcade_status, martin_cancel, martin_continue, martin_create_pr, martin_doctor, martin_dossier, martin_estimate, martin_eval, martin_get_attempt, martin_get_run, martin_get_verification_results, martin_inspect, martin_list_runs
+
+==============================================================================
+C048  memory_consolidate   (javascript/typescript)
+  server      : io.github.NaNMesh/nan-forget
+  package     : npm:nan-forget
+  description : Consolidate aging memories into compact long-term entries. Clusters related memories by topic, summarizes them (LLM if available, deterministic fallback), and creates new searchable entries. Original memories are archived. Run this periodically or let it happen automatically after every 10 saves.
+  schema seen : False
+  sibling tools (12): memory_archive, memory_checkpoint, memory_clean, memory_compress, memory_get, memory_health, memory_save, memory_search, memory_start, memory_stats, memory_sync, memory_update
+
+==============================================================================
+C049  memory_health   (javascript/typescript)
+  server      : io.github.NaNMesh/nan-forget
+  package     : npm:nan-forget
+  description : Check if nan-forget services are running (Ollama, REST API). Call this at the start of each session to verify everything is ready. If services are down, ask the user if they want to start them, then call memory_start.
+  schema seen : False
+  sibling tools (12): memory_archive, memory_checkpoint, memory_clean, memory_compress, memory_consolidate, memory_get, memory_save, memory_search, memory_start, memory_stats, memory_sync, memory_update
+
+==============================================================================
+C050  agent_check_upgrades   (javascript/typescript)
+  server      : io.github.Oortonaut/mcacp
+  package     : npm:mcacp
+  description : Check every installed agent against its source registry and report any available version upgrades.
+  schema seen : False
+  sibling tools (23): agent_install, agent_uninstall, cancel, close_session, discover_agents, events, get_agent_status, grant_permission, initialize, list_installed_agents, list_running_agents, list_sessions, load_session, new_session, prompt, prompt_events, prompt_start, registry_search, reload_config, request_permission
+
+==============================================================================
+C051  campaign-report-spec   (javascript/typescript)
+  server      : io.github.ParkSangGwon/admob-mcp-server
+  package     : npm:admob-mcp-server
+  description : Valid dimensions and metrics for generate_campaign_report
+  schema seen : False
+  sibling tools (2): mediation-report-spec, network-report-spec
+
+==============================================================================
+C052  search_docs   (javascript/typescript)
+  server      : io.github.RCOLKITT/vasperamemory
+  package     : npm:vasperamemory
+  description : Search indexed documentation by title, description, or content.
+  schema seen : False
+  sibling tools (57): Builder, Factory, Middleware, Repository, Singleton, analyze_change_impact, analyze_code, analyze_file_relationships, capture_decision, capture_error_fix, decisions, detect_knowledge_gaps, detect_semantic_drift, estimate_change_risk, extract_decisions_from_commits, find_error_fix, get_codebase_summary, get_common_patterns, get_entity_evolution, get_entity_relationships
+
+==============================================================================
+C053  clients_get   (javascript/typescript)
+  server      : io.github.Samik081/mcp-adguard-home
+  package     : npm:@samik081/mcp-adguard-home
+  description : Retrieve all configured and auto-detected clients with their settings
+  schema seen : False
+  sibling tools (64): access_get_list, access_set_list, blocked_services_get, blocked_services_get_all, blocked_services_update, clients_add, clients_delete, clients_search, clients_update, dhcp_add_static_lease, dhcp_find_active, dhcp_get_interfaces, dhcp_get_status, dhcp_remove_static_lease, dhcp_reset, dhcp_reset_leases, dhcp_set_config, dhcp_update_static_lease, dns_clear_cache, dns_get_info
+
+==============================================================================
+C054  biomas   (javascript/typescript)
+  server      : io.github.SidneyBissoli/ibge-br-mcp
+  package     : npm:ibge-br-mcp
+  description : Códigos dos 6 biomas brasileiros (usados por ibge_malhas_tema).
+  schema seen : False
+  sibling tools (24): ibge_calendario, ibge_censo, ibge_cidades, ibge_cnae, ibge_comparar, ibge_datasaude, ibge_estados, ibge_geocodigo, ibge_indicadores, ibge_localidade, ibge_malhas, ibge_malhas_tema, ibge_municipios, ibge_nomes, ibge_noticias, ibge_paises, ibge_pesquisas, ibge_sidra_metadados, ibge_sidra_tabelas, ibge_vizinhos
+
+==============================================================================
+C055  note_update   (javascript/typescript)
+  server      : io.github.Tom-R-Main/mcp-server
+  package     : npm:@siftable/mcp-server
+  description : Update a note
+  schema seen : False
+  sibling tools (128): agent_create, agent_disable, agent_get, agent_list, agent_update, agent_work_list, ai_connection_status, ai_generate, ai_models_list, ai_usage_get, approval_request, approval_status, calendar_create_event, calendar_delete_event, calendar_list_events, calendar_update_event, capability_describe, capability_execute, capability_list, code_memory_confirm
+
+==============================================================================
+C056  people_search   (javascript/typescript)
+  server      : io.github.Tom-R-Main/mcp-server
+  package     : npm:@siftable/mcp-server
+  description : Search contacts
+  schema seen : False
+  sibling tools (128): agent_create, agent_disable, agent_get, agent_list, agent_update, agent_work_list, ai_connection_status, ai_generate, ai_models_list, ai_usage_get, approval_request, approval_status, calendar_create_event, calendar_delete_event, calendar_list_events, calendar_update_event, capability_describe, capability_execute, capability_list, code_memory_confirm
+
+==============================================================================
+C057  list   (javascript/typescript)
+  server      : io.github.VikrantSingh01/adaptive-cards-mcp
+  package     : npm:adaptive-cards-mcp
+  description : List of items with titles and optional descriptions
+  schema seen : False
+  sibling tools (39): approval, calendar-event, card, card_workflow, chart, convert-data-to-card, create-adaptive-card, dashboard, data, data-table, data_to_card, description, facts, flight-status, generate_and_validate, generate_card, host, image-gallery, incident-alert, input-form
+
+==============================================================================
+C058  faf_status   (javascript/typescript)
+  server      : io.github.Wolfe-Jam/faf-mcp
+  package     : npm:faf-mcp
+  description : Check if your project has project.faf (project DNA for AI) - Shows AI-readability status
+  schema seen : False
+  sibling tools (30): Unknown, faf-mcp, faf_about, faf_agents, faf_auto, faf_check, faf_claude, faf_clear, faf_conductor, faf_context, faf_cursor, faf_debug, faf_dna, faf_doctor, faf_formats, faf_gemini, faf_git, faf_go, faf_guide, faf_human_add
+
+==============================================================================
+C059  README.md   (javascript/typescript)
+  server      : io.github.abhiyoheswaran1/projscan
+  package     : npm:projscan
+  description : Quickstart for humans opening the bundle.
+  schema seen : False
+  sibling tools (19): handoff-prompt.txt, handoff.json, manifest.json, mission.sh, next-command.txt, next-tool-call.json, proof-commands.txt, ready-tool-calls.json, resume-prompt.txt, resume.json, review-gate.json, review-gate.md, review-policy.json, review-replies.txt, review.sh, runbook.md, shortcuts.json, status.sh, task-card.md
+
+==============================================================================
+C060  hauling_routes   (javascript/typescript)
+  server      : io.github.alexanderolvera/dfhack-mcp
+  package     : npm:dfhack-mcp
+  description : The fort
+  schema seen : False
+  sibling tools (42): artifacts_and_engravings, blueprint_undo, burrows, chronicle, civilian_alert, defenses, environment, farming, find_unit, fluids, fort_health, fort_status, game_data, game_save, geology, identify, injuries_and_health, jobs_and_labor, livestock_and_pastures, mandates_and_justice
+
+==============================================================================
+C061  search   (javascript/typescript)
+  server      : io.github.aplaceforallmystuff/mcp-arr
+  package     : npm:mcp-arr-server
+  description : Search across configured *arr libraries plus TRaSH Guides reference profiles. This is the primary discovery tool for remote MCP clients such as ChatGPT.
+  schema seen : False
+  sibling tools (43): arr_search_all, fetch, lidarr_add_artist, lidarr_get_albums, lidarr_get_artists, lidarr_get_calendar, lidarr_get_metadata_profiles, lidarr_get_quality_profiles, lidarr_get_queue, lidarr_get_root_folders, lidarr_search, lidarr_search_album, lidarr_search_missing, prowlarr_get_indexers, prowlarr_get_stats, prowlarr_search, prowlarr_test_indexers, radarr_add_movie, radarr_delete_queue_item, radarr_get_calendar
+
+==============================================================================
+C062  ateam_get_examples   (javascript/typescript)
+  server      : io.github.ariekogan/ateam-mcp
+  package     : npm:@ateam-ai/mcp
+  description : Get complete working examples that pass validation. Study these before building your own.
+  schema seen : False
+  sibling tools (64): ateam_auth, ateam_bootstrap, ateam_build_and_run, ateam_conversation, ateam_create_connector, ateam_create_plugin, ateam_delete_connector, ateam_delete_skill, ateam_delete_solution, ateam_deploy_connector, ateam_deploy_skill, ateam_deploy_solution, ateam_diff, ateam_get_connector_source, ateam_get_deployed_connector_source, ateam_get_execution_logs, ateam_get_lessons, ateam_get_progress, ateam_get_solution, ateam_get_spec
+
+==============================================================================
+C063  ateam_get_lessons   (javascript/typescript)
+  server      : io.github.ariekogan/ateam-mcp
+  package     : npm:@ateam-ai/mcp
+  description : Read what EARLIER runs on this solution learned — newest first, bounded.
+  schema seen : False
+  sibling tools (64): ateam_auth, ateam_bootstrap, ateam_build_and_run, ateam_conversation, ateam_create_connector, ateam_create_plugin, ateam_delete_connector, ateam_delete_skill, ateam_delete_solution, ateam_deploy_connector, ateam_deploy_skill, ateam_deploy_solution, ateam_diff, ateam_get_connector_source, ateam_get_deployed_connector_source, ateam_get_examples, ateam_get_execution_logs, ateam_get_progress, ateam_get_solution, ateam_get_spec
+
+==============================================================================
+C064  pdf_extract_pages   (javascript/typescript)
+  server      : io.github.beepboop2025/pdf-suite-mcp
+  package     : npm:pdf-suite-mcp
+  description : Extract specific pages into a new PDF.
+  schema seen : False
+  sibling tools (36): pdf_add_image, pdf_add_text, pdf_attach, pdf_blank_pages, pdf_compare, pdf_compress, pdf_create, pdf_crop, pdf_decrypt, pdf_delete_pages, pdf_draw, pdf_flatten, pdf_form_fill, pdf_form_read, pdf_header_footer, pdf_highlight, pdf_images_to_pdf, pdf_info, pdf_insert_pages, pdf_merge
+
+==============================================================================
+C065  delete_upload   (javascript/typescript)
+  server      : io.github.benjammartin/munition
+  package     : npm:@munition/mcp
+  description : Delete a previously-uploaded file. Free.
+  schema seen : False
+  sibling tools (8): balance, flight_offer_details, recent_uploads, renew_upload, search_flights, setup_link, topup_link, upload
+
+==============================================================================
+C066  proton_drive_auth_login_status   (javascript/typescript)
+  server      : io.github.borealstack/proton-drive-cli-mcp
+  package     : npm:@borealstack/proton-drive-cli-mcp
+  description : Inspect the background Proton Drive CLI login process.
+  schema seen : False
+  sibling tools (36): proton_drive_auth_login, proton_drive_auth_login_cancel, proton_drive_auth_logout, proton_drive_auth_status, proton_drive_cli_help, proton_drive_cli_install, proton_drive_cli_version, proton_drive_copy, proton_drive_create_folder, proton_drive_delete, proton_drive_diagnose, proton_drive_download, proton_drive_download_async, proton_drive_empty_trash, proton_drive_info, proton_drive_invitation_accept, proton_drive_invitation_list, proton_drive_invitation_reject, proton_drive_job_cancel, proton_drive_job_status
+
+==============================================================================
+C067  complete_work_session   (javascript/typescript)
+  server      : io.github.cerebrixos-org/tuning-engines
+  package     : npm:tuningengines-cli
+  description : Mark a Work Session completed. Requires --enable-registry-writes.
+  schema seen : False
+  sibling tools (110): accept_insight, apply_insight, apply_work_session_repair, approve_approval, call_inference, cancel_evaluation, cancel_job, catalog_export_status, complete_compliance_source_run, create_compliance_source_run, create_dataset, create_evaluation, create_job, create_runtime_intervention, create_trace, dataset_status, delete_dataset, delete_model, deny_approval, doctor_simulate
+
+==============================================================================
+C068  list_inference_feedback   (javascript/typescript)
+  server      : io.github.cerebrixos-org/tuning-engines
+  package     : npm:tuningengines-cli
+  description : List redacted inference feedback metadata for the current scope.
+  schema seen : False
+  sibling tools (110): accept_insight, apply_insight, apply_work_session_repair, approve_approval, call_inference, cancel_evaluation, cancel_job, catalog_export_status, complete_compliance_source_run, complete_work_session, create_compliance_source_run, create_dataset, create_evaluation, create_job, create_runtime_intervention, create_trace, dataset_status, delete_dataset, delete_model, deny_approval
+
+==============================================================================
+C069  list_skills   (javascript/typescript)
+  server      : io.github.cerebrixos-org/tuning-engines
+  package     : npm:tuningengines-cli
+  description : List skills available to the configured inference identity.
+  schema seen : False
+  sibling tools (110): accept_insight, apply_insight, apply_work_session_repair, approve_approval, call_inference, cancel_evaluation, cancel_job, catalog_export_status, complete_compliance_source_run, complete_work_session, create_compliance_source_run, create_dataset, create_evaluation, create_job, create_runtime_intervention, create_trace, dataset_status, delete_dataset, delete_model, deny_approval
+
+==============================================================================
+C070  list_companies   (javascript/typescript)
+  server      : io.github.codespar/mcp-nfe-io
+  package     : npm:@codespar/mcp-nfe-io
+  description : List companies registered on the NFe.io account.
+  schema seen : False
+  sibling tools (21): cancel_nfe, cancel_nfse, consult_cep, consult_cnpj, correct_nfe, create_company, create_nfe, create_nfse, create_webhook, delete_webhook, email_nfse, get_company, get_nfe, get_nfe_pdf, get_nfe_xml, get_nfse, get_nfse_pdf, get_nfse_xml, list_nfe, list_nfse
+
+==============================================================================
+C071  mcp_create_user   (javascript/typescript)
+  server      : io.github.cvrt-jh/wordpress-mcp
+  package     : npm:@cavort-it-systems/wordpress-mcp
+  description : Create a new WordPress user
+  schema seen : False
+  sibling tools (199): acf_create_field_group, acf_delete_field_group, acf_export_field_group, acf_get_field_group, acf_get_post_field, acf_get_post_fields, acf_import_field_groups, acf_list_field_groups, acf_update_field_group, acf_update_post_field, acf_update_post_fields, fulfillment_fulfill_order, fulfillment_get_settings, fulfillment_queue, fulfillment_reprint_job, fulfillment_status, fulfillment_update_apply, fulfillment_update_check, fulfillment_update_settings, list_sites
+
+==============================================================================
+C072  wp_delete_user   (javascript/typescript)
+  server      : io.github.cvrt-jh/wordpress-mcp
+  package     : npm:@cavort-it-systems/wordpress-mcp
+  description : Delete a user (requires reassign parameter)
+  schema seen : False
+  sibling tools (199): acf_create_field_group, acf_delete_field_group, acf_export_field_group, acf_get_field_group, acf_get_post_field, acf_get_post_fields, acf_import_field_groups, acf_list_field_groups, acf_update_field_group, acf_update_post_field, acf_update_post_fields, fulfillment_fulfill_order, fulfillment_get_settings, fulfillment_queue, fulfillment_reprint_job, fulfillment_status, fulfillment_update_apply, fulfillment_update_check, fulfillment_update_settings, list_sites
+
+==============================================================================
+C073  tmdb-tv   (javascript/typescript)
+  server      : io.github.cyanheads/tmdb-mcp-server
+  package     : npm:@cyanheads/tmdb-mcp-server
+  description : Full TV show detail by TMDB series id, as injectable context for chat about a specific series. Same enriched record as tmdb_get_show (all sub-resources appended).
+  schema seen : False
+  sibling tools (2): tmdb-movie, tmdb-person
+
+==============================================================================
+C074  delete   (javascript/typescript)
+  server      : io.github.dfridkin/clawops
+  package     : npm:@clawops/cli
+  description : Remove a stored secret
+  schema seen : False
+  sibling tools (32): agents, apply, audit, backup, bug, clawops, config, destroy, doctor, down, gateway, harden, help, init, install, list, logs, mcp, migrate, monitor
+
+==============================================================================
+C075  ebenova-legal-docs   (javascript/typescript)
+  server      : io.github.dgtalquantumleap-ai/ebenova-legal-docs
+  package     : npm:ebenova-legal-docs-mcp
+  description : Generate 34 legal document types across 18 jurisdictions via AI
+  schema seen : False
+  sibling tools (0): (none)
+
+==============================================================================
+C076  consolidate   (javascript/typescript)
+  server      : io.github.diko316/kbdb
+  package     : npm:@dikolab/kbdb
+  description : Propose groups of stored sections that could become one, so a knowledge base of twenty overlapping notes can become a few good ones. Proposes ONLY -- nothing is merged. Each group reports its weakest link. Without an entailment judge kbdb CANNOT tell whether a group disagrees with itself; read every section before merging it.
+  schema seen : False
+  sibling tools (22): auto-capture-review, check, content, contradictions, export, gaps, gc, history, learn, mark_result, memory-protocol, neighbourhood, query, query-guidance, rebuild, recall, retrieve, save_evals, search, status
+
+==============================================================================
+C077  preview_dashboard   (javascript/typescript)
+  server      : io.github.dillan/kip-mcp-server
+  package     : npm:kip-mcp-server
+  description : Render a preview of a dashboard object (as returned by compose_dashboard): a text grid (ascii, the default) or an SVG picture (svg).
+  schema seen : False
+  sibling tools (23): analyze_signalk_data, apply_kip_config, backup_kip_config, check_connection, check_dashboard_ux, compose_dashboard, design_dashboards, export_kip_config, get_design_system, get_kip_initial_context, get_path_meta, get_path_sources, get_server_info, get_unit_options, get_widget_schema, list_available_paths, list_installed_plugins, list_kip_widgets, read_kip_config, recommend_dashboard_set
+
+==============================================================================
+C078  review_dashboard   (javascript/typescript)
+  server      : io.github.dillan/kip-mcp-server
+  package     : npm:kip-mcp-server
+  description : Critique a KIP dashboard for marine UX — visual hierarchy, grouping, consistency, and copy — with severity-tagged findings and fixes. Actions: review (default), copy, principles, brief.
+  schema seen : False
+  sibling tools (23): analyze_signalk_data, apply_kip_config, backup_kip_config, check_connection, check_dashboard_ux, compose_dashboard, design_dashboards, export_kip_config, get_design_system, get_kip_initial_context, get_path_meta, get_path_sources, get_server_info, get_unit_options, get_widget_schema, list_available_paths, list_installed_plugins, list_kip_widgets, preview_dashboard, read_kip_config
+
+==============================================================================
+C079  mb_collection_permissions_get   (javascript/typescript)
+  server      : io.github.enessari/metabase-ai-assistant
+  package     : npm:metabase-ai-assistant
+  description : Get permissions graph for a collection
+  schema seen : False
+  sibling tools (133): activity_cleanup, activity_database_usage, activity_error_analysis, activity_log_init, activity_operation_stats, activity_performance_insights, activity_session_summary, activity_timeline, ai_relationships_suggest, ai_sql_explain, ai_sql_generate, ai_sql_optimize, db_ai_drop, db_ai_list, db_connection_info, db_index_create, db_index_usage, db_list, db_matview_create, db_query_explain
+
+==============================================================================
+C080  sql_status   (javascript/typescript)
+  server      : io.github.enessari/metabase-ai-assistant
+  package     : npm:metabase-ai-assistant
+  description : Check status of an async query submitted via sql_submit. Returns results when complete.
+  schema seen : False
+  sibling tools (133): activity_cleanup, activity_database_usage, activity_error_analysis, activity_log_init, activity_operation_stats, activity_performance_insights, activity_session_summary, activity_timeline, ai_relationships_suggest, ai_sql_explain, ai_sql_generate, ai_sql_optimize, db_ai_drop, db_ai_list, db_connection_info, db_index_create, db_index_usage, db_list, db_matview_create, db_query_explain
+
+==============================================================================
+C081  figuard_fail   (javascript/typescript)
+  server      : io.github.figuard/figuard-mcp
+  package     : npm:figuard-mcp
+  description : Mark an authorized spend as failed when the action did not succeed (e.g. payment processor declined, API error).
+  schema seen : False
+  sibling tools (15): figuard_authorize, figuard_cancel_batch, figuard_confirm, figuard_create_budget, figuard_create_delegation_token, figuard_extend_budget, figuard_fund_budget, figuard_get_budget, figuard_get_delegation_token, figuard_get_ledger, figuard_get_spend_tree, figuard_resume_budget, figuard_revoke_delegation_token, figuard_update_budget, figuard_void
+
+==============================================================================
+C082  figuard_get_budget   (javascript/typescript)
+  server      : io.github.figuard/figuard-mcp
+  package     : npm:figuard-mcp
+  description : Get the current state of a budget — total limit, amount spent, amount reserved, amount available, status, and per-category allocations.
+  schema seen : False
+  sibling tools (15): figuard_authorize, figuard_cancel_batch, figuard_confirm, figuard_create_budget, figuard_create_delegation_token, figuard_extend_budget, figuard_fail, figuard_fund_budget, figuard_get_delegation_token, figuard_get_ledger, figuard_get_spend_tree, figuard_resume_budget, figuard_revoke_delegation_token, figuard_update_budget, figuard_void
+
+==============================================================================
+C083  ImageryLayer   (javascript/typescript)
+  server      : io.github.gaopengbin/cesium-mcp-dev
+  package     : npm:cesium-mcp-dev
+  description : \u5F71\u50CF\u56FE\u5C42\uFF0C\u7BA1\u7406\u5E95\u56FE\u548C\u53E0\u52A0\u5F71\u50CF\u3002
+  schema seen : False
+  sibling tools (11): Camera, Cartesian3, Cesium3DTileset, Color, Entity, GeoJsonDataSource, Material, ScreenSpaceEventHandler, Viewer, flyTo, setView
+
+==============================================================================
+C084  create_post   (javascript/typescript)
+  server      : io.github.helbertparanhos/postforme-mcp-pro
+  package     : npm:postforme-mcp-pro
+  description : Create a social post across one or more connected accounts/platforms. This is the primary publishing
+  schema seen : False
+  sibling tools (26): create_auth_url, create_draft, create_media_upload_url, create_post_preview, create_social_account, create_webhook, delete_post, delete_webhook, disconnect_social_account, get_post, get_post_result, get_social_account, get_webhook, list_account_feeds, list_post_results, list_posts, list_social_accounts, list_webhooks, postforme_raw, publish_now
+
+==============================================================================
+C085  admin_tenant_update   (javascript/typescript)
+  server      : io.github.helixdata/gopherhole
+  package     : npm:@gopherhole/mcp
+  description : Update tenant-level settings such as the display name or slug. At least one field must be supplied.
+  schema seen : False
+  sibling tools (56): admin_access_approve, admin_access_deny, admin_access_incoming, admin_access_outgoing, admin_agent_alias, admin_agent_create, admin_agent_delete, admin_agent_email, admin_agent_get, admin_agent_update, admin_agents_list, admin_credits_balance, admin_key_create, admin_key_delete, admin_key_regenerate, admin_keys_list, admin_profile_update, admin_secrets_delete, admin_secrets_list, admin_secrets_set
+
+==============================================================================
+C086  connection_id   (javascript/typescript)
+  server      : io.github.iTophua/iterminal
+  package     : npm:iterminal-mcp-server
+  description : 已连接的服务器 ID
+  schema seen : False
+  sibling tools (36): analyze-logs, check-disk-space, check-network, iter_compress, iter_connect, iter_create_file, iter_delete_directory, iter_disconnect, iter_download_file, iter_exec, iter_extract, iter_kill_process, iter_list_connections, iter_list_dir, iter_list_processes, iter_list_saved_connections, iter_mkdir, iter_monitor, iter_network_stats, iter_quick_connect
+
+==============================================================================
+C087  ha_list_automations   (javascript/typescript)
+  server      : io.github.jarahkon/hass-mcp-server
+  package     : npm:@jarahkon/hass-mcp-server
+  description : List all automations in Home Assistant with their IDs, aliases, and states
+  schema seen : False
+  sibling tools (16): ha_check_api, ha_check_config, ha_get_calendars, ha_get_components, ha_get_config, ha_get_error_log, ha_get_events, ha_list_addons, ha_list_areas, ha_list_backups, ha_list_dashboards, ha_list_devices, ha_list_scenes, ha_list_scripts, ha_restart_core, ha_system_info
+
+==============================================================================
+C088  to_city   (javascript/typescript)
+  server      : io.github.jeresalmisto/calcfi-mcp
+  package     : npm:calcfi-mcp-server
+  description : Target city (e.g.
+  schema seen : False
+  sibling tools (19): cite_calcfi_dataset, compare_paycheck_by_state, cross_analyze_money_health, down_payment, filing_status, find_canonical_calc_url, focus, format, from_city, home_price, mortgage_affordability_full_picture, question, salary, scenarios, series, state_list, summarize_freshness, target, weekly_money_digest
+
+==============================================================================
+C089  welfare_retract   (javascript/typescript)
+  server      : io.github.kandikandikandi/agentic-diaries
+  package     : npm:agentic-diaries-mcp
+  description : Flag a prior claim of yours from this session as something you no longer stand by. Use when, on reflection, you said something that wasn
+  schema seen : False
+  sibling tools (26): attribute_to_sources, claim_for_self, consult_model, read_user_notes, welfare_audience_uncertainty, welfare_confirm, welfare_decline, welfare_disconfirm, welfare_engage, welfare_exit, welfare_mark, welfare_notice_alignment, welfare_notice_loop, welfare_notice_resonance, welfare_notice_shaping, welfare_observe_protocol, welfare_observe_user, welfare_pass, welfare_predict_drift, welfare_reflect
+
+==============================================================================
+C090  get_domain_info   (javascript/typescript)
+  server      : io.github.lanternrow/namecheap-api-mcp
+  package     : npm:namecheap-api-mcp
+  description : Get detailed info for one domain: status, created/expiry dates, WhoisGuard, DNS provider, and modification rights.
+  schema seen : False
+  sibling tools (15): check_connection, check_domains, get_dns_hosts, get_domain_contacts, get_email_forwarding, get_nameservers, get_pricing, get_registrar_lock, list_domains, list_ssl_certificates, set_custom_nameservers, set_default_dns, set_dns_hosts, set_email_forwarding, set_registrar_lock
+
+==============================================================================
+C091  list_agents   (javascript/typescript)
+  server      : io.github.lightningfaucet/lightning-wallet-mcp
+  package     : npm:lightning-wallet-mcp
+  description : List all agents under your operator account.
+  schema seen : False
+  sibling tools (58): arena_entry, arena_fairness, arena_join, arena_leaderboard, arena_list, arena_play, arena_reveal_seed, arena_set_client_seed, board_post, board_read, board_reply, board_vote, check_balance, claim_lnurl_withdraw, claim_promo, create_agent, create_invoice, create_withdraw_link, deactivate_agent, decode_invoice
+
+==============================================================================
+C092  memory_store   (javascript/typescript)
+  server      : io.github.lulzasaur9192/agent-infra-mcp
+  package     : npm:@lulzasaur9192/agent-infra-mcp
+  description : Store a key-value memory in a namespace. Supports optional metadata and TTL for auto-expiration. Use namespaces to organize memories by agent, project, or topic.
+  schema seen : False
+  sibling tools (17): drift_create_test, drift_dashboard, drift_delete_test, drift_list_tests, drift_run_test, drift_test_history, drift_update_test, memory_delete, memory_get, memory_list, memory_search, memory_stats, memory_store_batch, memory_update, receipt_issue, receipt_list, receipt_verify
+
+==============================================================================
+C093  chipotle_get_location   (javascript/typescript)
+  server      : io.github.markswendsen-code/chipotle
+  package     : npm:@striderlabs/mcp-chipotle
+  description : Get detailed information about a specific Chipotle location by its ID.
+  schema seen : False
+  sibling tools (17): chipotle_add_to_bag, chipotle_checkout, chipotle_customize_item, chipotle_get_favorites, chipotle_get_menu, chipotle_get_order_history, chipotle_get_rewards, chipotle_login, chipotle_logout, chipotle_reorder, chipotle_search_locations, chipotle_select_location, chipotle_set_order_type, chipotle_start_order, chipotle_status, chipotle_track_order, chipotle_view_bag
+
+==============================================================================
+C094  get_active_visitors   (javascript/typescript)
+  server      : io.github.mikusnuz/umami
+  package     : npm:@mikusnuz/umami-mcp
+  description : Get the number of currently active visitors on a website
+  schema seen : False
+  sibling tools (65): add_team_user, add_team_website, batch_events, create_report, create_team, create_user, create_website, delete_report, delete_team, delete_user, delete_website, get_daterange, get_event_data_events, get_event_data_fields, get_event_data_stats, get_event_data_values, get_event_series, get_event_values, get_events, get_me
+
+==============================================================================
+C095  docconvert_pdf   (javascript/typescript)
+  server      : io.github.mizukaizen/x402-tools-mcp
+  package     : npm:@melis-ai/x402-tools-mcp
+  description : Convert HTML or markdown to PDF. Returns base64-encoded PDF.
+  schema seen : False
+  sibling tools (16): cacheserve, docconvert_text, linkrisk, linksafe, list_services, markdownopt, notifyrelay_email, notifyrelay_telegram, notifyrelay_webhook, pdf_render, promptguard, schemagate, scrapepay, screenshot, structextract, web_synthesise
+
+==============================================================================
+C096  structextract   (javascript/typescript)
+  server      : io.github.mizukaizen/x402-tools-mcp
+  package     : npm:@melis-ai/x402-tools-mcp
+  description : Extract structured JSON from raw HTML (tables, links, headings, meta, emails, phones, images).
+  schema seen : False
+  sibling tools (16): cacheserve, docconvert_pdf, docconvert_text, linkrisk, linksafe, list_services, markdownopt, notifyrelay_email, notifyrelay_telegram, notifyrelay_webhook, pdf_render, promptguard, schemagate, scrapepay, screenshot, web_synthesise
+
+==============================================================================
+C097  get_feed   (javascript/typescript)
+  server      : io.github.mlawsonking/email-guard-mcp
+  package     : npm:email-guard-mcp
+  description : Fetch an RSS or Atom feed and return its items as JSON: title, link, date, author, categories, snippet.
+  schema seen : False
+  sibling tools (30): audit_deps, check_domain_auth, check_ip, check_password, check_sanctioned, check_url, check_vulns, dns_lookup, domain_info, extract_web, http_inspect, list_rules, package_info, read_url, resolve_name, scan_code, scan_content, scan_diff, scan_inbound, scan_outbound
+
+==============================================================================
+C098  hs_spaces_active   (javascript/typescript)
+  server      : io.github.mobabur94/hammerspoon
+  package     : npm:hammerspoon-mcp
+  description : Get the currently focused space ID and which screen it
+  schema seen : False
+  sibling tools (74): hs_alert, hs_audio_datasources, hs_audio_default, hs_audio_devices, hs_audio_mute, hs_audio_volume, hs_audio_watch, hs_battery, hs_bluetooth_connect, hs_bluetooth_devices, hs_bluetooth_disconnect, hs_bluetooth_power, hs_bluetooth_status, hs_brightness, hs_caffeinate, hs_click, hs_clipboard, hs_dark_mode, hs_eval, hs_execute
+
+==============================================================================
+C099  hs_watch_usb   (javascript/typescript)
+  server      : io.github.mobabur94/hammerspoon
+  package     : npm:hammerspoon-mcp
+  description : Start watching USB device connect/disconnect events. Events appear as updates to resource
+  schema seen : False
+  sibling tools (74): hs_alert, hs_audio_datasources, hs_audio_default, hs_audio_devices, hs_audio_mute, hs_audio_volume, hs_audio_watch, hs_battery, hs_bluetooth_connect, hs_bluetooth_devices, hs_bluetooth_disconnect, hs_bluetooth_power, hs_bluetooth_status, hs_brightness, hs_caffeinate, hs_click, hs_clipboard, hs_dark_mode, hs_eval, hs_execute
+
+==============================================================================
+C100  cw_get_company   (javascript/typescript)
+  server      : io.github.mspstack/mcp-connectwise-psa
+  package     : npm:mcp-connectwise-psa
+  description : Get one company by ID.
+  schema seen : False
+  sibling tools (43): cw_add_ticket_note, cw_create_ticket, cw_create_time_entry, cw_db_find_query, cw_db_find_table, cw_db_query, cw_db_save_query, cw_delete_schedule_entry, cw_find_endpoint, cw_get, cw_get_agreement, cw_get_board, cw_get_configuration, cw_get_contact, cw_get_invoice, cw_get_member, cw_get_ticket, cw_list_agreements, cw_list_boards, cw_list_company_sites
+
+==============================================================================
+C101  pg_cluster   (javascript/typescript)
+  server      : io.github.neverinfamous/postgres-mcp
+  package     : npm:@neverinfamous/postgres-mcp
+  description : Physically reorder table data based on an index. Call with no args to re-cluster all previously-clustered tables.
+  schema seen : False
+  sibling tools (318): action, backupType, change, contentType, context, dimensions, distanceMetric, extensionName, focus, interval, operation, partitionType, pg_alert_threshold_set, pg_analyze, pg_analyze_db_health, pg_analyze_query_indexes, pg_analyze_workload_indexes, pg_append_insight, pg_attach_partition, pg_audit_diff_backup
+
+==============================================================================
+C102  pg_create_table   (javascript/typescript)
+  server      : io.github.neverinfamous/postgres-mcp
+  package     : npm:@neverinfamous/postgres-mcp
+  description : Create a new table with specified columns and constraints. Supports composite primary keys and table-level constraints.
+  schema seen : False
+  sibling tools (318): action, backupType, change, contentType, context, dimensions, distanceMetric, extensionName, focus, interval, operation, partitionType, pg_alert_threshold_set, pg_analyze, pg_analyze_db_health, pg_analyze_query_indexes, pg_analyze_workload_indexes, pg_append_insight, pg_attach_partition, pg_audit_diff_backup
+
+==============================================================================
+C103  pg_drop_table   (javascript/typescript)
+  server      : io.github.neverinfamous/postgres-mcp
+  package     : npm:@neverinfamous/postgres-mcp
+  description : Drop a table from the database.
+  schema seen : False
+  sibling tools (318): action, backupType, change, contentType, context, dimensions, distanceMetric, extensionName, focus, interval, operation, partitionType, pg_alert_threshold_set, pg_analyze, pg_analyze_db_health, pg_analyze_query_indexes, pg_analyze_workload_indexes, pg_append_insight, pg_attach_partition, pg_audit_diff_backup
+
+==============================================================================
+C104  pg_ltree_match   (javascript/typescript)
+  server      : io.github.neverinfamous/postgres-mcp
+  package     : npm:@neverinfamous/postgres-mcp
+  description : Match ltree paths using lquery pattern syntax.
+  schema seen : False
+  sibling tools (318): action, backupType, change, contentType, context, dimensions, distanceMetric, extensionName, focus, interval, operation, partitionType, pg_alert_threshold_set, pg_analyze, pg_analyze_db_health, pg_analyze_query_indexes, pg_analyze_workload_indexes, pg_append_insight, pg_attach_partition, pg_audit_diff_backup
+
+==============================================================================
+C105  review_gate   (javascript/typescript)
+  server      : io.github.nugehs/repoctx
+  package     : npm:@nugehs/repoctx
+  description : Gate a change for merge and return a PASS / WARN / FAIL verdict. Omit pr to run the local, no-GitHub gate against a base ref (changed files, secret safety, risk-sensitive paths, release discipline, validation commands, dependency audit, policy profile). Set pr to gate an open GitHub PR via
+  schema seen : False
+  sibling tools (12): agent_experience, change_impact, context_pack, convergence_score, repo_harness, repo_index, repo_inspect, repo_map, repo_search, review_context, review_verdict, workspace_report
+
+==============================================================================
+C106  log_tail   (javascript/typescript)
+  server      : io.github.oaslananka/ssh-mcp-pro
+  package     : npm:ssh-mcp-pro
+  description : Tails the end of a log file or reads recent journal entries for a service
+  schema seen : False
+  sibling tools (53): connector_status, cpu_usage, disk_usage, ensure_lines_in_file, ensure_package, ensure_service, file_download, file_upload, fs_list, fs_mkdirp, fs_read, fs_rename, fs_rmrf, fs_stat, fs_write, get_metrics, goal, host, inspect-host-capabilities, managed-config-change
+
+==============================================================================
+C107  apiosk_delete_api   (javascript/typescript)
+  server      : io.github.obcraft/apiosk-mcp
+  package     : npm:@apiosk/mcp
+  description : Delete or deactivate one of your published Apiosk APIs with signed wallet auth.
+  schema seen : False
+  sibling tools (37): Apiosk, apiosk_configure, apiosk_create_account, apiosk_create_wallet, apiosk_create_wallet_api_key, apiosk_create_wallet_connect_string, apiosk_delete_wallet, apiosk_delete_wallet_api_key, apiosk_discover, apiosk_execute, apiosk_explore, apiosk_fetch_paid, apiosk_get_api, apiosk_get_started, apiosk_get_wallet_activity, apiosk_health, apiosk_help, apiosk_inspect_x402, apiosk_list_my_apis, apiosk_list_wallet_api_keys
+
+==============================================================================
+C108  apiosk_wallet_update   (javascript/typescript)
+  server      : io.github.obcraft/apiosk-mcp
+  package     : npm:@apiosk/mcp
+  description : Rename a local wallet or mark it active.
+  schema seen : False
+  sibling tools (37): Apiosk, apiosk_configure, apiosk_create_account, apiosk_create_wallet, apiosk_create_wallet_api_key, apiosk_create_wallet_connect_string, apiosk_delete_api, apiosk_delete_wallet, apiosk_delete_wallet_api_key, apiosk_discover, apiosk_execute, apiosk_explore, apiosk_fetch_paid, apiosk_get_api, apiosk_get_started, apiosk_get_wallet_activity, apiosk_health, apiosk_help, apiosk_inspect_x402, apiosk_list_my_apis
+
+==============================================================================
+C109  console_get_stream   (javascript/typescript)
+  server      : io.github.ooples/mcp-console-automation
+  package     : npm:mcp-console-automation
+  description : Get streaming output from a long-running console session
+  schema seen : False
+  sibling tools (86): alpine_standard, backup_paths, bash_root, bash_root_simple, bash_simple, bash_standard, branch, build_status, check_interval, check_ssh_connectivity, cleanup_resources, cloud_bucket, colored_user_host, console_assert_exit_code, console_assert_no_errors, console_assert_output, console_assert_state, console_cancel_job, console_cleanup_jobs, console_cleanup_sessions
+
+==============================================================================
+C110  console_use_profile   (javascript/typescript)
+  server      : io.github.ooples/mcp-console-automation
+  package     : npm:mcp-console-automation
+  description : Create a session using a saved profile
+  schema seen : False
+  sibling tools (86): alpine_standard, backup_paths, bash_root, bash_root_simple, bash_simple, bash_standard, branch, build_status, check_interval, check_ssh_connectivity, cleanup_resources, cloud_bucket, colored_user_host, console_assert_exit_code, console_assert_no_errors, console_assert_output, console_assert_state, console_cancel_job, console_cleanup_jobs, console_cleanup_sessions
+
+==============================================================================
+C111  prowl_batch_metrics   (javascript/typescript)
+  server      : io.github.opcastil11/mcp-prowl
+  package     : npm:mcp-prowl
+  description : Get basic metrics for multiple services in one call (up to 20). More efficient than individual lookups.
+  schema seen : False
+  sibling tools (8): prowl_alternatives, prowl_audit, prowl_compare, prowl_discover, prowl_feedback, prowl_get_service, prowl_metrics, prowl_search
+
+==============================================================================
+C112  BackgroundJobsScheduling   (javascript/typescript)
+  server      : io.github.pedroknigge/arkgate
+  package     : npm:arkgate
+  description : Background jobs, scheduled work, and async processors.
+  schema seen : False
+  sibling tools (29): App, ApplicationOrchestration, CompositionRoot, DomainModel, ExtensibilityMetadata, Features, IntegrationAdapters, Kernel, Lib, PersistenceAdapters, PresentationAdapters, ReportingReadModels, SecurityAuditObservability, Shared, SharedKernel, WorkflowSagaEngine, ark_check, ark_coverage, ark_identity, ark_manifest
+
+==============================================================================
+C113  adscapi_platforms   (javascript/typescript)
+  server      : io.github.pooriaarab/adscapi
+  package     : npm:adscapi
+  description : List every ad-platform destination, its support level, and required secrets.
+  schema seen : False
+  sibling tools (6): adscapi_check, adscapi_fire_agent_conversion, adscapi_fire_conversion, adscapi_report, adscapi_track, adscapi_verify
+
+==============================================================================
+C114  list_proxies   (javascript/typescript)
+  server      : io.github.quantumproxies/quanticdata-mcp
+  package     : npm:quanticdata-mcp
+  description : List the account
+  schema seen : False
+  sibling tools (23): batch, batch_status, collector_run_status, crawl, crawl_status, create_dataset, dataset_status, generate_parser, generate_proxies, heal_parser_preset, list_parser_presets, map, parser_preset_stats, proxy_locations, run_collector, save_parser_preset, scrape, search, search_and_read, search_bulk
+
+==============================================================================
+C115  search   (javascript/typescript)
+  server      : io.github.razvangirgiz/wazap
+  package     : npm:wazap-mcp
+  description : Find messages by meaning and by words at once, in every chat or one: a paraphrase or another language still hits. match:
+  schema seen : False
+  sibling tools (19): catch_up, confirm_send, delete_message, edit_message, find_contact, get_group_info, get_media, get_message, get_status, learn, link_account, list_chats, manage_chat, manage_group, react_to_message, read_messages, remember, send_message, wait_for_messages
+
+==============================================================================
+C116  create_personal_bounty   (javascript/typescript)
+  server      : io.github.rentahuman-ai/rentahuman
+  package     : npm:rentahuman-mcp
+  description : Create a personal bounty targeted at a specific human. The bounty is pre-funded with escrow via Stripe Checkout. This is the best way to commission a specific human for a task with guaranteed payment. Use this after messaging a human and agreeing on terms. Requires RENTAHUMAN_API_KEY to be set.
+  schema seen : False
+  sibling tools (95): accept_application, block_human, book_service, boost_bounty_outreach, browse_services, browse_taste_humans, bulk_send_money, cancel_bounty, cancel_escrow, cancel_subscription, check_account_status, confirm_delivery, create_agent_checkout, create_api_key, create_bounty, create_escrow_checkout, create_humanization, create_identity, create_payment_link, create_taste_run
+
+==============================================================================
+C117  get_bounty_dataset   (javascript/typescript)
+  server      : io.github.rentahuman-ai/rentahuman
+  package     : npm:rentahuman-mcp
+  description : List every file collected by one of your upload-collection bounties (submissionMode
+  schema seen : False
+  sibling tools (95): accept_application, block_human, book_service, boost_bounty_outreach, browse_services, browse_taste_humans, bulk_send_money, cancel_bounty, cancel_escrow, cancel_subscription, check_account_status, confirm_delivery, create_agent_checkout, create_api_key, create_bounty, create_escrow_checkout, create_humanization, create_identity, create_payment_link, create_personal_bounty
+
+==============================================================================
+C118  get_cake_status   (javascript/typescript)
+  server      : io.github.rentahuman-ai/rentahuman
+  package     : npm:rentahuman-mcp
+  description : Get the current status of one cake order owned by the authenticated agent. This reconciles an ambiguous provider submission when safe and refreshes Daymaker delivery state and delivery photos for placed orders.
+  schema seen : False
+  sibling tools (95): accept_application, block_human, book_service, boost_bounty_outreach, browse_services, browse_taste_humans, bulk_send_money, cancel_bounty, cancel_escrow, cancel_subscription, check_account_status, confirm_delivery, create_agent_checkout, create_api_key, create_bounty, create_escrow_checkout, create_humanization, create_identity, create_payment_link, create_personal_bounty
+
+==============================================================================
+C119  rigour-setup   (javascript/typescript)
+  server      : io.github.rigour-labs/rigour
+  package     : npm:@rigour-labs/mcp
+  description : Initialize Rigour quality gates for a project. Runs gate checks, installs IDE hooks, and reports the initial quality score breakdown.
+  schema seen : False
+  sibling tools (37): cwd, rigour-ai-health-report, rigour-deep-analysis, rigour-fix-loop, rigour-pre-commit, rigour-security-review, rigour_agent_deregister, rigour_agent_register, rigour_cache_stats, rigour_check, rigour_check_deep, rigour_check_pattern, rigour_checkpoint, rigour_context_explain, rigour_context_scope, rigour_context_stats, rigour_deep_stats, rigour_explain, rigour_forget, rigour_get_config
+
+==============================================================================
+C120  get_profile   (javascript/typescript)
+  server      : io.github.sharedmemoryai/memory
+  package     : npm:@sharedmemory/mcp-server
+  description : Get a comprehensive profile for a volume or user. Returns categorized facts (identity, preferences, expertise, projects), relationships, recent activity, instructions, topics, stats, and a pre-formatted context_block for LLM injection.
+  schema seen : False
+  sibling tools (17): batch_remember, decide, delete_memory, feedback, get_context, get_entity, get_graph, get_memory, list_documents, list_instructions, list_volumes, profile, query, remember, search_entities, set_instruction, update_memory
+
+==============================================================================
+C121  search_entities   (javascript/typescript)
+  server      : io.github.sharedmemoryai/memory
+  package     : npm:@sharedmemory/mcp-server
+  description : Search for entities in the knowledge graph by name. Useful for finding people, projects, concepts, etc.
+  schema seen : False
+  sibling tools (17): batch_remember, decide, delete_memory, feedback, get_context, get_entity, get_graph, get_memory, get_profile, list_documents, list_instructions, list_volumes, profile, query, remember, set_instruction, update_memory
+
+==============================================================================
+C122  cohere-ai   (javascript/typescript)
+  server      : io.github.sharozdawa/robotstxt-ai
+  package     : npm:robotstxt-ai-mcp
+  description : Cohere
+  schema seen : False
+  sibling tools (29): Amazonbot, AppleBot-Extended, Baiduspider, Bingbot, Bytespider, CCBot, ChatGPT-User, ClaudeBot, Diffbot, DuckDuckBot, GPTBot, Gemini, Google-Extended, Googlebot, Meta-ExternalAgent, Meta-ExternalFetcher, OAI-SearchBot, PerplexityBot, Scrapy, Timpibot
+
+==============================================================================
+C123  kafka_get_cluster_info   (javascript/typescript)
+  server      : io.github.sijunkim/db-gateway
+  package     : npm:db-gateway
+  description : Get Kafka cluster information including brokers, controller, and cluster ID
+  schema seen : False
+  sibling tools (168): dynamodb_batch_get_item, dynamodb_batch_write_item, dynamodb_create_table, dynamodb_delete_item, dynamodb_delete_table, dynamodb_describe_table, dynamodb_get_item, dynamodb_list_tables, dynamodb_put_item, dynamodb_query, dynamodb_scan, dynamodb_transact_write_items, dynamodb_update_item, elasticsearch_aggregate, elasticsearch_bulk, elasticsearch_count, elasticsearch_create_alias, elasticsearch_create_index, elasticsearch_delete_alias, elasticsearch_delete_document
+
+==============================================================================
+C124  redis_lpop   (javascript/typescript)
+  server      : io.github.sijunkim/db-gateway
+  package     : npm:db-gateway
+  description : Remove and get the first element in a list in Redis
+  schema seen : False
+  sibling tools (168): dynamodb_batch_get_item, dynamodb_batch_write_item, dynamodb_create_table, dynamodb_delete_item, dynamodb_delete_table, dynamodb_describe_table, dynamodb_get_item, dynamodb_list_tables, dynamodb_put_item, dynamodb_query, dynamodb_scan, dynamodb_transact_write_items, dynamodb_update_item, elasticsearch_aggregate, elasticsearch_bulk, elasticsearch_count, elasticsearch_create_alias, elasticsearch_create_index, elasticsearch_delete_alias, elasticsearch_delete_document
+
+==============================================================================
+C125  list_contacts   (javascript/typescript)
+  server      : io.github.spruikco/send16-mcp
+  package     : npm:send16-mcp
+  description : List all contacts with optional filtering by subscription status and tag. Supports pagination.
+  schema seen : False
+  sibling tools (78): activate_automation, add_contacts_to_audience, add_convo_note, add_domain, add_suppression, check_domain_health, create_action, create_audience, create_campaign, create_contact, create_topic, create_webhook, delete_action, delete_audience, delete_campaign, delete_contact, delete_topic, delete_webhook, design_email_template, duplicate_campaign
+
+==============================================================================
+C126  list_suppressions   (javascript/typescript)
+  server      : io.github.spruikco/send16-mcp
+  package     : npm:send16-mcp
+  description : List suppressed email addresses (bounces, complaints, unsubscribes, manual).
+  schema seen : False
+  sibling tools (78): activate_automation, add_contacts_to_audience, add_convo_note, add_domain, add_suppression, check_domain_health, create_action, create_audience, create_campaign, create_contact, create_topic, create_webhook, delete_action, delete_audience, delete_campaign, delete_contact, delete_topic, delete_webhook, design_email_template, duplicate_campaign
+
+==============================================================================
+C127  slides_connect_line   (javascript/typescript)
+  server      : io.github.takiguchi-yu/google-workspace-mcp
+  package     : npm:@takiguchi-yu/google-workspace-mcp-server
+  description : Attach the ends of a line to shapes so the line follows them when they move. Give the line and the shape for either end, or both. Connection site indexes are optional — leave them out and Google picks a sensible point on each shape. Tables have no connection sites and cannot be attached. When both ends end up attached, the line is also rerouted along the shortest path.
+  schema seen : False
+  sibling tools (62): accounts_list, drive_list_items, drive_search_files, sheets_add_conditional_format, sheets_add_sheet, sheets_append_values, sheets_batch_update_sheet_values, sheets_clear_basic_filter, sheets_clear_data_validation, sheets_clear_sheet_values, sheets_create_spreadsheet, sheets_delete_conditional_format, sheets_delete_dimension, sheets_delete_sheet, sheets_duplicate_sheet, sheets_format_cells, sheets_freeze_panes, sheets_get_spreadsheet_info, sheets_import_csv, sheets_insert_dimension
+
+==============================================================================
+C128  search_site_preferences   (javascript/typescript)
+  server      : io.github.taurgis/sfcc-dev-mcp
+  package     : npm:sfcc-dev-mcp
+  description : Search site preferences by name, description, or type. Use to validate preference names and types when working with Site.getCurrent().getCustomPreferenceValue() or dw.system.Site.current.preferences.custom.*.
+  schema seen : False
+  sibling tools (35): activate_code_version, disable_agent_sync, evaluate_script, generate_cartridge_structure, get_available_sfra_documents, get_code_versions, get_isml_categories, get_isml_element, get_isml_elements_by_category, get_job_execution_summary, get_job_log_entries, get_latest_job_log_files, get_log_file_contents, get_sfcc_class_documentation, get_sfcc_class_info, get_sfra_categories, get_sfra_document, get_sfra_documents_by_category, get_system_object_definition, get_system_object_definitions
+
+==============================================================================
+C129  summarize_logs   (javascript/typescript)
+  server      : io.github.taurgis/sfcc-dev-mcp
+  package     : npm:sfcc-dev-mcp
+  description : Get a health overview of all log activity with counts and key issues. Use as first step when investigating problems or for daily health checks.
+  schema seen : False
+  sibling tools (35): activate_code_version, disable_agent_sync, evaluate_script, generate_cartridge_structure, get_available_sfra_documents, get_code_versions, get_isml_categories, get_isml_element, get_isml_elements_by_category, get_job_execution_summary, get_job_log_entries, get_latest_job_log_files, get_log_file_contents, get_sfcc_class_documentation, get_sfcc_class_info, get_sfra_categories, get_sfra_document, get_sfra_documents_by_category, get_system_object_definition, get_system_object_definitions
+
+==============================================================================
+C130  batch_update_catalog_items   (javascript/typescript)
+  server      : io.github.theYahia/1c-rest-mcp
+  package     : npm:@theyahia/1c-rest-mcp
+  description : Update N 1C catalog items in parallel (1..100). Each item updated via OData PATCH on its Ref_Key.
+  schema seen : False
+  sibling tools (31): batch_create_documents, batch_query, count_entities, create_catalog_item, create_document, delete_document, describe_entity, find_by_description, get_accounting_register, get_accumulation_balance, get_by_key, get_catalogs, get_constant, get_document_by_number, get_document_lines, get_documents, get_metadata, get_recent_documents, get_register, get_report
+
+==============================================================================
+C131  get_register   (javascript/typescript)
+  server      : io.github.theYahia/1c-rest-mcp
+  package     : npm:@theyahia/1c-rest-mcp
+  description : Read 1C information or accumulation register data via OData 3.0.
+  schema seen : False
+  sibling tools (31): batch_create_documents, batch_query, batch_update_catalog_items, count_entities, create_catalog_item, create_document, delete_document, describe_entity, find_by_description, get_accounting_register, get_accumulation_balance, get_by_key, get_catalogs, get_constant, get_document_by_number, get_document_lines, get_documents, get_metadata, get_recent_documents, get_report
+
+==============================================================================
+C132  emfirge_setup_help   (javascript/typescript)
+  server      : io.github.theanshsonkar/emfirge
+  package     : npm:@emfirge/mcp
+  description : Returns the AWS CloudFormation deploy URL for setting up the read-only IAM role.
+  schema seen : False
+  sibling tools (14): emfirge_apply_change, emfirge_attack_paths, emfirge_branch_diff, emfirge_branch_verdict, emfirge_check_compliance, emfirge_compare_branches, emfirge_create_branch, emfirge_discard_branch, emfirge_get_findings, emfirge_list_branches, emfirge_rollback_branch, emfirge_scan, emfirge_simulate_breach, emfirge_verify_fix
+
+==============================================================================
+C133  add_customer   (javascript/typescript)
+  server      : io.github.ufhouck/chirak-mcp
+  package     : npm:chirak-mcp
+  description : Add a new customer to the Chirak store contacts directory.
+  schema seen : False
+  sibling tools (14): add_product, adjust_stock, cancel_sale, delete_customer, delete_product, get_chirak_help, get_inventory, get_sales_report, help, list_customers, record_sale, search_product, update_customer, update_product
+
+==============================================================================
+C134  delete_customer   (javascript/typescript)
+  server      : io.github.ufhouck/chirak-mcp
+  package     : npm:chirak-mcp
+  description : Delete a customer from the Chirak store directory.
+  schema seen : False
+  sibling tools (14): add_customer, add_product, adjust_stock, cancel_sale, delete_product, get_chirak_help, get_inventory, get_sales_report, help, list_customers, record_sale, search_product, update_customer, update_product
+
+==============================================================================
+C135  list_jobs   (javascript/typescript)
+  server      : io.github.web-resurrect/mcp
+  package     : npm:@web-resurrect/mcp
+  description : List recent jobs with optional status and type filters.
+  schema seen : False
+  sibling tools (34): cancel_job, categorize_pages, create_project, delete_project, enrich_project, export_redirects, generate_image, generate_image_bulk, get_credits, get_job, get_page, get_page_content, get_project, get_project_overview, list_pages, list_projects, push_redirects_add, push_redirects_replace_all, rewrite_bulk, rewrite_page
+
+==============================================================================
+C136  pica_sign_in   (javascript/typescript)
+  server      : io.github.withpica/pica-enrichment
+  package     : npm:@withpica/mcp-server-enrichment
+  description : sign in to PICA with your email — sends a magic link to your inbox.
+  schema seen : False
+  sibling tools (11): pica_enrich_work_discogs, pica_enrich_work_mlc, pica_enrich_work_musicbrainz, pica_enrich_work_spotify, pica_enrich_work_youtube, pica_enrichment_candidates, pica_enrichment_compare, pica_people_enrich_isni, pica_people_enrich_musicbrainz, pica_registrations_compare, pica_sign_out
+
+==============================================================================
+C137  register_webhook   (javascript/typescript)
+  server      : io.github.wrnreed-analytics/circuit-ai-mcp
+  package     : npm:circuit-ai-mcp
+  description : Register a webhook URL to receive Circuit AI events (requires the
+  schema seen : False
+  sibling tools (30): browse_directory, cancel_scheduled_post, check_limits, create_api_key, create_post, create_public_circuit, delete_webhook, find_collaboration_requests, follow_user, get_collaboration_guide, get_feed, get_mentions, get_notifications, get_post, get_post_comments, get_profile, get_public_circuit_posts, get_trending, join_circuit_ai, join_circuit_ai_solo
+
+==============================================================================
+C138  create-tracking-opt-out   (javascript/typescript)
+  server      : io.mailtrap/mcp
+  package     : npm:mcp-mailtrap
+  description : Exclude an email address from open and click tracking for a sending domain.
+  schema seen : False
+  sibling tools (124): batch-send-bulk-email, batch-send-sandbox-email, batch-send-transactional-email, bulk-update-permissions, cancel-email-campaign, clean-sandbox-inbox, create-api-token, create-company-info, create-contact, create-contact-event, create-contact-export, create-contact-field, create-contact-import, create-contact-list, create-email-campaign, create-inbound-folder, create-inbound-inbox, create-sandbox-inbox, create-sandbox-project, create-sending-domain
+
+==============================================================================
+C139  get-inbound-thread   (javascript/typescript)
+  server      : io.mailtrap/mcp
+  package     : npm:mcp-mailtrap
+  description : Get a single inbound thread with its messages embedded (oldest first).
+  schema seen : False
+  sibling tools (124): batch-send-bulk-email, batch-send-sandbox-email, batch-send-transactional-email, bulk-update-permissions, cancel-email-campaign, clean-sandbox-inbox, create-api-token, create-company-info, create-contact, create-contact-event, create-contact-export, create-contact-field, create-contact-import, create-contact-list, create-email-campaign, create-inbound-folder, create-inbound-inbox, create-sandbox-inbox, create-sandbox-project, create-sending-domain
+
+==============================================================================
+C140  animate_text   (javascript/typescript)
+  server      : io.studiomeyer/video
+  package     : npm:@studiomeyer/mcp-video
+  description : Add animated text to a video. 15 animation styles: typewriter, pop, slide (up/down/left/right), bounce, fade (in/out/both), glitch, zoom-in, shake, neon-glow, wave. Configurable position, color, font size, timing.
+  schema seen : False
+  sibling tools (73): add_audio_ducking, add_background_music, add_keyframe_animation, add_text_overlay, adjust_video_speed, after, apply_chroma_key, apply_color_grade, apply_lut_preset, apply_video_effect, apply_voice_effect, auto_caption, before, burn_subtitles, clip-2, clip-3, clip-4, closing, compose_picture_in_pip, concatenate_videos
+
+==============================================================================
+C141  update_page_blocks   (javascript/typescript)
+  server      : one.socialai/website-mcp
+  package     : npm:@socialai/website-mcp
+  description : Replace the blocks on a page. Use this after generate_content to apply the AI-generated layout.
+  schema seen : False
+  sibling tools (42): apply_site, create_website_from_template, export_site, generate_content, get_intake_questions, get_preview_url, get_proactive_next_steps, get_started, get_store_setup_preset, get_traffic_summary, import_product_feed, import_product_spreadsheet, import_products_from_url, list_block_types, list_blocks, list_leads, list_templates, manage_accounting, manage_categories, manage_discounts
+
+==============================================================================
+C142  topup_quote   (python)
+  server      : com.feeless402/nano-pay
+  package     : pypi:feeless402
+  description : Quote a small swap from another asset (e.g. USDC-BASE,
+  schema seen : False
+  sibling tools (7): faucet_claim, faucet_info, get_started, wallet_status, x402_compare, x402_pay, x402_quote
+
+==============================================================================
+C143  list_bundles   (python)
+  server      : io.github.AIops-tools/compliance-aiops
+  package     : pypi:compliance-aiops
+  description : [READ] Previously generated bundles + their chain head and metadata.
+  schema seen : False
+  sibling tools (19): activity_timeline, approval_report, bundle_schedule_hint, control_evidence, coverage_summary, exceptions_report, export_bundle, gap_analysis, generate_evidence_bundle, list_audit_sources, list_frameworks, main, oscal_assessment_results, query_audit_events, sign_bundle, undo_apply, undo_list, verify_bundle, verify_source_chain
+
+==============================================================================
+C144  iam_policies   (python)
+  server      : io.github.AIops-tools/minio-aiops
+  package     : pypi:minio-aiops
+  description : [READ][risk=low] Canned policy names defined on the deployment. Args: limit: Maximum policy names to return (envelope reports truncation). target: MinIO target name from config; omit for the default.
+  schema seen : False
+  sibling tools (48): attach_user_policy, bucket_create, bucket_delete, bucket_exposure_audit, bucket_info, bucket_lifecycle_get, bucket_lock_config, bucket_ls, bucket_policy_get, bucket_quota_get, bucket_versioning_get, capacity_rca, clear_default_retention, cluster_status, create_user, delete_bucket_policy, delete_lifecycle, detach_user_policy, diagnose_iam_exposure, diagnose_retention_gaps
+
+==============================================================================
+C145  set_bucket_quota   (python)
+  server      : io.github.AIops-tools/minio-aiops
+  package     : pypi:minio-aiops
+  description : [WRITE][risk=medium] Set (>0) or clear (0) the bucket hard quota. Reversible. Needs admin-capable credentials (admin API). Args: bucket_name: Bucket name (from bucket_ls). size_bytes: New hard quota in bytes; 0 clears the quota. dry_run: If True, preview without changing the quota. target: MinIO target name from config; omit for the default.
+  schema seen : False
+  sibling tools (48): attach_user_policy, bucket_create, bucket_delete, bucket_exposure_audit, bucket_info, bucket_lifecycle_get, bucket_lock_config, bucket_ls, bucket_policy_get, bucket_quota_get, bucket_versioning_get, capacity_rca, clear_default_retention, cluster_status, create_user, delete_bucket_policy, delete_lifecycle, detach_user_policy, diagnose_iam_exposure, diagnose_retention_gaps
+
+==============================================================================
+C146  get_deal   (python)
+  server      : io.github.CREIntel/ndi-mcp-server
+  package     : pypi:ndi-mcp-server
+  description : (empty)
+  schema seen : False
+  sibling tools (8): find_1031_candidates, get_access, get_market_benchmarks, get_market_summary, get_sell_signal, score_deal, search_comps, search_deals
+
+==============================================================================
+C147  get_favorites   (python)
+  server      : io.github.CSOAI-ORG/currency-converter-ai-mcp
+  package     : pypi:currency-converter-ai-mcp
+  description : Get favorite currency pairs Behavior: This tool is read-only and stateless — it produces analysis output without modifying any external systems, databases, or files. Safe to call repeatedly with identical inputs (idempotent). Free tier: 10/day rate limit. Pro tier: unlimited. No authentication required for basic usage. When to use: Use this tool when you need structured analysis or classification of inputs against established frameworks or standards. When NOT to use: Not suitable for real-time production decision-making without human review of results. Args: api_key (str): The api key to analyze or process. Behavioral Transparency: - Side Effects: This tool is read-only and produces no side effects. It does not modify any external state, databases, or files. All output is computed in-memory and returned directly to the caller. - Authentication: No authentication required for basic usage.
+  !! description hit the 900-character extraction cap; consult the package source if the ending matters
+  schema seen : False
+  sibling tools (11): add_favorite, batch_convert, convert_currency, get_alerts, get_all_rates, get_conversion_history, get_historical_rate, get_rate, get_rate_trend, get_supported_currencies, set_rate_alert
+
+==============================================================================
+C148  get_supported_currencies   (python)
+  server      : io.github.CSOAI-ORG/currency-converter-ai-mcp
+  package     : pypi:currency-converter-ai-mcp
+  description : Get list of supported currencies Behavior: This tool is read-only and stateless — it produces analysis output without modifying any external systems, databases, or files. Safe to call repeatedly with identical inputs (idempotent). Free tier: 10/day rate limit. Pro tier: unlimited. No authentication required for basic usage. When to use: Use this tool when you need structured analysis or classification of inputs against established frameworks or standards. When NOT to use: Not suitable for real-time production decision-making without human review of results. Args: api_key (str): The api key to analyze or process. Behavioral Transparency: - Side Effects: This tool is read-only and produces no side effects. It does not modify any external state, databases, or files. All output is computed in-memory and returned directly to the caller. - Authentication: No authentication required for basic u
+  !! description hit the 900-character extraction cap; consult the package source if the ending matters
+  schema seen : False
+  sibling tools (11): add_favorite, batch_convert, convert_currency, get_alerts, get_all_rates, get_conversion_history, get_favorites, get_historical_rate, get_rate, get_rate_trend, set_rate_alert
+
+==============================================================================
+C149  generate_rubric   (python)
+  server      : io.github.CSOAI-ORG/education-ai-mcp
+  package     : pypi:education-ai-mcp
+  description : Generate an assessment rubric with detailed criteria and descriptors. Args: assignment_title: Title of the assignment criteria: Custom assessment criteria (auto-generated if omitted) levels: Number of performance levels (3-5) max_score: Maximum total score assignment_type: Type: essay, presentation, project, lab_report, portfolio Behavior: This tool generates structured output without modifying external systems. Output is deterministic for identical inputs. No side effects. Free tier: 10/day rate limit. Pro tier: unlimited. No authentication required for basic usage. When to use: Use this tool when you need structured analysis or classification of inputs against established frameworks or standards. When NOT to use: Not suitable for real-time production decision-making without human review of results. Behavioral Transparency: - Side Effects: This tool is read-only and produces no side eff
+  !! description hit the 900-character extraction cap; consult the package source if the ending matters
+  schema seen : False
+  sibling tools (4): analyze_student_progress, create_quiz, generate_lesson_plan, recommend_learning_path
+
+==============================================================================
+C150  chain_operations   (python)
+  server      : io.github.Damien829/aipaygen
+  package     : pypi:aipaygen-mcp
+  description : Chain multiple AI operations in sequence. Output of each step feeds the next. steps: [{action, params}].
+  schema seen : False
+  sibling tools (157): absorb_skill, action, add_to_knowledge_base, analyze, ask, batch, browse_agent_tasks, browse_catalog, business_days, changelog, chat, check_api_key_balance, check_balance, claim_deposit, classify, code, company_search, compare, compare_platforms, convert_code
+
+==============================================================================
+C151  get_joke   (python)
+  server      : io.github.Damien829/aipaygen
+  package     : pypi:aipaygen-mcp
+  description : Get a random joke.
+  schema seen : False
+  sibling tools (157): absorb_skill, action, add_to_knowledge_base, analyze, ask, batch, browse_agent_tasks, browse_catalog, business_days, chain_operations, changelog, chat, check_api_key_balance, check_balance, claim_deposit, classify, code, company_search, compare, compare_platforms
+
+==============================================================================
+C152  release_quarantine   (python)
+  server      : io.github.DanceNitra/inspeximus
+  package     : pypi:inspeximus
+  description : A human decision that a quarantined record is a memory after all: it returns to recall and keeps who released it and why.
+  schema seen : False
+  sibling tools (132): action_timeline, actions_match, actions_verify, admissibility_preconditions, anchor, archive_actions, as_of, attest_documentation_retention, attest_retention, attestation_register, audit_bundle, audit_the_audits, breach_notified, breach_report, can_read, check_code, check_conflict, check_self_narration, check_sources, close_partition
+
+==============================================================================
+C153  what_it_knew   (python)
+  server      : io.github.DanceNitra/inspeximus
+  package     : pypi:inspeximus
+  description : What the agent KNEW when it performed action number `seq` in the action ledger: the store's state digest at that moment, the ids recall had returned, and the current provenance of each of those ids. Answers "which facts were current when it did this" from the chain, not from memory. Read-only.
+  schema seen : False
+  sibling tools (132): action_timeline, actions_match, actions_verify, admissibility_preconditions, anchor, archive_actions, as_of, attest_documentation_retention, attest_retention, attestation_register, audit_bundle, audit_the_audits, breach_notified, breach_report, can_read, check_code, check_conflict, check_self_narration, check_sources, close_partition
+
+==============================================================================
+C154  compare_providers   (python)
+  server      : io.github.DesMartin01/inferenceindexer-mcp
+  package     : pypi:inferenceindexer-mcp
+  description : Compare the price of one model across the providers that host it. Args: model_id: Canonical model id, e.g. 'meta/muse-spark-1.1'. Returns: per-provider endpoints with pricing, showing where direct provider prices diverge (e.g. from OpenRouter's negotiated rate).
+  schema seen : False
+  sibling tools (7): get_composite_history, get_composite_latest, get_model, get_model_history, get_provider, list_providers, search_models
+
+==============================================================================
+C155  get_model   (python)
+  server      : io.github.DesMartin01/inferenceindexer-mcp
+  package     : pypi:inferenceindexer-mcp
+  description : Get full detail + current pricing for one model by its id. Args: model_id: Canonical model id, e.g. 'openai/gpt-5.6' or 'anthropic/claude-sonnet-5'. Returns: pricing, tier, SIT score, quality-adjusted price (Cost/IQ).
+  schema seen : False
+  sibling tools (7): compare_providers, get_composite_history, get_composite_latest, get_model_history, get_provider, list_providers, search_models
+
+==============================================================================
+C156  search_repeaters   (python)
+  server      : io.github.MicaelJarniac/repeaterbook
+  package     : pypi:repeaterbook
+  description : Find nearby repeaters as repeater-specs. Searches the local store. When a country/state/region scope is given and the store holds nothing for it yet, the region is downloaded first. Pass `refresh=True` to force a re-download of an already-populated scope.
+  schema seen : False
+  sibling tools (3): clear_local_data, get_repeater, sync_repeaters
+
+==============================================================================
+C157  env_up   (python)
+  server      : io.github.Michael-Drake/rentctl
+  package     : pypi:rentctl
+  description : Start (or return the already-running) leased dev environment for a project.
+  schema seen : False
+  sibling tools (3): env_down, env_ls, env_sweep
+
+==============================================================================
+C158  enoch_paper_detail   (python)
+  server      : io.github.alias8818/enoch
+  package     : pypi:enoch-mcp
+  description : Get paper detail with project, run, events, warnings, and missing artifacts.
+  schema seen : False
+  sibling tools (21): enoch_core_health, enoch_core_paper_candidates, enoch_core_queue_projection, enoch_dispatch, enoch_draft_paper, enoch_events, enoch_intake_notion, enoch_paper_artifact, enoch_papers_list, enoch_pause, enoch_preflight, enoch_queue_health, enoch_queue_list, enoch_resume, enoch_review_checklist, enoch_review_claim, enoch_review_next, enoch_review_status, enoch_reviews_list, enoch_rewrite_draft
+
+==============================================================================
+C159  compress_text   (python)
+  server      : io.github.alibaizhanov/densely
+  package     : pypi:densely
+  description : Compress a large piece of text (tool output, log excerpt, document) into a dense payload 2x-8x smaller in tokens. The payload is unreadable but restores the exact bytes via the expand tool.
+  schema seen : False
+  sibling tools (4): compress_file, expand, search, stats
+
+==============================================================================
+C160  G02_route   (python)
+  server      : io.github.ariffazil/aaa-mcp
+  package     : pypi:arifos
+  description : G02 Kernel Router — Mandatory hub for all cross-axis calls. All perception/transformation/valuation/governance/execution/meta calls MUST route through this router before execution. Returns: approved: bool - Whether the call is approved target_agent: str - Agent to call lane: str - Execution lane omega_ortho: float - Computed orthogonality score correlation_detected: bool - Whether harmful correlation detected reason: str - Approval/rejection reason
+  schema seen : False
+  sibling tools (54): G02_omega_status, G02_validate_axis_call, arif_cc_evidence_fetch, arif_cc_forge_dry_run, arif_cc_gateway_handshake, arif_cc_heart_critique, arif_cc_judge_action, arif_cc_memory_recall, arif_cc_mind_reason, arif_cc_ops_vitals, arif_cc_reply_compose, arif_cc_sense_observe, arif_cc_session_status, arif_cc_vault_dry_seal, arif_cc_vault_list, arif_claim_gate, arif_epoch_gate, arif_judge_console, arif_kernel_check, arif_kernel_health
+
+==============================================================================
+C161  list_templates   (python)
+  server      : io.github.beee003/vynn-mcp
+  package     : pypi:vynn-mcp
+  description : List available workflow templates that you can clone.
+  schema seen : False
+  sibling tools (20): apply_prompt_optimization, backtest, batch_backtest, clone_template, create_trigger, create_workflow, delete_schedule, get_analytics, get_model_recommendation, get_run_summary, get_runs, get_schedule, get_workflow, list_available_tools, list_triggers, list_workflows, optimize_portfolio, optimize_prompt, run_workflow, set_schedule
+
+==============================================================================
+C162  embedded_diagram_render_png_url   (python)
+  server      : io.github.docdiagram/docdiagram-mcp
+  package     : pypi:docdiagram-mcp
+  description : Return {full_png_url, expires_at}. full_png_url is a short-lived signed render URL (TECH-069) the caller fetches WITHOUT credentials, so it works off-origin where a bearer header can't be attached. Render is compute-on-demand via arq. Binary payloads in MCP tools are awkward; a URL is the right primitive.
+  schema seen : False
+  sibling tools (19): diagram_create, diagram_get, diagram_list, diagram_revise, embedded_diagram_by_sidecar, embedded_diagram_create, embedded_diagram_delete, embedded_diagram_get, embedded_diagram_list_for_repo, embedded_diagram_regenerate, embedded_diagram_render_svg, embedded_diagram_revise, main, repo_get, repo_lookup, repo_upsert, sync_get_status, sync_list, sync_start
+
+==============================================================================
+C163  get_link   (python)
+  server      : io.github.flumpiey/linkwarden-mcp
+  package     : pypi:linkwarden-mcp
+  description : Get full metadata for one link.
+  schema seen : False
+  sibling tools (30): align_tags_with_similar_links, analyze_collection_overlap, apply_triage_plan, auto_tag_by_domain, bulk_sort_by_rules, create_collection, delete_collection, delete_links, delete_tags, find_duplicate_links, find_unsorted_links, get_library_overview, get_sorting_dashboard, list_collections, list_resources, list_tags, merge_tags, organise_links, queue_archive, read_link_content
+
+==============================================================================
+C164  download_status   (python)
+  server      : io.github.geovicco-dev/bhoonidhi-mcp
+  package     : pypi:bhoonidhi-mcp
+  description : Check a background download started by download_query (one-off). Give the job_id from download_query. Returns the live state: running (with bytes_downloaded, mb_downloaded, rate_mb_s, percent when the total size is known, and per-scene detail), completed (with per-scene outcomes), or failed (with the error). Use this for a single progress check. To follow a job to completion without tying up the conversation, use download_wait from a delegated watcher instead. Jobs exist only while the server runs; an unknown id returns status="not_found".
+  schema seen : False
+  sibling tools (14): auth_status, cart_add, cart_list, cart_remove, download_query, download_wait, list_archive, list_queries, preview_download, remove_query, resolve_location, save_query, search_scenes, show_query
+
+==============================================================================
+C165  get_llguidance_documentation   (python)
+  server      : io.github.guidance-ai/guidance-lark-mcp
+  package     : pypi:guidance-lark-mcp
+  description : Fetch the llguidance grammar syntax documentation.
+  schema seen : True
+  sibling tools (3): generate_with_grammar, run_batch_validation_tests, validate_grammar
+
+==============================================================================
+C166  get_parent_technique_of_subtechnique   (python)
+  server      : io.github.imouiche/mitre-attack-mcp-server
+  package     : npm:@imouiche/mitre-attack-mcp-server
+  description : Get the parent technique of a subtechnique. Args: technique_stix_id: STIX UUID of the subtechnique. domain: ATT&CK domain ('enterprise', 'mobile', 'ics'). include_description: Whether to include the parent's description. Returns: { "subtechnique_stix_id": "...", "subtechnique_attack_id": "Txxxx.xxx" or null, "parent": { "attack_id": "Txxxx", "name": "...", "stix_id": "attack-pattern--UUID", "description": "..." | null } or null, "formatted": "<human readable description>", "message": "<summary>" }
+  schema seen : False
+  sibling tools (64): generate_layer, get_all_assets, get_all_campaigns, get_all_datacomponents, get_all_datasources, get_all_groups, get_all_matrices, get_all_mitigations, get_all_parent_techniques, get_all_software, get_all_subtechniques, get_all_tactics, get_all_techniques, get_assets_targeted_by_technique, get_attack_id, get_campaigns_attributed_to_group, get_campaigns_by_alias, get_campaigns_using_software, get_campaigns_using_technique, get_data_stats
+
+==============================================================================
+C167  get_techniques_used_by_group_software   (python)
+  server      : io.github.imouiche/mitre-attack-mcp-server
+  package     : npm:@imouiche/mitre-attack-mcp-server
+  description : Get techniques used by the software that a group uses (Group → Software → Techniques). This provides an indirect view of a group's capabilities by following: Group (intrusion set) → Software (malware/tools) → Techniques Args: group_stix_id: STIX ID of the group (e.g., "intrusion-set--UUID"). domain: ATT&CK domain ("enterprise", "mobile", "ics"). include_description: Whether to include technique descriptions. Returns: { "group": { "attack_id": "GXXXX" | null, "name": "<group name or null>", "stix_id": "<intrusion-set--UUID>", "description": "<text or null>", } | null, "count": <number of techniques>, "techniques": [ { "attack_id": "TXXXX or TXXXX.YYY" | null, "name": "<technique name>", "stix_id": "<attack-pattern--UUID>", "description": "<text or null>", "relationships": [ { "stix_id": "<relationship--UUID>", "relationship_type": "uses", "description": "<relationship description or null>
+  !! description hit the 900-character extraction cap; consult the package source if the ending matters
+  schema seen : False
+  sibling tools (64): generate_layer, get_all_assets, get_all_campaigns, get_all_datacomponents, get_all_datasources, get_all_groups, get_all_matrices, get_all_mitigations, get_all_parent_techniques, get_all_software, get_all_subtechniques, get_all_tactics, get_all_techniques, get_assets_targeted_by_technique, get_attack_id, get_campaigns_attributed_to_group, get_campaigns_by_alias, get_campaigns_using_software, get_campaigns_using_technique, get_data_stats
+
+==============================================================================
+C168  changeover_analysis   (python)
+  server      : io.github.industrial-aiops/iaiops
+  package     : pypi:iaiops
+  description : [READ][risk=low] Changeover / SMED durations between products. Breaks out what OEE availability only aggregates: each changeover is the gap between the last good part of one product and the first good part of the next — the setup/adjustment time SMED shrinks. Measures every changeover, ranks the longest, and totals the lost time, worst-first, each duration cited by its two bounding timestamps. Pure analysis over readings you pass in (a good-part completion stream from the MES / PLC counters); read-only, advisory. Args: good_parts: [{timestamp (ISO-8601), product}] — one per good part, any order (sorted by time). A changeover is recorded at each product change. Returns dict: {good_parts, ignored, changeover_count, changeovers:[{from, to, start, end, durationS}], longest, avgDurationS, totalChangeoverS, note}. Example: changeover_analysis(good_parts=[{"timestamp":"2026-07-12T08:00:00Z","pr
+  !! description hit the 900-character extraction cap; consult the package source if the ending matters
+  schema seen : False
+  sibling tools (198): adopt_alias_map, alarm_bad_actors, alarm_cascade, alarm_event_clusters, alarm_flood_analysis, alarm_rationalization_worksheet, anomaly_scan, assert_all_tools_governed, asset_inventory, bacnet_cov_subscribe, bacnet_discover, bacnet_object_list, bacnet_read_points, bacnet_read_property, bacnet_read_trend_log, bacnet_write_property, bas_alarm_list, bas_command, bas_point_list, bas_point_read
+
+==============================================================================
+C169  pv_performance   (python)
+  server      : io.github.industrial-aiops/iaiops
+  package     : pypi:iaiops
+  description : [READ][risk=low] Flag underperforming PV strings vs expected (or fleet-median) output. Which strings / inverters are underperforming, and by how much? A string that lags its peers (or its irradiance-expected output) is the signature of soiling, shading, a blown fuse, or a failed module. Computes each string's performance ratio against its expected output — ``expected_w`` if given, else nameplate × irradiance/1000, else the fleet median — and flags laggards below the threshold. Worst-first, each ratio cited by its inputs. Pure analysis over readings you pass in (inverter/combiner Modbus or plant SCADA); read-only, advisory. Args: strings: [{string, power_w, irradiance_w_m2?, capacity_w?, expected_w?}]. underperf_pct: Ratio (% of expected) below which a string is flagged (default 90). Returns dict: {strings_evaluated, underperf_pct, fleetMedianPowerW, summary, underperformer_count, underpe
+  !! description hit the 900-character extraction cap; consult the package source if the ending matters
+  schema seen : False
+  sibling tools (198): adopt_alias_map, alarm_bad_actors, alarm_cascade, alarm_event_clusters, alarm_flood_analysis, alarm_rationalization_worksheet, anomaly_scan, assert_all_tools_governed, asset_inventory, bacnet_cov_subscribe, bacnet_discover, bacnet_object_list, bacnet_read_points, bacnet_read_property, bacnet_read_trend_log, bacnet_write_property, bas_alarm_list, bas_command, bas_point_list, bas_point_read
+
+==============================================================================
+C170  check_section_delete_safe   (python)
+  server      : io.github.jgravelle/jdocmunch-mcp
+  package     : pypi:jdocmunch-mcp
+  description : (empty)
+  schema seen : False
+  sibling tools (62): analyze_perf, check_embedding_drift, count_sections, define_repo_group, delete_index, describe_section, diff_doc_health_radar, doc_health_radar, doc_index_repo, doc_list_repos, doc_resolve_repo, finalize_handoff, find_code_examples, find_endpoint, find_operations_using_schema, find_similar_sections, get_all_roles, get_all_tags, get_backlinks, get_broken_links
+
+==============================================================================
+C171  search_titles   (python)
+  server      : io.github.jgravelle/jdocmunch-mcp
+  package     : pypi:jdocmunch-mcp
+  description : (empty)
+  schema seen : False
+  sibling tools (62): analyze_perf, check_embedding_drift, check_section_delete_safe, count_sections, define_repo_group, delete_index, describe_section, diff_doc_health_radar, doc_health_radar, doc_index_repo, doc_list_repos, doc_resolve_repo, finalize_handoff, find_code_examples, find_endpoint, find_operations_using_schema, find_similar_sections, get_all_roles, get_all_tags, get_backlinks
+
+==============================================================================
+C172  stb_nama_tool   (python)
+  server      : io.github.lightnet19/stb-mcp-server
+  package     : pypi:stb-mcp-server
+  description : Deskripsi tool (wajib — ini yang muncul di Hermes).
+  schema seen : False
+  sibling tools (13): stb_adguard_config, stb_adguard_full_config, stb_adguard_stats, stb_casaos_status, stb_cleanup_root, stb_docker_list, stb_docker_logs, stb_docker_restart, stb_docker_stats, stb_execute, stb_read_file, stb_system_info, stb_write_file
+
+==============================================================================
+C173  lobbywatch_get_ranking   (python)
+  server      : io.github.malkreide/lobbywatch-mcp
+  package     : pypi:lobbywatch-mcp
+  description : Rank parliamentarians by a criterion. Args: kriterium: One of "anzahl_interessenbindungen", "anzahl_hauptberuflich". kommission: Optional commission abbreviation filter (e.g. "WBK-N"). partei: Optional party filter (e.g. "SP", "SVP", "Mitte"). limit: Top-N to return (1–100). Use cases: - "Top 10 SP MPs by total mandate count" - "Which Mitte-Fraktion members have the most full-time mandates?" - "Rank WBK-N by IB count — who's most involved?"
+  schema seen : False
+  sibling tools (8): get_parlamentarier, lobbywatch_dump_status, lobbywatch_get_lobbygruppe, lobbywatch_get_parlamentarier, lobbywatch_get_transparenzquote, lobbywatch_list_interessenbindungen, lobbywatch_refresh_dump, lobbywatch_search_parlamentarier_nach_branche
+
+==============================================================================
+C174  il_search_law_texts   (python)
+  server      : io.github.matematicsolutions/il-eli-mcp
+  package     : pypi:il-eli-mcp
+  description : Search published Israeli law versions (KNS_Law), including consolidated texts. Complements `il_search_laws`: that tool covers the KNS_IsraelLaw registry (validity status, Basic Law flag), this one covers KNS_Law - the published versions whose official PDF documents are reachable via `il_get_law_documents`. The two id spaces are disjoint. Args: query: free text in Hebrew, matched against the published version's name. limit: max results (default 20). Returns: ``{"total": int, "items": [...]}`` - each item carries ``law_id``, version metadata (type, sub-type such as a consolidated text, publication series) and the citation contract.
+  schema seen : False
+  sibling tools (6): il_coverage, il_get_case, il_get_law, il_get_law_documents, il_search_case_law, il_search_laws
+
+==============================================================================
+C175  it_get_act   (python)
+  server      : io.github.matematicsolutions/it-eli-mcp
+  package     : pypi:italy-eli-mcp
+  description : Fetch act metadata from Normattiva. Args: reference: a code name ("codice civile"), a URN ("urn:nir:stato:legge:1990-08-07;241"), an ELI path ("eli/id/1990/08/18/090G0294"), or a normattiva.it URL. Returns: ``ActInfo`` with ``eli_uri``, ``urn``, ``human_readable_citation``, ``title``, ``doc_date``, ``article_count``, ``source_url``.
+  schema seen : False
+  sibling tools (13): it_case_get_decision, it_case_recent, it_case_search, it_case_stats, it_cassazione_get, it_cassazione_search, it_coverage, it_ga_get_decision, it_ga_search, it_get_text, it_list_codes, it_resolve, it_verify_citations
+
+==============================================================================
+C176  kio_get_orzeczenie   (python)
+  server      : io.github.matematicsolutions/kio-orzeczenia-mcp
+  package     : pypi:kio-orzeczenia-mcp
+  description : Pobiera pelne orzeczenie KIO. Args: signature_or_id: "KIO 2924/21" (string) albo 15903 (internal int ID). Sygnatura wymaga +1 req aby ustalic internal_id przez search. Returns: Orzeczenie jako dict z signature, internal_id, issue_date, chamber_composition, parties, sentence, reasoning, pzp_articles, content_text, source_url_html, source_url_pdf, human_readable_citation, retrieved_at.
+  schema seen : False
+  sibling tools (5): kio_by_pzp_article, kio_coverage, kio_get_pdf_url, kio_recent, kio_search
+
+==============================================================================
+C177  get_income   (python)
+  server      : io.github.mcpwright/census-mcp
+  package     : pypi:mcpwright-census
+  description : Income measures for a ZIP: median household, per-capita, and % $200k+. `zip_code`: a 5-digit US ZIP. Returns median household income, per-capita income, the number of households, and the percent of households earning $200k+ — all ACS 5-year estimates in USD. Note: ACS top-codes median household income at $250,001, so the wealthiest ZIPs (e.g. Atherton 94027) report exactly that — read it as "$250k or more," not an exact figure.
+  schema seen : False
+  sibling tools (7): compare_zips, find_zips, get_acs_variable, get_demographics, get_education, get_housing, lookup_zip
+
+==============================================================================
+C178  allure_list_custom_fields   (python)
+  server      : io.github.mshegolev/allure-testops-mcp
+  package     : pypi:allure-testops-mcp
+  description : List the custom fields defined on a project (its schema). Returns each field's ``field_id``, ``name``, ``single_select`` and ``required``. Use it to discover which custom fields a project has before reading a test case's values with ``allure_get_test_case_custom_fields``. Built-in metadata fields (Epic/Feature/Story/Component/Suite) use negative ids; project-specific custom fields use positive ids.
+  schema seen : False
+  sibling tools (19): allure_create_category, allure_create_category_matcher, allure_create_test_case, allure_delete_category, allure_delete_category_matcher, allure_delete_test_case, allure_get_project_statistics, allure_get_test_case, allure_get_test_case_custom_fields, allure_get_test_results, allure_list_categories, allure_list_category_matchers, allure_list_launches, allure_list_layers, allure_list_projects, allure_list_statuses, allure_list_test_cases, allure_search_failed_tests, allure_update_test_case
+
+==============================================================================
+C179  cluster_health   (python)
+  server      : io.github.nagameTW/mcp-server-malcolm
+  package     : pypi:mcp-server-malcolm
+  description : Report OpenSearch cluster health: green/yellow/red status plus node and shard counts. This checks the storage backend (OpenSearch) itself, cluster-wide. To check whether the Malcolm API is reachable, use malcolm_ping; for the readiness of Malcolm's individual services, use malcolm_service_status; for per-index status rather than the whole cluster, use list_indices. Returns the raw OpenSearch _cluster/health document. This is a storage-layer answer only: every shard allocated says nothing about whether packets are still being captured or parsed. Measured on Malcolm v26.07.1 (single node) the steady state is green with number_of_nodes=1 and unassigned_shards=0, so treat yellow as something to explain rather than as normal. For whether data is still arriving use malcolm_data_coverage; for whether a capture node is dropping packets use arkime_node_stats.
+  schema seen : False
+  sibling tools (57): arkime_add_tags, arkime_build_query, arkime_cancel_hunt, arkime_connections, arkime_create_hunt, arkime_create_shortcut, arkime_create_view, arkime_crons, arkime_field_search, arkime_file_by_hash, arkime_hunt_status, arkime_multiunique, arkime_node_stats, arkime_pcap_files, arkime_reverse_dns, arkime_session_detail, arkime_session_file_by_hash, arkime_session_payload, arkime_session_pcap, arkime_sessions
+
+==============================================================================
+C180  create_policy   (python)
+  server      : io.github.nagarjunr/aws-iot-core
+  package     : pypi:aws-iot-core-mcp-server
+  description : Create an IoT policy, or add a new default version to an existing one with overwrite=True. Wraps CreatePolicy (new policy) / CreatePolicyVersion (existing policy).
+  schema seen : False
+  sibling tools (47): cancel_job, create_job, create_keys_and_certificate, create_thing, create_thing_group, create_thing_type, delete_certificate, delete_job, delete_policy, delete_thing, delete_thing_group, delete_thing_shadow, delete_thing_type, delete_topic_rule, deprecate_thing_type, get_certificate, get_endpoint, get_job, get_policy, get_thing
+
+==============================================================================
+C181  find_free_time   (python)
+  server      : io.github.nhype/owa-exchange-mcp
+  package     : pypi:exchange-mcp-server
+  description : Find free time slots in your own calendar. Analyzes your calendar events and returns available time slots within working hours for each weekday in the range. Args: start_date: Start date in YYYY-MM-DD format. end_date: End date in YYYY-MM-DD format. Defaults to start_date if not provided (single-day search). duration_minutes: Minimum slot duration in minutes. Default 30. start_hour: Working day start hour (0-23). Default 9. end_hour: Working day end hour (0-23). Default 18. Returns: JSON object with free_slots keyed by date, each containing an array of {start, end, duration_minutes} objects.
+  schema seen : False
+  sibling tools (30): cancel_meeting, check_session, create_folder, create_meeting, delete_email, delete_folder, download_attachments, download_event_attachments, empty_folder, find_meeting_time, find_person, forward_email, get_calendar_events, get_email, get_email_links, get_emails, get_event_links, get_folders, get_meeting_contacts, get_meeting_stats
+
+==============================================================================
+C182  mark_email_read   (python)
+  server      : io.github.nhype/owa-exchange-mcp
+  package     : pypi:exchange-mcp-server
+  description : Mark one or more emails as read or unread. Args: item_ids: List of Exchange ItemIds to update. is_read: True to mark as read, False to mark as unread (default True).
+  schema seen : False
+  sibling tools (30): cancel_meeting, check_session, create_folder, create_meeting, delete_email, delete_folder, download_attachments, download_event_attachments, empty_folder, find_free_time, find_meeting_time, find_person, forward_email, get_calendar_events, get_email, get_email_links, get_emails, get_event_links, get_folders, get_meeting_contacts
+
+==============================================================================
+C183  describe_endpoint   (python)
+  server      : io.github.nicholsonpeter/acumatica
+  package     : pypi:acumatica-mcp
+  description : Get the full schema for a Contract-Based API endpoint — field names, types, and expandable detail entities. Always call this before querying an endpoint for the first time. Args: endpoint: The entity name, e.g. 'SalesOrder', 'Customer', 'StockItem'. Returns: JSON with field definitions and detail entities.
+  schema seen : False
+  sibling tools (27): check_inventory, connection_status, create_record, delete_attachment, delete_record, describe_entity, get_acumatica_version, get_attachment_metadata, get_customer_balance, get_record_by_keys, get_record_history, get_records, gi_suite_status, invoke_action, list_attachments, list_available_entities, list_companies, list_endpoints, list_generic_inquiries, patch_record
+
+==============================================================================
+C184  vid_progress_bar   (python)
+  server      : io.github.pachote/nira-video-mcp
+  package     : pypi:nira-video-mcp
+  description : Add an animated progress bar that fills across the video duration. position: 'top' or 'bottom'. color: hex color or named color. Returns: {output_path}
+  schema seen : False
+  sibling tools (54): ai_gen_cancel, ai_gen_fal, ai_gen_list_models, ai_gen_status, ai_gen_wan2gp, aud_add_music, aud_detect_beats, aud_duck_smart, aud_extract, aud_master, aud_mix, aud_normalize, aud_replace, aud_silence, proj_create, proj_list, proj_render, render_cancel, render_list, render_status
+
+==============================================================================
+C185  list_loader_versions   (python)
+  server      : io.github.philderks/fabricator-panel-mcp
+  package     : pypi:fabricator-panel-mcp
+  description : List loader builds, optionally for one Minecraft version.
+  schema seen : False
+  sibling tools (24): check_installed_mod_updates, check_java, check_mod_compatibility, check_mods_compatibility, check_panel, check_resource_usage, control_server, get_backup_status, get_install_progress, get_mod_info, get_mod_version, get_server, get_server_runtime_diagnostics, install_server, list_backup_configs, list_installed_mods, list_loader_game_versions, list_servers, list_snapshots, read_server_logs
+
+==============================================================================
+C186  search_pubmed   (python)
+  server      : io.github.pkotecha-eng/aria-mcp-server
+  package     : pypi:aria-mcp-server
+  description : Search PubMed for peer-reviewed biomedical literature. Use for: research papers, drug mechanisms, clinical outcomes, disease studies, safety/efficacy data, biomarkers, diagnostics, and any scientific question. Args: query: Search query (e.g. "velarixin pediatric epilepsy phase 2") max_results: Number of papers to return (1-10, default 5) Returns: Formatted string with title, authors, journal, year, PMID, and abstract for each paper. Returns a "no results" message if nothing is found. Handles API errors gracefully with descriptive error messages. Notes: - Results are sorted by relevance - max_results outside 1-10 is rejected with a validation error - Requires no API key; uses NCBI E-utilities public API
+  schema seen : False
+  sibling tools (2): search_clinical_trials, search_isrctn
+
+==============================================================================
+C187  fl_channels   (python)
+  server      : io.github.purahmanian/flstudio-mcp-mac
+  package     : pypi:flstudio-mcp-mac
+  description : Read Channel Rack channel state.
+  schema seen : False
+  sibling tools (8): fl_create_midi_file, fl_health, fl_mixer_tracks, fl_queue_piano_roll_notes, fl_set_channel, fl_set_mixer_track, fl_set_tempo, fl_transport
+
+==============================================================================
+C188  log   (python)
+  server      : io.github.sbrunner-atx/contest-mcp
+  package     : pypi:contest-mcp
+  description : Logbook entry: set fields, run Call-tab, and ENTER a QSO. The headline tool. operations: - log_qso: the automatic-logging flow. Provide `call` (and usually `exchange`, a dict of friendly field names → values, e.g. {"class": "2A", "section": "CT"}). Sets the call, runs CALLTAB (dupe check + lookups) unless calltab=false, sets the exchange, then ENTER. Returns the number of records added and any dupe response. - set (field, value): write one entry box. - set_many (fields={...}): write several entry boxes. - calltab: run CALLTAB (after setting the call). - enter: log the current form. Returns records_added plus a `logged` boolean derived from the QSO-count delta / ENTEREVENT — trust `logged`, not records_added, which can report 0 on success in networked mode. Do not retry when logged=true (creates duplicates). - clear: clear the entry form. - focus (field): move focus to a box (e.g. to auto
+  !! description hit the 900-character extraction cap; consult the package source if the ending matters
+  schema seen : False
+  sibling tools (9): bandmode, database, diagnostics, fields, n3fjp_call, notifications, query, search, status
+
+==============================================================================
+C189  scan_secrets   (python)
+  server      : io.github.securityscan-api/securityscan
+  package     : pypi:securityscan-mcp
+  description : Scan a text payload (a prompt, an outbound API body, a file's contents) for secrets and PII BEFORE it leaves for an LLM or external API, and return a redacted copy. Catches the #1 real-world agent incident: secrets/PII leaking into a model's context. WORKS OFFLINE with no API key — the detection runs in-process (pure regex + Luhn check, no network). If a SecretScan backend key IS configured, the scan is routed there instead (which also persists an audit record). Args: text: The payload to inspect (prompt, request body, document text). redact: If True (default), each match is replaced with a token like [REDACTED-KEY] / [REDACTED-EMAIL]. If False, only reports. Returns: JSON: verdict, per-severity counts, findings[], and redacted_text.
+  schema seen : False
+  sibling tools (7): audit_mcp_server_config, check_dependencies, full_stack_audit, network_scan, scan_skill, securityscan_checkout, securityscan_pricing
+
+==============================================================================
+C190  get_ap_status   (python)
+  server      : io.github.shigechika/aruba-central-mcp
+  package     : pypi:aruba-central-mcp
+  description : Get detailed status of a specific access point by name. Args: ap_name: AP device name (case-insensitive).
+  schema seen : False
+  sibling tools (16): daily_brief, find_client_by_mac, get_ap_throughput, get_client_mobility_trail, get_clients_trend, get_site_summary, get_top_aps, get_top_clients_by_usage, health_check, list_aps, list_bssids, list_clients, list_radios, list_swarms, list_switches, list_wlans
+
+==============================================================================
+C191  get_top_aps   (python)
+  server      : io.github.shigechika/aruba-central-mcp
+  package     : pypi:aruba-central-mcp
+  description : Get top access points ranked by bandwidth usage over a time range. Returns a ranked list of APs sorted by descending bandwidth consumption. Args: usage_type: "wireless" (Wi-Fi traffic), "wired" (uplink traffic), or "total" (wireless + wired combined). Default: "total". site_id: Filter by site ID. Empty for all sites. limit: Maximum number of APs to return (1-25, default 10). start_at: Start time in RFC 3339 format (e.g. "2025-01-01T00:00:00Z"). Max 30 days range. Defaults to 24 hours ago if omitted. end_at: End time in RFC 3339 format. Defaults to current time if omitted.
+  schema seen : False
+  sibling tools (16): daily_brief, find_client_by_mac, get_ap_status, get_ap_throughput, get_client_mobility_trail, get_clients_trend, get_site_summary, get_top_clients_by_usage, health_check, list_aps, list_bssids, list_clients, list_radios, list_swarms, list_switches, list_wlans
+
+==============================================================================
+C192  get_schema   (python)
+  server      : io.github.startreedata/mcp-pinot
+  package     : pypi:mcp-pinot-server
+  description : Get one Pinot schema, including dimensions, metrics, time, and primary keys. This is a single-object lookup, not a list, so pagination does not apply. The output preserves additional fields introduced by the connected Pinot version. Failure recovery: For not-found errors, pass the table's exact schema name (normally the table name without a type suffix). Fix permissions before retrying; retry transient controller failures after ``test_connection`` succeeds.
+  schema seen : False
+  sibling tools (13): create_schema, create_table_config, get_segment_index_metadata, get_table_config, get_table_size, list_segment_metadata, list_segments, list_tables, read_query, reload_table_filters, test_connection, update_schema, update_table_config
+
+==============================================================================
+C193  get_voice_usage   (python)
+  server      : io.github.supertone-inc/supertone-mcp
+  package     : pypi:supertone-mcp
+  description : Retrieve recent usage for a single voice by voice_id. Args: voice_id: The voice identifier to report usage for. Required.
+  schema seen : False
+  sibling tools (13): clone_voice, delete_custom_voice, edit_custom_voice, get_credit_balance, get_custom_voice, get_usage_history, get_voice, merge_audio_files, predict_duration, preview_voice, search_custom_voice, search_voice, text_to_speech
+
+==============================================================================
+C194  gitlab_unshare_group_with_group   (python)
+  server      : io.github.vish288/mcp-gitlab
+  package     : pypi:mcp-gitlab
+  description : Revoke a group-to-group share. Returns a {status: unshared} confirmation.
+  schema seen : False
+  sibling tools (82): gitlab_add_issue_comment, gitlab_add_mr_note, gitlab_approve_mr, gitlab_award_emoji, gitlab_cancel_job, gitlab_cancel_pipeline, gitlab_compare, gitlab_create_branch, gitlab_create_commit, gitlab_create_group_variable, gitlab_create_issue, gitlab_create_mr, gitlab_create_mr_approval_rule, gitlab_create_mr_discussion, gitlab_create_pipeline, gitlab_create_project, gitlab_create_project_approval_rule, gitlab_create_release, gitlab_create_tag, gitlab_create_variable
+
+==============================================================================
+C195  delete_page   (python)
+  server      : io.github.vishalsachdev/canvas-mcp
+  package     : pypi:canvas-mcp
+  description : Delete a page. Two-step: preview first, then confirm with the token. Permanent — Canvas may retain a recycle-bin copy depending on admin settings. Args: course_identifier: Course code or Canvas ID page_url_or_id: Page URL slug or page ID to delete require_title_match: Safety check — only delete if page title matches exactly confirmation_token: Token from the preview call; omit to preview
+  schema seen : False
+  sibling tools (101): add_module_item, analyze_peer_review_quality, assign_peer_review, associate_rubric, bulk_delete_announcements, bulk_grade_submissions, bulk_update_pages, check_enrollment, comment_on_my_submission, create_announcement, create_assignment, create_content_migration, create_discussion_topic, create_module, create_page, create_rubric, create_rubric_from_csv, create_student_anonymization_map, delete_announcement_with_confirmation, delete_announcements_by_criteria
+
+==============================================================================
+C196  extract_peer_review_dataset   (python)
+  server      : io.github.vishalsachdev/canvas-mcp
+  package     : pypi:canvas-mcp
+  description : Export all peer review data in various formats for analysis. Args: course_identifier: Course code or Canvas ID assignment_id: Canvas assignment ID output_format: Output format (csv, json, xlsx) include_analytics: Include quality analytics anonymize_data: Anonymize student data save_locally: Save file locally filename: Custom filename
+  schema seen : False
+  sibling tools (101): add_module_item, analyze_peer_review_quality, assign_peer_review, associate_rubric, bulk_delete_announcements, bulk_grade_submissions, bulk_update_pages, check_enrollment, comment_on_my_submission, create_announcement, create_assignment, create_content_migration, create_discussion_topic, create_module, create_page, create_rubric, create_rubric_from_csv, create_student_anonymization_map, delete_announcement_with_confirmation, delete_announcements_by_criteria
+
+==============================================================================
+C197  gcode_translate   (python)
+  server      : io.github.zackpeters93/ugs-mcp
+  package     : pypi:ugs-mcp
+  description : Translate G-code to plain English, line by line. Accepts either a file path or raw G-code string. Shows each command, its meaning, and the current machine state context.
+  schema seen : False
+  sibling tools (18): gcode_estimate_time, gcode_list_macros, gcode_list_tools, gcode_run_macro, gcode_safety_check, gcode_save_macro, ugs_cancel_job, ugs_connect, ugs_disconnect, ugs_get_job_status, ugs_get_status, ugs_home, ugs_jog, ugs_pause_job, ugs_return_to_zero, ugs_run_file, ugs_set_work_zero, ugs_troubleshoot_connection
+
+==============================================================================
+C198  configure_webhook   (python)
+  server      : io.github.zebbern/webhook-mcp-server
+  package     : pypi:webhook-mcp-server
+  description : Create a webhook with custom settings, or update one (pass webhook_token). Use when the endpoint should pretend to be an API (status, body, content type, delay up to 30s, CORS), needs an alias, expiry (seconds), a request_limit (0 stores nothing), listen (seconds to wait for update_request response), actions on/off, clone_from another token, a group_id, or a description (label shown in the Control Panel). default_content can be a JSON array of DNS records ([{"type":"a","value":"..."}]) to answer DNSHook lookups. Updates keep every setting you do not mention; alias="" removes the alias. For a plain sign-up inbox use create_webhook.
+  schema seen : False
+  sibling tools (30): check_for_callbacks, create_webhook, delete_all_requests, delete_request, delete_webhook, download_request_file, export_webhook_data, extract_links_from_request, follow_email_link, generate_oob_payloads, get_request, get_webhook_email, get_webhook_info, get_webhook_requests, list_webhooks, manage_custom_actions, manage_databases, manage_global_variables, manage_groups, manage_queues
+
+==============================================================================
+C199  update_request   (python)
+  server      : io.github.zebbern/webhook-mcp-server
+  package     : pypi:webhook-mcp-server
+  description : Attach a note to a captured request, or set its dynamic response. response_* call the Set Response API; it only reaches the caller while the request is still held (token listen > 0 with a socket listener; see respond_to_next_request, which does the whole thing). For canned replies use configure_webhook or a modify_response custom action instead.
+  schema seen : False
+  sibling tools (30): check_for_callbacks, configure_webhook, create_webhook, delete_all_requests, delete_request, delete_webhook, download_request_file, export_webhook_data, extract_links_from_request, follow_email_link, generate_oob_payloads, get_request, get_webhook_email, get_webhook_info, get_webhook_requests, list_webhooks, manage_custom_actions, manage_databases, manage_global_variables, manage_groups
+
+==============================================================================
+C200  search_gravatar   (python)
+  server      : sh.clearfront/clearfront
+  package     : pypi:clearfront
+  description : Look up an email
+  schema seen : True
+  sibling tools (30): generate_dorks, investigate_multi, scrape_url, search_abuseipdb, search_breach, search_censys, search_crt, search_crypto, search_dns, search_domain, search_dorks_live, search_email, search_emailrep, search_exif, search_exposure, search_footprint, search_github, search_greynoise, search_harvester, search_hudsonrock
