@@ -177,7 +177,7 @@ def main():
 
     # Identity files for the repository.
     for name in ("README.md", "CITATION.cff", "LICENSE", "LICENSE-DATA.md",
-                 "DATA_SCOPE.md", "ZENODO_METADATA.md", ".gitignore",
+                 "DATA_SCOPE.md", "DEPOSIT.md", ".gitignore",
                  ".gitattributes", "requirements.txt"):
         src = os.path.join(ROOT, "replication", "templates", name)
         if os.path.isfile(src):
