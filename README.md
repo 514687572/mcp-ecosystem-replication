@@ -30,6 +30,13 @@ a fresh harvest can be checked against it.
 The HTTP cache under `data/cache/` is also omitted: it is a performance
 artefact, and every entry can be regenerated from the public sources.
 
+Elsevier's CAS document class is not redistributed either. `paper/latex/`
+contains the manuscript source and its bibliography, but the class files
+(`cas-dc.cls`, `cas-common.sty`, `cas-model2-names.bst`) belong to the publisher
+and carry its copyright. To rebuild the PDF, obtain them from the journal's
+author template download and place them beside `mcp-ecosystem.tex`, then run
+`paper/build.ps1`. Nothing in the analysis depends on them.
+
 ## Reproducing the study
 
 ```

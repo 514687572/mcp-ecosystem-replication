@@ -47,10 +47,13 @@ INCLUDE_DIRS = [
 #   STYLE_NOTES.md              internal editing notes; the manuscript carries
 #                               its own generative-AI declaration
 #   SUBMISSION.md               the author's upload checklist
+#   COVER_LETTER.md             submission correspondence, addressed to the
+#                               editors rather than to a reader of the package
 EXCLUDE_NAMES = {
     ".env", "registry.jsonl", "__pycache__", "reference_candidates.json",
     "style_after.json", "style_before.json", "HUMAN_TASKS.md",
     "ACCEPTANCE_ASSESSMENT.md", "STYLE_NOTES.md", "SUBMISSION.md",
+    "COVER_LETTER.md",
     # Elsevier's CAS bundle. These are the publisher's copyrighted files, they
     # are not ours to redistribute, and a reader who wants to rebuild the PDF
     # obtains them from the journal's own template download.

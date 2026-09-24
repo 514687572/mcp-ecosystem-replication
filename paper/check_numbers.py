@@ -21,6 +21,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 TEX = os.path.join(HERE, "latex", "mcp-ecosystem.tex")
 HILITE = os.path.join(HERE, "HIGHLIGHTS.txt")
+COVER = os.path.join(HERE, "COVER_LETTER.md")
 TABLES = os.path.join(ROOT, "results", "tables")
 VALID = os.path.join(ROOT, "results", "validation")
 
@@ -84,13 +85,36 @@ def main():
     body_numbers = numbers_in(body)
     problems = []
 
-    for label, source in (("abstract", abstract), ("highlights", highlights)):
+    cover = ""
+    if os.path.isfile(COVER):
+        with open(COVER, encoding="utf-8") as fh:
+            cover = fh.read()
+        # The ORCID and the DOI are identifiers, not quantities. Scanning their
+        # digit groups produces meaningless mismatches.
+        cover = re.sub(r"ORCID\s*[\d-]+", " ", cover, flags=re.IGNORECASE)
+        cover = re.sub(r"10\.\d{4,5}/[^\s<>)]+", " ", cover)
+
+    # Quantities that describe the replication package rather than the paper.
+    # The body has no reason to state them, so they are checked against the
+    # package itself instead.
+    package_facts = {}
+    tables_dir = os.path.join(ROOT, "results", "tables")
+    if os.path.isdir(tables_dir):
+        package_facts[str(len([f for f in os.listdir(tables_dir)
+                               if f.endswith(".csv")]))] = "result tables on disk"
+
+    for label, source in (("abstract", abstract), ("highlights", highlights),
+                          ("cover letter", cover)):
+        if not source:
+            continue
         for value in sorted(numbers_in(source), key=lambda v: -len(v)):
             if value in body_numbers:
                 continue
             # Allow a different rounding of the same quantity.
             alt = {value, value.rstrip("0").rstrip(".")}
             if any(a in body_numbers for a in alt if a):
+                continue
+            if value in package_facts:
                 continue
             problems.append("%s quotes %s but the body does not" % (label, value))
 
