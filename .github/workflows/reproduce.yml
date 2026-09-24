@@ -1,0 +1,35 @@
+name: reproduce
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Verify the package manifest
+        run: python scripts/verify_manifest.py
+
+      - name: Rebuild the fact sheet from the shipped tables
+        run: python scripts/17_build_facts.py
+
+      - name: Recompute the extraction-quality summary
+        run: python scripts/10_ingest_part_a.py --codes results/validation/T1.txt
+
+      - name: Recompute inter-rater agreement
+        run: python scripts/13_interrater.py
+
+      - name: Check the manuscript still meets the journal's requirements
+        run: python paper/check_jss_compliance.py

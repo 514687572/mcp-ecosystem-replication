@@ -33,6 +33,12 @@ def main():
     # Report label/reference balance too, since JSS requires numbered cross-refs.
     labels = set(re.findall(r"\\label\{([^}]*)\}", tex))
     refs = set(re.findall(r"\\ref\{([^}]*)\}", tex))
+    # Packages such as totpages create labels without a \label in the source,
+    # so the .aux file is the authority on what exists.
+    aux = os.path.join(HERE, "latex", "mcp-ecosystem.aux")
+    if os.path.isfile(aux):
+        with open(aux, encoding="utf-8", errors="ignore") as fh:
+            labels |= set(re.findall(r"\\newlabel\{([^}]*)\}", fh.read()))
     print("\nlabels  : %d" % len(labels))
     print("broken refs: %s" % (sorted(refs - labels) or "none"))
     print("unreferenced labels: %s" % (sorted(labels - refs) or "none"))

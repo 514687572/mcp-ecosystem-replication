@@ -57,7 +57,8 @@ EXCLUDE_NAMES = {
     "cas-common.sty", "cas-dc.cls", "cas-dc-sample.tex", "cas-refs.bib",
     "cas-model2-names.bst", "cas-sc.cls", "cas-sc-sample.tex",
 }
-EXCLUDE_SUFFIXES = (".pyc", ".aux", ".log", ".blg", ".out", ".bbl", ".synctex.gz")
+EXCLUDE_SUFFIXES = (".pyc", ".aux", ".log", ".blg", ".out", ".bbl", ".abs",
+                    ".synctex.gz")
 
 # Text files are normalised to LF before hashing. Without this the manifest
 # matches the Windows working tree but not a fresh clone: .gitattributes
@@ -101,27 +102,60 @@ def sha256(path, chunk=1 << 20):
     return digest.hexdigest()
 
 
-def force_remove(path):
-    """Remove a tree even when it contains read-only files.
+def clear_dir(path):
+    """Empty a directory without removing the directory itself.
 
-    A previous `git init` inside the package leaves read-only objects under
-    .git, which plain rmtree refuses to delete on Windows.
+    Two Windows behaviours make this the safer choice. A previous `git init`
+    inside the package leaves read-only objects that plain rmtree refuses to
+    delete, and Windows can hold a transient handle on a directory after a
+    killed process, which makes removing the directory fail even when every
+    file inside it is gone. Clearing the contents sidesteps both, and the
+    package's own contents are what the manifest enumerates.
+
+    Read-only bits are cleared first. Failures raise rather than pass: a silent
+    failure leaves a half-deleted package, which is how a manifest can end up
+    listing a file that no longer exists.
+
+    `.git` is preserved. This directory doubles as the working copy that gets
+    pushed to the public repository, so clearing it wholesale would destroy the
+    very thing the caller is about to commit from.
     """
-    def on_error(func, target, _exc):
-        try:
-            os.chmod(target, stat.S_IWRITE)
-            func(target)
-        except OSError:
-            pass
+    if not os.path.isdir(path):
+        return
+    keep = os.path.abspath(os.path.join(path, ".git"))
 
-    if os.path.isdir(path):
-        shutil.rmtree(path, onerror=on_error)
+    def protected(target):
+        target = os.path.abspath(target)
+        return target == keep or target.startswith(keep + os.sep)
+
+    # Files, top-down, pruning .git so the walk never descends into it.
+    for dirpath, dirnames, filenames in os.walk(path, topdown=True):
+        dirnames[:] = [d for d in dirnames
+                       if not protected(os.path.join(dirpath, d))]
+        for name in filenames:
+            target = os.path.join(dirpath, name)
+            try:
+                os.chmod(target, stat.S_IWRITE)
+            except OSError:
+                pass
+            os.unlink(target)
+
+    # Now the directories are empty; remove them bottom-up, still skipping .git.
+    for dirpath, dirnames, _ in os.walk(path, topdown=False):
+        if protected(dirpath):
+            continue
+        for name in dirnames:
+            target = os.path.join(dirpath, name)
+            if protected(target) or not os.path.isdir(target):
+                continue
+            if not os.listdir(target):
+                os.rmdir(target)
 
 
 def main():
-    force_remove(DEST)
-    force_remove(os.path.join(DEST, ".git"))
-    os.makedirs(DEST)
+    clear_dir(DEST)
+    if not os.path.isdir(DEST):
+        os.makedirs(DEST)
 
     copied = []
     for src_rel, dst_rel in INCLUDE_DIRS:

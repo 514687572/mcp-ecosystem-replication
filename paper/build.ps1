@@ -19,6 +19,12 @@ python (Join-Path $root "paper\check_format.py")
 Write-Host "`nstyle metrics" -ForegroundColor Cyan
 python (Join-Path $root "paper\ai_style_check.py")
 
+Write-Host "`nnumber traceability" -ForegroundColor Cyan
+python (Join-Path $root "paper\check_numbers.py")
+
+Write-Host "`nrendered layout" -ForegroundColor Cyan
+python (Join-Path $root "paper\check_layout.py")
+
 Push-Location $tex
 try {
     # MiKTeX writes an administrative "updates out-of-sync" notice to stderr on

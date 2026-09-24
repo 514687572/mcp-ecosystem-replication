@@ -20,7 +20,32 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{totpages}
+
+%% The CAS class computes its own \lastpage at \AtEndDocument, before deferred
+%% floats are flushed, so figures that land on trailing float pages are never
+%% counted and the footer prints values like "Page 13 of 12". totpages counts
+%% the pages actually shipped, which is what the footer means. The override has
+%% to happen at \AtBeginDocument, because the class's value arrives in the .aux
+%% file, which is read after this preamble.
+\AtBeginDocument{\renewcommand{\lastpage}{\ref{TotPages}}}
+\usepackage{float}
 \graphicspath{{../figures/}}
+
+%% Float placement. With the default limits, a dense two-column body pushes
+%% every figure to the end of the document, because no page has enough legal
+%% float area. Relaxing the fractions lets a figure sit near the text that
+%% references it, which is what the journal asks for.
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.7}
+\renewcommand{\dbltopfraction}{0.9}
+\renewcommand{\dblfloatpagefraction}{0.7}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\setcounter{dbltopnumber}{2}
 
 \begin{document}
 \let\WriteBookmarks\relax
@@ -587,9 +612,9 @@ declared variables (95\% CI [18.3, 21.6]); restricted to the latest version of
 each server it falls to 17.6\% [16.7, 18.6], because servers that republish
 often repeat their declarations. We quote the all-versions basis throughout.
 
-\begin{figure}[t]
+\begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{Figure_3}
+\includegraphics[width=\linewidth]{Figure_1}
 \caption{Credential-like environment variables, split by whether the manifest
 flags them secret. A client cannot redact automatically what the manifest does
 not mark. Source: \texttt{t11\_credential\_hygiene.csv}.}
@@ -653,7 +678,7 @@ Cumulative servers reached 35,388, and the curve shows no inflection
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{Figure_1}
+\includegraphics[width=\textwidth]{Figure_2}
 \caption{Ecosystem growth over the twelve months of the snapshot. Bars give new
 versions published per month; the line gives cumulative distinct servers. Both
 are registry counts, so they measure publication rather than deployment.
@@ -695,9 +720,9 @@ again}, a further 16.1\% last published within 30 days of the freeze, and only
 servers (1.1\%) are formally deprecated. Fig.~\ref{fig:churn} shows how
 concentrated the release distribution is.
 
-\begin{figure}[t]
+\begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{Figure_2}
+\includegraphics[width=\linewidth]{Figure_3}
 \caption{Published versions per server. The distribution is dominated by
 single-release servers, which is why every activity statistic in this paper
 carries a median beside its mean. Source: \texttt{t08\_versions\_per\_server.csv}.}
