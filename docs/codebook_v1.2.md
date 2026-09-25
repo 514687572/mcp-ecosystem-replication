@@ -98,3 +98,35 @@ scale, so they cannot simply be kept.
 `desc_states_purpose`, `desc_states_inputs` and the Part B capability fields
 already reached moderate or better agreement; re-coding them costs little and
 produces a single consistent round.
+
+## Addendum — the `secret_documented_as_secret` rule is not the RQ2 rule
+
+The rules above are frozen: round 3 was coded against them and the reported
+$\kappa$ belongs to this version. Do not edit them in place. This addendum
+records a difference between two things that share a name.
+
+`secret_documented_as_secret` (Part B) classifies a declared variable as
+credential-like by the **permissive substring rule** — a hint such as `pat` or
+`token` matching anywhere in the name. The population measurement in RQ2 uses
+the **whole-word rule** instead, because the permissive one fires inside
+unrelated words (`pat` in `PATH`, `token` in a "token-bucket" description) and
+over-counts by roughly a factor of fourteen.
+
+The two are not in conflict, because they answer different questions. The Part B
+field asks whether *this coded server* shows a credential that the manifest does
+not flag, and the pack supplies the rule's verdict so both coders apply a lookup
+rather than exercise judgement. RQ2 asks how many declarations in the whole
+population are in that position, which needs a rule whose precision can be
+defended on its own.
+
+The consequence to keep in mind: the permissive rule is the more inclusive of
+the two, so a server coded `yes` under Part B would also be `yes` under the
+whole-word rule except where the match was a location noun or a flag. Where the
+manuscript reports the population figure it quotes the whole-word rule, and
+Table 4 no longer carries the Part B "secret not flagged" sub-count, so no number
+in the paper is derived from the permissive rule except the documented upper
+bound in \S 4.2.
+
+**Applies to**: `scripts/15_make_interrater_pack_v12.py`,
+`results/validation/interrater_pack_v1.2.md`, and the round-3 worksheets, all of
+which remain as coded.

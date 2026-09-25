@@ -8,11 +8,150 @@ import re
 
 import pandas as pd
 
-CREDENTIAL_HINTS = (
+# --- credential naming -------------------------------------------------------
+#
+# Two rules are computed and both are reported, because they answer different
+# questions and differ by an order of magnitude. The manuscript quotes both and
+# treats the distance between them as a result.
+#
+# ``PERMISSIVE_HINTS`` is the original substring rule. It is retained only to
+# produce the upper bound, because it fires inside unrelated words: "pat"
+# matches "path", "compat" and "patterns"; "token" matches "tokenizer" and
+# "RATE_LIMIT_BURST" ("token-bucket" in the description).
+#
+# ``classify_credential`` is the whole-word rule. It segments the variable name
+# into alphanumeric tokens and requires the credential term to be the head noun
+# (the last segment, or the tail of an explicit compound such as ``API_KEY``).
+# Location nouns, measurement qualifiers, boolean verbs and public-key markers
+# demote a name that would otherwise fire. The rule is deliberately narrow: it
+# is the lower bound, and ``AUDIT_NON_CREDENTIAL`` below records the residue
+# that inspecting the complete firing set still found to be over-matching.
+PERMISSIVE_HINTS = (
     "token", "key", "secret", "password", "passwd", "credential",
     "api_key", "apikey", "auth", "oauth", "pat", "cookie", "session",
     "private", "access_key", "client_secret", "webhook", "dsn",
 )
+
+# Compounds: these segments must be adjacent and must end the name.
+CREDENTIAL_COMPOUNDS = (
+    ("api", "key"), ("access", "key"), ("secret", "key"), ("private", "key"),
+    ("client", "secret"), ("access", "token"), ("auth", "token"),
+    ("bearer", "token"), ("api", "token"), ("personal", "access", "token"),
+    ("refresh", "token"), ("id", "token"),
+)
+# Head nouns that name a secret outright.
+CREDENTIAL_HEADS_EXPLICIT = frozenset(
+    {"token", "password", "passwd", "credential", "credentials",
+     "secret", "secrets", "apikey"}
+)
+# Head nouns that are credentials only by convention. This tier is where
+# judgement enters, and the audit below measures how much it costs.
+CREDENTIAL_HEADS_AMBIGUOUS = frozenset({"key", "keys"})
+# Head nouns that name a location or a piece of metadata, not the secret.
+NON_SECRET_TAILS = frozenset({
+    "path", "paths", "file", "files", "dir", "dirs", "folder", "url", "uri",
+    "id", "ids", "mode", "name", "names", "type", "types", "format", "count",
+    "size", "length", "limit", "timeout", "scope", "scopes", "host",
+    "hostname", "port", "endpoint", "region", "version", "flag", "enabled",
+    "disabled", "algorithm", "charset", "header", "prefix", "suffix",
+})
+# A preceding segment from this set turns the credential word into a
+# measurement ("CHARACTERS_PER_TOKEN") or a configuration flag
+# ("REDACT_SECRETS", "ALLOW_SECRETS", "FOREIGN_KEYS").
+NON_SECRET_QUALIFIERS = frozenset({
+    "per", "max", "min", "num", "count", "chars", "char", "average", "avg",
+    "total", "budget", "window", "remaining", "reserved", "allow", "allowed",
+    "enable", "enabled", "disable", "disabled", "use", "require", "required",
+    "support", "include", "skip", "hide", "show", "list", "foreign", "expose",
+    "log", "redact", "mask", "sanitise", "sanitize", "scrub", "store", "get",
+    "set", "load", "read", "write", "never", "no", "not", "without",
+    "validate", "verify", "check", "detect", "scan", "prevent", "block",
+    "deny", "guard", "protect", "encrypt", "decrypt", "hash", "rotate",
+    "expire", "ttl",
+})
+# A preceding segment from this set makes the value public by construction.
+PUBLIC_QUALIFIERS = frozenset({"public", "pub", "publishable", "anon",
+                               "anonymous"})
+# Descriptions that say the value is a location rather than a secret.
+LOCATION_PHRASES = (
+    "path to", "absolute path", "file path", "full path",
+    "directory containing", "location of",
+)
+
+# The result of inspecting every distinct name the whole-word rule flags
+# (239 names, 2,467 unflagged declarations, see
+# results/tables/t11b_credential_rule_audit.csv). Each entry names a
+# declaration that the rule matched but that does not carry a secret: a
+# location, a guard flag, or a project identifier. Recording them here rather
+# than deleting them from the rule keeps the rule reproducible and the residue
+# visible.
+AUDIT_NON_CREDENTIAL = {
+    "OURA_CREDENTIALS": ("explicit", "location",
+                         "description: where the credentials file lives"),
+    "SEO_MCP_GOOGLE_TOKEN": ("explicit", "location",
+                             "description: path where the token is stored"),
+    "MCP_SECURITY_ALLOW_PLACEHOLDER_API_KEY": ("explicit", "guard-flag",
+                                               "name: allow-placeholder switch"),
+    "LINUX_MCP_SEARCH_FOR_SSH_KEY": ("ambiguous", "guard-flag",
+                                     "description: auto-discover keys in ~/.ssh"),
+    "LINUX_MCP_VERIFY_HOST_KEYS": ("ambiguous", "guard-flag",
+                                   "description: verify host identity"),
+    "MCP_REPLIT_SSH_STRICT_HOST_KEY": ("ambiguous", "guard-flag",
+                                       "description: boolean switch"),
+    "ONE_CONNECTION_KEYS": ("ambiguous", "identifier",
+                            "description: comma-separated allowlist"),
+    "ZEPHYR_DEFAULT_PROJECT_KEY": ("ambiguous", "identifier",
+                                   "name: project identifier"),
+    "DATAIKU_PROJECT_KEY": ("ambiguous", "identifier",
+                            "name: project identifier"),
+}
+
+
+def _segments(name):
+    """Split a variable name into lower-case alphanumeric segments."""
+    return [s for s in re.split(r"[^a-z0-9]+", (name or "").lower()) if s]
+
+
+def classify_credential(name, description):
+    """Classify one declared variable by the whole-word rule alone.
+
+    Returns ``(tier, reason)``, where ``tier`` is ``"explicit"``,
+    ``"ambiguous"`` or ``None`` and ``reason`` explains a rejection. The
+    adjudication in ``AUDIT_NON_CREDENTIAL`` is deliberately not applied here,
+    so this function is the reproducible rule and the audit is a separate,
+    enumerable correction.
+    """
+    seg = _segments(name)
+    if not seg:
+        return None, "empty"
+    low = (description or "").lower()
+
+    idx = None
+    tier = None
+    for compound in CREDENTIAL_COMPOUNDS:
+        size = len(compound)
+        if tuple(seg[-size:]) == compound:
+            idx = len(seg) - size
+            tier = "explicit"
+            break
+    if idx is None:
+        if seg[-1] in CREDENTIAL_HEADS_EXPLICIT:
+            idx, tier = len(seg) - 1, "explicit"
+        elif seg[-1] in CREDENTIAL_HEADS_AMBIGUOUS:
+            idx, tier = len(seg) - 1, "ambiguous"
+    if idx is None:
+        return None, "no-credential-term"
+
+    if seg[-1] in NON_SECRET_TAILS:
+        return None, "head-is-location-or-metadata"
+    if idx > 0 and seg[idx - 1] in NON_SECRET_QUALIFIERS:
+        return None, "qualified"
+    if idx > 0 and seg[idx - 1] in PUBLIC_QUALIFIERS:
+        return None, "public-by-name"
+    for phrase in LOCATION_PHRASES:
+        if phrase in low:
+            return None, "declared-as-location"
+    return tier, "credential"
 
 
 def _to_frame(rows, columns=None):
@@ -290,42 +429,102 @@ def credential_declarations(env_vars):
     """Credential hygiene across declared environment variables.
 
     The registry schema lets a publisher mark a variable as secret and/or
-    required. Where a variable *looks* like a credential but is not marked
-    secret, a client cannot know to redact it from logs or prompts.
+    required. Where a variable names a credential but is not marked secret, a
+    client cannot know to redact it from logs or prompts.
+
+    Returns ``(summary, top_vars, audit)``. ``audit`` is the complete list of
+    names the whole-word rule flags, with the adjudication verdict, so the
+    precision of the rule can be checked rather than assumed.
     """
     if env_vars.empty:
-        return pd.DataFrame(), pd.DataFrame()
+        return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
 
     frame = env_vars.copy()
+    verdicts = frame.apply(
+        lambda row: classify_credential(row.get("var_name"),
+                                        row.get("var_description")),
+        axis=1,
+    )
+    frame["credential_tier"] = [v[0] for v in verdicts]
+    frame["credential_reason"] = [v[1] for v in verdicts]
+
+    # The legacy substring rule, kept only as the upper bound. It is reported
+    # beside the whole-word rule so the width of the interval is visible.
     name_lower = frame["var_name"].fillna("").str.lower()
     desc_lower = frame["var_description"].fillna("").str.lower()
     frame["looks_like_credential"] = (
-        name_lower.apply(lambda v: any(h in v for h in CREDENTIAL_HINTS))
-        | desc_lower.apply(lambda v: any(h in v for h in CREDENTIAL_HINTS))
+        name_lower.apply(lambda v: any(h in v for h in PERMISSIVE_HINTS))
+        | desc_lower.apply(lambda v: any(h in v for h in PERMISSIVE_HINTS))
+    )
+
+    audit_verdict = frame["var_name"].map(
+        lambda v: AUDIT_NON_CREDENTIAL.get(v, (None, "credential", ""))
+    )
+    frame["audit_reason"] = [v[1] if v[0] else "" for v in audit_verdict]
+    frame["audit_demoted"] = [
+        bool(tier) and bool(v[0]) for tier, v in zip(frame["credential_tier"],
+                                                     audit_verdict)
+    ]
+    # Post-adjudication flags: the rule fires, and the name survived the audit.
+    frame["credential_named"] = [
+        bool(tier) and not demoted
+        for tier, demoted in zip(frame["credential_tier"], frame["audit_demoted"])
+    ]
+    frame["credential_named_unflagged"] = (
+        frame["credential_named"] & ~frame["is_secret"]
+    )
+    frame["permissive_unflagged"] = (
+        frame["looks_like_credential"] & ~frame["is_secret"]
     )
 
     total = len(frame)
-    cred = frame[frame["looks_like_credential"]]
-    summary = pd.DataFrame(
-        [
-            ("declared environment variables", total),
-            ("required variables", int(frame["is_required"].sum())),
-            ("variables marked secret", int(frame["is_secret"].sum())),
-            ("variables that look like credentials", len(cred)),
-            ("credential-like but NOT marked secret",
-             int((~cred["is_secret"]).sum()) if len(cred) else 0),
-            ("credential-like and required but NOT marked secret",
-             int((cred["is_required"] & ~cred["is_secret"]).sum()) if len(cred) else 0),
-            ("variables with a default value", int(frame["default_value"].notna().sum())),
-            ("servers declaring at least one env var",
-             frame["server_name"].nunique()),
-            ("servers requiring at least one env var",
-             frame.loc[frame["is_required"], "server_name"].nunique()),
-        ],
-        columns=["metric", "value"],
-    )
-    summary["share_pct"] = (100.0 * summary["value"] / max(1, total)).round(1)
+    explicit = frame["credential_tier"] == "explicit"
+    ambiguous = frame["credential_tier"] == "ambiguous"
+    named = frame["credential_named"]
+    unflagged = frame["credential_named_unflagged"]
+
+    def servers_with(mask):
+        return int(frame.loc[mask, "server_name"].nunique())
+
+    permissive_unflagged = int(frame["permissive_unflagged"].sum())
+    named_unflagged = int(unflagged.sum())
+    rows = [
+        ("declared environment variables", total),
+        ("required variables", int(frame["is_required"].sum())),
+        ("variables marked secret", int(frame["is_secret"].sum())),
+        ("credential-named, explicit tier",
+         int((explicit & frame["credential_named"]).sum())),
+        ("credential-named, ambiguous tier",
+         int((ambiguous & frame["credential_named"]).sum())),
+        ("credential-named, both tiers", int(named.sum())),
+        ("credential-named and NOT marked secret", named_unflagged),
+        ("... of those, explicit tier", int((explicit & unflagged).sum())),
+        ("... of those, ambiguous tier", int((ambiguous & unflagged).sum())),
+        ("credential-named, NOT marked secret, and required",
+         int((unflagged & frame["is_required"]).sum())),
+        ("permissive rule: variables that look like credentials",
+         int(frame["looks_like_credential"].sum())),
+        ("permissive rule: look like credentials, NOT marked secret",
+         permissive_unflagged),
+        ("declarations demoted by adjudication",
+         int(frame["audit_demoted"].sum())),
+        ("... of those, with no secret flag",
+         int((frame["audit_demoted"] & ~frame["is_secret"]).sum())),
+        ("variables with a default value",
+         int(frame["default_value"].notna().sum())),
+        ("servers declaring at least one env var",
+         int(frame["server_name"].nunique())),
+        ("servers declaring at least one credential-named variable",
+         servers_with(named)),
+        ("servers declaring a credential-named variable with no secret flag",
+         servers_with(unflagged)),
+    ]
+    summary = pd.DataFrame(rows, columns=["metric", "value"])
+    summary["share_pct"] = (100.0 * summary["value"] / max(1, total)).round(2)
     summary.loc[summary["metric"].str.startswith("servers"), "share_pct"] = None
+
+    summary["basis"] = "all published versions"
+    summary["value"] = summary["value"].astype(int)
 
     top_vars = (
         frame.groupby("var_name")
@@ -339,7 +538,99 @@ def credential_declarations(env_vars):
     top_vars["secret_flagged_pct"] = (
         100.0 * top_vars["secret_flagged"] / top_vars["declarations"]
     ).round(1)
-    return summary, top_vars
+
+    # Every distinct name the whole-word rule flags, with the audit verdict.
+    # This is what makes the precision of the rule checkable.
+    flagged = frame[frame["credential_tier"].notna()].copy()
+    audit = (
+        flagged.groupby(["var_name", "credential_tier"], as_index=False)
+        .agg(declarations=("server_name", "size"),
+             servers=("server_name", "nunique"),
+             secret_flagged=("is_secret", "sum"),
+             unflagged=("is_secret", lambda s: int((~s.astype(bool)).sum())),
+             audit_reason=("audit_reason", "first"),
+             example_description=("var_description", "first"))
+        .sort_values(["credential_tier", "unflagged", "declarations"],
+                     ascending=[True, False, False])
+    )
+    audit["verdict"] = audit["audit_reason"].apply(
+        lambda r: "credential" if r == "" else r
+    )
+    return (summary, top_vars, audit, credential_rule_precision(audit),
+            permissive_rule_decomposition(frame))
+
+
+def permissive_rule_decomposition(frame):
+    """Why the permissive rule's unflagged set is larger than the whole-word one.
+
+    Every declaration the permissive rule flags and does not find secret is
+    assigned to exactly one mechanism, so the manuscript's claim that the
+    excess is substring and description collision can be checked rather than
+    believed. ``the permissive rule is the one that is wrong`` is the paper's
+    central justification for quoting the whole-word figure, and this table is
+    the evidence for it.
+    """
+    if frame.empty:
+        return pd.DataFrame()
+    flagged = frame[frame["permissive_unflagged"]].copy()
+    if flagged.empty:
+        return pd.DataFrame()
+
+    name_lower = flagged["var_name"].fillna("").str.lower()
+    name_hint = name_lower.apply(lambda v: any(h in v for h in PERMISSIVE_HINTS))
+    whole_word = flagged["credential_named"].astype(bool)
+
+    def mechanism(row_hint, row_whole):
+        if row_whole:
+            return "corroborated by the whole-word rule"
+        if row_hint:
+            return "incidental name match"
+        return "description only"
+
+    flagged["mechanism"] = [
+        mechanism(hint, whole)
+        for hint, whole in zip(name_hint, whole_word)
+    ]
+    out = (
+        flagged.groupby("mechanism", as_index=False)
+        .agg(declarations=("server_name", "size"),
+             servers=("server_name", "nunique"),
+             distinct_names=("var_name", "nunique"))
+        .sort_values("declarations", ascending=False)
+    )
+    out["share_pct"] = (100.0 * out["declarations"] / len(flagged)).round(1)
+    out["basis"] = "all published versions, no secret flag"
+    return out
+
+
+def credential_rule_precision(audit):
+    """Precision of the whole-word rule, per tier.
+
+    Computed over every name the rule flags rather than a sample of them, so
+    the figure is exact for this snapshot and can be recomputed from
+    results/tables/t11b_credential_rule_audit.csv alone. The two tiers are
+    reported separately because they behave differently, and that difference
+    is a result in its own right (Section~\\ref{sec:reliability-pattern}).
+    """
+    if audit.empty:
+        return pd.DataFrame()
+    rows = []
+    for tier in ("explicit", "ambiguous"):
+        block = audit[(audit["credential_tier"] == tier) & (audit["unflagged"] > 0)]
+        if block.empty:
+            continue
+        flagged = int(block["unflagged"].sum())
+        demoted = int(block.loc[block["verdict"] != "credential",
+                                "unflagged"].sum())
+        rows.append({
+            "tier": tier,
+            "distinct_names_flagged": int(len(block)),
+            "unflagged_before_audit": flagged,
+            "adjudicated_non_credential": demoted,
+            "unflagged_after_audit": flagged - demoted,
+            "precision_pct": round(100.0 * (flagged - demoted) / flagged, 1),
+        })
+    return pd.DataFrame(rows)
 
 
 def remote_endpoint_hygiene(remotes):

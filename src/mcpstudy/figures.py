@@ -77,32 +77,51 @@ def version_churn(latest, figures_dir):
 
 
 def credential_hygiene(env_vars, figures_dir):
-    """How often credential-like variables are flagged as secret."""
+    """Credential-named variables, split by tier and by the secret flag.
+
+    The three bars are the whole-word rule's explicit tier, its ambiguous tier,
+    and the permissive substring rule, so the width of the measurement gap is
+    visible in the same picture as the underlying asymmetry.
+    """
     if env_vars.empty:
         return
-    from .analysis import CREDENTIAL_HINTS
+    from .analysis import AUDIT_NON_CREDENTIAL, PERMISSIVE_HINTS, classify_credential
 
-    frame = env_vars
-    if "looks_like_credential" not in frame.columns:
-        name_lower = frame["var_name"].fillna("").str.lower()
-        desc_lower = frame["var_description"].fillna("").str.lower()
-        frame = frame.assign(
-            looks_like_credential=name_lower.apply(
-                lambda v: any(h in v for h in CREDENTIAL_HINTS)
-            )
-            | desc_lower.apply(lambda v: any(h in v for h in CREDENTIAL_HINTS))
-        )
-    cred = frame[frame["looks_like_credential"]]
-    if cred.empty:
-        return
+    frame = env_vars.copy()
+    tiers = frame.apply(
+        lambda row: classify_credential(row.get("var_name"),
+                                        row.get("var_description"))[0],
+        axis=1,
+    )
+    frame = frame.assign(credential_tier=tiers)
+    # Apply the same adjudication the summary table applies, so the bars and
+    # t11_credential_hygiene.csv cannot disagree.
+    demoted = frame["var_name"].map(lambda v: v in AUDIT_NON_CREDENTIAL)
+    frame.loc[demoted, "credential_tier"] = None
+    name_lower = frame["var_name"].fillna("").str.lower()
+    desc_lower = frame["var_description"].fillna("").str.lower()
+    frame = frame.assign(
+        permissive=name_lower.apply(lambda v: any(h in v for h in PERMISSIVE_HINTS))
+        | desc_lower.apply(lambda v: any(h in v for h in PERMISSIVE_HINTS))
+    )
+
+    explicit = frame["credential_tier"] == "explicit"
+    ambiguous = frame["credential_tier"] == "ambiguous"
+    secret = frame["is_secret"].astype(bool)
     groups = [
-        ("flagged secret", int(cred["is_secret"].sum())),
-        ("not flagged secret", int((~cred["is_secret"]).sum())),
+        ("explicit tier\nflagged secret", int((explicit & secret).sum())),
+        ("explicit tier\nno flag", int((explicit & ~secret).sum())),
+        ("ambiguous tier\nno flag", int((ambiguous & ~secret).sum())),
+        ("permissive rule\nno flag",
+         int((frame["permissive"] & ~secret).sum())),
     ]
-    fig, ax = plt.subplots(figsize=(4.6, 2.8))
+    if not any(value for _, value in groups):
+        return
+    colours = ["#31a354", "#de2d26", "#fdae6b", "#9e9ac8"]
+    fig, ax = plt.subplots(figsize=(5.4, 3.0))
     ax.bar([g[0] for g in groups], [g[1] for g in groups],
-           color=["#31a354", "#de2d26"])
-    ax.set_ylabel("credential-like variables")
+           color=colours)
+    ax.set_ylabel("declared variables")
     for i, (_, value) in enumerate(groups):
         ax.text(i, value, str(value), ha="center", va="bottom", fontsize=8)
     _save(fig, "fig3_credential_flagging", figures_dir)

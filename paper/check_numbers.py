@@ -44,6 +44,32 @@ CLAIMS = [
      ("metric", "tools with a description", "share_pct"), 96.4),
     ("descriptions stating when to use", "t21_tool_interface_summary.csv",
      ("metric", "descriptions that state when to use the tool", "share_pct"), 6.2),
+    # The RQ2 headline and the bound beside it. These are the two figures the
+    # abstract and the highlights both quote, and both changed once already
+    # when the credential rule was replaced, so they are pinned here.
+    ("credential-named and unflagged", "t11_credential_hygiene.csv",
+     ("metric", "credential-named and NOT marked secret", "value"), 2421),
+    ("permissive-rule upper bound", "t11_credential_hygiene.csv",
+     ("metric", "permissive rule: look like credentials, NOT marked secret",
+      "value"), 34704),
+    ("servers with an unflagged credential name", "t11_credential_hygiene.csv",
+     ("metric", "servers declaring a credential-named variable with no secret flag",
+      "value"), 209),
+    ("whole-word rule precision, explicit tier",
+     "t11c_credential_rule_precision.csv",
+     ("tier", "explicit", "precision_pct"), 99.3),
+    ("whole-word rule precision, ambiguous tier",
+     "t11c_credential_rule_precision.csv",
+     ("tier", "ambiguous", "precision_pct"), 81.4),
+    ("bootstrap interval, whole-word of all declared",
+     "t31_bootstrap_intervals.csv",
+     ("quantity", "unflagged credential names, of all declared "
+                  "(whole-word rule, all published versions)", "value_pct"), 1.4),
+    ("bootstrap interval, permissive of all declared",
+     "t31_bootstrap_intervals.csv",
+     ("quantity", "unflagged credential names, of all declared "
+                  "(permissive substring rule, all published versions)",
+      "value_pct"), 19.9),
 ]
 
 

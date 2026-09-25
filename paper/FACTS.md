@@ -165,16 +165,109 @@ bottom 50% of namespaces (10270)     10270                    9.0
 
 
 ```
-                                            metric  value  share_pct
-                    declared environment variables 174265      100.0
-                                required variables  31305       18.0
-                           variables marked secret  46242       26.5
-              variables that look like credentials  78695       45.2
-             credential-like but NOT marked secret  34704       19.9
-credential-like and required but NOT marked secret   3273        1.9
-                    variables with a default value  50653       29.1
-            servers declaring at least one env var   7515        NaN
-            servers requiring at least one env var   4143        NaN
+                                                           metric  value  share_pct                  basis
+                                   declared environment variables 174265     100.00 all published versions
+                                               required variables  31305      17.96 all published versions
+                                          variables marked secret  46242      26.54 all published versions
+                                  credential-named, explicit tier  39635      22.74 all published versions
+                                 credential-named, ambiguous tier   4020       2.31 all published versions
+                                     credential-named, both tiers  43655      25.05 all published versions
+                           credential-named and NOT marked secret   2421       1.39 all published versions
+                                      ... of those, explicit tier   2285       1.31 all published versions
+                                     ... of those, ambiguous tier    136       0.08 all published versions
+                credential-named, NOT marked secret, and required    604       0.35 all published versions
+            permissive rule: variables that look like credentials  78695      45.16 all published versions
+        permissive rule: look like credentials, NOT marked secret  34704      19.91 all published versions
+                             declarations demoted by adjudication     46       0.03 all published versions
+                                ... of those, with no secret flag     46       0.03 all published versions
+                                   variables with a default value  50653      29.07 all published versions
+                           servers declaring at least one env var   7515        NaN all published versions
+         servers declaring at least one credential-named variable   5714        NaN all published versions
+servers declaring a credential-named variable with no secret flag    209        NaN all published versions
+```
+
+
+---
+
+## RQ2 — credential rule precision
+
+`results/tables/t11c_credential_rule_precision.csv`
+
+
+```
+     tier  distinct_names_flagged  unflagged_before_audit  adjudicated_non_credential  unflagged_after_audit  precision_pct
+ explicit                     207                    2300                          15                   2285           99.3
+ambiguous                      32                     167                          31                    136           81.4
+```
+
+
+---
+
+## RQ2 — why the permissive rule over-counts
+
+`results/tables/t11d_permissive_rule_decomposition.csv`
+
+
+```
+                          mechanism  declarations  servers  distinct_names  share_pct                                  basis
+              incidental name match         16827     1141            1205       48.5 all published versions, no secret flag
+                   description only         15456     1464            1780       44.5 all published versions, no secret flag
+corroborated by the whole-word rule          2421      209             230        7.0 all published versions, no secret flag
+```
+
+
+---
+
+## RQ2 — credential rule audit (first 40 rows)
+
+`results/tables/t11b_credential_rule_audit.csv`
+
+
+_(first 40 rows)_
+
+
+```
+                               var_name credential_tier  declarations  servers  secret_flagged  unflagged audit_reason                                                                                                                                                                                                                                                                                                                      example_description    verdict
+                    STASHBOX_FANSDB_KEY       ambiguous            15        1               0         15          NaN                                                                                                                                                                                                                                                        API key for FansDB. A catalogue with no key is named as absent from every answer. credential
+                  STASHBOX_JAVSTASH_KEY       ambiguous            15        1               0         15          NaN                                                                                                                                                                                                                                                      API key for JAVStash. A catalogue with no key is named as absent from every answer. credential
+                       STASHBOX_PMV_KEY       ambiguous            15        1               0         15          NaN                                                                                                                                                                                                                                                     API key for PMV Stash. A catalogue with no key is named as absent from every answer. credential
+                   STASHBOX_STASHDB_KEY       ambiguous            15        1               0         15          NaN                                                                                                                                                                                                                                                       API key for StashDB. A catalogue with no key is named as absent from every answer. credential
+                      STASHBOX_TPDB_KEY       ambiguous            15        1               0         15          NaN                                                                                                                                                                                                                                                     API key for ThePornDB. A catalogue with no key is named as absent from every answer. credential
+                    MCP_X402_WALLET_KEY       ambiguous            11        1               0         11          NaN                                                                                                                                                                                                     EVM private key (0x…) for auto USDC payment on 402. SECURITY: MCP process can drain this wallet — use a dedicated low-balance payer. credential
+       SCHOLAR_MCP_OIDC_JWT_SIGNING_KEY       ambiguous            13        1               3         10          NaN Signing key for issued JWTs; used in oidc-proxy mode only. When unset, the key is derived deterministically from `oidc_client_secret`, so tokens survive a restart — but rotating that secret invalidates every issued token. Set this explicitly to decouple token validity from secret rotation. Generate with `openssl rand -hex 32`. credential
+           LINUX_MCP_SEARCH_FOR_SSH_KEY       ambiguous             6        1               0          6   guard-flag                                                                                                                                                                                                                                                                                                           Auto-discover keys in `~/.ssh` guard-flag
+             LINUX_MCP_VERIFY_HOST_KEYS       ambiguous             6        1               0          6   guard-flag                                                                                                                                                                                                                                                                                              Verify remote host identity via known_hosts guard-flag
+           SCHOLAR_MCP_EPO_CONSUMER_KEY       ambiguous             6        1               0          6          NaN                                                                                                                                                                                               EPO Open Patent Services consumer key. Optional; patent tools are hidden when unset. Register at https://developers.epo.org/user/register. credential
+             ZEPHYR_DEFAULT_PROJECT_KEY       ambiguous             6        1               0          6   identifier                                                                                                                                                                                                                                                                                Project key used when a tool is called without projectKey identifier
+                    DATAIKU_PROJECT_KEY       ambiguous             5        1               0          5   identifier                                                                                                                                                                                                                                                                                                    Optional default Dataiku project key. identifier
+              COMTRADE_SUBSCRIPTION_KEY       ambiguous             4        1               0          4          NaN                                                                                                                                                                                          Azure API Management key from comtradedeveloper.un.org. Optional — without it, tools fall back to the public preview endpoint (500-record cap). credential
+         MCP_REPLIT_SSH_STRICT_HOST_KEY       ambiguous             4        1               0          4   guard-flag                                                                                                                                   Set to 1 to require pre-populated known-hosts entries. When unset (default), unknown hosts are recorded on first contact (OpenSSH `accept-new` behaviour); a fingerprint mismatch always fails closed. guard-flag
+                    ONE_CONNECTION_KEYS       ambiguous             4        1               0          4   identifier                                                                                                                                                                                                                                                                          Comma-separated connection keys the agent may see, or * for all identifier
+                    OVH_APPLICATION_KEY       ambiguous             4        1               0          4          NaN                                                                                                                                                                                                                                                                                                                  OVH API application key credential
+                WAITLISTER_WAITLIST_KEY       ambiguous             4        1               0          4          NaN                                                                                                                                                                                                                                                                                                                 Your unique waitlist key credential
+              SUPABASE_SERVICE_ROLE_KEY       ambiguous           152        8             149          3          NaN                                                                                                                                                                                                                                                                                                                Supabase service role key credential
+                      TIKTOK_CLIENT_KEY       ambiguous             5        3               2          3          NaN                                                                                                                                                                                                                                                     TikTok developer app client key. Optional until OAuth or live upload flows are used. credential
+                        TRANSLOADIT_KEY       ambiguous             3        1               0          3          NaN                                                                                                                                                                                                                                                               Your Transloadit Auth Key from https://transloadit.com/c/-/api-credentials credential
+                     NUPAY_MERCHANT_KEY       ambiguous             2        1               0          2          NaN                                                                                                                                                                                                                                                                                             NuPay X-Merchant-Key issued to your merchant credential
+                                LLM_KEY       ambiguous             4        2               3          1          NaN                                                                                                                                                                                                                             Your API key for the LLM service (must only be provided if you did not set it in your Florentine.ai account) credential
+                 MOLTBRIDGE_SIGNING_KEY       ambiguous             3        1               2          1          NaN                                                                                                                                                                                                                                                                                             Your Ed25519 signing key (base64url encoded) credential
+                          APOGEOAPI_KEY       ambiguous             1        1               0          1          NaN                                                                                                                                                                                                                                                                              API key from https://app.apogeoapi.com — free: 1,000 req/mo credential
+                        GRABZIT_APP_KEY       ambiguous             1        1               0          1          NaN                                                                                                                                                                                                                                                                        Your GrabzIt Application Key (Available at https://grabz.it/api/) credential
+                   KORG_LEDGER_HMAC_KEY       ambiguous             1        1               0          1          NaN                                                                                                                                                                                                                                                               Optional HMAC key — makes the chain tamper-PROOF, not just tamper-evident. credential
+                      MAGNET_OPENAI_KEY       ambiguous             1        1               0          1          NaN                                                                                                                                                                                                                                                                                   OpenAI API key for the reflector and classifier models credential
+                             PUSHER_KEY       ambiguous             1        1               0          1          NaN                                                                                                                                                                                                                                                                                                              Your Pusher application key credential
+                           SHOTPIPE_KEY       ambiguous             1        1               0          1          NaN                                                                                                                                                                                                                                                                Shotpipe API key id (starts with k_). Free at https://shotpipe.io/signup. credential
+            SOLANA_NFT_MCP_NO_AUTO_KEYS       ambiguous             1        1               0          1          NaN                                                                                                                                                                                                                                                               Optional. Set to 1 to stop the server from issuing an OpenSea key for you. credential
+              SONAR_DEFAULT_PROJECT_KEY       ambiguous             1        1               0          1          NaN                                                                                                                                                                                                                                                                                      Project key used when a tool call does not name one credential
+                      SONAR_PROJECT_KEY       ambiguous             1        1               0          1          NaN                                                                                                                                                                                                                                                                                                                    SonarQube project key credential
+                        MCP_LICENSE_KEY       ambiguous          1549      154            1549          0          NaN                                                                                                                                                                                                                                                                                  Optional Pro license key (MCPL1....). Verified offline. credential
+                               API_KEYS       ambiguous           345        3             345          0          NaN                                                                                                                                                                                                                                                     API keys for LiteLLM cloud embedding (format: ENV_VAR:key). Enables LiteLLM backend. credential
+                    BLOCKRUN_WALLET_KEY       ambiguous            61        1              61          0          NaN                                                                                                                                                                                                                       Optional: Your wallet private key for USDC payments (hex, starts with 0x). If not set, a wallet is auto-generated. credential
+                  NEW_RELIC_LICENSE_KEY       ambiguous            59        1              59          0          NaN                                                                                                                                                                                                                       New Relic ingest license key. Optional: without it Preflight runs local-only with the dashboard at localhost:7777. credential
+MARKDOWN_VAULT_MCP_OIDC_JWT_SIGNING_KEY       ambiguous            55        1              55          0          NaN                                                                                                                                                                                                                                                                             Signing key for OIDC session JWTs (critical on Linux/Docker) credential
+                               MDCX_KEY       ambiguous            52        2              52          0          NaN                                                                                                                                                                                                                                                                                                            Key that decrypts the package credential
+                   TOKEN_ENCRYPTION_KEY       ambiguous            45        2              45          0          NaN                                                                                                                                                                                                                                                                 Base64-encoded 32-byte key used to encrypt stored Google refresh tokens. credential
+                     GOMODEL_MASTER_KEY       ambiguous            43        1              43          0          NaN                                                                                                                                                                                                                                              Gateway API key clients authenticate with; unset runs the gateway in unsafe (no-auth) mode. credential
 ```
 
 
@@ -493,24 +586,28 @@ registry versions exceed GitHub releases      586       64.1
 
 
 ```
-                                                                     quantity  value_pct  ci95_low  ci95_high      n                  basis
-                                               description states the purpose     93.500    90.000     96.500    200 coded tool definitions
-                                              description explains the inputs     61.000    54.000     67.500    200 coded tool definitions
-                                               description names side effects     38.500    32.000     45.000    200 coded tool definitions
-                                               description states when to use     23.000    17.500     29.000    200 coded tool definitions
-                                               confusable with a sibling tool     93.500    90.000     96.500    200 coded tool definitions
-                                          authentication mechanism identified     64.000    56.700     71.300    150          coded servers
-                                                   no authentication required     34.700    27.300     42.700    150          coded servers
-                                                             write capability     34.000    26.700     42.000    150          coded servers
-                                                                  broad scope     31.300    24.000     38.700    150          coded servers
-                                             broad scope and write capability     22.000    15.300     28.700    150          coded servers
-                                          packages yielding at least one tool     56.300    53.600     59.200   1200       sampled packages
-                                               servers with no tagged release     59.300    56.100     62.500    914   sampled repositories
-                          Spearman correlation, registry versions vs releases      0.379     0.314      0.442    914   sampled repositories
-     credential-like not flagged, of credential-like (all published versions)     44.100    40.300     47.500  78621 all published versions
-unflagged credential-like, of all declared variables (all published versions)     19.900    18.300     21.600 174265 all published versions
-        credential-like not flagged, of credential-like (latest version only)     36.200    34.500     37.900  12458    latest version only
-   unflagged credential-like, of all declared variables (latest version only)     17.600    16.700     18.600  25643    latest version only
+                                                                                           quantity  value_pct  ci95_low  ci95_high      n                  basis
+                                                                     description states the purpose     93.500    90.000     96.500    200 coded tool definitions
+                                                                    description explains the inputs     61.000    54.000     67.500    200 coded tool definitions
+                                                                     description names side effects     38.500    32.000     45.000    200 coded tool definitions
+                                                                     description states when to use     23.000    17.500     29.000    200 coded tool definitions
+                                                                     confusable with a sibling tool     93.500    90.000     96.500    200 coded tool definitions
+                                                                authentication mechanism identified     64.000    56.700     71.300    150          coded servers
+                                                                         no authentication required     34.700    27.300     42.700    150          coded servers
+                                                                                   write capability     34.000    26.700     42.000    150          coded servers
+                                                                                        broad scope     31.300    24.000     38.700    150          coded servers
+                                                                   broad scope and write capability     22.000    15.300     28.700    150          coded servers
+                                                                packages yielding at least one tool     56.300    53.600     59.200   1200       sampled packages
+                                                                     servers with no tagged release     59.300    56.100     62.500    914   sampled repositories
+                                                Spearman correlation, registry versions vs releases      0.379     0.314      0.442    914   sampled repositories
+          unflagged credential names, of credential-named (whole-word rule, all published versions)      5.500     3.900      7.500  43655 all published versions
+              unflagged credential names, of all declared (whole-word rule, all published versions)      1.400     1.000      1.900 174265 all published versions
+unflagged credential names, of credential-named (permissive substring rule, all published versions)     44.100    40.400     47.500  78695 all published versions
+    unflagged credential names, of all declared (permissive substring rule, all published versions)     19.900    18.300     21.600 174265 all published versions
+             unflagged credential names, of credential-named (whole-word rule, latest version only)      3.700     3.100      4.300   7628    latest version only
+                 unflagged credential names, of all declared (whole-word rule, latest version only)      1.100     0.900      1.300  25643    latest version only
+   unflagged credential names, of credential-named (permissive substring rule, latest version only)     36.200    34.600     37.900  12483    latest version only
+       unflagged credential names, of all declared (permissive substring rule, latest version only)     17.600    16.700     18.600  25643    latest version only
 ```
 
 

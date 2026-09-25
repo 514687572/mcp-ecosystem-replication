@@ -12,7 +12,11 @@ broad scope and write capability,22.0,15.3,28.7,150,coded servers
 packages yielding at least one tool,56.3,53.6,59.2,1200,sampled packages
 servers with no tagged release,59.3,56.1,62.5,914,sampled repositories
 "Spearman correlation, registry versions vs releases",0.379,0.314,0.442,914,sampled repositories
-"credential-like not flagged, of credential-like (all published versions)",44.1,40.3,47.5,78621,all published versions
-"unflagged credential-like, of all declared variables (all published versions)",19.9,18.3,21.6,174265,all published versions
-"credential-like not flagged, of credential-like (latest version only)",36.2,34.5,37.9,12458,latest version only
-"unflagged credential-like, of all declared variables (latest version only)",17.6,16.7,18.6,25643,latest version only
+"unflagged credential names, of credential-named (whole-word rule, all published versions)",5.5,3.9,7.5,43655,all published versions
+"unflagged credential names, of all declared (whole-word rule, all published versions)",1.4,1.0,1.9,174265,all published versions
+"unflagged credential names, of credential-named (permissive substring rule, all published versions)",44.1,40.4,47.5,78695,all published versions
+"unflagged credential names, of all declared (permissive substring rule, all published versions)",19.9,18.3,21.6,174265,all published versions
+"unflagged credential names, of credential-named (whole-word rule, latest version only)",3.7,3.1,4.3,7628,latest version only
+"unflagged credential names, of all declared (whole-word rule, latest version only)",1.1,0.9,1.3,25643,latest version only
+"unflagged credential names, of credential-named (permissive substring rule, latest version only)",36.2,34.6,37.9,12483,latest version only
+"unflagged credential names, of all declared (permissive substring rule, latest version only)",17.6,16.7,18.6,25643,latest version only

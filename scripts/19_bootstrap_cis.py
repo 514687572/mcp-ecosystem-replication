@@ -25,7 +25,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 
 import pandas as pd  # noqa: E402
 
-from mcpstudy import config, registry  # noqa: E402
+from mcpstudy import analysis, config, registry  # noqa: E402
 
 VALID = os.path.join(config.RESULTS_DIR, "validation")
 N = 10000
@@ -177,41 +177,55 @@ def main():
 
     # --- credential shares, clustered by server ------------------------------
     #
-    # Two bases are computed because the paper uses both and they give
-    # different answers. Counting every published version lets a server that
-    # republishes often contribute many times; counting only the latest version
-    # describes what a client sees today. Both are reported so no figure in the
-    # manuscript rests on an unstated choice of basis.
+    # Both credential rules are bootstrapped, because both are quoted: the
+    # whole-word rule is the paper's lower bound and the permissive substring
+    # rule is its upper bound, and the gap between them is a reported result.
+    # Two bases are computed because counting every published version lets a
+    # server that republishes often contribute many times, while counting only
+    # the latest version describes what a client sees today.
+    #
+    # The rule lives in mcpstudy.analysis so the interval cannot drift away
+    # from the point estimate the manuscript quotes.
     entries = registry.load_entries()
     env = pd.DataFrame(registry.extract_environment_variables(entries))
-    hints = ("token", "key", "secret", "password", "passwd", "credential",
-             "auth", "pat", "cookie", "session", "private", "dsn")
+    verdicts = env.apply(
+        lambda row: analysis.classify_credential(row.get("var_name"),
+                                                 row.get("var_description"))[0],
+        axis=1,
+    )
+    env["credential_tier"] = verdicts
+    env["audit_demoted"] = env["var_name"].map(
+        lambda v: v in analysis.AUDIT_NON_CREDENTIAL
+    )
+    env["credential_named"] = env["credential_tier"].notna() & ~env["audit_demoted"]
+    name_lower = env["var_name"].fillna("").str.lower()
+    desc_lower = env["var_description"].fillna("").str.lower()
+    env["permissive"] = (
+        name_lower.apply(lambda v: any(h in v for h in analysis.PERMISSIVE_HINTS))
+        | desc_lower.apply(lambda v: any(h in v for h in analysis.PERMISSIVE_HINTS))
+    )
 
     for basis, frame_env in (("all published versions", env),
                              ("latest version only", env[env["is_latest"]])):
-        frame_env = frame_env.copy()
-        name = frame_env["var_name"].fillna("").str.lower()
-        desc = frame_env["var_description"].fillna("").str.lower()
-        frame_env["looks_like_credential"] = (
-            name.apply(lambda v: any(h in v for h in hints))
-            | desc.apply(lambda v: any(h in v for h in hints))
-        )
-        cred = frame_env[frame_env["looks_like_credential"]]
-        flags = (~cred["is_secret"]).astype(int).tolist()
-        clusters = cred["server_name"].tolist()
-        point = 100.0 * sum(flags) / len(flags)
-        add("credential-like not flagged, of credential-like (%s)" % basis,
-            point, boot_proportion(flags, cluster=clusters), len(flags),
-            basis)
-        # Also the share of every declared variable, which is what the
-        # manuscript quotes.
-        all_flags = ((frame_env["looks_like_credential"]
-                      & ~frame_env["is_secret"]).astype(int)).tolist()
-        all_clusters = frame_env["server_name"].tolist()
-        add("unflagged credential-like, of all declared variables (%s)" % basis,
-            100.0 * sum(all_flags) / len(all_flags),
-            boot_proportion(all_flags, cluster=all_clusters), len(all_flags),
-            basis)
+        for label, column in (("whole-word rule", "credential_named"),
+                              ("permissive substring rule", "permissive")):
+            flagged = frame_env[frame_env[column]]
+            flags = (~flagged["is_secret"]).astype(int).tolist()
+            clusters = flagged["server_name"].tolist()
+            add("unflagged credential names, of credential-named (%s, %s)"
+                % (label, basis),
+                100.0 * sum(flags) / len(flags),
+                boot_proportion(flags, cluster=clusters), len(flags), basis)
+            # The share of every declared variable, which is what the
+            # manuscript quotes.
+            all_flags = ((frame_env[column] & ~frame_env["is_secret"])
+                         .astype(int)).tolist()
+            all_clusters = frame_env["server_name"].tolist()
+            add("unflagged credential names, of all declared (%s, %s)"
+                % (label, basis),
+                100.0 * sum(all_flags) / len(all_flags),
+                boot_proportion(all_flags, cluster=all_clusters),
+                len(all_flags), basis)
 
     out = pd.DataFrame(rows)
     path = os.path.join(config.TABLES_DIR, "t31_bootstrap_intervals.csv")

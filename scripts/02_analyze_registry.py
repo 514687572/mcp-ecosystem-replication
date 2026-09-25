@@ -81,10 +81,14 @@ def main():
     save(naming, "t10_naming_conventions.csv")
 
     print("\nsecurity")
-    cred_summary, top_vars = analysis.credential_declarations(env_vars)
+    (cred_summary, top_vars, cred_audit, cred_precision,
+     cred_decomposition) = analysis.credential_declarations(env_vars)
     if not cred_summary.empty:
         save(cred_summary, "t11_credential_hygiene.csv")
         save(top_vars, "t12_most_common_env_vars.csv")
+        save(cred_audit, "t11b_credential_rule_audit.csv")
+        save(cred_precision, "t11c_credential_rule_precision.csv")
+        save(cred_decomposition, "t11d_permissive_rule_decomposition.csv")
     remote_summary, top_hosts = analysis.remote_endpoint_hygiene(remotes)
     if not remote_summary.empty:
         save(remote_summary, "t13_remote_endpoint_hygiene.csv")
